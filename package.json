@@ -1,0 +1,28 @@
+{
+  "name": "trevordmiller-website",
+  "scripts": {
+    "start": "next",
+    "verify": "scripts/verify",
+    "build": "next build",
+    "now-start": "next start"
+  },
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^17.0.2",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.10.2",
+    "eslint-plugin-react": "^6.7.1",
+    "jest": "^17.0.3",
+    "parallelshell": "^2.0.0",
+    "watch": "^1.0.1"
+  },
+  "dependencies": {
+    "next": "^1.1.2"
+  }
+}
