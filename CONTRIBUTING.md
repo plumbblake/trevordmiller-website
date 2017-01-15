@@ -1,10 +1,16 @@
-_This assumes you have Bash, Git, Node, and npm_
+# Requirements
 
-- Fork repo
-- Branch off `master`
-- Run `npm start` to compile
-- Run `npm run verify` to lint and test
-- Stage, commit, and push
-- Submit a pull request
-- Ensure your pull request passes all checks
-- An admin will merge your pull request and deploy a release
+- Git
+- Node
+- Yarn
+
+# Process
+
+- Fork the repo
+- Branch off of `master`
+- Install dependencies with `yarn`
+- Work locally with `yarn dev`
+- Check tests/linting/builds with `yarn verify`
+- Submit a pull request to source `master`
+
+If everything looks good, an admin will merge your pull request and deploy a release :)

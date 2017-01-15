@@ -1,10 +1,12 @@
 {
   "name": "trevordmiller-website",
   "scripts": {
-    "start": "next",
-    "verify": "scripts/verify",
+    "dev": "next",
+    "test": "jest",
+    "lint": "eslint src",
     "build": "next build",
-    "now-start": "next start"
+    "verify": "yarn test && yarn lint && yarn build",
+    "start": "next start"
   },
   "babel": {
     "presets": [
@@ -12,17 +14,45 @@
       "react"
     ]
   },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "react/display-name": [
+        "off"
+      ],
+      "react/prop-types": [
+        "off"
+      ]
+    }
+  },
   "devDependencies": {
     "babel-jest": "^17.0.2",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "eslint": "^3.10.2",
     "eslint-plugin-react": "^6.7.1",
-    "jest": "^17.0.3",
-    "parallelshell": "^2.0.0",
-    "watch": "^1.0.1"
+    "jest": "^17.0.3"
   },
   "dependencies": {
-    "next": "^1.1.2"
+    "next": "^1.2.3"
   }
 }

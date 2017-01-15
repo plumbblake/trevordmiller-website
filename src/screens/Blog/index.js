@@ -1,7 +1,8 @@
 import React from 'react'
+import Screen from '../../components/Screen'
 
 export default () => (
-  <main>
-    Blog
-  </main>
+  <Screen title='Blog'>
+    This is the blog screen
+  </Screen>
 )
