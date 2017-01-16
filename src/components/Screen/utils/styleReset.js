@@ -1,3 +1,5 @@
+import {uiGroups} from '../../../utils/styleGuide'
+
 export default `
   body {
     margin: 0;
@@ -5,14 +7,23 @@ export default `
 
   html {
     box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.3;
   }
 
   *,
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+  
+  *:focus {
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+    outline: 1px solid ${uiGroups.userCurrentState};
+  }
+
+  ::selection {
+    background: ${uiGroups.userCurrentState};
+    color: ${uiGroups.backgroundShade};
   }
 `

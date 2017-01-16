@@ -32,7 +32,8 @@
       "ecmaVersion": 6,
       "sourceType": "module",
       "ecmaFeatures": {
-        "jsx": true
+        "jsx": true,
+        "experimentalObjectRestSpread": true
       }
     },
     "rules": {
@@ -53,6 +54,8 @@
     "jest": "^17.0.3"
   },
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "^1.2.3",
+    "nova-colors": "^2.1.5",
+    "react-tabs": "^0.8.2"
   }
 }

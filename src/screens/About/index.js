@@ -3,10 +3,10 @@ import Screen from '../../components/Screen'
 
 export default () => (
   <Screen
-    title='Blog'
+    title='About'
     sections={[
       {
-        component: <div>Blog stuff</div>
+        component: <div>About stuff</div>
       }
     ]}
   / >
