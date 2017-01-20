@@ -1,8 +1,8 @@
 import React from 'react'
-import Image from '../../../../components/Image'
+import Screenshot from '../../../../components/Screenshot'
 
 const ExampleCode = () => (
-  <Image
+  <Screenshot
     src='https://github.com/trevordmiller/trevordmiller-website/blob/master/src/screens/Nova/components/ExampleCode/utils/screenshot.png?raw=true'
     quiet={true}
   />

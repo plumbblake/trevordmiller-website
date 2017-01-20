@@ -16,7 +16,7 @@ import Heading from '../../../../components/Heading'
 import Icon from '../../../../components/Icon'
 import List from '../../../../components/List'
 import Anchor from '../../../../components/Anchor'
-import Image from '../../../../components/Image'
+import Screenshot from '../../../../components/Screenshot'
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`;
 
@@ -266,14 +266,14 @@ export default class Platforms extends React.Component {
                 fill={
                   index === this.state.activeTab
                     ? uiGroups.userCurrentState
-                    : uiGroups.gray2
+                    : uiGroups.gray3
                 }
               />
               <div style={{
                 marginTop: spacing.small,
                 color: index === this.state.activeTab
                   ? uiGroups.userCurrentState
-                  : uiGroups.gray2,
+                  : uiGroups.gray3,
               }}>
                 {plugin.title}
               </div>
@@ -305,7 +305,7 @@ export default class Platforms extends React.Component {
                 ? <div style={{
                     marginBottom: spacing.medium,
                   }}>
-                    <Image
+                    <Screenshot
                       src={plugin.screenshot}
                       quiet={true}
                     />

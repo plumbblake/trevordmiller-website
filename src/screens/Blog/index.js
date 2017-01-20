@@ -6,7 +6,7 @@ export default () => (
     title='Blog'
     sections={[
       {
-        component: <div>Blog stuff</div>
+        component: <div>TODO</div>
       }
     ]}
   / >

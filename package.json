@@ -28,6 +28,7 @@
       "node": true,
       "jest": true
     },
+    "parser": "babel-eslint",
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -46,6 +47,7 @@
     }
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "babel-jest": "^17.0.2",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",

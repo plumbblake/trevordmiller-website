@@ -1,4 +1,4 @@
 import React from 'react'
-import Home from '../src/screens/Home'
+import About from '../src/screens/About'
 
-export default () => <Home />
+export default () => <About />

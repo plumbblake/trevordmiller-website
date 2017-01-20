@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
-import {spacing} from '../../../../utils/styleGuide'
-import Heading from '../../../Heading'
+import {spacing} from '../../../../../../utils/styleGuide'
+import Heading from '../../../../../Heading'
 
 const Section = ({children, title}) => (
   <section

@@ -1,18 +1,16 @@
 import React, {PropTypes} from 'react'
 import Head from 'next/head'
 import {
-  screenSizes,
-  spacing,
   uiGroups,
   fontFamilies,
   fontSizes,
   fontWeights,
   lineHeights,
 } from '../../utils/styleGuide'
-import Heading from '../Heading'
 import styleReset from './utils/styleReset'
+import Navigation from './components/Navigation'
 import Header from './components/Header'
-import Section from './components/Section'
+import Main from './components/Main'
 
 export const Screen = ({
   title,
@@ -51,39 +49,12 @@ export const Screen = ({
       lineHeight: lineHeights.medium,
       minHeight: '100vh',
     }}>
-
-      <Header />
-
-      <main style={{
-        maxWidth: screenSizes.large,
-        margin: 'auto',
-      }}>
-
-        <div style={{
-          paddingTop: spacing.medium,
-          paddingRight: spacing.large,
-          paddingLeft: spacing.large,
-          paddingBottom: spacing.medium,
-        }}>
-          <Heading level={1}>
-            {title}
-          </Heading>
-          <Heading level={2}>
-            {description}
-          </Heading>
-        </div>
-
-        {sections.map((section, index) => (
-          <Section
-            key={index}
-            title={section.title}
-          >
-            {section.component}
-          </Section>
-        ))}
-
-      </main>
-
+      <Navigation />
+      <Header
+        title={title}
+        description={description}
+      />
+      <Main sections={sections} />
     </div>
 
   </div>

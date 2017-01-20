@@ -1,36 +1,19 @@
 import React from 'react'
-import Link from 'next/link'
+import {spacing} from '../../../../utils/styleGuide'
+import Heading from '../../../Heading'
 
-const routes = [
-  {
-    path: '/',
-    title: 'Home',
-  },
-  {
-    path: '/about',
-    title: 'About',
-  },
-  {
-    path: '/blog',
-    title: 'Blog',
-  },
-  {
-    path: '/nova',
-    title: 'Nova',
-  },
-]
-
-export default () => (
-  <header>
-    <nav>
-      {routes.map((route, index) => (
-        <Link 
-          key={index}
-          href={route.path}
-        >
-          <a>{route.title}</a>
-        </Link>
-      ))}
-    </nav>
+export default ({title, description}) => (
+  <header style={{
+    paddingTop: spacing.medium,
+    paddingRight: spacing.large,
+    paddingLeft: spacing.large,
+    paddingBottom: spacing.medium,
+  }}>
+    <Heading level={1}>
+      {title}
+    </Heading>
+    <Heading level={2}>
+      {description}
+    </Heading>
   </header>
 )
