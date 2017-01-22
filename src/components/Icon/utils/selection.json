@@ -4,6 +4,191 @@
     {
       "icon": {
         "paths": [
+          "M0 1024h512v-1024h-512v1024zM320 128h128v128h-128v-128zM320 384h128v128h-128v-128zM320 640h128v128h-128v-128zM64 128h128v128h-128v-128zM64 384h128v128h-128v-128zM64 640h128v128h-128v-128zM576 320h448v64h-448zM576 1024h128v-256h192v256h128v-576h-448z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "office",
+          "buildings",
+          "work"
+        ],
+        "defaultCode": 59651,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "office, buildings",
+        "name": "office",
+        "id": 3,
+        "order": 29,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 3
+    },
+    {
+      "icon": {
+        "paths": [
+          "M288 576h-64v448h64c17.6 0 32-14.4 32-32v-384c0-17.6-14.4-32-32-32z",
+          "M736 576c-17.602 0-32 14.4-32 32v384c0 17.6 14.398 32 32 32h64v-448h-64z",
+          "M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512c0 61.412 10.83 120.29 30.656 174.848-19.478 33.206-30.656 71.87-30.656 113.152 0 112.846 83.448 206.188 192 221.716v-443.418c-31.914 4.566-61.664 15.842-87.754 32.378-5.392-26.718-8.246-54.364-8.246-82.676 0-229.75 186.25-416 416-416s416 186.25 416 416c0 28.314-2.83 55.968-8.22 82.696-26.1-16.546-55.854-27.848-87.78-32.418v443.44c108.548-15.532 192-108.874 192-221.714 0-41.274-11.178-79.934-30.648-113.138 19.828-54.566 30.648-113.452 30.648-174.866z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "headphones",
+          "headset",
+          "music",
+          "audio"
+        ],
+        "defaultCode": 59664,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "headphones, headset",
+        "name": "headphones",
+        "id": 16,
+        "order": 25,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 16
+    },
+    {
+      "icon": {
+        "paths": [
+          "M960 0h64v736c0 88.366-100.29 160-224 160s-224-71.634-224-160c0-88.368 100.29-160 224-160 62.684 0 119.342 18.4 160 48.040v-368.040l-512 113.778v494.222c0 88.366-100.288 160-224 160s-224-71.634-224-160c0-88.368 100.288-160 224-160 62.684 0 119.342 18.4 160 48.040v-624.040l576-128z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "music",
+          "song",
+          "audio",
+          "sound",
+          "note"
+        ],
+        "defaultCode": 59665,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "music, song",
+        "name": "music",
+        "id": 17,
+        "order": 27,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 17
+    },
+    {
+      "icon": {
+        "paths": [
+          "M320 192c0-106.039 85.961-192 192-192s192 85.961 192 192c0 106.039-85.961 192-192 192s-192-85.961-192-192zM768.078 448h-35.424l-199.104 404.244 74.45-372.244-96-96-96 96 74.45 372.244-199.102-404.244h-35.424c-127.924 0-127.924 85.986-127.924 192v320h768v-320c0-106.014 0-192-127.922-192z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "user-tie",
+          "user",
+          "user-employee",
+          "profile",
+          "avatar",
+          "person",
+          "member",
+          "job",
+          "official"
+        ],
+        "defaultCode": 59766,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "user-tie, user5",
+        "name": "suit",
+        "id": 118,
+        "order": 30,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 118
+    },
+    {
+      "icon": {
+        "paths": [
+          "M256 96c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z",
+          "M832 96c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z",
+          "M256 256h-192c-35.346 0-64 28.654-64 64v320h64v384h80v-384h32v384h80v-384h64v-320c0-35.346-28.652-64-64-64z",
+          "M975 512l49-35.5-133.286-206.116c-5.92-8.98-15.958-14.384-26.714-14.384h-256c-10.756 0-20.792 5.404-26.714 14.384l-133.286 206.116 49 35.5 110.644-143.596 38.458 89.74-134.102 245.856h122.666l21.334 320h64v-320h32v320h64l21.334-320h122.666l-134.104-245.858 38.458-89.74 110.646 143.598z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "man-woman",
+          "toilet",
+          "bathroom",
+          "sex",
+          "gender"
+        ],
+        "defaultCode": 59870,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "man-woman, toilet",
+        "name": "couple",
+        "id": 222,
+        "order": 28,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 222
+    },
+    {
+      "icon": {
+        "paths": [
+          "M0 64v896h1024v-896h-1024zM960 896h-896v-768h896v768zM896 192h-768v640h768v-640zM448 512h-64v64h-64v64h-64v-64h64v-64h64v-64h-64v-64h-64v-64h64v64h64v64h64v64zM704 640h-192v-64h192v64z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "terminal",
+          "console",
+          "cmd",
+          "command-line"
+        ],
+        "defaultCode": 60033,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "terminal, console",
+        "name": "terminal",
+        "id": 385,
+        "order": 26,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 385
+    },
+    {
+      "icon": {
+        "paths": [
           "M0 742.4v185.575c0 53.103 42.976 96.025 95.99 96.025h832.020c52.97 0 95.99-42.992 95.99-96.025v-185.575h-1024zM0 742.4h1024v192h-1024v-192z",
           "M531.2 448v-448h-38.4v934.4h38.4v-448h492.8v-38.4h-492.8zM0 96.042c0-53.042 43.021-96.042 95.99-96.042h832.020c53.014 0 95.99 43.039 95.99 96.042v838.358h-1024v-838.358z"
         ],
@@ -51,8 +236,8 @@
           59649
         ]
       },
-      "setIdx": 0,
-      "setId": 5,
+      "setIdx": 1,
+      "setId": 1,
       "iconIdx": 0
     },
     {
@@ -78,8 +263,8 @@
         "code": 57349
       },
       "setIdx": 1,
-      "setId": 4,
-      "iconIdx": 5
+      "setId": 1,
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -104,8 +289,8 @@
         "code": 57380
       },
       "setIdx": 1,
-      "setId": 4,
-      "iconIdx": 24
+      "setId": 1,
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -126,12 +311,12 @@
         "id": 50,
         "order": 22,
         "prevSize": 24,
-        "name": "record",
+        "name": "bullet",
         "code": 57417
       },
       "setIdx": 1,
-      "setId": 4,
-      "iconIdx": 49
+      "setId": 1,
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -165,13 +350,13 @@
       "properties": {
         "order": 8,
         "id": 1,
-        "name": "atom-original",
+        "name": "atom",
         "prevSize": 32,
         "code": 59650
       },
-      "setIdx": 2,
-      "setId": 3,
-      "iconIdx": 0
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -205,13 +390,13 @@
       "properties": {
         "order": 7,
         "id": 0,
-        "name": "vim-plain",
+        "name": "vim",
         "prevSize": 32,
         "code": 59651
       },
-      "setIdx": 2,
-      "setId": 3,
-      "iconIdx": 1
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 5
     },
     {
       "icon": {
@@ -238,13 +423,13 @@
       "properties": {
         "order": 9,
         "id": 0,
-        "name": "hyper-symbols",
+        "name": "hyper",
         "prevSize": 32,
         "code": 59652
       },
-      "setIdx": 3,
-      "setId": 2,
-      "iconIdx": 0
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -268,9 +453,9 @@
         "name": "git",
         "ligatures": ""
       },
-      "setIdx": 4,
+      "setIdx": 1,
       "setId": 1,
-      "iconIdx": 0
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -295,9 +480,9 @@
         "name": "npm",
         "ligatures": ""
       },
-      "setIdx": 4,
+      "setIdx": 1,
       "setId": 1,
-      "iconIdx": 54
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -322,12 +507,12 @@
         "id": 149,
         "prevSize": 32,
         "code": 59029,
-        "name": "terminal",
+        "name": "iterm",
         "ligatures": ""
       },
-      "setIdx": 4,
+      "setIdx": 1,
       "setId": 1,
-      "iconIdx": 149
+      "iconIdx": 9
     }
   ],
   "height": 1024,

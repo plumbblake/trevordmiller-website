@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from '../../components/Screen'
+import Screen from '../../../../components/Screen'
 import Contributors from './components/Contributors'
 import Colors from './components/Colors'
 import ExampleCode from './components/ExampleCode'

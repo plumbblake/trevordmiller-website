@@ -1,6 +1,6 @@
 import React from 'react'
-import {spacing} from '../../../../utils/styleGuide'
-import Heading from '../../../../components/Heading'
+import {spacing} from '../../../../../../utils/styleGuide'
+import Heading from '../../../../../../components/Heading'
 
 const characteristics = [
   {

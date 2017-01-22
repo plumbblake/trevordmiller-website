@@ -4,9 +4,9 @@ import {
   spacing,
   fontSizes,
   opacities,
-} from '../../../../utils/styleGuide'
-import Icon from '../../../../components/Icon'
-import Anchor from '../../../../components/Anchor'
+} from '../../../../../../utils/styleGuide'
+import Icon from '../../../../../../components/Icon'
+import Anchor from '../../../../../../components/Anchor'
 
 const contributors = [
   {

@@ -11,12 +11,12 @@ import {
   spacing,
   borderSizes,
   borderRadii,
-} from '../../../../utils/styleGuide'
-import Heading from '../../../../components/Heading'
-import Icon from '../../../../components/Icon'
-import List from '../../../../components/List'
-import Anchor from '../../../../components/Anchor'
-import Screenshot from '../../../../components/Screenshot'
+} from '../../../../../../utils/styleGuide'
+import Heading from '../../../../../../components/Heading'
+import Icon from '../../../../../../components/Icon'
+import List from '../../../../../../components/List'
+import Anchor from '../../../../../../components/Anchor'
+import Screenshot from '../../../../../../components/Screenshot'
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`;
 

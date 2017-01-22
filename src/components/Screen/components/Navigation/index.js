@@ -8,12 +8,12 @@ const routes = [
     title: 'About',
   },
   {
-    path: '/blog',
-    title: 'Blog',
+    path: '/projects',
+    title: 'Projects',
   },
   {
-    path: '/nova',
-    title: 'Nova',
+    path: '/blog',
+    title: 'Blog',
   },
 ]
 

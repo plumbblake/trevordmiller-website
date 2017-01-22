@@ -1,5 +1,5 @@
 import React from 'react'
-import {syntaxGroups, spacing, fontSizes} from '../../../../utils/styleGuide'
+import {syntaxGroups, spacing, fontSizes} from '../../../../../../utils/styleGuide'
 import ColorTile from './components/ColorTile'
 
 // TODO: Update to latest nova-colors groups

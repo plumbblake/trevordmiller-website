@@ -12,8 +12,11 @@ export default ({title, description}) => (
     <Heading level={1}>
       {title}
     </Heading>
-    <Heading level={2}>
-      {description}
-    </Heading>
+    {description
+      ? <Heading level={2}>
+          {description}
+        </Heading>
+      : null
+    }
   </header>
 )
