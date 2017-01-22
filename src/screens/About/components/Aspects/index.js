@@ -19,8 +19,8 @@ const aspects = [
     label: 'coder',
     description: 'I love learning and can often be found reading, watching video tutorials, or writing code for open source projects. Being a programmer isn\'t just a job for me, it\'s a hobby too.',
     more: {
-      description: 'View my open source code on GitHub',
-      href: 'https://github.com/trevordmiller',
+      description: 'View my projects',
+      href: '/projects',
     },
   },
   {
