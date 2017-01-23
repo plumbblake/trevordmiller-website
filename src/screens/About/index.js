@@ -6,6 +6,7 @@ import Aspects from './components/Aspects'
 export default () => (
   <Screen
     title='About'
+    description='A bit about me'
     sections={[
       {
         component: <Intro />,

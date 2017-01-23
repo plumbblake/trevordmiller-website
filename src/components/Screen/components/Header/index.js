@@ -4,10 +4,10 @@ import Heading from '../../../Heading'
 
 export default ({title, description}) => (
   <header style={{
-    paddingTop: spacing.medium,
-    paddingRight: spacing.large,
+    paddingTop: spacing.large,
+    paddingBottom: spacing.xlarge,
     paddingLeft: spacing.large,
-    paddingBottom: spacing.medium,
+    paddingRight: spacing.large,
   }}>
     <Heading level={1}>
       {title}
