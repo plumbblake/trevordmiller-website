@@ -3,6 +3,7 @@ import {uiGroups, fontSizes, spacing}  from '../../../../utils/styleGuide'
 import Icon from '../../../../components/Icon'
 import Heading from '../../../../components/Heading'
 import Anchor from '../../../../components/Anchor'
+import List from '../../../../components/List'
 
 const aspects = [
   {
@@ -86,11 +87,16 @@ export default () => (
           </Heading>
           <div>{aspect.description}</div>
           <div style={{
-            marginTop: spacing.medium,
+            marginTop: spacing.small,
           }}>
-            <Anchor href={aspect.more.href}>
-              {aspect.more.description}
-            </Anchor>
+            <List
+              items={[
+                <Anchor href={aspect.more.href}>
+                  {aspect.more.description}
+                </Anchor>
+              ]}
+              type='link'
+            />
           </div>
         </div>
       </div>

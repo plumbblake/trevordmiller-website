@@ -348,10 +348,7 @@ export default class Platforms extends React.Component {
                     </Heading>
                     <List
                       items={plugin.links.map(link => (
-                        <Anchor
-                          href={link.url}
-                          inline={true}
-                        >
+                        <Anchor href={link.url}>
                           {link.title}
                         </Anchor>
                       ))}

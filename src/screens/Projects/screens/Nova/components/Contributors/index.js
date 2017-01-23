@@ -61,10 +61,7 @@ export default () => (
             marginRight: (index + 1 < contributors.length) ? spacing.medium : 0,
           }}
         >
-          <Anchor
-            href={contributor.url}
-            inline={true}
-          >
+          <Anchor href={contributor.url}>
             {contributor.handle}
           </Anchor>
         </span>

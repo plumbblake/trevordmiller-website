@@ -6,12 +6,10 @@ import {colorValues} from '../../utils/styleGuide'
 const Anchor = ({
   href,
   children,
-  inline = false,
 }) => {
 
   const linkStyle = {
     color: colorValues.colors.blue,
-    display: inline ? 'inline' : 'block',
     lineHeight: 0,
   }
 
@@ -36,7 +34,6 @@ Anchor.propTypes = {
     PropTypes.string,
     PropTypes.object,
   ]).isRequired,
-  inline: PropTypes.bool,
 }
 
 export default Anchor
