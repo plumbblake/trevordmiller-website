@@ -16,7 +16,7 @@ import Heading from '../../../../../../components/Heading'
 import Icon from '../../../../../../components/Icon'
 import List from '../../../../../../components/List'
 import Anchor from '../../../../../../components/Anchor'
-import Screenshot from '../../../../../../components/Screenshot'
+import Image from '../../../../../../components/Image'
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`;
 
@@ -305,7 +305,7 @@ export default class Platforms extends React.Component {
                 ? <div style={{
                     marginBottom: spacing.medium,
                   }}>
-                    <Screenshot
+                    <Image
                       src={plugin.screenshot}
                       quiet={true}
                     />

@@ -1,9 +1,11 @@
 import React from 'react'
-import {spacing} from '../../../../utils/styleGuide'
+import {spacing, screenSizes} from '../../../../utils/styleGuide'
 import Heading from '../../../Heading'
 
 export default ({title, description}) => (
   <header style={{
+    maxWidth: screenSizes.large,
+    margin: 'auto',
     paddingTop: spacing.large,
     paddingBottom: spacing.xlarge,
     paddingLeft: spacing.large,

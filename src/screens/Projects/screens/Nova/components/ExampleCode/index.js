@@ -1,8 +1,8 @@
 import React from 'react'
-import Screenshot from '../../../../../../components/Screenshot'
+import Image from '../../../../../../components/Image'
 
 const ExampleCode = () => (
-  <Screenshot
+  <Image
     src='/static/nova-example-code-screenshot.png'
     quiet={true}
   />
