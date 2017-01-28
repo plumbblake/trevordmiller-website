@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {uiGroups, spacing} from '../../../../utils/styleGuide'
+import {uiGroups, spacing, fontSizes} from '../../../../utils/styleGuide'
 
 const routes = [
   {
@@ -21,6 +21,7 @@ export default () => (
   <nav style={{
     background: uiGroups.backgroundShade,
     display: 'flex',
+    justifyContent: 'center',
   }}>
     {routes.map((route, index) => {
       // TODO: waiting on https://github.com/zeit/next.js/issues/141
@@ -36,6 +37,7 @@ export default () => (
             padding: spacing.medium,
             background: isActive ? uiGroups.background : uiGroups.backgroundShade,
             color: isActive ? uiGroups.userCurrentState : uiGroups.gray3,
+            fontSize: fontSizes.large,
           }}>
             {route.title}
           </a>

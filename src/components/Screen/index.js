@@ -11,6 +11,7 @@ import styleReset from './utils/styleReset'
 import Navigation from './components/Navigation'
 import Header from './components/Header'
 import Main from './components/Main'
+import Footer from './components/Footer'
 
 export const Screen = ({
   title,
@@ -50,6 +51,10 @@ export const Screen = ({
 
     <div style={{
       background: uiGroups.background,
+      backgroundImage: 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
+      backgroundSize: '1200px, 1200px',
+      backgroundPosition: 'center top, center bottom',
+      backgroundRepeat: 'no-repeat, no-repeat',
       color: uiGroups.gray4,
       fontFamily: fontFamilies.primary,
       fontSize: fontSizes.medium,
@@ -63,6 +68,7 @@ export const Screen = ({
         description={description}
       />
       <Main sections={sections} />
+      <Footer />
     </div>
 
   </div>

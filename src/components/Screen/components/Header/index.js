@@ -6,7 +6,7 @@ export default ({title, description}) => (
   <header style={{
     maxWidth: screenSizes.large,
     margin: 'auto',
-    paddingTop: spacing.large,
+    paddingTop: spacing.xlarge,
     paddingBottom: spacing.xlarge,
     paddingLeft: spacing.large,
     paddingRight: spacing.large,

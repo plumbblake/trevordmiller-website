@@ -16,10 +16,10 @@ export default `
   }
   
   *:focus {
-    outline-style: none;
     box-shadow: none;
     border-color: transparent;
     outline: 1px solid ${uiGroups.userCurrentState};
+    z-index: 1;
   }
 
   ::selection {

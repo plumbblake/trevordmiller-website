@@ -4,7 +4,6 @@ import Screen from '../../components/Screen'
 import List from '../../components/List'
 import Anchor from '../../components/Anchor'
 
-// TODO: Auto build this list from Projects sub folder items
 const projects = [
   {
     title: 'Nova',
@@ -22,7 +21,7 @@ const projects = [
     href: 'https://github.com/trevordmiller/settings',
   },
   {
-    title: 'Record Badass Screencasts for egghead.io',
+    title: 'Record Screencasts for egghead.io',
     description: 'I love egghead.io. They help people learn how to code through consise screencasts. My favorite thing about them is that they respect the student\'s time - they keeep everything short and to the point, with a high quantity of high quality examples. I use egghead to keep my own skills sharp. I also teach through egghead. I created this course to teach programmers everything they need to know to become an egghead instructor.',
     href: 'https://egghead.io/courses/record-badass-screencasts-for-egghead-io',
   },

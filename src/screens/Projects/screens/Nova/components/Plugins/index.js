@@ -11,6 +11,7 @@ import {
   spacing,
   borderSizes,
   borderRadii,
+  fontSizes,
 } from '../../../../../../utils/styleGuide'
 import Heading from '../../../../../../components/Heading'
 import Icon from '../../../../../../components/Icon'
@@ -235,7 +236,7 @@ export default class Platforms extends React.Component {
           listStyle: 'none',
           padding: 0,
           display: 'flex',
-          flexWrap: 'wrap',
+          overflowX: 'scroll',
           borderTop: tabBorder,
           borderRight: tabBorder,
           borderLeft: tabBorder,
@@ -247,11 +248,10 @@ export default class Platforms extends React.Component {
               key={index}
               onClick={this.handleTabClick.bind(this, index)}
               style={{
+                flex: '1',
                 background: index === this.state.activeTab
                   ? uiGroups.background
                   : uiGroups.backgroundShade,
-                flex: 1,
-                maxWidth: '100px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -261,14 +261,17 @@ export default class Platforms extends React.Component {
                 cursor: 'pointer',
               }}
             >
-              <Icon
-                type={plugin.icon}
-                fill={
-                  index === this.state.activeTab
-                    ? uiGroups.userCurrentState
-                    : uiGroups.gray3
-                }
-              />
+              <div>
+                <Icon
+                  type={plugin.icon}
+                  size={fontSizes.xlarge}
+                  fill={
+                    index === this.state.activeTab
+                      ? uiGroups.userCurrentState
+                      : uiGroups.gray3
+                  }
+                />
+              </div>
               <div style={{
                 marginTop: spacing.small,
                 color: index === this.state.activeTab
@@ -290,8 +293,8 @@ export default class Platforms extends React.Component {
               borderBottomRightRadius: borderRadii.large,
               borderBottomLeftRadius: borderRadii.large,
               paddingTop: spacing.large,
+              paddingBottom: spacing.large,
               paddingRight: spacing.medium,
-              paddingBottom: spacing.medium,
               paddingLeft: spacing.medium,
             }}
           >
@@ -321,10 +324,14 @@ export default class Platforms extends React.Component {
                     <Heading level={3}>
                       Instructions
                     </Heading>
-                    <List
-                      items={plugin.steps}
-                      type='number'
-                    />
+                    <div style={{
+                      paddingBottom: spacing.medium,
+                    }}>
+                      <List
+                        items={plugin.steps}
+                        type='number'
+                      />
+                    </div>
                   </div>
                 : null
               }
@@ -337,7 +344,11 @@ export default class Platforms extends React.Component {
                     <Heading level={3}>
                       Notes
                     </Heading>
-                    <List items={plugin.notes} />
+                    <div style={{
+                      paddingBottom: spacing.medium,
+                    }}>
+                      <List items={plugin.notes} />
+                    </div>
                   </div>
                 : null
               }

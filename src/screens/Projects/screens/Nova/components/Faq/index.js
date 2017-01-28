@@ -28,7 +28,7 @@ const Faq = () => (
         key={index}
         style={{
           marginBottom: (index + 1 < faq.length)
-            ? spacing.medium
+            ? spacing.large
             : 0,
         }}
       >
