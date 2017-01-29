@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing} from '../../utils/styleGuide'
+import {spacing} from '../utils/styleGuide'
 import List from '../List'
 import Anchor from '../Anchor'
 

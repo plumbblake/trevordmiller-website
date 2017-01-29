@@ -8,7 +8,7 @@ import {
   borderSizes,
   syntaxGroups,
   uiGroups,
-} from '../../../utils/styleGuide'
+} from '../../../components/utils/styleGuide'
 import Screen from '../../../components/Screen'
 import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'
@@ -412,6 +412,7 @@ class Plugins extends React.Component {
                   }}>
                     <Image
                       src={plugin.screenshot}
+                      description={`Screenshot of Nova plugin for ${plugin.title}`}
                       quiet={true}
                     />
                   </div>
@@ -578,7 +579,8 @@ export default () => (
         component: (
           <Image
             src='/static/nova-example-code-screenshot.png'
-            quiet={true}
+            description={`Nova example code screenshot`}
+            quiet
           />
         ),
       },

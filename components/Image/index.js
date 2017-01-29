@@ -1,17 +1,17 @@
 import React, {PropTypes} from 'react'
-import {uiGroups, borderRadii, borderSizes} from '../../utils/styleGuide'
+import {uiGroups, borderRadii, borderSizes} from '../utils/styleGuide'
 import Anchor from '../Anchor'
 
-const Image = ({src, quiet = false}) => (
+const Image = ({src, description, quiet = false}) => (
   <Anchor href={src}>
     <img
       style={{
-        border: quiet ? 0 : `${borderSizes.small}px solid ${uiGroups.gray3}`,
+        border: quiet ? 0 : `${borderSizes.medium}px solid ${uiGroups.gray3}`,
         borderRadius: borderRadii.medium,
         width: '100%',
       }}
       src={src}
-      role='presentation'
+      alt={description}
     />
   </Anchor>
 )

@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing} from '../../../utils/styleGuide'
+import {spacing} from '../../../components/utils/styleGuide'
 import Screen from '../../../components/Screen'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
@@ -52,6 +52,7 @@ export default () => (
             }}>
               <Image 
                 src={release.artworkPath} 
+                description={`Album artwork for ${release.title}`}
                 quiet
               />
             </div>

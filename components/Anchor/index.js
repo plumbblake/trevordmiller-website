@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import Link from 'next/link'
-import {colorValues} from '../../utils/styleGuide'
+import {colorValues} from '../utils/styleGuide'
 
 const Anchor = ({
   href,

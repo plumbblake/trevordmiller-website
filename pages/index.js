@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing, uiGroups, fontSizes} from '../utils/styleGuide'
+import {spacing, uiGroups, fontSizes} from '../components/utils/styleGuide'
 import Screen from '../components/Screen'
 import Avatar from '../components/Avatar'
 import Heading from '../components/Heading'

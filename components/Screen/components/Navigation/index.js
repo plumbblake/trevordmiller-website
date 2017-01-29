@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {uiGroups, spacing, fontSizes} from '../../../../utils/styleGuide'
+import {uiGroups, spacing, fontSizes} from '../../../utils/styleGuide'
 
 const routes = [
   {

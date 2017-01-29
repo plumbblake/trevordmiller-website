@@ -4,7 +4,7 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
   'spaced-repetition-software': {
-    title: `Remembering what I learn through Spaced Repetition Software (SRS)`,
+    title: `Retaining what I learn through Spaced Repetition Software (SRS)`,
     description: `When I learn something new, I add it to my SRS. Then, each morning I review what my SRS suggests I\'m about to forget, to ingrain it in my long-term memory.`,
   },
 }
@@ -12,7 +12,7 @@ export const posts = {
 export default () => (
   <Screen
     title='Blog'
-    description='Thoughts I wanted to share'
+    description='Thoughts to share'
     sections={Object.keys(posts).map(key => ({
       title: posts[key].title,
       component: (

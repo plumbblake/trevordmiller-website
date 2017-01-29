@@ -6,7 +6,7 @@ import {
   fontSizes,
   fontWeights,
   lineHeights,
-} from '../../utils/styleGuide'
+} from '../utils/styleGuide'
 import styleReset from './utils/styleReset'
 import Navigation from './components/Navigation'
 import Header from './components/Header'

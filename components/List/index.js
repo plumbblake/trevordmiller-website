@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import {colorValues, spacing, fontSizes} from '../../utils/styleGuide'
+import {colorValues, spacing, fontSizes} from '../utils/styleGuide'
 import Icon from '../Icon'
 
 const List = ({

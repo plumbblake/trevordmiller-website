@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing, screenSizes} from '../../../../utils/styleGuide'
+import {spacing, screenSizes} from '../../../utils/styleGuide'
 import Heading from '../../../Heading'
 
 export default ({title, description}) => (
@@ -15,9 +15,13 @@ export default ({title, description}) => (
       {title}
     </Heading>
     {description
-      ? <Heading level={2}>
-          {description}
-        </Heading>
+      ? <div style={{
+          marginTop: spacing.small,
+        }}>
+          <Heading level={2}>
+            {description}
+          </Heading>
+        </div>
       : null
     }
   </header>

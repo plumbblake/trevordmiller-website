@@ -1,5 +1,5 @@
 import React from 'react'
-import {screenSizes} from '../../../../utils/styleGuide'
+import {screenSizes} from '../../../utils/styleGuide'
 import Section from './components/Section'
 
 export default ({sections}) => (

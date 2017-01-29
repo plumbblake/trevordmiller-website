@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import {colors} from '../../utils/styleGuide'
+import {colors} from '../utils/styleGuide'
 import icons from './utils/icons'
 
 const Icon = ({
