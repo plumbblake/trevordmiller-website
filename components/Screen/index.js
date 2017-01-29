@@ -52,7 +52,7 @@ export const Screen = ({
     <div style={{
       background: uiGroups.background,
       backgroundImage: 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
-      backgroundSize: '1200px, 1200px',
+      backgroundSize: '1000px, 1000px',
       backgroundPosition: 'center top, center bottom',
       backgroundRepeat: 'no-repeat, no-repeat',
       color: uiGroups.gray4,
