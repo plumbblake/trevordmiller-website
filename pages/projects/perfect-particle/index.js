@@ -32,7 +32,7 @@ const maxPlayerSize = 250
 export default () => (
   <Screen
     title='Perfect Particle'
-    description='An instrumental blend of math/post rock, modern jazz, ambient, and electronic music'
+    description='An instrumental blend of math rock, modern jazz, ambient, and electronic music'
     sections={releases.map(release => ({
       title: release.title,
       component: (

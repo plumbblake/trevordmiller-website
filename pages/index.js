@@ -3,15 +3,14 @@ import {spacing, uiGroups, fontSizes} from '../components/utils/styleGuide'
 import Screen from '../components/Screen'
 import Avatar from '../components/Avatar'
 import Heading from '../components/Heading'
-import Anchor from '../components/Anchor'
 import Icon from '../components/Icon'
-import List from '../components/List'
+import Teaser from '../components/Teaser'
 
 const lifeAspects = [
   {
     iconType: 'eggo',
     label: 'Software Engineer',
-    description: 'I work with a company called egghead.io, which is a platform for instructors to teach others how to code through consise screencasts. I help code the instructor\'s platform as well as teach as an instructor myself.',
+    description: `I work for egghead.io, a website for learning how to code through consise screencasts. I help instructors and teach as an instructor myself.`,
     more: {
       description: 'Watch my coding lessons',
       href: 'https://egghead.io/instructors/trevor-miller',
@@ -20,7 +19,7 @@ const lifeAspects = [
   {
     iconType: 'terminal',
     label: 'coder',
-    description: 'I love learning and can often be found reading, watching video tutorials, or writing code for open source projects. Being a programmer isn\'t just a job for me, it\'s a hobby too.',
+    description: `I love learning. Being a programmer isn't just a job for me, it's a hobby too.`,
     more: {
       description: 'View my projects',
       href: '/projects',
@@ -29,7 +28,7 @@ const lifeAspects = [
   {
     iconType: 'headphones',
     label: 'music enthusiast',
-    description: 'I mainly enjoy modern jazz, math/post rock, ambient, and electronic stuff.',
+    description: `I mainly enjoy modern jazz, math rock, ambient, and electronic stuff.`,
     more: {
       description: 'View my Spotify playlists',
       href: 'https://open.spotify.com/user/trevordmiller',
@@ -38,7 +37,7 @@ const lifeAspects = [
   {
     iconType: 'music',
     label: 'musician',
-    description: 'I play, write, and record music. My main instrument is guitar.',
+    description: `I play, write, and record music. My main instrument is guitar.`,
     more: {
       description: 'Listen to my albums',
       href: '/projects/perfect-particle',
@@ -47,7 +46,7 @@ const lifeAspects = [
   {
     iconType: 'couple',
     label: 'family man',
-    description: 'No kids yet. My wife Amy runs a cool project called Freshly Married, to help couples strengthen their marriages.',
+    description: `No kids yet. My wife Amy runs a cool project called Freshly Married, to help couples strengthen their marriages.`,
     more: {
       description: 'View Freshly Married',
       href: 'http://freshlymarried.com',
@@ -56,7 +55,7 @@ const lifeAspects = [
   {
     iconType: 'suit',
     label: 'Mormon',
-    description: 'I\'ve got plenty of weaknesses, but I strive to follow Christ.',
+    description: `I've got plenty of weaknesses, but I strive to follow Christ.`,
     more: {
       description: 'Learn about Mormons',
       href: 'https://www.mormon.org',
@@ -88,49 +87,35 @@ export default () => (
           </div>
         ),
       },
-      {
+      ...lifeAspects.map((lifeAspect, index) => ({
+        title: `I'm a ${lifeAspect.label}`,
         component: (
-          <div>
-            {lifeAspects.map((lifeAspect, index) => (
-              <div 
-                key={index}
-                style={{
-                  display: 'flex',
-                  marginBottom: spacing.xlarge,
-                }}
-              >
-                <div style={{
-                  marginRight: spacing.large,
-                }}>
-                  <Icon
-                    type={lifeAspect.iconType}
-                    fill={uiGroups.userCurrentState}
-                    size={fontSizes.xxxlarge}
-                  />
-                </div>
-                <div>
-                  <Heading level={3}>
-                    {`I'm a ${lifeAspect.label}`}
-                  </Heading>
-                  <div>{lifeAspect.description}</div>
-                  <div style={{
-                    marginTop: spacing.small,
-                  }}>
-                    <List
-                      items={[
-                        <Anchor href={lifeAspect.more.href}>
-                          {lifeAspect.more.description}
-                        </Anchor>
-                      ]}
-                      type='link'
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div 
+            key={index}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <div style={{
+              marginRight: spacing.large,
+            }}>
+              <Icon
+                type={lifeAspect.iconType}
+                fill={uiGroups.userCurrentState}
+                size={fontSizes.xxxlarge}
+              />
+            </div>
+            <div>
+              <Teaser 
+                description={lifeAspect.description}
+                href={lifeAspect.more.href}
+                hrefDescription={lifeAspect.more.description}
+              />
+            </div>
           </div>
         ),
-      },
+      }))
     ]}
   />
 )

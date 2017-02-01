@@ -3,7 +3,7 @@ import {spacing} from '../utils/styleGuide'
 import List from '../List'
 import Anchor from '../Anchor'
 
-export default ({description, href}) => (
+export default ({description, href, hrefDescription = 'View'}) => (
   <div>
     <div>
       {description}
@@ -14,7 +14,7 @@ export default ({description, href}) => (
       <List
         items={[
           <Anchor href={href}>
-            View
+            {hrefDescription}
           </Anchor>
         ]}
         type='link'

@@ -27,6 +27,10 @@ export const Screen = ({
         name='description'
         content={description}
       />
+      <meta 
+        name='author'
+        content='Trevor D. Miller'
+      />
       <meta
         name='viewport'
         content='initial-scale=1.0, width=device-width'
