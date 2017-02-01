@@ -32,6 +32,7 @@ export const fontWeights = {
 }
 
 export const spacing = {
+  xxlarge: 170,
   xlarge: 64,
   large: 24,
   medium: 16,

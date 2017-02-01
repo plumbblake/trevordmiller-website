@@ -12,7 +12,7 @@ export default () => (
     description={posts[key].description}
     sections={[
       {
-        title: `Making notes when learning`,
+        title: `Recording learning`,
         component: (
           <div>
             <Paragraph>
@@ -33,7 +33,7 @@ export default () => (
         ),
       },
       {
-        title: `Reviewing notes in calculated intervals`,
+        title: `Reviewing in calculated intervals`,
         component: (
           <div>
             <Paragraph>
@@ -50,7 +50,7 @@ export default () => (
         ),
       },
       {
-        title: `Oranizing notes in categories`,
+        title: `Oranizing by category`,
         component: (
           <div>
             <Paragraph>
@@ -64,7 +64,7 @@ export default () => (
         ),
       },
       {
-        title: `Revewing statistics`,
+        title: `Study statistics`,
         component: (
           <div>
             <Paragraph>
@@ -78,7 +78,7 @@ export default () => (
         ),
       },
       {
-        title: `Try it!`,
+        title: `Conclusion`,
         component: (
           <div>
             <Paragraph>

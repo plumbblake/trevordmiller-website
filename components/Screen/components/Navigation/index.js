@@ -23,26 +23,20 @@ export default () => (
     display: 'flex',
     justifyContent: 'center',
   }}>
-    {routes.map((route, index) => {
-      // TODO: waiting on https://github.com/zeit/next.js/issues/141
-      // const isActive = location.pathname === route.path
-      const isActive = false
-      return (
-        <Link 
-          key={index}
-          href={route.path}
-        >
-          <a style={{
-            textDecoration: 'none',
-            padding: spacing.medium,
-            background: isActive ? uiGroups.background : uiGroups.backgroundShade,
-            color: isActive ? uiGroups.userCurrentState : uiGroups.gray3,
-            fontSize: fontSizes.large,
-          }}>
-            {route.title}
-          </a>
-        </Link>
-      )
-    })}
+    {routes.map((route, index) => (
+      <Link 
+        key={index}
+        href={route.path}
+      >
+        <a style={{
+          textDecoration: 'none',
+          padding: spacing.medium,
+          color: uiGroups.gray3,
+          fontSize: fontSizes.large,
+        }}>
+          {route.title}
+        </a>
+      </Link>
+    ))}
   </nav>
 )

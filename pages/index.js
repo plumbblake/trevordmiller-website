@@ -9,7 +9,7 @@ import List from '../components/List'
 
 const lifeAspects = [
   {
-    iconType: 'office',
+    iconType: 'eggo',
     label: 'Software Engineer',
     description: 'I work with a company called egghead.io, which is a platform for instructors to teach others how to code through consise screencasts. I help code the instructor\'s platform as well as teach as an instructor myself.',
     more: {

@@ -9,7 +9,6 @@ import {
 } from '../utils/styleGuide'
 import styleReset from './utils/styleReset'
 import Navigation from './components/Navigation'
-import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
@@ -50,24 +49,23 @@ export const Screen = ({
     </Head>
 
     <div style={{
-      background: uiGroups.background,
-      backgroundImage: 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
-      backgroundSize: '1000px, 1000px',
-      backgroundPosition: 'center top, center bottom',
-      backgroundRepeat: 'no-repeat, no-repeat',
       color: uiGroups.gray4,
       fontFamily: fontFamilies.primary,
       fontSize: fontSizes.medium,
       fontWeight: fontWeights.normal,
       lineHeight: lineHeights.medium,
-      minHeight: '100vh',
+      background: uiGroups.background,
+      backgroundImage: 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
+      backgroundSize: '1000px, 1000px',
+      backgroundPosition: 'center top, center bottom',
+      backgroundRepeat: 'no-repeat, no-repeat',
     }}>
       <Navigation />
-      <Header
+      <Main
         title={title}
         description={description}
+        sections={sections}
       />
-      <Main sections={sections} />
       <Footer />
     </div>
 
