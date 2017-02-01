@@ -6,7 +6,18 @@
     "lint": "eslint src",
     "build": "next build",
     "verify": "yarn test && yarn lint && yarn build",
-    "start": "next start"
+    "start": "next start",
+    "stage": "now",
+    "deploy": "now --alias"
+  },
+  "now": {
+    "name": "trevordmiller",
+    "aliases": [
+      "trevordmiller.com"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   },
   "babel": {
     "presets": [
