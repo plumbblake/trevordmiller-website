@@ -10,7 +10,7 @@ import {
 export const levelSpecificStyles = {
   1: {
     color: colorValues.colors.cyan,
-    fontSize: fontSizes.xxlarge,
+    fontSize: fontSizes.xxxlarge,
     lineHeight: lineHeights.xxlarge,
     textAlign: 'center',
   },

@@ -10,8 +10,9 @@ export const uiGroups = novaUiGroups
 export const syntaxGroups = novaSyntaxGroups
 
 export const screenSizes = {
-  small: 320,
   large: 740,
+  medium: 450,
+  small: 320,
 }
 
 export const fontFamilies = {
@@ -19,7 +20,8 @@ export const fontFamilies = {
 }
 
 export const fontSizes = {
-  xxlarge: 52,
+  xxxlarge: 52,
+  xxlarge: 43,
   xlarge: 35,
   large: 22,
   medium: 18,
@@ -32,7 +34,6 @@ export const fontWeights = {
 }
 
 export const spacing = {
-  xxlarge: 170,
   xlarge: 64,
   large: 24,
   medium: 16,

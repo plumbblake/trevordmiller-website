@@ -105,7 +105,7 @@ export default () => (
                   <Icon
                     type={lifeAspect.iconType}
                     fill={uiGroups.userCurrentState}
-                    size={fontSizes.xxlarge}
+                    size={fontSizes.xxxlarge}
                   />
                 </div>
                 <div>
