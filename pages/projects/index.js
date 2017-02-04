@@ -20,12 +20,12 @@ const projects = [
   },
   {
     title: `Record Screencasts for egghead.io`,
-    description: `I love egghead.io. They help people learn how to code through consise screencasts. My favorite thing about them is that they respect the student's time - they keeep everything short and to the point, with a high quantity of high quality examples. I use egghead to keep my own skills sharp. I also teach through egghead. I created this course to teach programmers everything they need to know to become an egghead instructor.`,
+    description: `I love egghead.io. They help people learn how to code through concise screencasts. My favorite thing about them is that they respect the student's time - they keep everything short and to the point, with a high quantity of high quality examples. I use egghead to keep my own skills sharp. I also teach through egghead. I created this course to teach programmers everything they need to know to become an egghead instructor.`,
     href: 'https://egghead.io/courses/record-badass-screencasts-for-egghead-io',
   },
   {
     title: `Practical Git for Everyday Professional Use`,
-    description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutly amazing. I created this course to help developers feel confident with using Git from the command line.`,
+    description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutely amazing. I created this course to help developers feel confident with using Git from the command line.`,
     href: 'https://egghead.io/courses/practical-git-for-everyday-professional-use',
   },
   {

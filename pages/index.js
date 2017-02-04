@@ -10,7 +10,7 @@ const lifeAspects = [
   {
     iconType: 'eggo',
     label: 'Software Engineer',
-    description: `I work for egghead.io, a website for learning how to code through consise screencasts. I help instructors and teach as an instructor myself.`,
+    description: `I work for egghead.io, a website for learning how to code through concise screencasts. I help instructors and teach as an instructor myself.`,
     more: {
       description: 'Watch my coding lessons',
       href: 'https://egghead.io/instructors/trevor-miller',

@@ -5,7 +5,7 @@ const inputResetStyles = {
   fontFamily: fontFamilies.primary,
   fontSize: fontSizes.medium,
   border: 0,
-  WebAppearance: 'none',
+  WebkitAppearance: 'none',
   MozAppearance: 'none',
 }
 
