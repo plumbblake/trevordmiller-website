@@ -37,7 +37,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Each day go through the cards that bubble up from the spaced repetition algorithm (max of 20 a day, which takes about 5-10 minutes a day); I view the question, think of the answer, then show the answer and see if I was right. I can then answer how difficult it was for me to remember so the software knows when to show this to me the next time.
+              Each day I go through the cards that bubble up from the spaced repetition algorithm (max of 20 a day, which takes about 5-10 minutes a day); I view the question, think of the answer, then show the answer and see if I was right. I can then answer how difficult it was for me to remember so the software knows when to show this to me the next time.
             </Paragraph>
             <Image 
               src='/static/anki-card-answer.jpg'

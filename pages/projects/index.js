@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: `Settings`,
-    description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write scripts for repetative tasks and keep them here.`,
+    description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write scripts for repetitive tasks and keep them here.`,
     href: 'https://github.com/trevordmiller/settings',
   },
   {

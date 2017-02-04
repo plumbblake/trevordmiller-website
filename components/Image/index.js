@@ -7,7 +7,7 @@ const Image = ({src, description, quiet = false}) => (
     <img
       style={{
         border: quiet ? 0 : `${borderSizes.medium}px solid ${uiGroups.gray3}`,
-        borderRadius: borderRadii.large,
+        borderRadius: borderRadii.medium,
         width: '100%',
       }}
       src={src}

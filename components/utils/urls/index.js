@@ -1,5 +1,3 @@
-export const newsletterSignupUrl = 'http://eepurl.com/czOhev'
-
 export const eggheadUrl = 'https://egghead.io/instructors/trevor-miller'
 
 export const githubUrl = 'https://github.com/trevordmiller'

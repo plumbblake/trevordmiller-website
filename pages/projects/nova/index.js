@@ -342,8 +342,8 @@ class Plugins extends React.Component {
           borderTop: tabBorder,
           borderRight: tabBorder,
           borderLeft: tabBorder,
-          borderTopRightRadius: borderRadii.large,
-          borderTopLeftRadius: borderRadii.large,
+          borderTopRightRadius: borderRadii.medium,
+          borderTopLeftRadius: borderRadii.medium,
         }}>
           {plugins.map((plugin, index) => (
             <Tab
@@ -392,8 +392,8 @@ class Plugins extends React.Component {
               borderRight: tabBorder,
               borderBottom: tabBorder,
               borderLeft: tabBorder,
-              borderBottomRightRadius: borderRadii.large,
-              borderBottomLeftRadius: borderRadii.large,
+              borderBottomRightRadius: borderRadii.medium,
+              borderBottomLeftRadius: borderRadii.medium,
               paddingTop: spacing.large,
               paddingBottom: spacing.large,
               paddingRight: spacing.medium,
@@ -558,7 +558,7 @@ export default () => (
                     }}>
                       <div style={{
                         background: color.value,
-                        borderRadius: borderRadii.large,
+                        borderRadius: borderRadii.medium,
                         width: 72,
                         height: 72,
                       }} />

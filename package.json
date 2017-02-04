@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "test": "jest",
-    "lint": "eslint src",
+    "lint": "eslint pages components",
     "build": "next build",
     "verify": "yarn test && yarn lint && yarn build",
     "start": "next start",

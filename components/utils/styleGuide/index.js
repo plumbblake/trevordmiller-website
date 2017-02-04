@@ -52,8 +52,7 @@ export const borderSizes = {
 }
 
 export const borderRadii = {
-  large: 7,
-  medium: 3,
+  medium: 7,
 }
 
 export const opacities = {
