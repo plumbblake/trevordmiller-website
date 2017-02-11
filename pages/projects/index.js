@@ -9,11 +9,6 @@ const projects = [
     href: '/projects/nova',
   },
   {
-    title: `Perfect Particle`,
-    description: `I love music. I also enjoy composing. Perfect Particle is the name I use to release my recordings. I mainly create instrumental music that blends multiple styles like post rock, math rock, modern jazz, and ambient. I'm a guitarist at heart. I primarily compose with and play guitar, but I layer bits of synth and other instruments together.`,
-    href: '/projects/perfect-particle',
-  },
-  {
     title: `Settings`,
     description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write scripts for repetitive tasks and keep them here.`,
     href: 'https://github.com/trevordmiller/settings',
@@ -33,12 +28,23 @@ const projects = [
     description: `I've grown to like testing, especially for creating pure modules that just transform data or render something. I taught this course to show some of the ways I test my web apps.`,
     href: 'https://egghead.io/courses/react-testing-cookbook',
   },
+  {
+    title: `Perfect Particle`,
+    description: `I love music. I also enjoy composing. Perfect Particle is the name I use to release my recordings. I mainly create instrumental music that blends multiple styles like post rock, math rock, modern jazz, and ambient. I'm a guitarist at heart. I primarily compose with and play guitar, but I layer bits of synth and other instruments together.`,
+    href: '/projects/perfect-particle',
+  },
+  {
+    title: `Guitar Lessons`,
+    description: `A collection of guitar lessons using the way I understand music.`,
+    href: '/projects/guitar-lessons',
+  },
 ]
 
 export default () => (
   <Screen
     title='Projects'
     description='Info and links to some of my projects'
+    showDescription
     sections={projects.map(project => ({
       title: project.title,
       component: (

@@ -17,7 +17,8 @@ export default class Screen extends Component {
 
   static propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    showDescription: PropTypes.bool,
     sections: React.PropTypes.arrayOf(React.PropTypes.shape({
       title: React.PropTypes.string,
       component: React.PropTypes.element.isRequired,
@@ -30,7 +31,7 @@ export default class Screen extends Component {
   }
 
   render() {
-    const {title, description, sections} = this.props
+    const {title, description, showDescription, sections} = this.props
     return (
       <div>
 
@@ -83,7 +84,7 @@ export default class Screen extends Component {
           <Navigation />
           <Main
             title={title}
-            description={description}
+            description={showDescription ? description : null}
             sections={sections}
           />
           <Footer />

@@ -483,6 +483,7 @@ export default () => (
   <Screen
     title='Nova'
     description='A color scheme for modern web development'
+    showDescription
     sections={[
       {
         component: (

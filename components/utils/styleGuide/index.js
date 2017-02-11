@@ -3,11 +3,11 @@ import novaColorValues, {
   syntaxGroups as novaSyntaxGroups,
 } from 'nova-colors'
 
-export const colorValues = novaColorValues
-
 export const uiGroups = novaUiGroups
 
 export const syntaxGroups = novaSyntaxGroups
+
+export const colorValues = novaColorValues
 
 export const screenSizes = {
   large: 740,
@@ -39,6 +39,7 @@ export const spacing = {
   medium: 16,
   small: 12,
   xsmall: 7,
+  xxsmall: 4,
 }
 
 export const lineHeights = {
@@ -47,8 +48,9 @@ export const lineHeights = {
 }
 
 export const borderSizes = {
-  small: 2,
   medium: 4,
+  small: 2,
+  xsmall: 1,
 }
 
 export const borderRadii = {

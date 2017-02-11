@@ -33,6 +33,7 @@ export default () => (
   <Screen
     title='Perfect Particle'
     description='An instrumental blend of math rock, modern jazz, ambient, and electronic music'
+    showDescription
     sections={releases.map(release => ({
       title: release.title,
       component: (

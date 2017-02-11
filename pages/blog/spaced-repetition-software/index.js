@@ -10,6 +10,7 @@ export default () => (
   <Screen
     title={posts[key].title}
     description={posts[key].description}
+    showDescription
     sections={[
       {
         title: `Recording learning`,

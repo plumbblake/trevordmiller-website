@@ -12,7 +12,7 @@ export const posts = {
 export default () => (
   <Screen
     title='Blog'
-    description='Thoughts to share'
+    description='Writings from Trevor D. Miller on programming, organization, music, and other thoughts.'
     sections={Object.keys(posts).map(key => ({
       title: posts[key].title,
       component: (

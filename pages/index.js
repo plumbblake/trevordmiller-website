@@ -66,7 +66,7 @@ const lifeAspects = [
 export default () => (
   <Screen
     title='About'
-    description='A bit about me'
+    description='Aspects from the life of Trevor D. Miller'
     sections={[
       {
         component: (
