@@ -5,23 +5,15 @@ import Screen from '../../../components/Screen'
 import Heading from '../../../components/Heading'
 import Button from '../../../components/Button'
 
-const degrees = [1, 2, 3, 4, 5, 6, 7]
-
-const types = [
-  'singleNotes',
-  'powerChords',
-  'triadChords',
-  'seventhChords',
-  'quartalChords',
-]
-
-const noteSize = 20
-const fretSize = 60
-
-const GuitarPattern = ({strings, highlightedDegreesByString}) => (
+const GuitarPattern = ({
+  strings,
+  highlightedDegreesByString,
+  noteSize = 20,
+  fretSize = 60,
+}) => (
   <div style={{
     marginTop: spacing.medium,
-    overflow: 'scroll',
+    overflowX: 'scroll',
   }}>
     <div style={{
       background: uiGroups.backgroundShade,
@@ -76,69 +68,43 @@ const GuitarPattern = ({strings, highlightedDegreesByString}) => (
   </div>
 )
 
-const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
-const doubleOctave = octave.concat(octave)
+const Selector = ({title, onClick, selectedItem, items}) => (
+  <div>
+    <Heading level={4}>
+      {title}
+    </Heading>
 
-const strings = [
-  doubleOctave.slice(0, 12),
-  doubleOctave.slice(7, 19),
-  doubleOctave.slice(3, 15),
-  doubleOctave.slice(10, 22),
-  doubleOctave.slice(5, 17),
-  doubleOctave.slice(0, 12),
-]
-
-class Selector extends Component {
-
-  render() {
-    const {title, onClick, selectedItem, items} = this.props
-
-    return (
-      <div>
-        <Heading level={4}>
-          {title}
-        </Heading>
-
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          marginBottom: spacing.large,
-        }}>
-          {items.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                marginRight: spacing.small,
-                marginTop: spacing.small,
-              }}
-            >
-              <Button
-                type={selectedItem === item ? 'primary' : 'secondary'}
-                onClick={onClick.bind(this, item)}
-              >
-                {startCase(item)}
-              </Button>
-            </div>
-          ))}
+    <div style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      marginBottom: spacing.large,
+    }}>
+      {items.map((item, index) => (
+        <div
+          key={index}
+          style={{
+            marginRight: spacing.small,
+            marginTop: spacing.small,
+          }}
+        >
+          <Button
+            type={selectedItem === item ? 'primary' : 'secondary'}
+            onClick={onClick.bind(this, item)}
+          >
+            {startCase(item)}
+          </Button>
         </div>
-      </div>
-    )
-  }
-}
+      ))}
+    </div>
+  </div>
+)
 
 class GuitarPatternsSelector extends Component {
 
   state = {
-    selectedDegree: 1,
+    selectedDegree: 'None',
     selectedType: 'singleNotes',
-    highlightedDegreesByString: {
-      1: [1],
-      2: [1],
-      3: [1],
-      4: [1],
-      5: [1],
-      6: [1],
-    },
+    highlightedDegreesByString: false,
   }
 
   handleDegreeChange = (selectedDegree) => {
@@ -175,7 +141,7 @@ class GuitarPatternsSelector extends Component {
           5: [selectedDegree, intervalToDegree(5)],
           6: [selectedDegree],
         },
-        triadChords: {
+        basicChords: {
           2: [intervalToDegree(3)],
           3: [intervalToDegree(3), selectedDegree],
           4: [selectedDegree, intervalToDegree(5)],
@@ -185,8 +151,22 @@ class GuitarPatternsSelector extends Component {
         seventhChords: {
           2: [intervalToDegree(3)],
           3: [intervalToDegree(3), intervalToDegree(7)],
-          4: [intervalToDegree(7), intervalToDegree(5)],
-          5: [intervalToDegree(5), selectedDegree],
+          4: [intervalToDegree(7), intervalToDegree(3)],
+          5: [intervalToDegree(3), selectedDegree],
+          6: [selectedDegree],
+        },
+        ninthChords: {
+          2: [intervalToDegree(2)],
+          3: [intervalToDegree(2), intervalToDegree(7)],
+          4: [intervalToDegree(7), intervalToDegree(3)],
+          5: [intervalToDegree(3), selectedDegree],
+          6: [selectedDegree],
+        },
+        eleventhChords: {
+          2: [intervalToDegree(4)],
+          3: [intervalToDegree(4), intervalToDegree(7)],
+          4: [intervalToDegree(7), intervalToDegree(3)],
+          5: [intervalToDegree(3), selectedDegree],
           6: [selectedDegree],
         },
         quartalChords: {
@@ -202,8 +182,25 @@ class GuitarPatternsSelector extends Component {
 
   render() {
     const {selectedDegree, selectedType, highlightedDegreesByString} = this.state
+    const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
+    const doubleOctave = octave.concat(octave)
+    const strings = [
+      doubleOctave.slice(0, 13),
+      doubleOctave.slice(7, 20),
+      doubleOctave.slice(3, 16),
+      doubleOctave.slice(10, 23),
+      doubleOctave.slice(5, 18),
+      doubleOctave.slice(0, 13),
+    ]
+
     return (
       <div>
+
+        <div style={{
+          marginBottom: spacing.medium,
+        }}>
+          We can apply the in-key pattern to the guitar. Each dot on the fretboard below is a note that is "in-key". This entire pattern repeats up and down so the ends "connect". The pattern is not specific to any note or fret number - it can be shifted up or down depending on the "key" you are in. Scroll horizontally to view the entire pattern. Tap a "Degree" and "Type" to highlight specific notes or chords inside the pattern. The most common chord progressions in typical songs use primarily the 1, 4, 5, and 6 degree chords. Most common songs will resolve back to the 1 (Major) or 6 (Minor) degree chord. Once you find the "root" of a song, you can play any of the notes in the entire in-key pattern and it is likely to sound good.
+        </div>
 
         <div style={{
           marginBottom: spacing.medium,
@@ -212,26 +209,28 @@ class GuitarPatternsSelector extends Component {
             strings={strings}
             highlightedDegreesByString={highlightedDegreesByString}
           />
-          <div style={{
-            textAlign: 'center',
-            margin: spacing.small,
-          }}>
-            {'<-- Scroll horizontally -->'}
-          </div>
         </div>
 
         <Selector
           title='Degree'
           onClick={this.handleDegreeChange}
           selectedItem={selectedDegree}
-          items={degrees}
+          items={['None', 1, 2, 3, 4, 5, 6, 7]}
         />
 
         <Selector
           title='Type'
           onClick={this.handleTypeChange}
           selectedItem={selectedType}
-          items={types}
+          items={[
+            'singleNotes',
+            'powerChords',
+            'basicChords',
+            'seventhChords',
+            'ninthChords',
+            'eleventhChords',
+            'quartalChords',
+          ]}
         />
 
       </div>
@@ -242,10 +241,31 @@ class GuitarPatternsSelector extends Component {
 export default () => (
   <Screen
     title='Guitar lessons'
-    description='Diatonic (in-key) chord and scale diagrams to help you understand music better'
+    description='Diatonic (in-key) chord and scale diagrams to help you go beyond tabs and memorizing songs'
     sections={[
       {
-        title: 'In-key guitar patterns',
+        title: 'The in-key pattern',
+        component: (
+          <div>
+
+            <div style={{
+              marginBottom: spacing.medium,
+            }}>
+              In common music, most notes used are "in-key". Then, chords (multiple notes played at a time) are built from these in-key notes. There are only twelve notes in music, but they repeat in "octaves". Only seven of these notes are in-key. Below is what the pattern of in-key notes looks like. Scroll horizontally to view the entire pattern. This pattern repeats infinitely up and down so the ends "connect".
+            </div>
+
+            <GuitarPattern 
+              strings={[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]}
+              highlightedDegreesByString={{
+                1: [1, 3, 5, 6, 8, 10, 12],
+              }}
+            />
+
+          </div>
+        ),
+      },
+      {
+        title: 'The in-key guitar pattern',
         component: (
           <GuitarPatternsSelector />
         ),

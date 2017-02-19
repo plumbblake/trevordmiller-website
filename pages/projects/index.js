@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: `Guitar Lessons`,
-    description: `A collection of guitar lessons using the way I understand music.`,
+    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
     href: '/projects/guitar-lessons',
   },
 ]
