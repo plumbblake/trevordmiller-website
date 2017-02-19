@@ -21,7 +21,16 @@ const lifeAspects = [
     label: 'coder',
     description: `I love learning. Being a programmer isn't just a job for me, it's a hobby too.`,
     more: {
-      description: 'View my projects',
+      description: 'View my code projects',
+      href: '/projects',
+    },
+  },
+  {
+    iconType: 'music',
+    label: 'musician',
+    description: `I play, write, and record music. My main instrument is guitar.`,
+    more: {
+      description: 'View my music projects',
       href: '/projects',
     },
   },
@@ -32,15 +41,6 @@ const lifeAspects = [
     more: {
       description: 'View my Spotify playlists',
       href: 'https://open.spotify.com/user/trevordmiller',
-    },
-  },
-  {
-    iconType: 'music',
-    label: 'musician',
-    description: `I play, write, and record music. My main instrument is guitar.`,
-    more: {
-      description: 'Listen to my albums',
-      href: '/projects/perfect-particle',
     },
   },
   {
