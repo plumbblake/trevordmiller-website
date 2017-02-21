@@ -88,7 +88,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              The project uses <Anchor href='https://github.com/trevordmiller/trevordmiller-website/blob/master/components/utils/styleGuide/index.js'>a module for a style guide</Anchor>. This is the source for shared styles like colors, spacing (padding/margin), font sizes, etc. The color scheme is <Anchor href='https://trevordmiller.com/projects/nova'>Nova</Anchor>, which I use across my projects and tools - so the style guide module simply maps colors to the <Code>nova-colors</Code> npm package values.
+              The project uses <Anchor href='https://github.com/trevordmiller/trevordmiller-website/blob/master/components/utils/styleGuide/index.js'>a module for a style guide</Anchor>. This is the source for shared styles like colors, spacing (padding/margin), font sizes, etc. The color scheme is <Anchor href='/projects/nova'>Nova</Anchor>, which I use across my projects and tools - so the style guide module simply maps colors to the <Code>nova-colors</Code> npm package values.
             </Paragraph>
             <Image 
               src='/static/nova-colors.jpg'

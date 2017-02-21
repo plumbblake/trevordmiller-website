@@ -34,7 +34,7 @@ const contributors = [
   },
   {
     handle: '@trevordmiller',
-    url: 'http://trevordmiller.com'
+    url: '/'
   },
 ]
 
