@@ -313,7 +313,7 @@ const faq = [
   },
 ]
 
-const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`;
+const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
 
 class Plugins extends React.Component {
 

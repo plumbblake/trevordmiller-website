@@ -1,5 +1,5 @@
 import React from 'react'
-import {uiGroups, spacing, borderRadii} from '../utils/styleGuide'
+import {uiGroups, spacing, borderRadii, fontSizes, fontFamilies} from '../utils/styleGuide'
 
 const stylesByType = {
   primary: {
@@ -24,7 +24,8 @@ export default ({onClick, type = 'primary', children}) => (
       display: 'inline-block',
       textAlign: 'center',
       border: 'none',
-      fontSize: 18,
+      fontSize: fontSizes.medium,
+      fontFamily: fontFamilies.primary,
       outline: 'none',
       borderRadius: borderRadii.medium,
       ...stylesByType[type]
