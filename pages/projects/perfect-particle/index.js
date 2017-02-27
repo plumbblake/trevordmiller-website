@@ -4,6 +4,7 @@ import Screen from '../../../components/Screen'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
+import Audio from '../../../components/Audio'
 
 const releases = [
   {
@@ -57,13 +58,7 @@ export default () => (
                 quiet
               />
             </div>
-            <audio
-              src={release.sampleAudioPath}
-              controls
-              style={{
-                width: '100%',
-              }}
-            />
+            <Audio src={release.sampleAudioPath} />
           </div>
 
           <div style={{

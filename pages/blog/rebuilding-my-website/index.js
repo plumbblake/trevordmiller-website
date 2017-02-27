@@ -24,7 +24,7 @@ export default () => (
             </Paragraph>
             <Image 
               src='/static/trevordmiller-website.jpg'
-              description={`The home page of trevordmiller.com`}
+              description='The home page of trevordmiller.com'
             />
           </div>
         ),
@@ -56,7 +56,7 @@ export default () => (
             </Paragraph>
             <Image 
               src='/static/trevordmiller-website-workflow.jpg'
-              description={`Screenshot of working on the website in vim`}
+              description='Screenshot of working on the website in vim'
             />
           </div>
         ),
@@ -92,11 +92,11 @@ export default () => (
             </Paragraph>
             <Image 
               src='/static/nova-colors.jpg'
-              description={`Screenshot of nova color tiles`}
+              description='Screenshot of nova color tiles'
             />
             <Image 
               src='/static/guitar-lessons.jpg'
-              description={`Screenshot of the guitar lessons fretboard pattern picker`}
+              description='Screenshot of the guitar lessons fretboard pattern picker'
             />
           </div>
         ),
