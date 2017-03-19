@@ -3,6 +3,10 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
+  'task-list': {
+    title: `Using my task list as my single source of truth`,
+    description: `I like to stay organized with an automated task list so that I don’t forget to do the things I want and need to do, and so I can keep my brain free from remembering it all.`,
+  },
   'minimal-office': {
     title: `My minimal office set up`,
     description: `For years I had a cheap office: a $30 plastic folding desk and an external monitor I'd plug into and that was it. But recently, I took the plunge and set up my dream office and I'm ecstatic with how it turned out.`,
