@@ -8,7 +8,7 @@
     "verify": "yarn test && yarn lint && yarn build",
     "start": "next start",
     "deploy": "git checkout master && git pull && now",
-    "alias": "now -a trevordmiller.com"
+    "alias": "now alias $(pbpaste) trevordmiller.com"
   },
   "babel": {
     "presets": [
