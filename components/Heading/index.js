@@ -24,7 +24,7 @@ export const levelSpecificStyles = {
     color: colorValues.grays.gray6,
     fontSize: fontSizes.medium,
     textTransform: 'uppercase',
-    marginBottom: spacing.small,
+    marginBottom: spacing.medium,
   },
   4: {
     color: colorValues.colors.cyan,
