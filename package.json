@@ -10,12 +10,6 @@
     "deploy": "git checkout master && git pull && now",
     "alias": "now alias $(pbpaste) trevordmiller.com"
   },
-  "babel": {
-    "presets": [
-      "latest",
-      "react"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
@@ -60,8 +54,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "next": "^1.2.3",
+    "next": "^2.0.1",
     "nova-colors": "^2.1.5",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-tabs": "^0.8.2"
   }
 }

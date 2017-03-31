@@ -25,6 +25,7 @@ export default () => (
   }}>
     {routes.map((route, index) => (
       <Link 
+        prefetch
         key={index}
         href={route.path}
       >

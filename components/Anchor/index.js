@@ -13,7 +13,10 @@ const Anchor = ({
   }
 
   return href.startsWith('/')
-    ? <Link href={href}>
+    ? <Link 
+        prefetch
+        href={href}
+      >
         <a style={linkStyle}>
           {children}
         </a>
