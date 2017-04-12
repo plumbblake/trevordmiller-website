@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import {
   uiGroups,
@@ -19,9 +20,9 @@ export default class Screen extends Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     showDescription: PropTypes.bool,
-    sections: React.PropTypes.arrayOf(React.PropTypes.shape({
-      title: React.PropTypes.string,
-      component: React.PropTypes.element.isRequired,
+    sections: PropTypes.arrayOf(React.PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.element.isRequired,
     })).isRequired,
   }
 

@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import {uiGroups} from '../utils/styleGuide'
-
 
 const Video = ({src}) => (
   <div style={{

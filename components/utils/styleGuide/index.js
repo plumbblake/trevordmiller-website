@@ -12,7 +12,7 @@ export const colorValues = novaColorValues
 export const screenSizes = {
   large: 740,
   medium: 450,
-  small: 320,
+  small: 300,
 }
 
 export const fontFamilies = {

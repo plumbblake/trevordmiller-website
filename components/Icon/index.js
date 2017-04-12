@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import {colors} from '../utils/styleGuide'
 import icons from './utils/icons'
 
