@@ -3,6 +3,11 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
+  'color-scheme-building': {
+    mainVisual: '/static/nova-example-code-screenshot.png',
+    title: `Building the Nova color scheme`,
+    description: `By using an npm module for color values, we were able to generate color schemes for multiple editors and tools from one source.`,
+  },
   'task-list': {
     mainVisual: '/static/todoist.jpg',
     title: `Using my task list as my single source of truth`,
