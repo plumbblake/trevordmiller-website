@@ -1,4 +1,4 @@
-import {uiGroups} from '../../utils/styleGuide'
+import {uiGroups} from '../../../utils/styleGuide'
 
 export default `
   body {
@@ -25,5 +25,18 @@ export default `
   ::selection {
     background: ${uiGroups.userCurrentState};
     color: ${uiGroups.backgroundShade};
+  }
+
+  input::placeholder {
+    color: ${uiGroups.backgroundShade};
+  }
+
+  a, input {
+    transition: opacity 0.2s;
+  }
+
+  a:hover, input:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
 `

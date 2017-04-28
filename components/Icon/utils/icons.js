@@ -1,5 +1,5 @@
 import React from 'react'
-import {uiGroups} from '../../utils/styleGuide'
+import {uiGroups} from '../../../utils/styleGuide'
 
 export default {
   bullet: {

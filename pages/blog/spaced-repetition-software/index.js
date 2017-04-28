@@ -8,6 +8,9 @@ const key = 'spaced-repetition-software'
 
 export default () => (
   <Screen
+    baseRouteTitle='Blog'
+    mainVisual={posts[key].mainVisual}
+    pathname={`https://trevordmiller.com/blog/${key}`}
     title={posts[key].title}
     description={posts[key].description}
     showDescription

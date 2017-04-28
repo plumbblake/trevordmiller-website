@@ -8,7 +8,7 @@ import {
   borderSizes,
   syntaxGroups,
   uiGroups,
-} from '../../../components/utils/styleGuide'
+} from '../../../utils/styleGuide'
 import Screen from '../../../components/Screen'
 import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'
@@ -22,6 +22,9 @@ import {
   TabPanel,
 } from 'react-tabs'
 Tabs.setUseDefaultStyles(false)
+import {projects} from '../'
+
+const key = 'nova'
 
 const contributors = [
   {
@@ -482,6 +485,9 @@ class Plugins extends React.Component {
 
 export default () => (
   <Screen
+    baseRouteTitle='Projects'
+    mainVisual={projects[key].mainVisual}
+    pathname={`https://trevordmiller.com/projects/${key}`}
     title='Nova'
     description='A color scheme for modern web development'
     showDescription

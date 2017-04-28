@@ -1,5 +1,5 @@
 import React from 'react'
-import {uiGroups, spacing, borderRadii, fontSizes, fontFamilies} from '../utils/styleGuide'
+import {uiGroups, spacing, borderRadii, fontSizes, fontFamilies} from '../../utils/styleGuide'
 
 const stylesByType = {
   primary: {

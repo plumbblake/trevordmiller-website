@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing, screenSizes} from '../../../../../utils/styleGuide'
+import {spacing, screenSizes} from '../../../../../../utils/styleGuide'
 import Heading from '../../../../../Heading'
 
 export default ({title, description}) => (

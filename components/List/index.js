@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {colorValues, spacing, fontSizes} from '../utils/styleGuide'
+import {colorValues, spacing, fontSizes} from '../../utils/styleGuide'
 import Icon from '../Icon'
 
 const List = ({

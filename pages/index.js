@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing} from '../components/utils/styleGuide'
+import {spacing} from '../utils/styleGuide'
 import Screen from '../components/Screen'
 import Avatar from '../components/Avatar'
 import Heading from '../components/Heading'
@@ -64,6 +64,9 @@ const lifeAspects = [
 
 export default () => (
   <Screen
+    baseRouteTitle='About'
+    mainVisual='/static/trevordmiller-website.jpg'
+    pathname={`https://trevordmiller.com`}
     title='About'
     description='Aspects from the life of Trevor D. Miller'
     sections={[

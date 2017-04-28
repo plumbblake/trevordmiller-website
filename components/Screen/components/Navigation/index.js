@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import {uiGroups, spacing, fontSizes} from '../../../utils/styleGuide'
+import {uiGroups, spacing, fontSizes} from '../../../../utils/styleGuide'
 
-const routes = [
+const baseRoutes = [
   {
     path: '/',
     title: 'About',
@@ -17,25 +17,29 @@ const routes = [
   },
 ]
 
-export default () => (
+export const baseRouteTitles = baseRoutes.map(baseRoute => baseRoute.title)
+
+export default ({baseRouteTitle}) => (
   <nav style={{
     background: uiGroups.backgroundShade,
     display: 'flex',
     justifyContent: 'center',
   }}>
-    {routes.map((route, index) => (
+    {baseRoutes.map((baseRoute, index) => (
       <Link 
         prefetch
         key={index}
-        href={route.path}
+        href={baseRoute.path}
       >
         <a style={{
           textDecoration: 'none',
           padding: spacing.medium,
-          color: uiGroups.gray3,
+          color: baseRouteTitle === baseRoute.title
+            ? uiGroups.userCurrentState
+            : uiGroups.gray3,
           fontSize: fontSizes.large,
         }}>
-          {route.title}
+          {baseRoute.title}
         </a>
       </Link>
     ))}

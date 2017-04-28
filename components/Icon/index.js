@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {colors} from '../utils/styleGuide'
+import {colors} from '../../utils/styleGuide'
 import icons from './utils/icons'
 
 const Icon = ({

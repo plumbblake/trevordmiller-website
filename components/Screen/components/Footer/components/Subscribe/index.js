@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing, borderRadii, fontSizes, uiGroups, fontFamilies} from '../../../../../utils/styleGuide'
+import {spacing, borderRadii, fontSizes, uiGroups, fontFamilies} from '../../../../../../utils/styleGuide'
 
 const inputResetStyles = {
   fontFamily: fontFamilies.primary,

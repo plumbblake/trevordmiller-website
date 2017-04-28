@@ -1,5 +1,5 @@
 import React from 'react'
-import {spacing, uiGroups, fontSizes, screenSizes} from '../utils/styleGuide'
+import {spacing, uiGroups, fontSizes, screenSizes} from '../../utils/styleGuide'
 import List from '../List'
 import Anchor from '../Anchor'
 import Image from '../Image'

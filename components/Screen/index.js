@@ -7,20 +7,23 @@ import {
   fontSizes,
   fontWeights,
   lineHeights,
-} from '../utils/styleGuide'
+} from '../../utils/styleGuide'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
-import Navigation from './components/Navigation'
+import Navigation, {baseRouteTitles} from './components/Navigation'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
 export default class Screen extends Component {
 
   static propTypes = {
+    baseRouteTitle: PropTypes.oneOf(baseRouteTitles).isRequired,
+    mainVisual: PropTypes.string.isRequired,
+    pathname: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     showDescription: PropTypes.bool,
-    sections: PropTypes.arrayOf(React.PropTypes.shape({
+    sections: PropTypes.arrayOf(PropTypes.shape({
       title: PropTypes.string,
       component: PropTypes.element.isRequired,
     })).isRequired,
@@ -32,11 +35,20 @@ export default class Screen extends Component {
   }
 
   render() {
-    const {title, description, showDescription, sections} = this.props
+    const {
+      baseRouteTitle, 
+      mainVisual,
+      pathname,
+      title, 
+      description, 
+      showDescription, 
+      sections,
+    } = this.props
     return (
       <div>
 
         <Head>
+
           <title>
             {title}
           </title>
@@ -48,6 +60,61 @@ export default class Screen extends Component {
             name='author'
             content='Trevor D. Miller'
           />
+
+          <meta 
+            property='og:title' 
+            content={title}
+          />
+          <meta 
+            property='og:type' 
+            content='article' 
+          />
+          <meta 
+            property='og:url' 
+            content={pathname}
+          />
+          <meta 
+            property='og:image' 
+            content={`https://trevordmiller.com${mainVisual}`}
+          />
+          <meta 
+            property='og:description' 
+            content={description}
+          />
+          <meta 
+            property='og:site_name' 
+            content='Trevor D. Miller portfolio'
+          />
+
+          <meta 
+            name='twitter:card' 
+            content='summary_large_image' 
+          />
+          <meta 
+            name='twitter:site' 
+            content='@trevordmiller' 
+          />
+          <meta 
+            name='twitter:creator' 
+            content='@trevordmiller' 
+          />
+          <meta 
+            name='twitter:title' 
+            content={title}
+          />
+          <meta 
+            name='twitter:description' 
+            content={description}
+          />
+          <meta 
+            name='twitter:image' 
+            content={`https://trevordmiller.com${mainVisual}`}
+          />
+          <meta 
+            name='twitter:image:alt' 
+            content='A decorative image'
+          />
+
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
@@ -59,6 +126,7 @@ export default class Screen extends Component {
           <style>
             {styleReset}
           </style>
+
           <link rel='manifest' href='/static/manifest.json' />
           <link rel='apple-touch-icon' sizes='180x180' href='/static/apple-touch-icon.png' />
           <link rel='mask-icon' href='/static/safari-pinned-tab.svg' color={uiGroups.userCurrentState} />
@@ -67,7 +135,9 @@ export default class Screen extends Component {
           <link rel='icon' type='image/png' href='/static/favicon-32x32.png' sizes='32x32' />
           <link rel='icon' type='image/png' href='/static/favicon-16x16.png' sizes='16x16' />
           <link rel='shortcut icon' href='/static/favicon.ico' />
+
           <script dangerouslySetInnerHTML={{__html: analytics}} />
+
         </Head>
 
         <div style={{
@@ -82,7 +152,7 @@ export default class Screen extends Component {
           backgroundPosition: 'center top, center bottom',
           backgroundRepeat: 'no-repeat, no-repeat',
         }}>
-          <Navigation />
+          <Navigation baseRouteTitle={baseRouteTitle} />
           <Main
             title={title}
             description={showDescription ? description : null}
