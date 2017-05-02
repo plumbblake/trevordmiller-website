@@ -1,13 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import {
-  uiGroups,
-  fontFamilies,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-} from '../../utils/styleGuide'
+import {uiGroups} from '../../utils/styleGuide'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
 import Navigation, {baseRouteTitles} from './components/Navigation'
