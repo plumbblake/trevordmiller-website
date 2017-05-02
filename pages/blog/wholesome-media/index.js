@@ -28,7 +28,7 @@ export default () => (
         ),
       },
       {
-        title: `First defence: internal`,
+        title: `First defense: internal`,
         component: (
           <div>
             <Paragraph>
