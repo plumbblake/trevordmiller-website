@@ -1,17 +1,21 @@
-import {uiGroups} from '../../../utils/styleGuide'
+import {uiGroups, fontFamilies, fontSizes, fontWeights, lineHeights} from '../../../utils/styleGuide'
 
 export default `
   body {
     margin: 0;
+    color: ${uiGroups.gray4};
+    font-family: ${fontFamilies.primary};
+    font-size: ${fontSizes.medium};
+    font-weight: ${fontWeights.normal};
+    line-height: ${lineHeights.medium};
+    background: ${uiGroups.background};
   }
 
   html {
     box-sizing: border-box;
   }
 
-  *,
-  *:before,
-  *:after {
+  *, *:before, *:after {
     box-sizing: inherit;
   }
   

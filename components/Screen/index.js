@@ -141,12 +141,6 @@ export default class Screen extends Component {
         </Head>
 
         <div style={{
-          color: uiGroups.gray4,
-          fontFamily: fontFamilies.primary,
-          fontSize: fontSizes.medium,
-          fontWeight: fontWeights.normal,
-          lineHeight: lineHeights.medium,
-          background: uiGroups.background,
           backgroundImage: 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
           backgroundSize: '1000px, 1000px',
           backgroundPosition: 'center top, center bottom',
