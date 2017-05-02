@@ -4,6 +4,12 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
 
+  'wholesome-media': {
+    mainVisual: '/static/opendns-porn.jpg',
+    title: `Configuring devices for wholesome media`,
+    description: `I use a combination of filters and settings to help keep media in my home wholesome`,
+  },
+
   'color-scheme-building': {
     mainVisual: '/static/nova-example-code-screenshot.png',
     title: `Building the Nova color scheme`,
