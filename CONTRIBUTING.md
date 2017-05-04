@@ -5,4 +5,4 @@
 - Run `yarn dev` to develop
 - Submit a pull request to `master`
 - Continuous Integration runs `yarn verify` to ensure things are working as expected
-- An admin merges your pull request into `master` and runs `yarn release` to release a new version
+- An admin merges your pull request into `master` and releases a new version

@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "next",
     "verify": "yarn lint && yarn build",
-    "lint": "eslint pages components",
+    "lint": "eslint .",
     "build": "next build",
-    "release": "git checkout master && git pull && now",
+    "stage": "git checkout master && git pull && now",
+    "release": "now alias",
     "start": "next start"
   },
   "eslintConfig": {
@@ -40,6 +41,7 @@
       ]
     }
   },
+  "alias": "trevordmiller.com",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
