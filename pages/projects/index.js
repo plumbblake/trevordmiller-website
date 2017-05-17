@@ -39,6 +39,36 @@ export const projects = {
     ],
   },
 
+  'egghead-instructor-center': {
+    tags: [tags.react],
+    mainVisual: '/static/egghead-instructor-center.png',
+    title: `egghead Instructor Center`,
+    description: `I built the initial production egghead Instructor Center. It was a React web app. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/eggheadio/egghead-instructor-center',
+      },
+    ],
+  },
+
+  'egghead-ui': {
+    tags: [tags.npm, tags.react],
+    mainVisual: '/static/egghead-ui.png',
+    title: `egghead component library`,
+    description: `I built the initial production egghead.io React component library which is used across egghead apps. It contains React components, pages of composed components, and general JavaScript utilities. It outputs an npm library as well as a living stle guide / documentation app from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
+    links: [
+      {
+        description: 'Web app',
+        href: 'https://styleguide.egghead.io',
+      },
+      {
+        description: 'Code',
+        href: 'https://github.com/eggheadio/egghead-ui',
+      },
+    ],
+  },
+
   'nova': {
     tags: [tags.npm],
     mainVisual: '/static/nova-colors.png',
@@ -137,6 +167,20 @@ export const projects = {
     ],
   },
 
+  'domo-mobile-web': {
+    tags: [tags.react, tags.node],
+    mainVisual: '/static/domo.png',
+    title: `Domo Mobile Web`,
+    description: `I helped create the initial production mobile web app for Domo. It was built with React, Redux, complex data transformation, realtime chat, Node scripts, many other features and tools.`,
+  },
+
+  'church-history': {
+    tags: [tags.node],
+    mainVisual: '/static/church-history.png',
+    title: `LDS Church History`,
+    description: `I helped create the LDS Church History web app, which at the time included some new complex challenges like using Node for our API, server side rendering, interactive maps, and mobile first immersive visual effects.`,
+  },
+
   'perfect-particle': {
     tags: [tags.react],
     mainVisual: '/static/spectrum-artwork.jpg',
@@ -161,7 +205,7 @@ export const projects = {
     description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
     links: [
       {
-        description: 'Project website',
+        description: 'Web app',
         href: '/projects/guitar-lessons',
       },
       {
