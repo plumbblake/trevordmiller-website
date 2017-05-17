@@ -92,11 +92,11 @@ export default () => (
             </Paragraph>
             <List items={[
               <span>Starting a new project (<Code>script-project</Code>)</span>,
-              <span>Working on existing projects (ie <Code>script-egghead-instructor-center</Code>)</span>,
+              <span>Working on existing projects (ie <Code>script-nova</Code>)</span>,
               <span>Killing processes on my computer (<Code>script-kill</Code>)</span>,
               <span>Cleaning up garbage files/directories (<Code>script-clean</Code>)</span>,
               <span>Upgrading my operating system/apps/packages/plugins (<Code>script-upgrade</Code>)</span>,
-              <span>Setting up my computer for screencasting (<Code>script-screencast</Code>)</span>,
+              <span>Quitting everything at the end of a work day (<Code>script-quit</Code>)</span>,
             ]} />
           </div>
         ),

@@ -1,15 +1,10 @@
 import React from 'react'
 import {uiGroups, fontSizes, spacing} from '../../../../../../utils/styleGuide'
-import {eggheadUrl, githubUrl, twitterUrl, spotifyUrl} from '../../../../../../utils/urls'
+import {githubUrl, twitterUrl} from '../../../../../../utils/urls'
 import Anchor from '../../../../../Anchor'
 import Icon from '../../../../../Icon'
 
 const followItems = [
-  {
-    iconType: 'eggo',
-    label: 'egghead.io',
-    href: eggheadUrl,
-  },
   {
     iconType: 'github',
     label: 'GitHub',
@@ -19,11 +14,6 @@ const followItems = [
     iconType: 'twitter',
     label: 'Twitter',
     href: twitterUrl,
-  },
-  {
-    iconType: 'spotify',
-    label: 'Spotify',
-    href: spotifyUrl,
   },
 ]
 

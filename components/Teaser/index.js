@@ -5,18 +5,17 @@ import Anchor from '../Anchor'
 import Image from '../Image'
 import Icon from '../Icon'
 
-export default ({visual, description, href, hrefDescription = 'View'}) => (
+export default ({visual, description, links}) => (
   <div style={{
     display: 'flex',
     flexWrap: 'wrap',
-    alignItems: 'center',
   }}>
 
     {visual
       ? <div style={{
           marginBottom: spacing.xsmall,
           marginRight: spacing.large,
-          maxWidth: screenSizes.small,
+          maxWidth: 200,
         }}>
           {visual && visual.startsWith('/')
             ? <Image
@@ -27,7 +26,7 @@ export default ({visual, description, href, hrefDescription = 'View'}) => (
             : <Icon
                 type={visual}
                 fill={uiGroups.userCurrentState}
-                size={fontSizes.xxxlarge}
+                size={70}
               />
           }
         </div>
@@ -42,22 +41,25 @@ export default ({visual, description, href, hrefDescription = 'View'}) => (
       <div>
         {description}
       </div>
-      <div style={{
-        marginTop: spacing.small,
-      }}>
-        <List
-          items={[
-            <span style={{
-              fontSize: fontSizes.large,
-            }}>
-              <Anchor href={href}>
-                {hrefDescription}
-              </Anchor>
-            </span>,
-          ]}
-          type='link'
-        />
-      </div>
+      {links
+        ? <div style={{
+            marginTop: spacing.small,
+          }}>
+            <List
+              items={links.map((link) => (
+                <span style={{
+                  fontSize: fontSizes.large,
+                }}>
+                  <Anchor href={link.href}>
+                    {link.description}
+                  </Anchor>
+                </span>
+              ))}
+              type='link'
+            />
+          </div>
+        : null
+      }
     </div>
 
   </div>

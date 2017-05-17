@@ -77,7 +77,12 @@ export default () => (
           <Teaser 
             visual={project.mainVisual}
             description={project.description}
-            href={project.href || `/projects/${projectKey}`}
+            links={[
+              {
+                description: 'View',
+                href: project.href || `/projects/${projectKey}`,
+              },
+            ]}
           />
         ),
       })

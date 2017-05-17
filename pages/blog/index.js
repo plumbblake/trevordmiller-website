@@ -58,7 +58,12 @@ export default () => (
           <Teaser 
             visual={post.mainVisual}
             description={post.description}
-            href={`/blog/${postKey}`}
+            links={[
+              {
+                description: 'View',
+                href: `/blog/${postKey}`
+              },
+            ]}
           />
         ),
       })

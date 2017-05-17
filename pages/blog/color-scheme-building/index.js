@@ -84,7 +84,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              While Nova itself was built primarily for my own use (for example, it does not have great contrast so I don't use it in <Anchor href='https://egghead.io/instructors/trevor-miller'>my screencasts on egghead.io</Anchor>), I would recommend using a shared location for source values for things like style guides and color schemes, with a compile step - it makes using and maintaining them a lot easier ;)
+              I would recommend using a shared location for source values for things like style guides and color schemes, with a compile step - it makes using and maintaining them a lot easier ;)
             </Paragraph>
           </div>
         ),
