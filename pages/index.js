@@ -37,11 +37,15 @@ const lifeAspects = [
   {
     visual: 'music',
     label: 'musician',
-    description: `I play, write, and record music. My main instrument is guitar. I mainly enjoy modern jazz, math rock, ambient, and electronic styles.`,
+    description: `I play, write, and record music. My main instrument is guitar. I've published some music under the artist name "Perfect Particle". I mainly enjoy modern jazz, math rock, ambient, and electronic styles.`,
     links: [
       {
-        description: 'Current and past projects',
-        href: '/projects',
+        description: 'Perfect Particle',
+        href: '/projects/perfect-particle',
+      },
+      {
+        description: 'Guitar lessons',
+        href: '/projects/guitar-lessons',
       },
       {
         description: 'Spotify playlists',
