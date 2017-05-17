@@ -1,5 +1,4 @@
 import React from 'react'
-import {uiGroups} from '../../utils/styleGuide'
 import tags from '../../utils/tags'
 import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
@@ -7,7 +6,7 @@ import Teaser from '../../components/Teaser'
 export const projects = {
 
   'cortex': {
-    tags: [tags.inProgress, tags.react, tags.node, tags.graphQl],
+    tags: [tags.inProgress, tags.react, tags.node, tags.graphQl, tags.mongodb],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
     description: `I'm working on building a free, open souce, lightweight, "Spaced Repetition Software" to help you remember the things you learn. I hope the final production app is useful, but this is primarily a learning experience for me; I want to see if I can use a single set of GraphQL connected React components across multiple platforms. This project has a Mongo database, GraphQL API using Node, npm component library using Relay Modern, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
@@ -62,7 +61,7 @@ export const projects = {
   },
 
   'settings': {
-    tags: [tags.shell, tags.unix],
+    tags: [tags.unix],
     mainVisual: '/static/github.png',
     title: `Settings`,
     description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write shell scripts for repetitive tasks and keep them here.`,
@@ -75,7 +74,7 @@ export const projects = {
   },
 
   'egghead-practical-git': {
-    tags: [tags.git, tags.unix],
+    tags: [tags.unix, tags.git],
     mainVisual: '/static/egghead-practical-git.png',
     title: `Practical Git for Everyday Professional Use`,
     description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
@@ -92,7 +91,7 @@ export const projects = {
   },
 
   'egghead-publish-npm': {
-    tags: [tags.npm, tags.unix],
+    tags: [tags.unix, tags.npm, tags.node],
     mainVisual: '/static/egghead-publish-npm.png',
     title: `Publish JavaScript packages on npm`,
     description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
@@ -109,7 +108,7 @@ export const projects = {
   },
 
   'egghead-react-testing': {
-    tags: [tags.react],
+    tags: [tags.react, tags.node],
     mainVisual: '/static/egghead-react-testing.png',
     title: `React Testing Cookbook`,
     description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my web apps.`,
@@ -156,12 +155,7 @@ export const projects = {
   },
 
   'guitar-lessons': {
-    tags: [
-      {
-        label: 'React',
-        color: uiGroups.userCurrentState,
-      },
-    ],
+    tags: [tags.react],
     mainVisual: '/static/guitar-lessons.png',
     title: `Guitar Lessons`,
     description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,

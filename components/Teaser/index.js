@@ -11,6 +11,9 @@ export default ({visual, description, links, tags}) => (
     {tags
       ? <div style={{
           marginBottom: spacing.medium,
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center'
         }}>
           {tags.map(tag => (
             <div 
@@ -19,7 +22,6 @@ export default ({visual, description, links, tags}) => (
                 border: `${borderSizes.small}px solid ${tag.color}`,
                 borderRadius: borderRadii.medium,
                 color: tag.color,
-                display: 'inline-block',
                 paddingTop: spacing.xsmall,
                 paddingBottom: spacing.xsmall,
                 paddingRight: spacing.medium,
@@ -28,7 +30,24 @@ export default ({visual, description, links, tags}) => (
                 marginBottom: spacing.small,
               }}
             >
-              {tag.label}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}>
+                {tag.icon
+                  ? <Icon
+                      type={tag.icon}
+                      fill={tag.color}
+                      size={fontSizes.large}
+                    />
+                  : null
+                }
+                <div style={{
+                  marginLeft: tag.icon ? spacing.small : 0,
+                }}>
+                  {tag.label}
+                </div>
+              </div>
             </div>
           ))}
         </div>
