@@ -505,7 +505,7 @@ export default () => (
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-              // Built with 
+              Built with 
               <div style={{
                 marginLeft: spacing.xsmall,
                 marginRight: spacing.xsmall,
