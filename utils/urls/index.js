@@ -1,5 +1,3 @@
-export const eggheadUrl = 'https://egghead.io/instructors/trevor-miller'
-
 export const githubUrl = 'https://github.com/trevordmiller'
 
 export const npmUrl = 'https://www.npmjs.com/~trevordmiller'

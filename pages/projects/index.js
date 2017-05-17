@@ -4,10 +4,31 @@ import Teaser from '../../components/Teaser'
 
 export const projects = {
 
+  'egghead-practical-git': {
+    mainVisual: '/static/egghead-practical-git.png',
+    title: `Practical Git for Everyday Professional Use`,
+    description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
+    href: 'https://egghead.io/courses/practical-git-for-everyday-professional-use',
+  },
+
+  'egghead-publish-npm': {
+    mainVisual: '/static/egghead-publish-npm.png',
+    title: `Publish JavaScript packages on npm`,
+    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
+    href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
+  },
+
+  'egghead-react-testing': {
+    mainVisual: '/static/egghead-react-testing.png',
+    title: `React Testing Cookbook`,
+    description: `I've grown to like testing, especially for creating pure modules that just transform data or render something. I taught this video course to show some of the ways I test my web apps.`,
+    href: 'https://egghead.io/courses/react-testing-cookbook',
+  },
+
   'nova': {
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
-    description: `I'm not much of a designer, but I enjoy great design. I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. We built it as a stand-alone library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
+    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. We built it as a stand-alone library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
   },
 
   'settings': {
@@ -17,32 +38,11 @@ export const projects = {
     href: 'https://github.com/trevordmiller/settings',
   },
 
-  'egghead-publish-npm': {
-    mainVisual: '/static/egghead-publish-npm.png',
-    title: `Publish JavaScript packages on npm`,
-    description: `I made this 20 minute long course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
-    href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
-  },
-
   'egghead-record-screencasts': {
     mainVisual: '/static/egghead-record-screencasts.png',
-    title: `Record Screencasts for egghead.io`,
-    description: `I love egghead.io. They help people learn how to code through concise screencasts. My favorite thing about them is that they respect the student's time - they keep everything short and to the point, with a high quantity of high quality examples. I use egghead to keep my own skills sharp. I also teach through egghead. I created this course to teach programmers everything they need to know to become an egghead instructor.`,
+    title: `Record programming screencasts`,
+    description: `I created this video course to teach programmers how to make code screencasts to help them share their knowledge with other developers.`,
     href: 'https://egghead.io/courses/record-badass-screencasts-for-egghead-io',
-  },
-
-  'egghead-practical-git': {
-    mainVisual: '/static/egghead-practical-git.png',
-    title: `Practical Git for Everyday Professional Use`,
-    description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutely amazing. I created this course to help developers feel confident with using Git from the command line.`,
-    href: 'https://egghead.io/courses/practical-git-for-everyday-professional-use',
-  },
-
-  'egghead-react-testing': {
-    mainVisual: '/static/egghead-react-testing.png',
-    title: `React Testing Cookbook`,
-    description: `I've grown to like testing, especially for creating pure modules that just transform data or render something. I taught this course to show some of the ways I test my web apps.`,
-    href: 'https://egghead.io/courses/react-testing-cookbook',
   },
 
   'perfect-particle': {
