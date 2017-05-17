@@ -21,7 +21,6 @@ import {
   TabList,
   TabPanel,
 } from 'react-tabs'
-Tabs.setUseDefaultStyles(false)
 import {projects} from '../'
 
 const key = 'nova'
@@ -392,17 +391,20 @@ class Plugins extends React.Component {
         {plugins.map((plugin, index) => (
           <TabPanel
             key={index}
-            style={{
-              borderRight: tabBorder,
-              borderBottom: tabBorder,
-              borderLeft: tabBorder,
-              borderBottomRightRadius: borderRadii.medium,
-              borderBottomLeftRadius: borderRadii.medium,
-              paddingTop: spacing.large,
-              paddingBottom: spacing.large,
-              paddingRight: spacing.medium,
-              paddingLeft: spacing.medium,
-            }}
+            style={index === this.state.activeTab
+              ? {
+                  borderRight: tabBorder,
+                  borderBottom: tabBorder,
+                  borderLeft: tabBorder,
+                  borderBottomRightRadius: borderRadii.medium,
+                  borderBottomLeftRadius: borderRadii.medium,
+                  paddingTop: spacing.large,
+                  paddingBottom: spacing.large,
+                  paddingRight: spacing.medium,
+                  paddingLeft: spacing.medium,
+                }
+              : {}
+            }
           >
             <Heading level={4}>
               {plugin.title}

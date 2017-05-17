@@ -47,16 +47,16 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
-    "eslint-plugin-react": "^6.10.3",
-    "now": "^4.11.2"
+    "eslint-plugin-react": "^7.0.1",
+    "now": "^5.3.1"
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "next": "^2.2.0",
+    "next": "^2.3.1",
     "nova-colors": "^2.1.5",
-    "prop-types": "^15.5.8",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-tabs": "^0.8.3"
+    "react-tabs": "^1.0.0"
   }
 }

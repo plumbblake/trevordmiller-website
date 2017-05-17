@@ -4,6 +4,19 @@ import Teaser from '../../components/Teaser'
 
 export const projects = {
 
+  'nova': {
+    mainVisual: '/static/nova-colors.png',
+    title: `Nova`,
+    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. We built it as a stand-alone library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
+  },
+
+  'settings': {
+    mainVisual: '/static/github.png',
+    title: `Settings`,
+    description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write shell scripts for repetitive tasks and keep them here.`,
+    href: 'https://github.com/trevordmiller/settings',
+  },
+
   'egghead-practical-git': {
     mainVisual: '/static/egghead-practical-git.png',
     title: `Practical Git for Everyday Professional Use`,
@@ -23,19 +36,6 @@ export const projects = {
     title: `React Testing Cookbook`,
     description: `I've grown to like testing, especially for creating pure modules that just transform data or render something. I taught this video course to show some of the ways I test my web apps.`,
     href: 'https://egghead.io/courses/react-testing-cookbook',
-  },
-
-  'nova': {
-    mainVisual: '/static/nova-colors.png',
-    title: `Nova`,
-    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. We built it as a stand-alone library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
-  },
-
-  'settings': {
-    mainVisual: '/static/github.png',
-    title: `Settings`,
-    description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write shell scripts for repetitive tasks and keep them here.`,
-    href: 'https://github.com/trevordmiller/settings',
   },
 
   'egghead-record-screencasts': {
