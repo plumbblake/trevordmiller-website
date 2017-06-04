@@ -55,7 +55,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              The project has a <Anchor href='https://github.com/trevordmiller/trevordmiller-website/blob/master/package.json'>minimal package.json</Anchor>. This file declares dependencies, scripts, and some config for compilation and linting. The only steps needed to work in the app are to clone it, run <Code>yarn</Code> to install dependencies, then run <Code>yarn dev</Code> to start the app locally. <Code>yarn verify</Code> can additionally be run to check builds, linting, and tests. Once a pull request is merged into master, <Code>yarn deploy</Code> is run to deploy a test release; if everything looks good, <Code>yarn alias</Code> is run to tie the latest deployment to the <Code>trevordmiller.com</Code> domain.
+              The project has a <Anchor href='https://github.com/trevordmiller/trevordmiller-website/blob/master/package.json'>minimal package.json</Anchor>. This file declares dependencies, scripts, and some config for compilation and linting. The only steps needed to work in the app are to clone it, run <Code>npm install</Code> to install dependencies, then run <Code>npm run dev</Code> to develop. <Code>npm run verify</Code> can additionally be run to check builds, linting, and tests. Once a pull request is merged into master, <Code>npm run stage</Code> is run to deploy the latest code to a test release URL; if everything looks good, <Code>npm run release</Code> is run to tie the latest deployment to the <Code>trevordmiller.com</Code> URL.
             </Paragraph>
             <Image 
               src='/static/trevordmiller-website-workflow.jpg'
