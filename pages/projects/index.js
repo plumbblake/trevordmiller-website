@@ -39,6 +39,23 @@ export const projects = {
     ],
   },
 
+  'dog-bathroom-button': {
+    tags: [tags.unix, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Dog Bathroom Button`,
+    description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+      },
+      {
+        description: 'Blog post',
+        href: '/blog/raspberry-pi-button',
+      },
+    ],
+  },
+
   'egghead-instructor-center': {
     tags: [tags.react],
     mainVisual: '/static/egghead-instructor-center.png',
@@ -86,6 +103,10 @@ export const projects = {
       {
         description: 'Code for editor plugins and tools',
         href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
+      },
+      {
+        description: 'Blog post',
+        href: '/blog/color-scheme-building',
       },
     ],
   },
@@ -167,6 +188,40 @@ export const projects = {
     ],
   },
 
+  'trevordmiller-website': {
+    tags: [tags.react],
+    mainVisual: '/static/trevordmiller-website.jpg',
+    title: `This website`,
+    description: `I built this website using React rendered with Next.js. It is hosted on now. I try to update it often and use it as an example  of my current technology choices.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
+      },
+      {
+        description: 'Blog post',
+        href: '/blog/rebuilding-my-website',
+      },
+    ],
+  },
+
+  'guitar-lessons': {
+    tags: [tags.react],
+    mainVisual: '/static/guitar-lessons.png',
+    title: `Guitar Lessons`,
+    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
+    links: [
+      {
+        description: 'Web app',
+        href: '/projects/guitar-lessons',
+      },
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
+      },
+    ],
+  },
+
   'domo-mobile-web': {
     tags: [tags.react, tags.node],
     mainVisual: '/static/domo.png',
@@ -190,23 +245,6 @@ export const projects = {
       {
         description: 'Project website',
         href: '/projects/perfect-particle',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
-      },
-    ],
-  },
-
-  'guitar-lessons': {
-    tags: [tags.react],
-    mainVisual: '/static/guitar-lessons.png',
-    title: `Guitar Lessons`,
-    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
-    links: [
-      {
-        description: 'Web app',
-        href: '/projects/guitar-lessons',
       },
       {
         description: 'Code',

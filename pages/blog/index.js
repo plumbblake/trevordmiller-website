@@ -5,6 +5,13 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
 
+  'raspberry-pi-button': {
+    tags: [tags.unix, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Running a Node server on a Raspberry Pi with a physical button`,
+    description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, using the latest Node and npm, and creating a Node server to send a text message when the button is pressed.`,
+  },
+
   'color-scheme-building': {
     tags: [tags.npm],
     mainVisual: '/static/nova-example-code-screenshot.png',
@@ -35,7 +42,7 @@ export const posts = {
 
   'wholesome-media': {
     tags: [tags.hardware],
-    mainVisual: '/static/opendns-porn.jpg',
+    mainVisual: '/static/opendns.jpg',
     title: `Configuring devices for wholesome media`,
     description: `I use a combination of filters and settings to help keep media in my home wholesome.`,
   },
