@@ -196,7 +196,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              You can have the script run automatically on boot by adding <Code>{`cd {project} && npm start &`}</Code> to the <Code>/etc/rc.local</Code> file. This file is run when Raspian boots, and adding the <Code>&</Code> to the end runs the server as a background process.
+              You can have the script run automatically on boot by adding <Code>{`cd {project} && npm start &`}</Code> to the <Code>/etc/rc.local</Code> file. This file is run when Raspian boots, and adding the <Code>&</Code> to the end runs the server as a background process. Once this is done, you can shutdown the device, unplug everything, and then re-plug in only the power adapter and the program will run on its own by any outlet in your home.
             </Paragraph>
           </div>
         ),
