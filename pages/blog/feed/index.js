@@ -23,7 +23,7 @@ Object.keys(posts).forEach((postKey) => {
     date: post.date,
     author: 'Trevor D. Miller',
     enclosure: {
-      url: `https://trevordmiller.com${post.mainVisual}`,
+      file: `https://trevordmiller.com${post.mainVisual}`,
     },
   })
 })
