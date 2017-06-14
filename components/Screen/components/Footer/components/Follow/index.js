@@ -1,6 +1,6 @@
 import React from 'react'
 import {uiGroups, fontSizes, spacing} from '../../../../../../utils/styleGuide'
-import {githubUrl, twitterUrl} from '../../../../../../utils/urls'
+import {githubUrl, npmUrl, twitterUrl, rssUrl} from '../../../../../../utils/urls'
 import Anchor from '../../../../../Anchor'
 import Icon from '../../../../../Icon'
 
@@ -11,9 +11,19 @@ const followItems = [
     href: githubUrl,
   },
   {
+    iconType: 'npm',
+    label: 'npm',
+    href: npmUrl,
+  },
+  {
     iconType: 'twitter',
     label: 'Twitter',
     href: twitterUrl,
+  },
+  {
+    iconType: 'rss',
+    label: 'RSS',
+    href: rssUrl,
   },
 ]
 
