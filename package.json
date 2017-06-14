@@ -55,6 +55,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-tabs": "^1.0.0"
+    "react-tabs": "^1.0.0",
+    "rss": "^1.2.2"
   }
 }

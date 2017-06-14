@@ -109,6 +109,12 @@ export default class Screen extends Component {
             content='A decorative image'
           />
 
+          <link 
+            rel='alternate' 
+            type='application/rss+xml' 
+            href='https://trevordmiller.com/blog/feed' 
+          />
+
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
