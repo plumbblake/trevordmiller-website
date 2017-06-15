@@ -50,12 +50,6 @@ const tags = {
     icon: 'graphql',
   },
 
-  mongodb: {
-    label: 'MongoDB',
-    color: uiGroups.userCurrentState,
-    icon: 'mongodb',
-  },
-  
   hardware: {
     label: 'Hardware',
     color: uiGroups.userCurrentState,

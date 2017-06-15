@@ -23,8 +23,7 @@ export const levelSpecificStyles = {
   },
   3: {
     color: colorValues.grays.gray6,
-    fontSize: fontSizes.medium,
-    textTransform: 'uppercase',
+    fontSize: fontSizes.large,
     marginBottom: spacing.medium,
   },
   4: {

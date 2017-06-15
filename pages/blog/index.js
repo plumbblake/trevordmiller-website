@@ -5,6 +5,14 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
 
+  'front-end-tooling-preferences': {
+    tags: [tags.git, tags.npm, tags.react, tags.node, tags.graphQl],
+    mainVisual: '/static/front-end-tooling-preferences.jpg',
+    title: `My current front-end tooling preferences`,
+    description: `An opinionated list of my current favorite options for front-end code projects. This includes the reasoning behind why I picked each option.`,
+    date: 'June 14, 2017',
+  },
+
   'raspberry-pi-button': {
     tags: [tags.unix, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
