@@ -153,7 +153,7 @@ export default () => (
         component: (
           <Teaser 
             visual='zeit'
-            description={`styled-jsx for styling, because it is the most minimal CSS-in-JS library. There are many other solid CSS-in-JS libraries like styled-components and glamorous. The main benefits to any CSS-in-JS library over separate CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write styles in an "additive", mobile-first way. I use flexbox with container-query-esque rules for layouts as it works across React platform targets (not tied to the browser).`}
+            description={`styled-jsx for styling, because it is the most minimal CSS-in-JS library. There are many other solid CSS-in-JS libraries like styled-components and glamorous. The main benefits to any CSS-in-JS library over separate CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write styles in an "additive", mobile-first way. I use flexbox for layouts as it works across React platform targets (not tied to the browser).`}
           />
         )
       },
