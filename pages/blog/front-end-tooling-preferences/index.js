@@ -61,7 +61,7 @@ export default () => (
         component: (
           <Teaser 
             visual='javascript'
-            description='JavaScript as the primary language and ecosystem, because it is available everywhere, flexible, and in high demand. Although I like the idea of some of the new players like Elm, they are a little too immature and "all-in-one" solutions for me to feel comfortable adopting at the moment..'
+            description='JavaScript as the primary language and ecosystem, because it is available everywhere, flexible, and in high demand. Although I like the idea of some of the new players like Elm, they are a little too immature and "all-in-one" solutions for me to feel comfortable adopting at the moment.'
           />
         ),
       },
@@ -137,7 +137,7 @@ export default () => (
         component: (
           <Teaser 
             visual='apollo'
-            description='Apollo for data management, because it provides a declarative approach to typical data fetching, storing, re-fetching, error handling, and the like for GraphQL APIs. I like Apollo better than Relay at the moment because it is less opinionated, driven by the community, and has better documentation + support. Redux is another great solution in this space and I really like it, but have found that I can write a lot less code with Apollo as it manages the typical data management pieces - plus it can sync with Redux on top if needed as it uses Redux under-the-hood.'
+            description='Apollo for data management, because it provides a declarative approach to typical data fetching, storing, re-fetching, error handling, and the like for GraphQL APIs. I like Apollo better than Relay at the moment because it is less opinionated, driven by the community, and has better documentation + support. Redux is another great solution in this space and I really like it, but have found that I can write a lot less code with Apollo as it manages the typical data management pieces in a more declarative way - plus it can sync with Redux on top if needed as it uses Redux under-the-hood.'
             links={[
               {
                 description: 'View a blog post on replacing Redux with Apollo',
@@ -243,7 +243,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Phew! That is a lot of tooling. Note that not all tools are necissary when starting a project, but become more useful as the code and team size grow. The nice thing is that most of these tools don't require much effort after they are set up. Here is an example projet with these tools in place so you can see how they fit together.
+              Phew! That is a lot of tooling. Note that not all tools are necissary when starting a project, but become more useful as the code and team size grow. The nice thing is that most of these tools don't require much effort after they are set up. Here is an example project with these tools in place so you can see how they fit together.
             </Paragraph>
             <Anchor href='https://github.com/trevordmiller/example-web-app'>
               <Button>
@@ -277,7 +277,7 @@ export default () => (
                 <span>I favor composition over inheritance because it is easier for my brain to understand.</span>,
                 <span>I use open source options wherever possible to avoid proprietary lock-in and support the community.</span>,
                 <span>I favor battle-tested, more widely used options to avoid large amounts of early-adoption bugs.</span>,
-                <span>I generally favor minimal configuration over strict setups because I've believe that strictness deters innovation and adds extra complexity.</span>,
+                <span>I generally favor minimal configuration over strict setups because I believe that strictness deters innovation and adds extra complexity.</span>,
                 <span>Many of these options are not needed to start out, or possibly ever. I like to start with only what is needed and only add other tools if they solve a problem that arises.</span>,
               ]}
             />
