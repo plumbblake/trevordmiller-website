@@ -6,11 +6,13 @@ import icons from './utils/icons'
 const Icon = ({
   type,
   fill = colors.normal.white,
+  style,
   size = '100%',
 }) => (
   <svg
     viewBox={`0 0 ${icons[type].viewBox} ${icons[type].viewBox}`}
     fill={fill}
+    style={style}
     width={size}
     height={size}
     xmlns="http://www.w3.org/2000/svg"

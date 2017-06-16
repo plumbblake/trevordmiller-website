@@ -31,44 +31,11 @@ export default () => (
       },
 
       {
-        title: `Principles`,
-        component: (
-          <div>
-            <Paragraph>
-              There are some underlying principles with each of these choices:
-            </Paragraph>
-            <List
-              items={[
-                <span>I generally favor lightweight options that do one thing well and compose together with other things, rather than large "all-in-one" type solutions because it is easier to upgrade and swap out pieces as things change.</span>,
-                <span>I try to stay more in "the middle" of the constant pendulum of technology options rather than swinging to extremes, because the pendulum always swings back.</span>,
-                <span>I do lean a bit towards the Functional Programming camp because I've found that these patterns have helped me write code that has less bugs and is easier to change without breaking other things.</span>,
-                <span>I favor composition over inheritance because it is easier for my brain to understand.</span>,
-                <span>I use open source options wherever possible to avoid proprietary lock-in and support the community.</span>,
-                <span>I favor battle-tested, more widely used options to avoid large amounts of early-adoption bugs.</span>,
-                <span>I generally favor minimal configuration over strict setups because I've believe that strictness deters innovation and adds extra complexity.</span>,
-                <span>Many of these options are not needed to start out, or possibly ever. I like to start with only what is needed and only add other tools if they solve a problem that arises.</span>,
-              ]}
-            />
-          </div>
-        ),
-      },
-
-      {
-        title: `Language: JavaScript`,
-        component: (
-          <Teaser 
-            visual='javascript'
-            description='JavaScript as the primary language and ecosystem, because it is available everywhere, flexible, and in high demand. Although I like the idea of some of the new players like Elm, they are a little too immature and "all-in-one" solutions for me to feel comfortable adopting at the moment..'
-          />
-        ),
-      },
-
-      {
         title: `Version Control: Git`,
         component: (
           <Teaser 
             visual='git'
-            description='Git for version control, because command line Git is powerful and flexible.'
+            description='Git for version control, because it is the standard and gives you fine-grain control over your code history.'
             links={[
               {
                 description: 'Learn command line Git',
@@ -84,9 +51,19 @@ export default () => (
         component: (
           <Teaser 
             visual='github'
-            description='GitHub for code hosting, because it is host of the majority of open source code and has great features like protected branches, pull request reviews etc.'
+            description='GitHub for code hosting, because it is where the majority of open source code lives and has great features like protected branches, pull request reviews etc.'
           />
         )
+      },
+
+      {
+        title: `Language: JavaScript`,
+        component: (
+          <Teaser 
+            visual='javascript'
+            description='JavaScript as the primary language and ecosystem, because it is available everywhere, flexible, and in high demand. Although I like the idea of some of the new players like Elm, they are a little too immature and "all-in-one" solutions for me to feel comfortable adopting at the moment..'
+          />
+        ),
       },
 
       {
@@ -94,7 +71,7 @@ export default () => (
         component: (
           <Teaser 
             visual='npm'
-            description='npm for package management, because it is has the largest and highest quality JavaScript packages.'
+            description={`npm for package management, because it has the largest amount of JavaScript packages. Yarn is great too, but with npm 5 I don't know of a compelling reason for the extra dependency - vanilla npm is solid.`}
             links={[
               {
                 description: 'Learn how to publish your own npm packages',
@@ -110,7 +87,7 @@ export default () => (
         component: (
           <Teaser 
             visual='npm'
-            description='npm for script running, because it is easy to add scripts in a package.json and they have access to package binaries.'
+            description='npm for script running, because it is easy to add scripts in a package.json and they have access to the binaries in node_modules.'
           />
         )
       },
@@ -136,81 +113,21 @@ export default () => (
       },
 
       {
-        title: `Linting: ESLint`,
-        component: (
-          <Teaser 
-            visual='eslint'
-            description='ESLint for linting, because it has a solid set of "recommended" rules for catching errors. I prefer using only the recommended rules to catch errors and leave stylistic things to an automatic tool like Prettier.'
-          />
-        )
-      },
-
-      {
-        title: `Type checking: Flow`,
-        component: (
-          <Teaser 
-            visual='flow'
-            description='Flow for type checking, because it works well with Babel.'
-          />
-        )
-      },
-
-      {
-        title: `Test running: Jest`,
-        component: (
-          <Teaser 
-            visual='jest'
-            description='Jest for test running, because tests can be written with minimal config and with useful features like git diff based test running and snapshot testing.'
-          />
-        )
-      },
-
-      {
-        title: `Functional testing: WebdriverIO`,
-        component: (
-          <Teaser 
-            visual='webdriverio'
-            description='WebdriverIO for functional testing, because it is just Node.js bindings for the W3C WebDriver protocol.'
-          />
-        )
-      },
-
-      {
-        title: `Continuous Integration + Deployment: Travis CI`,
-        component: (
-          <Teaser 
-            visual='travisci'
-            description='Travis CI for continuous integration and deployment, because it is free for open source, uses a project config file, and has first-class GitHub integration.'
-          />
-        )
-      },
-
-      {
-        title: `Code style: Prettier`,
-        component: (
-          <Teaser 
-            visual='prettier'
-            description='Prettier for code style formatting, because it is automatic so you can avoid thinking about or debating code style.'
-          />
-        )
-      },
-
-      {
-        title: `Project structure: feature folders`,
-        component: (
-          <Teaser 
-            visual='folder'
-            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory for breaking out logic into modules.'
-          />
-        )
-      },
-
-      {
         title: `UI rendering: React`,
         component: (
           <Teaser 
             visual='react'
             description='React for UI rendering, because of the separation of library from rendering environments (web, native, VR etc.), one way rendering from data (its like programming UI with composed functions), Functional Programming leanings while still being flexible, and a strong community.'
+          />
+        )
+      },
+
+      {
+        title: `React app wire up: Next.js`,
+        component: (
+          <Teaser 
+            visual='nextjs'
+            description={`Next.js for React app wire up, because it gives you automatic routing, code splitting, static file serving, server rendering, page prefetching, and development hot module replacement for free. Using a library like this to abstract compilation and module bundling also gives you simple ecosystem updates for free without having to manage your own Webpack and Babel configs. There are other options in this space like react-scripts from create-react-app, but I prefer Next.js because it is more minimal/lightweight and can be extended using the library with a programmatic API without "ejecting".`}
           />
         )
       },
@@ -242,16 +159,6 @@ export default () => (
       },
 
       {
-        title: `React app wire up: Next.js`,
-        component: (
-          <Teaser 
-            visual='zeit'
-            description={`Next.js for React app wire up, because it gives you automatic routing, code splitting, static file serving, server rendering, page prefetching, and development hot module replacement for free. Using a library like this to abstract compilation and module bundling also gives you simple ecosystem updates for free without having to manage your own Webpack and Babel configs. There are other options in this space like react-scripts from create-react-app, but I prefer Next.js as it can be extended without "ejecting" and is more minimal.`}
-          />
-        )
-      },
-
-      {
         title: `Hosting: now`,
         component: (
           <Teaser 
@@ -261,6 +168,75 @@ export default () => (
         )
       },
 
+      {
+        title: `Linting: ESLint`,
+        component: (
+          <Teaser 
+            visual='eslint'
+            description='ESLint for linting, because it has a solid set of "recommended" rules for catching errors. I prefer using only the recommended rules to catch errors and leave stylistic things to an automatic tool like Prettier.'
+          />
+        )
+      },
+
+      {
+        title: `Test running: Jest`,
+        component: (
+          <Teaser 
+            visual='jest'
+            description='Jest for test running, because it uses minimal config, runs fast, has git diff based test running, and includes snapshot testing.'
+          />
+        )
+      },
+
+      {
+        title: `Functional testing: WebdriverIO`,
+        component: (
+          <Teaser 
+            visual='webdriverio'
+            description='WebdriverIO for functional testing, because it is just Node.js bindings for the W3C WebDriver protocol.'
+          />
+        )
+      },
+
+      {
+        title: `Type checking: Flow`,
+        component: (
+          <Teaser 
+            visual='flow'
+            description='Flow for type checking, because it works well with Babel.'
+          />
+        )
+      },
+
+      {
+        title: `Code style: Prettier`,
+        component: (
+          <Teaser 
+            visual='prettier'
+            description='Prettier for code style formatting, because it is automatic so you can avoid thinking about or debating code style.'
+          />
+        )
+      },
+
+      {
+        title: `Continuous Integration + Deployment: Travis CI`,
+        component: (
+          <Teaser 
+            visual='travisci'
+            description='Travis CI for continuous integration and deployment, because it is free for open source, uses a project config file, and has first-class GitHub integration.'
+          />
+        )
+      },
+
+      {
+        title: `Project structure: feature folders`,
+        component: (
+          <Teaser 
+            visual='folder'
+            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory for breaking out logic into modules.'
+          />
+        )
+      },
 
       {
         title: `Putting all the pieces together`,
@@ -274,6 +250,37 @@ export default () => (
                 View example project
               </Button>
             </Anchor>
+            <Paragraph>
+              I wrote a script that I use to scaffold new projects like this with all the tools mentioned in this post. I find it helps me create more projects without worrying about project setup, and then when my preferences change I just update the script for future projects to get the updates as well.
+            </Paragraph>
+            <Anchor href='https://github.com/trevordmiller/settings/tree/master/scripts/script-project'>
+              <Button>
+                View the script
+              </Button>
+            </Anchor>
+          </div>
+        ),
+      },
+
+      {
+        title: `Principles`,
+        component: (
+          <div>
+            <Paragraph>
+              There are some underlying principles with each of these choices:
+            </Paragraph>
+            <List
+              items={[
+                <span>I generally favor lightweight options that do one thing well and compose together with other things, rather than large "all-in-one" type solutions because it is easier to upgrade and swap out pieces as things change.</span>,
+                <span>I try to stay more in "the middle" of the constant pendulum of technology options rather than swinging to extremes, because the pendulum always swings back.</span>,
+                <span>I do lean a bit towards the Functional Programming camp because I've found that these patterns have helped me write code that has less bugs and is easier to change without breaking other things.</span>,
+                <span>I favor composition over inheritance because it is easier for my brain to understand.</span>,
+                <span>I use open source options wherever possible to avoid proprietary lock-in and support the community.</span>,
+                <span>I favor battle-tested, more widely used options to avoid large amounts of early-adoption bugs.</span>,
+                <span>I generally favor minimal configuration over strict setups because I've believe that strictness deters innovation and adds extra complexity.</span>,
+                <span>Many of these options are not needed to start out, or possibly ever. I like to start with only what is needed and only add other tools if they solve a problem that arises.</span>,
+              ]}
+            />
           </div>
         ),
       },

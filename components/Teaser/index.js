@@ -74,6 +74,9 @@ export default ({visual, description, links, tags}) => (
               : <Icon
                   type={visual}
                   fill={uiGroups.userCurrentState}
+                  style={{
+                    color: uiGroups.userCurrentState
+                  }}
                   size={70}
                 />
             }
