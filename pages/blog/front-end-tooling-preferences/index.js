@@ -24,7 +24,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              This is my current opinion. The list will be updated as I learn more and as the community and tools evolve. These options are also just a baseline for the typical types of projects I work on, but each project has its own unique needs where different options would be a better fit. Everything has tradeoffs and there is no "one true stack" of programming tools. I don't like seeing unkind holy wars break out about "tool A vs tool B"; we are all in this together, let's be kind and remember that everything has pros and cons. I hope this list with my research and experience can be helpful in some way, but this list is by no means the "best" or "right" way to do things ;)
+              This is my current opinion. The list will be updated as I learn more and as the community and tools evolve. These options are also just a baseline for the typical types of projects I work on, but each project has its own unique needs where different options would be a better fit. Everything has tradeoffs and there is no "one true stack" of programming tools. Let's all be kind - avoid the hostile holy wars about "tool A destroys tool B"; we are all in this together and everything has pros and cons. I hope this list with my research and experience can be helpful in some way, but this list is by no means the "best" or "right" way to do things ;)
             </Paragraph>
           </div>
         ),
@@ -35,10 +35,10 @@ export default () => (
         component: (
           <Teaser 
             visual='git'
-            description='Git for version control, because it is the standard and gives you fine-grain control over your code history.'
+            description='Git for version control, because it is the standard and gives you fine-grained control over your code history.'
             links={[
               {
-                description: 'Learn command line Git',
+                description: 'Watch a video course on command line Git',
                 href: 'https://egghead.io/courses/practical-git-for-everyday-professional-use'
               },
             ]}
@@ -51,7 +51,7 @@ export default () => (
         component: (
           <Teaser 
             visual='github'
-            description='GitHub for code hosting, because it is where the majority of open source code lives and has great features like protected branches, pull request reviews etc.'
+            description='GitHub for code hosting, because it is where the majority of open source code lives and has great features like protected branches, pull request reviews etc. My favorite approach for GitHub is to create small pull requests for each feature/bug and to submit them rebased on master once continuous integration runs and fellow team members have given an approved review.'
           />
         )
       },
@@ -74,7 +74,7 @@ export default () => (
             description={`npm for package management, because it has the largest amount of JavaScript packages. Yarn is great too, but with npm 5 I don't know of a compelling reason for the extra dependency - vanilla npm is solid.`}
             links={[
               {
-                description: 'Learn how to publish your own npm packages',
+                description: 'Watch a video course on publishing your own npm packages',
                 href: 'https://egghead.io/courses/publish-javascript-packages-on-npm'
               },
             ]}
@@ -140,7 +140,7 @@ export default () => (
             description='Apollo for data management, because it provides a declarative approach to typical data fetching, storing, re-fetching, error handling, and the like for GraphQL APIs. I like Apollo better than Relay at the moment because it is less opinionated, driven by the community, and has better documentation + support. Redux is another great solution in this space and I really like it, but have found that I can write a lot less code with Apollo as it manages the typical data management pieces - plus it can sync with Redux on top if needed as it uses Redux under-the-hood.'
             links={[
               {
-                description: 'Learn how to replace Redux with Apollo',
+                description: 'View a blog post on replacing Redux with Apollo',
                 href: 'https://dev-blog.apollodata.com/reducing-our-redux-code-with-react-apollo-5091b9de9c2a'
               },
             ]}
@@ -153,7 +153,7 @@ export default () => (
         component: (
           <Teaser 
             visual='zeit'
-            description={`styled-jsx for styling, because it is minimal. There are many other solid CSS-in-JS libraries like styled-components and glamorous. The main benefits to any CSS-in-JS library over CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write styles in an "additive", mobile-first way. I use flexbox with container-query-esque rules for layouts as it works across React platform targets (not tied to the browser).`}
+            description={`styled-jsx for styling, because it is the most minimal CSS-in-JS library. There are many other solid CSS-in-JS libraries like styled-components and glamorous. The main benefits to any CSS-in-JS library over separate CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write styles in an "additive", mobile-first way. I use flexbox with container-query-esque rules for layouts as it works across React platform targets (not tied to the browser).`}
           />
         )
       },
@@ -163,7 +163,7 @@ export default () => (
         component: (
           <Teaser 
             visual='zeit'
-            description={`now for hosting, because it is simple, scales automatically, uses open source tech instead of lock-in, uses immutable deployments, has simple domain name registering, and has zero-config HTTPS included`}
+            description={`now for hosting, because it is simple, scales automatically, uses open source tech instead of lock-in, uses immutable deployments, has simple domain name registering, and has zero-config HTTPS included.`}
           />
         )
       },
@@ -173,7 +173,7 @@ export default () => (
         component: (
           <Teaser 
             visual='eslint'
-            description='ESLint for linting, because it has a solid set of "recommended" rules for catching errors. I prefer using only the recommended rules to catch errors and leave stylistic things to an automatic tool like Prettier.'
+            description='ESLint for linting, because it has a solid set of "recommended" rules for catching errors. I prefer only using linting to catch errors and leaving stylistic things to an automatic tool like Prettier.'
           />
         )
       },
@@ -203,7 +203,7 @@ export default () => (
         component: (
           <Teaser 
             visual='flow'
-            description='Flow for type checking, because it works well with Babel.'
+            description='Flow for type checking, because it works well with Babel and is just a type checker.'
           />
         )
       },
@@ -233,7 +233,7 @@ export default () => (
         component: (
           <Teaser 
             visual='folder'
-            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory for breaking out logic into modules.'
+            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory for breaking up logic into modules and an optional "components" directory for breaking up sub-components. The root of the project contains a "pages" directory to map routes to top-level components.'
           />
         )
       },
@@ -243,7 +243,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Phew! That is a lot of tooling. The nice thing is that most of it doesn't need much effort once set up. Here is an example projet with these tools set up so you can see how they fit together.
+              Phew! That is a lot of tooling. Note that not all tools are necissary when starting a project, but become more useful as the code and team size grow. The nice thing is that most of these tools don't require much effort after they are set up. Here is an example projet with these tools in place so you can see how they fit together.
             </Paragraph>
             <Anchor href='https://github.com/trevordmiller/example-web-app'>
               <Button>
@@ -267,7 +267,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              There are some underlying principles with each of these choices:
+              There are some underlying principles with each of these tooling choices:
             </Paragraph>
             <List
               items={[
@@ -290,7 +290,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Programming is a deep field. There are so many languages, tools, and options out there that making decisions on them can be intimidating. Although these are my current preferences, all of this is subject to change as I learn and progress and the community changes. I'm happy to use other tools and try new things as well. I strive to keep an open mind and always keep learning and hope the same for our community; let's all strive to lift and help each other and learn together, rather than getting caught up in antagonistic tech discussions and dogmatic attitudes.
+              Programming is a deep field. There are so many languages, tools, and options out there that making decisions on them can be intimidating. Although these are my current preferences, all of this is subject to change as I learn and progress and the community changes. I'm happy to use other tools and try new things as well. I strive to keep an open mind and always keep learning and hope the same for our community; let's all strive to lift and help each other and learn together, rather than getting caught up in antagonistic tech discussions and dogmatic attitudes. I am extremely grateful that I get to be a software engineer working in the front-end; yes, it can be a little complex and fast-paced at times, but I enjoy the challenge and chance to continually learn and grow!
             </Paragraph>
           </div>
         ),

@@ -9,7 +9,7 @@ export const posts = {
     tags: [tags.git, tags.npm, tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/front-end-tooling-preferences.jpg',
     title: `My current front-end tooling preferences`,
-    description: `An opinionated list of my current favorite options for front-end code projects. This includes the reasoning behind why I picked each option.`,
+    description: `An opinionated list of my current favorite options for front-end code projects. This includes the reasoning behind why I picked each option and an example project to show how they can all fit together.`,
     date: 'June 14, 2017',
   },
 
