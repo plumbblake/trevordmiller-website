@@ -290,7 +290,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Programming is a deep field. There are so many languages, tools, and options out there that making decisions on them can be intimidating. Although these are my current preferences, all of this is subject to change as I learn and progress and the community changes. I strive to keep an open mind and always keep learning and hope the same for our community; let's all strive to lift and help each other and learn together, rather than getting caught up in antagonistic tech discussions and dogmatic attitudes.
+              Programming is a deep field. There are so many languages, tools, and options out there that making decisions on them can be intimidating. Although these are my current preferences, all of this is subject to change as I learn and progress and the community changes. I'm happy to use other tools and try new things as well. I strive to keep an open mind and always keep learning and hope the same for our community; let's all strive to lift and help each other and learn together, rather than getting caught up in antagonistic tech discussions and dogmatic attitudes.
             </Paragraph>
           </div>
         ),
