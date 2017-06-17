@@ -3,7 +3,7 @@ import Screen from '../../../components/Screen'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
-import List from '../../../components/List'
+import Button from '../../../components/Button'
 import Code from '../../../components/Code'
 import {posts} from '../'
 
@@ -36,17 +36,14 @@ export default () => (
         title: `The technology stack`,
         component: (
           <div>
-            <List
-              items={[
-                `Source control: Git + GitHub. Still awesome.`,
-                `Dependencies + scripts: Yarn. Easy package management and script running.`,
-                `Framework: Next.js. Pretty much everything Zeit is doing lately is awesome. Next.js is a lightweight framework for writing universal React apps with zero config and smart defaults.`,
-                `Hosting: now. I have a premium Zeit plan and deploy with now. Dead simple.`,
-                `Continuous Integration: Travis CI. Rock solid and free for open source.`,
-                `User analytics: Google Analytics. Bloated, but it’s free and better than alternatives I’ve tried.`,
-                `Email subscription: MailChimp. The classic.`,
-              ]}
-            />
+            <Paragraph>
+              I use my website as a testing ground for my latest "favorite" tech stack, so it is using the tooling from that list.
+            </Paragraph>
+            <Anchor href='/blog/front-end-tooling-preferences'>
+              <Button>
+                View tooling preferences
+              </Button>
+            </Anchor>
           </div>
         ),
       },
