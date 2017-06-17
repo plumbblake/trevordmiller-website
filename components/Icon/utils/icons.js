@@ -557,6 +557,15 @@ export default {
     ),
   },
 
+  styledComponents: {
+    viewBox: 48,
+    elements: (
+      <g>
+        <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10"><g id="g12"><g clipPath="url(#clipPath16)" id="g14"><g transform="translate(28,1)" id="g20"><path id="path22" fill="#6A7D89" d="M 0,0 0,4 C 0,4 0,8 4,8 8,8 8,4 8,4 L 8,0 0,0 Z"/></g><g transform="translate(19,1)" id="g24"><path id="path26" fill="#6A7D89" d="m 0,0 0,9 c 0,0 0,4 4,4 4,0 4,-4 4,-4 L 8,0 0,0 Z"/></g><g transform="translate(10,1)" id="g28"><path id="path30" fill="#6A7D89" d="m 0,0 0,12 c 0,0 0,4 4,4 4,0 4,-4 4,-4 L 8,0 0,0 Z"/></g><g transform="translate(1,1)" id="g32"><path id="path34" fill="#6A7D89" d="m 0,0 0,9 c 0,0 0,4 4,4 4,0 4,-4 4,-4 L 8,0 0,0 Z"/></g><g transform="translate(17.0005,13)" id="g36"><path id="path38" d="m 0,0 c 0,1.657 0,8 -3,8 -3,0 -3,-6.343 -3,-8 0,-1.657 1.343,-3 3,-3 1.657,0 3,1.343 3,3"/></g><g transform="translate(8.0005,10)" id="g40"><path id="path42" d="m 0,0 c 0,1.657 0,8 -3,8 -3,0 -3,-6.343 -3,-8 0,-1.657 1.343,-3 3,-3 1.657,0 3,1.343 3,3"/></g><g transform="translate(26,10)" id="g44"><path id="path46" d="m 0,0 c 0,1.657 0,8 -3,8 -3,0 -3,-6.343 -3,-8 0,-1.657 1.344,-3 3,-3 1.657,0 3,1.343 3,3"/></g><g transform="translate(35,5)" id="g48"><path id="path50" d="m 0,0 c 0,1.657 0,8 -3,8 -3,0 -3,-6.343 -3,-8 0,-1.657 1.344,-3 3,-3 1.657,0 3,1.343 3,3"/></g><g transform="translate(14,21)" id="g52"><path id="path54" d="m 0,0 0,-4 2,0 c 0,0 2,0 6,4 L 6,2 C 6,2 4,0 0,0"/></g><g transform="translate(20,23)" id="g56"><path id="path58" fill="#899BA6" d="M 0,0 8,8 10,6 2,-2 0,0 Z"/></g><g transform="translate(28,31)" id="g60"><path id="path62" fill="#899BA6" d="M 0,0 C 0,0 -2,2 0,4 L 2,6 9,6 9,1 6,-2 C 4,-4 2,-2 2,-2 L 0,0 Z"/></g></g></g></g>
+      </g>
+    ),
+  },
+
   zeit: {
     viewBox: 512,
     elements: (

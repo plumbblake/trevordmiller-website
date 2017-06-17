@@ -149,11 +149,11 @@ export default () => (
       },
 
       {
-        title: `Styling: styled-jsx`,
+        title: `Styling: Styled Components`,
         component: (
           <Teaser 
-            visual='zeit'
-            description={`styled-jsx for styling, because it is the most minimal CSS-in-JS library. There are many other solid CSS-in-JS libraries like styled-components and glamorous. The main benefits to any CSS-in-JS library over separate CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write styles in an "additive", mobile-first way. I use flexbox for layouts as it works across React platform targets (not tied to the browser).`}
+            visual='styledComponents'
+            description={`Styled components for styling, because it is currently the CSS-in-JS library with the strongest community, has the best React platform target support (browser, server rendering, and React Native from one package), uses normal CSS syntax so there is less lock-in and it is more familiar for those with CSS experience, automatically vendor prefixes browser-based styles, and wraps your styles inside React components. The main benefits to any CSS-in-JS library over separate CSS based options is that your styles are not tied to the browser and you have access to all your JavaScript tooling and logic in your styles - it's just JavaScript! Because of this, your presentational components can become self-contained so they can be reused across platforms or published to npm without any extra files or module bundling needed. Inline styles work in a similiar way out of the box with React, but they don't support all of CSS and tie you more directly to React, so I prefer a CSS-in-JS library to them. I like to write the styles for these presentational components in an "additive", mobile-first way. Also, by using flexbox for layouts, it works across React platform targets (not tied to the browser).`}
           />
         )
       },
