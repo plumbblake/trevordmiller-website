@@ -183,7 +183,7 @@ export default () => (
         component: (
           <Teaser 
             visual='jest'
-            description='Jest for test running, because it uses minimal config, runs fast, has git diff based test running, and includes snapshot testing.'
+            description='Jest for test running, because it uses minimal config, runs fast with parallel sandboxed tests, has git diff based test running, and includes snapshot testing.'
           />
         )
       },
