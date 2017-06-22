@@ -179,21 +179,11 @@ export default () => (
       },
 
       {
-        title: `Test running: Jest`,
+        title: `Testing: Jest`,
         component: (
           <Teaser 
             visual='jest'
             description='Jest for test running, because it uses minimal config, runs fast with parallel sandboxed tests, has git diff based test running, and includes snapshot testing.'
-          />
-        )
-      },
-
-      {
-        title: `Functional testing: WebdriverIO`,
-        component: (
-          <Teaser 
-            visual='webdriverio'
-            description='WebdriverIO for functional testing, because it is just Node.js bindings for the W3C WebDriver protocol.'
           />
         )
       },
@@ -209,7 +199,7 @@ export default () => (
       },
 
       {
-        title: `Code style: Prettier`,
+        title: `Formatting: Prettier`,
         component: (
           <Teaser 
             visual='prettier'
@@ -219,11 +209,11 @@ export default () => (
       },
 
       {
-        title: `Continuous Integration + Deployment: Travis CI`,
+        title: `Continuous Integration: Travis CI`,
         component: (
           <Teaser 
             visual='travisci'
-            description='Travis CI for continuous integration and deployment, because it is free for open source, uses a project config file, and has first-class GitHub integration.'
+            description='Travis CI for continuous integration, because it is free for open source, uses a project config file, and has first-class GitHub integration.'
           />
         )
       },
@@ -233,7 +223,7 @@ export default () => (
         component: (
           <Teaser 
             visual='folder'
-            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory for breaking up logic into modules and an optional "components" directory for breaking up sub-components. The root of the project contains a "pages" directory to map routes to top-level components.'
+            description='Feature folders for project structure, because adding features or fixing bugs keeps related code in self-contained modules rather than spread out by file type. I like to use node-style index.js files as the entry point for each feature folder, with an optional sibling "utils" directory (for breaking up logic into utility modules) and an optional "components" directory (if the feature folder is UI based, for breaking up components into sub-components as needed). The root of the project contains a "pages" directory to map routes to top-level components.'
           />
         )
       },
@@ -243,7 +233,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Phew! That is a lot of tooling. Note that not all tools are necissary when starting a project, but become more useful as the code and team size grow. The nice thing is that most of these tools don't require much effort after they are set up. Here is an example project with these tools in place so you can see how they fit together.
+              Phew! That is a lot of tooling. Note that not all tools are necessary when starting a project, but become more useful as the code and team size grow. The nice thing is that most of these tools don't require much effort after they are set up. Here is an example project with these tools in place so you can see how they fit together.
             </Paragraph>
             <Anchor href='https://github.com/trevordmiller/example-web-app'>
               <Button>
