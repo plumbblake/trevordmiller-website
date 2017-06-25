@@ -8,7 +8,7 @@ export default ({title, description, sections}) => (
     <div style={{
       maxWidth: screenSizes.large,
       margin: 'auto',
-      minHeight: '50vh',
+      minHeight: '100vh',
     }}>
       <Header
         title={title}

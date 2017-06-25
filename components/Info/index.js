@@ -6,7 +6,7 @@ export default ({children}) => (
     padding: spacing.large,
     marginBottom: spacing.large,
     borderRadius: borderRadii.medium,
-    background: 'rgba(0, 0, 0, 0.15)',
+    background: 'rgba(0, 0, 0, 0.25)',
     textAlign: 'center',
     maxWidth: screenSizes.large - (screenSizes.large / 2.5),
     margin: 'auto',

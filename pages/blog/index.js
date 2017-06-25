@@ -76,7 +76,7 @@ export default () => (
   <Screen
     baseRouteTitle='Blog'
     mainVisual={posts[postKeys[0]].mainVisual}
-    pathname={`https://trevordmiller.com/blog`}
+    pathname='https://trevordmiller.com/blog'
     title='Blog'
     description='Writings from Trevor D. Miller on programming, organization, music, and other thoughts.'
     sections={postKeys.map(postKey => {

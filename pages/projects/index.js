@@ -261,7 +261,7 @@ export default () => (
   <Screen
     baseRouteTitle='Projects'
     mainVisual={projects[projectKeys[0]].mainVisual}
-    pathname={`https://trevordmiller.com/projects`}
+    pathname='https://trevordmiller.com/projects'
     title='Projects'
     description='Info and links to some of my projects'
     showDescription

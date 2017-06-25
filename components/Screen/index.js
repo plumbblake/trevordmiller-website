@@ -21,6 +21,7 @@ export default class Screen extends Component {
       title: PropTypes.string,
       component: PropTypes.element.isRequired,
     })).isRequired,
+    footer: PropTypes.bool,
   }
 
   componentDidMount() {
@@ -37,6 +38,7 @@ export default class Screen extends Component {
       description, 
       showDescription, 
       sections,
+      footer = true,
     } = this.props
     return (
       <div>
@@ -152,13 +154,20 @@ export default class Screen extends Component {
           backgroundPosition: 'center top, center bottom',
           backgroundRepeat: 'no-repeat, no-repeat',
         }}>
+
           <Navigation baseRouteTitle={baseRouteTitle} />
+
           <Main
             title={title}
             description={showDescription ? description : null}
             sections={sections}
           />
-          <Footer />
+
+          {footer
+            ? <Footer />
+            : null
+          }
+          
         </div>
 
       </div>

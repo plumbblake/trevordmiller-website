@@ -1,8 +1,6 @@
 import React from 'react'
 import {spacing, screenSizes} from '../../../../utils/styleGuide'
-import Info from '../../../Info'
-import Subscribe from './components/Subscribe'
-import Follow from './components/Follow'
+import Follow from '../../../Follow'
 
 export default () => (
   <footer style={{
@@ -13,16 +11,6 @@ export default () => (
     margin: 'auto',
     marginTop: spacing.large,
   }}>
-    <Info>
-      <div>
-        Subscribe to my newsletter to be notified when I publish new things. No spam.
-      </div>
-      <Subscribe />
-      <div style={{
-        marginTop: spacing.medium,
-      }}>
-        <Follow />
-      </div>
-    </Info>
+    <Follow />
   </footer>
 )

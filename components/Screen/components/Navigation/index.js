@@ -15,6 +15,10 @@ const baseRoutes = [
     path: '/blog',
     title: 'Blog',
   },
+  {
+    path: '/follow',
+    title: 'Follow',
+  },
 ]
 
 export const baseRouteTitles = baseRoutes.map(baseRoute => baseRoute.title)
@@ -24,6 +28,7 @@ export default ({baseRouteTitle}) => (
     background: uiGroups.backgroundShade,
     display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
   }}>
     {baseRoutes.map((baseRoute, index) => (
       <Link 

@@ -1,8 +1,8 @@
 import React from 'react'
-import {uiGroups, fontSizes, spacing} from '../../../../../../utils/styleGuide'
-import {githubUrl, npmUrl, twitterUrl, rssUrl} from '../../../../../../utils/urls'
-import Anchor from '../../../../../Anchor'
-import Icon from '../../../../../Icon'
+import {uiGroups, fontSizes, spacing} from '../../../../utils/styleGuide'
+import {githubUrl, npmUrl, twitterUrl, rssUrl} from '../../../../utils/urls'
+import Anchor from '../../../Anchor'
+import Icon from '../../../Icon'
 
 const followItems = [
   {
@@ -43,7 +43,7 @@ export default () => (
         }}>
           <Icon
             type={followItem.iconType}
-            fill={uiGroups.backgroundShade}
+            fill={uiGroups.userCurrentState}
             size={fontSizes.xxlarge}
           />
         </div>
