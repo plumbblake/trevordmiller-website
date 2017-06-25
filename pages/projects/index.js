@@ -9,7 +9,7 @@ export const projects = {
     tags: [tags.inProgress, tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
-    description: `I'm working on building a free, open souce, lightweight, "Spaced Repetition Software" to help you remember the things you learn. I hope the final production app is useful, but this is primarily a learning experience for me; I want to see if I can use a single set of GraphQL connected React components across multiple platforms. This project has a Graphcool database, GraphQL API using Node, npm component library using Apollo, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
+    description: `I'm working on building a proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This is primarily a learning experience for me and a proof of concept, rather than a real application to be used by others; I want to see if I can use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Apollo to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
     links: [
       {
         description: 'Code for GraphQL API',
