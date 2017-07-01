@@ -8,12 +8,15 @@ export default () => (
   <section>
     <Info>
       <div>
-        Subscribe to my newsletter to be notified when I publish new things. No spam.
+        Subscribe to my newsletter if you want to get emailed when I publish new blog posts and projects. No spam.
       </div>
       <Subscribe />
       <div style={{
-        marginTop: spacing.medium,
+        marginTop: spacing.large,
       }}>
+        Follow elsewhere if you want to see my updates. Mostly posts about code.
+      </div>
+      <div>
         <FollowIcons />
       </div>
     </Info>
