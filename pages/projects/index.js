@@ -175,19 +175,6 @@ export const projects = {
     ],
   },
 
-  'egghead-record-screencasts': {
-    tags: [tags.general],
-    mainVisual: '/static/egghead-record-screencasts.png',
-    title: `Record programming screencasts`,
-    description: `I created this video course to teach programmers how to make code screencasts to help them share their knowledge with other developers.`,
-    links: [
-      {
-        description: 'Videos',
-        href: 'https://egghead.io/courses/record-badass-screencasts-for-egghead-io',
-      },
-    ],
-  },
-
   'trevordmiller-website': {
     tags: [tags.react],
     mainVisual: '/static/trevordmiller-website.jpg',
