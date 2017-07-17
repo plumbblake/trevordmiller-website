@@ -12,7 +12,7 @@ import {
   exampleUse,
   exampleApp,
   exampleToggle,
-  exampleAccordian,
+  exampleAccordion,
   exampleModal,
   exampleThumbnail,
 } from './utils/exampleCodeStrings'
@@ -31,11 +31,22 @@ export default () => (
     sections={[
 
       {
+        title: 'How do you abstract stateful logic in React?',
+        component: (
+          <div>
+            <Paragraph>
+              The two most popular options are "Higher Order Components" and "Render Callbacks" (AKA Function as Child components). I've come to like the Render Callback pattern more because I feel it is simpler and more flexible.
+            </Paragraph>
+          </div>
+        ),
+      },
+
+      {
         title: `What is a Render Callback?`,
         component: (
           <div>
             <Paragraph>
-              Since React is mostly just JavaScript, it makes it really easy to share logic across components using functions. A "Render Callback" is a component that supplies arguments to a <Code>children</Code> prop that is a function (AKA Function as Child component). This might sound confusing but a code example should show how simple it really is.
+              Since React is mostly just JavaScript, it makes it really easy to share logic across components using functions. A "Render Callback" is a component that supplies arguments to a <Code>children</Code> prop that is a function.
             </Paragraph>
           </div>
         ),
@@ -73,7 +84,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              We have three components: an accordian, modal, and thumbnail image. Tap to interact with each one and compare how they are similiar.
+              We have three components: an accordion, modal, and thumbnail image. Tap to interact with each one and compare how they are similiar.
             </Paragraph>
 
             <CodeBlock 
@@ -92,11 +103,11 @@ export default () => (
             </CodeBlock>
             
             <Paragraph>
-              Now we don't have to re-write that state in each of our similiar components but can reuse the state passed to the children function and the instances of "Toggle" can just be stateless function components.
+              Now we don't have to re-write that state in each of our similar components but can reuse the state passed to the children function and the instances of "Toggle" can just be stateless function components.
             </Paragraph>
 
-            <CodeBlock fileName='Accordian.js'>
-              {exampleAccordian}
+            <CodeBlock fileName='Accordion.js'>
+              {exampleAccordion}
             </CodeBlock>
 
             <CodeBlock fileName='Modal.js'>
@@ -131,7 +142,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Although there are a few ways to share stateful logic across components in React, I feel that Render Callbacks are the most flexible and simple. All you need to remember is to pass a function as the children and then use the arguments!
+              Although there are a few ways to share stateful logic across components in React, I feel that the Render Callback pattern is the most flexible and simple. All you need to remember is to pass a function as the children and then use the arguments!
             </Paragraph>
           </div>
         ),

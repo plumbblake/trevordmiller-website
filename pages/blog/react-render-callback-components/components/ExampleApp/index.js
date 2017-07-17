@@ -1,32 +1,23 @@
 import React from 'react'
-import Accordian from '../Accordian'
+import Accordion from '../Accordion'
 import Modal from '../Modal'
 import Thumbnail from '../Thumbnail'
 
-const exampleImageUrl = 'https://unsplash.it/1000'
-
-const ExampleDetails = () => (
-  <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
-  </div>
-)
-
 const ExampleApp = () => (
   <main>
-    <Accordian
-      teaser='Tap to toggle Accordian details'
-      details={<ExampleDetails />}
+    <Accordion
+      teaser='Tap to toggle Accordion details'
+      details={<div>Some details</div>}
     />
     
     <Modal
       teaser={<button>Tap to toggle Modal details</button>}
-      details={<ExampleDetails />}
+      details={<div>Some details</div>}
     />
 
     <Thumbnail
       teaser='Tap image to toggle Thumbnail zoom'
-      src={exampleImageUrl}
+      src='https://unsplash.it/1000'
     />
   </main>
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 import Toggle from '../Toggle'
 
-const Accordian = ({teaser, details}) => (
+const Accordion = ({teaser, details}) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <section>
@@ -14,4 +14,4 @@ const Accordian = ({teaser, details}) => (
   </Toggle>
 )
 
-export default Accordian
+export default Accordion
