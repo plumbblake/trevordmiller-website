@@ -5,6 +5,14 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
 
+  'react-render-callback-components': {
+    tags: [tags.react],
+    mainVisual: '/static/react-render-callback-components.png',
+    title: `Sharing stateful UI logic in React apps using Render Callback components`,
+    description: `A few examples of how stateful logic can be shared across multiple components in React using Render Callback components (aka Function as Child components).`,
+    date: 'July 15, 2017',
+  },
+
   'front-end-tooling-preferences': {
     tags: [tags.git, tags.npm, tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/front-end-tooling-preferences.jpg',
