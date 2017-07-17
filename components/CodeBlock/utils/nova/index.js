@@ -1,148 +1,101 @@
+import { uiGroups, syntaxGroups } from 'nova-colors'
+
 export default {
+
+  // --------------------------------
+  // UI GROUPS
+  // --------------------------------
 
   "hljs": {
     "display": "block",
     "overflowX": "auto",
     "padding": "0.5em",
-    "color": "#abb2bf",
+    "background": uiGroups.background,
+    "color": uiGroups.foreground,
   },
 
-  "hljs-comment": {
-    "color": "#5c6370",
-    "fontStyle": "italic"
-  },
 
-  "hljs-quote": {
-    "color": "#5c6370",
-    "fontStyle": "italic"
-  },
-
-  "hljs-doctag": {
-    "color": "#c678dd"
-  },
-
-  "hljs-keyword": {
-    "color": "#c678dd"
-  },
-
-  "hljs-formula": {
-    "color": "#c678dd"
-  },
-
-  "hljs-section": {
-    "color": "#e06c75"
-  },
-
-  "hljs-name": {
-    "color": "#e06c75"
-  },
-
-  "hljs-selector-tag": {
-    "color": "#e06c75"
-  },
-
-  "hljs-deletion": {
-    "color": "#e06c75"
-  },
-
-  "hljs-subst": {
-    "color": "#e06c75"
-  },
-
+  // --------------------------------
+  // SYNTAX GROUPS
+  // --------------------------------
+  
+  // CONSTANT
+  
   "hljs-literal": {
-    "color": "#56b6c2"
+    "color": syntaxGroups.constant,
   },
 
   "hljs-string": {
-    "color": "#98c379"
-  },
-
-  "hljs-regexp": {
-    "color": "#98c379"
-  },
-
-  "hljs-addition": {
-    "color": "#98c379"
-  },
-
-  "hljs-attribute": {
-    "color": "#98c379"
-  },
-
-  "hljs-meta-string": {
-    "color": "#98c379"
-  },
-
-  "hljs-built_in": {
-    "color": "#e6c07b"
-  },
-
-  "hljs-class .hljs-title": {
-    "color": "#e6c07b"
-  },
-
-  "hljs-attr": {
-    "color": "#d19a66"
-  },
-
-  "hljs-variable": {
-    "color": "#d19a66"
-  },
-
-  "hljs-template-variable": {
-    "color": "#d19a66"
-  },
-
-  "hljs-type": {
-    "color": "#d19a66"
-  },
-
-  "hljs-selector-class": {
-    "color": "#d19a66"
-  },
-
-  "hljs-selector-attr": {
-    "color": "#d19a66"
-  },
-
-  "hljs-selector-pseudo": {
-    "color": "#d19a66"
+    "color": syntaxGroups.constant,
   },
 
   "hljs-number": {
-    "color": "#d19a66"
+    "color": syntaxGroups.constant,
   },
 
-  "hljs-symbol": {
-    "color": "#61aeee"
+  "hljs-regexp": {
+    "color": syntaxGroups.constant,
   },
 
-  "hljs-bullet": {
-    "color": "#61aeee"
+  // IDENTIFIER
+
+  "hljs-variable": {
+    "color": syntaxGroups.identifier,
   },
 
-  "hljs-link": {
-    "color": "#61aeee",
-    "textDecoration": "underline"
+  "hljs-params": {
+    "color": syntaxGroups.identifier,
   },
 
-  "hljs-meta": {
-    "color": "#61aeee"
+  "hljs-class": {
+    "color": syntaxGroups.identifier,
   },
 
-  "hljs-selector-id": {
-    "color": "#61aeee"
+  "hljs-attr": {
+    "color": syntaxGroups.identifier,
   },
 
   "hljs-title": {
-    "color": "#61aeee"
+    "color": syntaxGroups.identifier,
   },
 
-  "hljs-emphasis": {
-    "fontStyle": "italic"
+  // STATEMENT
+  
+  "hljs-tag": {
+    "color": syntaxGroups.statement,
   },
 
-  "hljs-strong": {
-    "fontWeight": "bold"
-  }
+  "hljs-subst": {
+    "color": syntaxGroups.statement,
+  },
+
+  // TYPE
+  
+  "hljs-type": {
+    "color": syntaxGroups.type,
+  },
+  
+  // GLOBAL
+
+  "hljs-keyword": {
+    "color": syntaxGroups.global,
+  },
+
+  "hljs-built_in": {
+    "color": syntaxGroups.global,
+  },
+  
+  // EMPHASIS
+  
+  // SPECIAL
+  
+  "hljs-function": {
+    "color": syntaxGroups.special,
+  },
+
+  // TRIVIAL
+  
+  "hljs-comment": {
+    "color": syntaxGroups.trivial,
+  },
 }
