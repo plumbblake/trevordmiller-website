@@ -9,7 +9,7 @@ export const posts = {
     tags: [tags.react],
     mainVisual: '/static/react-render-callback-components.png',
     title: `Sharing stateful UI logic in React apps using Render Callback components`,
-    description: `A few examples of how stateful logic can be shared across multiple components in React using Render Callback components (aka Function as Child components).`,
+    description: `A few examples of abstracting shared logic across multiple components using the Render Callback pattern (aka Function as Child components).`,
     date: 'July 15, 2017',
   },
 

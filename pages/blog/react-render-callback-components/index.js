@@ -31,11 +31,11 @@ export default () => (
     sections={[
 
       {
-        title: 'How do you abstract stateful logic in React?',
+        title: 'What about Higher Order Components?',
         component: (
           <div>
             <Paragraph>
-              The two most popular options are "Higher Order Components" and "Render Callbacks" (AKA Function as Child components). I've come to like the Render Callback pattern more because I feel it is simpler and more flexible.
+              A common way to share stateful logic across React components is using the "Higher Order Components" (HOC) pattern. This post will show an alternative that I feel is simpler and more flexible called "Render Callback components" (AKA Function as Child components).
             </Paragraph>
           </div>
         ),
@@ -46,7 +46,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Since React is mostly just JavaScript, it makes it really easy to share logic across components using functions. A "Render Callback" is a component that supplies arguments to a <Code>children</Code> prop that is a function.
+              A "Render Callback" is a component where the <Code>children</Code> prop is a function; then shared logic is accessed through the function's arguments. Render Callbacks are just functions - just JavaScript!
             </Paragraph>
           </div>
         ),
@@ -59,22 +59,22 @@ export default () => (
             <Heading level={4}>
               Define
             </Heading>
-            <CodeBlock>
+            <Paragraph>
+              To define a Render Callback you return <Code>this.props.children</Code> (a function) with the arguments you want to share.
+            </Paragraph>
+            <CodeBlock file='SharedThing.js'>
               {exampleDefine}
             </CodeBlock>
-            <Paragraph>
-              To define a Render Callback you return the children prop (a function) with arguments to share like <Code>this.props.children(thing1, thing2)</Code>.
-            </Paragraph>
 
             <Heading level={4}>
               Use
             </Heading>
-            <CodeBlock>
+            <Paragraph>
+              To use a Render Callback you write an inline function with the arguments you've shared.
+            </Paragraph>
+            <CodeBlock file='AnotherComponent.js'>
               {exampleUse}
             </CodeBlock>
-            <Paragraph>
-              To use a Render Callback you use a function as the children and do something with the arguments like <Code>{`<SharedThing>{(thing1, thing2) => // use args}</SharedThing>`}</Code>.
-            </Paragraph>
           </div>
         ),
       },
@@ -84,7 +84,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              We have three components: an accordion, modal, and thumbnail image. Tap to interact with each one and compare how they are similiar.
+              We have three components: an <Code>Accordion</Code>, <Code>Modal</Code>, and <Code>Thumbnail</Code>. Here is an example <Code>App</Code> using all three and showing their output; tap the output to interact with each component and compare how they are similiar.
             </Paragraph>
 
             <CodeBlock 
@@ -95,7 +95,7 @@ export default () => (
             </CodeBlock>
 
             <Paragraph>
-              What is common between them is they all can be "toggled" open/closed. We could write each of them as a stateful class component, but since they have the same state setup - let's share it! Let's abstract the state into a "Toggle" Render Callback component.
+              What is common between them? They all can be "toggled" open/closed. We could write each of them as a stateful class component with the same wrapping code, but since they have the same state setup - let's share it! Let's abstract the state into a <Code>Toggle</Code> component (a Render Callback).
             </Paragraph>
 
             <CodeBlock fileName='Toggle.js'>
@@ -103,7 +103,7 @@ export default () => (
             </CodeBlock>
             
             <Paragraph>
-              Now we don't have to re-write that state in each of our similar components but can reuse the state passed to the children function and the instances of "Toggle" can just be stateless function components.
+              Now components that use <Code>Toggle</Code> will have access to their own <Code>isOpen</Code> and <Code>handleToggleClick</Code> arguments without having to wire up the state code. The instances of <Code>Toggle</Code> (<Code>Accordion</Code>, <Code>Modal</Code>, and <Code>Thumbnail</Code>) can just be stateless function components.
             </Paragraph>
 
             <CodeBlock fileName='Accordion.js'>
@@ -142,7 +142,7 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              Although there are a few ways to share stateful logic across components in React, I feel that the Render Callback pattern is the most flexible and simple. All you need to remember is to pass a function as the children and then use the arguments!
+              Although there are a few ways to share stateful logic across components in React, I feel that the Render Callback pattern is the most flexible and simple. All you need to remember is to pass a function as the <Code>children</Code> and then use the arguments!
             </Paragraph>
           </div>
         ),

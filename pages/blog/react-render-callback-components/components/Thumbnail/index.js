@@ -5,6 +5,7 @@ const Thumbnail = ({src, teaser}) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <div>
+        <div>{teaser}</div>
         <img
           src={src}
           alt={teaser}
@@ -13,9 +14,6 @@ const Thumbnail = ({src, teaser}) => (
             maxWidth: isOpen ? '100%' : 150
           }}
         />
-        <div>
-          {teaser}
-        </div>
       </div>
     )}
   </Toggle>

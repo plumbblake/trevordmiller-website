@@ -1,13 +1,11 @@
-export const exampleDefine = `import {Component} from 'react'
+export const exampleDefine = `import { Component } from 'react'
 
 class SharedThing extends Component {
 
-  this.state = {
-    someState: someValue,
-  }
+  ...
 
   render() {
-    return this.props.children(this.state.someState)
+    return this.props.children(thing1, thing2)
   }
 }
 
@@ -18,8 +16,8 @@ export const exampleUse = `import React from 'react'
 
 const AnotherComponent = () => (
   <SharedThing>
-    {(someState) => (
-      // use someState
+    {(thing1, thing2) => (
+      // use thing1 and thing2
     )}
   </SharedThing>
 )
@@ -54,7 +52,7 @@ const App = () => (
 export default App
 `
 
-export const exampleToggle = `import {Component} from 'react'
+export const exampleToggle = `import { Component } from 'react'
 
 class Toggle extends Component {
 
@@ -106,30 +104,29 @@ const Modal = ({teaser, details}) => (
     {(isOpen, handleToggleClick) => (
       <div onClick={handleToggleClick}>
         {teaser}
-        {isOpen
-          ? <div>
-              <div style={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                zIndex: 3,
-                color: '#fff',
-              }}>
-                {details}
-              </div>
-              <div style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 2,
-                background: 'rgba(0, 0, 0, 0.8)',
-              }} />
+        {isOpen && (
+          <div>
+            <div style={{
+              color: '#fff',
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 3,
+            }}>
+              {details}
             </div>
-          : null
-        }
+            <div style={{
+              background: 'rgba(0, 0, 0, 0.9)',
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 2,
+            }} />
+          </div>
+        )}
       </div>
     )}
   </Toggle>
@@ -145,6 +142,7 @@ const Thumbnail = ({src, teaser}) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <div>
+        <div>{teaser}</div>
         <img
           src={src}
           alt={teaser}
@@ -153,9 +151,6 @@ const Thumbnail = ({src, teaser}) => (
             maxWidth: isOpen ? '100%' : 150
           }}
         />
-        <div>
-          {teaser}
-        </div>
       </div>
     )}
   </Toggle>
