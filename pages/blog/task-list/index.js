@@ -93,7 +93,7 @@ export default () => (
             <List items={[
               <span>Starting a new project (<Code>create-js-project</Code>)</span>,
               <span>Working on existing projects (ie <Code>trevordmiller-website</Code>)</span>,
-              <span>Killing processes on my computer (<Code>kill</Code>)</span>,
+              <span>Stopping processes on my computer (<Code>stop</Code>)</span>,
               <span>Cleaning up garbage files/directories (<Code>clean</Code>)</span>,
               <span>Upgrading my operating system/apps/packages/plugins (<Code>upgrade</Code>)</span>,
               <span>Quitting everything at the end of a work day (<Code>quit</Code>)</span>,
