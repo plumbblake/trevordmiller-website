@@ -66,14 +66,14 @@ export default () => (
         component: (
           <div>
             <Paragraph>
-              I keep <Anchor href='https://github.com/trevordmiller/settings'>all of my device settings in one place</Anchor>. This includes shell scripts I have created to automate some of my tasks.
+              I keep <Anchor href='https://github.com/trevordmiller/device-setup'>all of my device settings in one place</Anchor>. I also use <Anchor href='https://github.com/trevordmiller/shell-scripts'>shell scripts</Anchor> I have created to automate some of my tasks.
             </Paragraph>
             <Image
               src='/static/scripts.jpg'
               description='My shell scripts'
             />
             <Paragraph>
-              I have a task to run <Code>script-check</Code> a few times a day.
+              I have a task to run my <Code>sync</Code> scripts a few times a day.
             </Paragraph>
             <Image
               src='/static/todoist-script-check-task.jpg'
@@ -91,12 +91,12 @@ export default () => (
               I also have other scripts to automate things I do regularly; for example:
             </Paragraph>
             <List items={[
-              <span>Starting a new project (<Code>script-project</Code>)</span>,
-              <span>Working on existing projects (ie <Code>script-nova</Code>)</span>,
-              <span>Killing processes on my computer (<Code>script-kill</Code>)</span>,
-              <span>Cleaning up garbage files/directories (<Code>script-clean</Code>)</span>,
-              <span>Upgrading my operating system/apps/packages/plugins (<Code>script-upgrade</Code>)</span>,
-              <span>Quitting everything at the end of a work day (<Code>script-quit</Code>)</span>,
+              <span>Starting a new project (<Code>create-js-project</Code>)</span>,
+              <span>Working on existing projects (ie <Code>trevordmiller-website</Code>)</span>,
+              <span>Killing processes on my computer (<Code>kill</Code>)</span>,
+              <span>Cleaning up garbage files/directories (<Code>clean</Code>)</span>,
+              <span>Upgrading my operating system/apps/packages/plugins (<Code>upgrade</Code>)</span>,
+              <span>Quitting everything at the end of a work day (<Code>quit</Code>)</span>,
             ]} />
           </div>
         ),

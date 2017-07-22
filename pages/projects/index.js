@@ -111,15 +111,41 @@ export const projects = {
     ],
   },
 
-  'settings': {
-    tags: [tags.unix],
+  'dotfiles': {
+    tags: [tags.unix, tags.git],
     mainVisual: '/static/github.png',
-    title: `Settings`,
-    description: `I like to stay organized. I use this settings repo to automate as much of my settings as possible, and document the rest. I also write shell scripts for repetitive tasks and keep them here.`,
+    title: `Dotfiles`,
+    description: `I organize my tooling settings in dotfiles.`,
     links: [
       {
         description: 'Code',
-        href: 'https://github.com/trevordmiller/settings',
+        href: 'https://github.com/trevordmiller/dotfiles',
+      },
+    ],
+  },
+
+  'shell-scripts': {
+    tags: [tags.unix, tags.git],
+    mainVisual: '/static/github.png',
+    title: `Shell Scripts`,
+    description: `I write shell scripts for repetitive tasks.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/shell-scripts',
+      },
+    ],
+  },
+
+  'device-setup': {
+    tags: [tags.unix, tags.git],
+    mainVisual: '/static/github.png',
+    title: `Device Setup`,
+    description: `I use this repo to aggregate and automate as much of my settings as possible, and document the rest.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/device-setup',
       },
     ],
   },
