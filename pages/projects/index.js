@@ -5,11 +5,24 @@ import Teaser from '../../components/Teaser'
 
 export const projects = {
 
+  'hideaway': {
+    tags: [tags.inProgress, tags.react, tags.node],
+    mainVisual: '/static/hideaway.png',
+    title: `Hideaway`,
+    description: `When trying to focus on a task there are often a lot of distractions. I'm building a Mac app to escape distractions for a set amount of time. You start the timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. I'm building it with Node (Electron) and React (Next.js).`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/hideaway',
+      },
+    ],
+  },
+
   'cortex': {
-    tags: [tags.inProgress, tags.react, tags.node, tags.graphQl],
+    tags: [tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
-    description: `I'm working on building a proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This is primarily a learning experience for me and a proof of concept, rather than a real application to be used by others; I want to see if I can use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Apollo to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
+    description: `A proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This was primarily a learning experience for me, rather than a real application to be used by others; I wanted to see if I could use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Relay Modern to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
     links: [
       {
         description: 'Code for GraphQL API',
@@ -22,19 +35,6 @@ export const projects = {
       {
         description: 'Code for clients',
         href: 'https://github.com/trevordmiller/cortex-clients',
-      },
-    ],
-  },
-
-  'hideaway': {
-    tags: [tags.inProgress, tags.react, tags.node],
-    mainVisual: '/static/hideaway.png',
-    title: `Hideaway`,
-    description: `When trying to focus on a task there are often a lot of distractions. I'm building a Mac app to escape distractions for a set amount of time. You start the timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. I'm building it with Node (Electron) and React (Next.js).`,
-    links: [
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/hideaway',
       },
     ],
   },
@@ -52,61 +52,6 @@ export const projects = {
       {
         description: 'Blog post',
         href: '/blog/raspberry-pi-button',
-      },
-    ],
-  },
-
-  'egghead-instructor-center': {
-    tags: [tags.react],
-    mainVisual: '/static/egghead-instructor-center.png',
-    title: `egghead Instructor Center`,
-    description: `I built the initial production egghead Instructor Center. It was a React web app. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
-    links: [
-      {
-        description: 'Code',
-        href: 'https://github.com/eggheadio/egghead-instructor-center',
-      },
-    ],
-  },
-
-  'egghead-ui': {
-    tags: [tags.npm, tags.react],
-    mainVisual: '/static/egghead-ui.png',
-    title: `egghead component library`,
-    description: `I built the initial production egghead.io React component library which is used across egghead apps. It contains React components, pages of composed components, and general JavaScript utilities. It outputs an npm library as well as a living stle guide / documentation app from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
-    links: [
-      {
-        description: 'Web app',
-        href: 'https://styleguide.egghead.io',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/eggheadio/egghead-ui',
-      },
-    ],
-  },
-
-  'nova': {
-    tags: [tags.npm],
-    mainVisual: '/static/nova-colors.png',
-    title: `Nova`,
-    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. I built it as a stand-alone npm library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
-    links: [
-      {
-        description: 'Project website',
-        href: '/projects/nova',
-      },
-      {
-        description: 'Code for color library',
-        href: 'https://github.com/trevordmiller/nova-colors',
-      },
-      {
-        description: 'Code for editor plugins and tools',
-        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
-      },
-      {
-        description: 'Blog post',
-        href: '/blog/color-scheme-building',
       },
     ],
   },
@@ -149,6 +94,62 @@ export const projects = {
       },
     ],
   },
+
+  'nova': {
+    tags: [tags.npm],
+    mainVisual: '/static/nova-colors.png',
+    title: `Nova`,
+    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. I built it as a stand-alone npm library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
+    links: [
+      {
+        description: 'Project website',
+        href: '/projects/nova',
+      },
+      {
+        description: 'Code for color library',
+        href: 'https://github.com/trevordmiller/nova-colors',
+      },
+      {
+        description: 'Code for editor plugins and tools',
+        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
+      },
+      {
+        description: 'Blog post',
+        href: '/blog/color-scheme-building',
+      },
+    ],
+  },
+
+  'egghead-instructor-center': {
+    tags: [tags.react],
+    mainVisual: '/static/egghead-instructor-center.png',
+    title: `egghead Instructor Center`,
+    description: `I built the initial production egghead Instructor Center. It was a React web app. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/eggheadio/egghead-instructor-center',
+      },
+    ],
+  },
+
+  'egghead-ui': {
+    tags: [tags.npm, tags.react],
+    mainVisual: '/static/egghead-ui.png',
+    title: `egghead component library`,
+    description: `I built the initial production egghead.io React component library which is used across egghead apps. It contains React components, pages of composed components, and general JavaScript utilities. It outputs an npm library as well as a living stle guide / documentation app from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
+    links: [
+      {
+        description: 'Web app',
+        href: 'https://styleguide.egghead.io',
+      },
+      {
+        description: 'Code',
+        href: 'https://github.com/eggheadio/egghead-ui',
+      },
+    ],
+  },
+
 
   'egghead-practical-git': {
     tags: [tags.unix, tags.git],
