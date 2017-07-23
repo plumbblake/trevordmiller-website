@@ -5,6 +5,14 @@ import Teaser from '../../components/Teaser'
 
 export const posts = {
 
+  'dotfiles': {
+    tags: [tags.unix, tags.git],
+    mainVisual: '/static/dotfiles.png',
+    title: `Organizing tooling settings using dotfiles`,
+    description: `Examples of using dotfiles to manage and back-up the config for git, shells, editors, etc.`,
+    date: 'July 23, 2017',
+  },
+
   'react-render-callback-components': {
     tags: [tags.react],
     mainVisual: '/static/react-render-callback-components.png',
