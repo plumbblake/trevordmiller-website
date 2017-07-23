@@ -3,35 +3,34 @@ const baseRoutes = [
     path: '/',
     title: 'Home',
     description: `An overview of what is on the website`,
-    visual: 'terminal',
   },
 
   {
     path: '/projects',
     title: 'Projects',
-    description: 'Info and links to some of my projects',
-    visual: 'terminal',
+    description: 'Info and links to some of my projects and code',
+    visual: 'stack',
   },
 
   {
     path: '/blog',
     title: 'Blog',
     description: 'Articles, mostly posts about code.',
-    visual: 'terminal',
+    visual: 'newspaper',
   },
 
   {
     path: '/about',
     title: 'About',
     description: 'Aspects about me',
-    visual: 'terminal',
+    visual: 'profile',
   },
 
   {
     path: '/follow',
     title: 'Follow',
     description: 'Follow along with my newsletter, social media, and whatnot',
-    visual: 'terminal',
+    visual: 'userPlus',
   },
 ]
 

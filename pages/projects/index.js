@@ -264,7 +264,7 @@ export default () => (
     mainVisual={projects[projectKeys[0]].mainVisual}
     pathname='https://trevordmiller.com/projects'
     title='Projects'
-    description='Info and links to some of my projects'
+    description='Info and links to some of my projects and code'
     showDescription
     sections={projectKeys.map(projectKey => {
       const project = projects[projectKey]
