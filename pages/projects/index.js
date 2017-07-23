@@ -73,24 +73,11 @@ export const projects = {
     tags: [tags.unix, tags.git],
     mainVisual: '/static/github.png',
     title: `Shell Scripts`,
-    description: `I write shell scripts for repetitive tasks.`,
+    description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
     links: [
       {
         description: 'Code',
         href: 'https://github.com/trevordmiller/shell-scripts',
-      },
-    ],
-  },
-
-  'device-setup': {
-    tags: [tags.unix, tags.git],
-    mainVisual: '/static/github.png',
-    title: `Device Setup`,
-    description: `I use this repo to aggregate and automate as much of my settings as possible, and document the rest.`,
-    links: [
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/device-setup',
       },
     ],
   },
