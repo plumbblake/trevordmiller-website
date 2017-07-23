@@ -66,6 +66,10 @@ export const projects = {
         description: 'Code',
         href: 'https://github.com/trevordmiller/dotfiles',
       },
+      {
+        description: 'Blog post',
+        href: '/blog/dotfiles',
+      },
     ],
   },
 
