@@ -86,7 +86,7 @@ export default () => (
     mainVisual={posts[postKeys[0]].mainVisual}
     pathname='https://trevordmiller.com/blog'
     title='Blog'
-    description='Writings from Trevor D. Miller on programming, organization, music, and other thoughts.'
+    description='Articles from Trevor D. Miller, mostly posts about code.'
     sections={postKeys.map(postKey => {
       const post = posts[postKey]
       return ({

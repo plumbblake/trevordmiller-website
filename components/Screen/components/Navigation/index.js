@@ -1,25 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import baseRoutes from '../../../../utils/baseRoutes'
 import {uiGroups, spacing, fontSizes} from '../../../../utils/styleGuide'
-
-const baseRoutes = [
-  {
-    path: '/',
-    title: 'About',
-  },
-  {
-    path: '/projects',
-    title: 'Projects',
-  },
-  {
-    path: '/blog',
-    title: 'Blog',
-  },
-  {
-    path: '/follow',
-    title: 'Follow',
-  },
-]
 
 export const baseRouteTitles = baseRoutes.map(baseRoute => baseRoute.title)
 
