@@ -1,11 +1,11 @@
 import React from 'react'
-import {spacing} from '../../../utils/styleGuide'
+import { spacing } from '../../../utils/styleGuide'
 import Screen from '../../../components/Screen'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
 import Audio from '../../../components/Audio'
-import {projects} from '../'
+import { projects } from '../'
 
 const key = 'perfect-particle'
 
@@ -21,7 +21,8 @@ const releases = [
       },
       {
         title: 'Google Play',
-        href: 'https://play.google.com/store/music/album/Perfect_Particle_Spectrum?id=Bwg3wyliewntt747irfkl2zti4a',
+        href:
+          'https://play.google.com/store/music/album/Perfect_Particle_Spectrum?id=Bwg3wyliewntt747irfkl2zti4a',
       },
       {
         title: 'Amazon MP3',
@@ -33,33 +34,38 @@ const releases = [
 
 const maxPlayerSize = 250
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='Projects'
+    baseRouteTitle="Projects"
     mainVisual={projects[key].mainVisual}
     pathname={`https://trevordmiller.com/projects/${key}`}
-    title='Perfect Particle'
-    description='An instrumental blend of math rock, modern jazz, ambient, and electronic music'
+    title="Perfect Particle"
+    description="An instrumental blend of math rock, modern jazz, ambient, and electronic music"
     showDescription
     sections={releases.map(release => ({
       title: release.title,
       component: (
-        <div style={{
-          display: 'flex', 
-          flexWrap: 'wrap',
-        }}>
-
-          <div style={{
-            marginRight: spacing.medium,
-            marginBottom: spacing.small,
-            maxWidth: maxPlayerSize,
-          }}>
-            <div style={{
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div
+            style={{
+              marginRight: spacing.medium,
               marginBottom: spacing.small,
               maxWidth: maxPlayerSize,
-            }}>
-              <Image 
-                src={release.artworkPath} 
+            }}
+          >
+            <div
+              style={{
+                marginBottom: spacing.small,
+                maxWidth: maxPlayerSize,
+              }}
+            >
+              <Image
+                src={release.artworkPath}
                 description={`Album artwork for ${release.title}`}
                 quiet
               />
@@ -67,26 +73,28 @@ export default () => (
             <Audio src={release.sampleAudioPath} />
           </div>
 
-          <div style={{
-            maxWidth: maxPlayerSize,
-          }}>
-            <div style={{
-              marginBottom: spacing.small,
-            }}>
+          <div
+            style={{
+              maxWidth: maxPlayerSize,
+            }}
+          >
+            <div
+              style={{
+                marginBottom: spacing.small,
+              }}
+            >
               You can buy it through most digital music stores.
             </div>
             <List
-              items={release.stores.map(store => (
+              items={release.stores.map(store =>
                 <Anchor href={store.href}>
                   {store.title}
                 </Anchor>
-              ))}
-              type='link'
+              )}
+              type="link"
             />
           </div>
-
         </div>
       ),
     }))}
   />
-)

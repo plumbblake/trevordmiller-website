@@ -1,6 +1,12 @@
 import React from 'react'
-import {spacing} from '../../utils/styleGuide'
-import {githubUrl, npmUrl, twitterUrl, spotifyUrl, freshlyMarriedUrl} from '../../utils/urls'
+import { spacing } from '../../utils/styleGuide'
+import {
+  githubUrl,
+  npmUrl,
+  twitterUrl,
+  spotifyUrl,
+  freshlyMarriedUrl,
+} from '../../utils/urls'
 import Screen from '../../components/Screen'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
@@ -77,47 +83,47 @@ const lifeAspects = [
       },
     ],
   },
-
 ]
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='About'
-    mainVisual='/static/trevordmiller-website.jpg'
+    baseRouteTitle="About"
+    mainVisual="/static/trevordmiller-website.jpg"
     pathname={`https://trevordmiller.com/about`}
-    title='About'
-    description='Aspects from the life of Trevor D. Miller'
+    title="About"
+    description="Aspects from the life of Trevor D. Miller"
     sections={[
       {
         component: (
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
-            <div style={{
-              width: 200,
-              marginBottom: spacing.small,
-            }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <div
+              style={{
+                width: 200,
+                marginBottom: spacing.small,
+              }}
+            >
               <Avatar />
             </div>
-            <Heading level={2}>
-              Well, hello there! My name is Trevor.
-            </Heading>
+            <Heading level={2}>Well, hello there! My name is Trevor.</Heading>
           </div>
         ),
       },
       ...lifeAspects.map((lifeAspect, index) => ({
         title: `I'm a ${lifeAspect.label}`,
         component: (
-          <Teaser 
+          <Teaser
             key={index}
             visual={lifeAspect.visual}
             description={lifeAspect.description}
             links={lifeAspect.links}
           />
         ),
-      }))
+      })),
     ]}
   />
-)

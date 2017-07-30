@@ -4,8 +4,7 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
-
-  'hideaway': {
+  hideaway: {
     tags: [tags.inProgress, tags.react, tags.node],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
@@ -18,7 +17,7 @@ export const projects = {
     ],
   },
 
-  'cortex': {
+  cortex: {
     tags: [tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
@@ -56,7 +55,7 @@ export const projects = {
     ],
   },
 
-  'dotfiles': {
+  dotfiles: {
     tags: [tags.unix, tags.git],
     mainVisual: '/static/github.png',
     title: `Dotfiles`,
@@ -86,7 +85,7 @@ export const projects = {
     ],
   },
 
-  'nova': {
+  nova: {
     tags: [tags.npm],
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
@@ -141,7 +140,6 @@ export const projects = {
     ],
   },
 
-
   'egghead-practical-git': {
     tags: [tags.unix, tags.git],
     mainVisual: '/static/egghead-practical-git.png',
@@ -150,7 +148,8 @@ export const projects = {
     links: [
       {
         description: 'Videos',
-        href: 'https://egghead.io/courses/practical-git-for-everyday-professional-use',
+        href:
+          'https://egghead.io/courses/practical-git-for-everyday-professional-use',
       },
       {
         description: 'Code',
@@ -257,32 +256,30 @@ export const projects = {
       },
     ],
   },
-
 }
 
 const projectKeys = Object.keys(projects)
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='Projects'
+    baseRouteTitle="Projects"
     mainVisual={projects[projectKeys[0]].mainVisual}
-    pathname='https://trevordmiller.com/projects'
-    title='Projects'
-    description='Info and links to some of my projects and code'
+    pathname="https://trevordmiller.com/projects"
+    title="Projects"
+    description="Info and links to some of my projects and code"
     showDescription
     sections={projectKeys.map(projectKey => {
       const project = projects[projectKey]
-      return ({
+      return {
         title: project.title,
         component: (
-          <Teaser 
+          <Teaser
             visual={project.mainVisual}
             description={project.description}
             links={project.links}
             tags={project.tags}
           />
         ),
-      })
+      }
     })}
   />
-)

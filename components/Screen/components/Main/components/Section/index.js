@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {spacing} from '../../../../../../utils/styleGuide'
+import { spacing } from '../../../../../../utils/styleGuide'
 import Heading from '../../../../../Heading'
 
-const Section = ({children, title}) => (
+const Section = ({ children, title }) =>
   <section
     id={title}
     style={{
@@ -16,11 +16,9 @@ const Section = ({children, title}) => (
       ? <Heading level={3}>
           {title}
         </Heading>
-      : null
-    }
+      : null}
     {children}
   </section>
-)
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,

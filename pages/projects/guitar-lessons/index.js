@@ -1,17 +1,18 @@
-import React, {Component} from 'react'
-import {startCase, first} from 'lodash'
+import React, { Component } from 'react'
+import { startCase, first } from 'lodash'
 import Link from 'next/link'
-import {uiGroups, spacing, borderSizes} from '../../../utils/styleGuide'
+import { uiGroups, spacing, borderSizes } from '../../../utils/styleGuide'
 import Screen from '../../../components/Screen'
 import Heading from '../../../components/Heading'
 import Button from '../../../components/Button'
-import {projects} from '../'
+import { projects } from '../'
 
 const key = 'guitar-lessons'
 
 const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
 const doubleOctave = octave.concat(octave)
-const createUrl = (degree, type) => `/projects/guitar-lessons?degree=${degree}&type=${type}`
+const createUrl = (degree, type) =>
+  `/projects/guitar-lessons?degree=${degree}&type=${type}`
 const degreeOptions = ['None', 1, 2, 3, 4, 5, 6, 7]
 const typeOptions = [
   'singleNotes',
@@ -24,13 +25,12 @@ const typeOptions = [
 ]
 
 const getHighlightedDegreesByString = (selectedDegree, selectedType) => {
-
   const intervalToDegree = interval => {
     const remainder = (selectedDegree + (interval - 1)) % 7
     return remainder === 0 ? 7 : remainder
   }
 
-  return ({
+  return {
     singleNotes: {
       1: [selectedDegree],
       2: [selectedDegree],
@@ -80,7 +80,7 @@ const getHighlightedDegreesByString = (selectedDegree, selectedType) => {
       5: [intervalToDegree(4), selectedDegree],
       6: [selectedDegree],
     },
-  })[selectedType]
+  }[selectedType]
 }
 
 const GuitarPattern = ({
@@ -88,7 +88,7 @@ const GuitarPattern = ({
   highlightedDegreesByString,
   noteSize = 20,
   fretSize = 60,
-}) => (
+}) =>
   <div
     style={{
       marginTop: spacing.medium,
@@ -101,14 +101,14 @@ const GuitarPattern = ({
         display: 'inline-block',
       }}
     >
-      {strings.map((string, stringIndex) => (
+      {strings.map((string, stringIndex) =>
         <div
           key={stringIndex}
           style={{
             display: 'flex',
           }}
         >
-          {string.map((degree, noteIndex) => (
+          {string.map((degree, noteIndex) =>
             <div
               key={noteIndex}
               style={{
@@ -120,9 +120,10 @@ const GuitarPattern = ({
                 paddingTop: spacing.xxsmall + noteSize / 3,
                 paddingBottom: spacing.xxsmall + noteSize / 3,
                 borderLeft: `${borderSizes.small}px solid ${uiGroups.background}`,
-                borderRight: noteIndex === string.length - 1
-                  ? `${borderSizes.small}px solid ${uiGroups.background}`
-                  : '0',
+                borderRight:
+                  noteIndex === string.length - 1
+                    ? `${borderSizes.small}px solid ${uiGroups.background}`
+                    : '0',
               }}
             >
               <div
@@ -137,10 +138,12 @@ const GuitarPattern = ({
                 style={{
                   borderRadius: '100%',
                   background: degree
-                    ? highlightedDegreesByString[stringIndex + 1]
-                      && highlightedDegreesByString[stringIndex + 1].includes(degree)
-                        ? uiGroups.userCurrentState
-                        : uiGroups.background
+                    ? highlightedDegreesByString[stringIndex + 1] &&
+                      highlightedDegreesByString[stringIndex + 1].includes(
+                        degree
+                      )
+                      ? uiGroups.userCurrentState
+                      : uiGroups.background
                     : 'transparent',
                   width: noteSize,
                   height: noteSize,
@@ -148,14 +151,13 @@ const GuitarPattern = ({
                 }}
               />
             </div>
-          ))}
+          )}
         </div>
-      ))}
+      )}
     </div>
   </div>
-)
 
-const SelectorItem = ({children}) => (
+const SelectorItem = ({ children }) =>
   <div
     style={{
       marginRight: spacing.small,
@@ -164,9 +166,8 @@ const SelectorItem = ({children}) => (
   >
     {children}
   </div>
-)
 
-const Selector = ({title, children}) => (
+const Selector = ({ title, children }) =>
   <div>
     <Heading level={4}>
       {title}
@@ -182,21 +183,19 @@ const Selector = ({title, children}) => (
       {children}
     </div>
   </div>
-)
 
 class GuitarPatternsSelector extends Component {
-
   static defaultProps = {
     selectedDegree: first(degreeOptions),
     selectedType: first(typeOptions),
   }
 
   render() {
-    const {selectedDegree, selectedType} = this.props
+    const { selectedDegree, selectedType } = this.props
 
     const highlightedDegreesByString = getHighlightedDegreesByString(
       selectedDegree,
-      selectedType,
+      selectedType
     )
 
     const strings = [
@@ -210,97 +209,100 @@ class GuitarPatternsSelector extends Component {
 
     return (
       <div>
-
-        <div style={{
-          marginBottom: spacing.medium,
-        }}>
-          We can apply the in-key pattern to the guitar. Each dot on the fretboard below is a note that is 'in-key'. This entire pattern repeats up and down so the ends 'connect'. The pattern is not specific to any note or fret number - it can be shifted up or down depending on the 'key' you are in. Scroll horizontally to view the entire pattern. Tap a 'Degree' and 'Type' to highlight specific notes or chords inside the pattern. The most common chord progressions in typical songs use primarily the 1, 4, 5, and 6 degree chords. Most common songs will resolve back to the 1 (Major) or 6 (Minor) degree chord. Once you find the 'root' of a song, you can play any of the notes in the entire in-key pattern and it is likely to sound good.
+        <div
+          style={{
+            marginBottom: spacing.medium,
+          }}
+        >
+          We can apply the in-key pattern to the guitar. Each dot on the
+          fretboard below is a note that is 'in-key'. This entire pattern
+          repeats up and down so the ends 'connect'. The pattern is not specific
+          to any note or fret number - it can be shifted up or down depending on
+          the 'key' you are in. Scroll horizontally to view the entire pattern.
+          Tap a 'Degree' and 'Type' to highlight specific notes or chords inside
+          the pattern. The most common chord progressions in typical songs use
+          primarily the 1, 4, 5, and 6 degree chords. Most common songs will
+          resolve back to the 1 (Major) or 6 (Minor) degree chord. Once you find
+          the 'root' of a song, you can play any of the notes in the entire
+          in-key pattern and it is likely to sound good.
         </div>
 
-        <div style={{
-          marginBottom: spacing.medium,
-        }}>
+        <div
+          style={{
+            marginBottom: spacing.medium,
+          }}
+        >
           <GuitarPattern
             strings={strings}
             highlightedDegreesByString={highlightedDegreesByString}
           />
         </div>
 
-        <Selector title='Degree'>
-          {degreeOptions.map(degree => (
+        <Selector title="Degree">
+          {degreeOptions.map(degree =>
             <SelectorItem key={degree}>
-              <Link
-                href={createUrl(degree, selectedType)}
-                scroll={false}
-              >
-                <Button type={selectedDegree === degree
-                  ? 'primary'
-                  : 'secondary'
-                }>
+              <Link href={createUrl(degree, selectedType)} scroll={false}>
+                <Button
+                  type={selectedDegree === degree ? 'primary' : 'secondary'}
+                >
                   {startCase(degree)}
                 </Button>
               </Link>
             </SelectorItem>
-          ))}
+          )}
         </Selector>
 
-        <Selector title='Type'>
-          {typeOptions.map(type => (
+        <Selector title="Type">
+          {typeOptions.map(type =>
             <SelectorItem key={type}>
-              <Link
-                href={createUrl(selectedDegree, type)}
-                scroll={false}
-              >
-                <Button type={selectedType === type
-                  ? 'primary'
-                  : 'secondary'
-                }>
+              <Link href={createUrl(selectedDegree, type)} scroll={false}>
+                <Button type={selectedType === type ? 'primary' : 'secondary'}>
                   {startCase(type)}
                 </Button>
               </Link>
             </SelectorItem>
-          ))}
+          )}
         </Selector>
-
       </div>
     )
   }
 }
 
 export default class extends React.Component {
-
-  static async getInitialProps ({
-    query: {
-      degree,
-      type,
-    },
-  }) {
-    return ({
+  static async getInitialProps({ query: { degree, type } }) {
+    return {
       selectedDegree: degree,
       selectedType: type,
-    })
+    }
   }
 
   render() {
-    const {selectedDegree, selectedType} = this.props
+    const { selectedDegree, selectedType } = this.props
 
     return (
       <Screen
-        baseRouteTitle='Projects'
+        baseRouteTitle="Projects"
         mainVisual={projects[key].mainVisual}
         pathname={`https://trevordmiller.com/projects/${key}`}
-        title='Guitar lessons'
-        description='Diatonic (in-key) chord and scale diagrams to help you go beyond tabs and memorizing songs'
+        title="Guitar lessons"
+        description="Diatonic (in-key) chord and scale diagrams to help you go beyond tabs and memorizing songs"
         sections={[
           {
             title: 'The in-key pattern',
             component: (
               <div>
-
-                <div style={{
-                  marginBottom: spacing.medium,
-                }}>
-                  In common music, most notes used are 'in-key'. Then, chords (multiple notes played at a time) are built from these in-key notes. There are only twelve notes in music, but they repeat in 'octaves'. Only seven of these notes are in-key. Below is what the pattern of in-key notes looks like. Scroll horizontally to view the entire pattern. This pattern repeats infinitely up and down so the ends 'connect'.
+                <div
+                  style={{
+                    marginBottom: spacing.medium,
+                  }}
+                >
+                  In common music, most notes used are 'in-key'. Then, chords
+                  (multiple notes played at a time) are built from these in-key
+                  notes. There are only twelve notes in music, but they repeat
+                  in 'octaves'. Only seven of these notes are in-key. Below is
+                  what the pattern of in-key notes looks like. Scroll
+                  horizontally to view the entire pattern. This pattern repeats
+                  infinitely up and down so the ends 'connect'.
                 </div>
 
                 <GuitarPattern
@@ -309,7 +311,6 @@ export default class extends React.Component {
                     1: [first(degreeOptions)],
                   }}
                 />
-
               </div>
             ),
           },

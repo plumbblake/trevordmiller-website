@@ -1,7 +1,6 @@
-import {Component} from 'react'
+import { Component } from 'react'
 
 class Toggle extends Component {
-
   state = {
     isOpen: false,
   }
@@ -13,10 +12,7 @@ class Toggle extends Component {
   }
 
   render() {
-    return this.props.children(
-      this.state.isOpen, 
-      this.handleToggleClick
-    )
+    return this.props.children(this.state.isOpen, this.handleToggleClick)
   }
 }
 

@@ -4,8 +4,7 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
-
-  'dotfiles': {
+  dotfiles: {
     tags: [tags.unix, tags.git],
     mainVisual: '/static/dotfiles.png',
     title: `Organizing tooling settings using dotfiles`,
@@ -88,31 +87,30 @@ export const posts = {
 
 const postKeys = Object.keys(posts)
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='Blog'
+    baseRouteTitle="Blog"
     mainVisual={posts[postKeys[0]].mainVisual}
-    pathname='https://trevordmiller.com/blog'
-    title='Blog'
-    description='Articles from Trevor D. Miller, mostly posts about code.'
+    pathname="https://trevordmiller.com/blog"
+    title="Blog"
+    description="Articles from Trevor D. Miller, mostly posts about code."
     sections={postKeys.map(postKey => {
       const post = posts[postKey]
-      return ({
+      return {
         title: post.title,
         component: (
-          <Teaser 
+          <Teaser
             tags={post.tags}
             visual={post.mainVisual}
             description={post.description}
             links={[
               {
                 description: 'View',
-                href: `/blog/${postKey}`
+                href: `/blog/${postKey}`,
               },
             ]}
           />
         ),
-      })
+      }
     })}
   />
-)

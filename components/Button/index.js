@@ -1,5 +1,11 @@
 import React from 'react'
-import {uiGroups, spacing, borderRadii, fontSizes, fontFamilies} from '../../utils/styleGuide'
+import {
+  uiGroups,
+  spacing,
+  borderRadii,
+  fontSizes,
+  fontFamilies,
+} from '../../utils/styleGuide'
 
 const stylesByType = {
   primary: {
@@ -12,8 +18,8 @@ const stylesByType = {
   },
 }
 
-export default ({onClick, type = 'primary', children}) => (
-  <button 
+export default ({ onClick, type = 'primary', children }) =>
+  <button
     onClick={onClick}
     style={{
       paddingTop: spacing.medium,
@@ -28,9 +34,8 @@ export default ({onClick, type = 'primary', children}) => (
       fontFamily: fontFamilies.primary,
       outline: 'none',
       borderRadius: borderRadii.medium,
-      ...stylesByType[type]
+      ...stylesByType[type],
     }}
   >
     {children}
   </button>
-)

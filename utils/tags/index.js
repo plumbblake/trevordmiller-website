@@ -1,7 +1,6 @@
-import {uiGroups} from '../styleGuide'
+import { uiGroups } from '../styleGuide'
 
 const tags = {
-
   inProgress: {
     label: 'In Progress',
     color: uiGroups.userActionNeeded,
@@ -55,7 +54,6 @@ const tags = {
     color: uiGroups.userCurrentState,
     icon: 'plug',
   },
-
 }
 
 export default tags

@@ -3,12 +3,12 @@ import baseRoutes from '../utils/baseRoutes'
 import Screen from '../components/Screen'
 import Teaser from '../components/Teaser'
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='Home'
-    mainVisual='/static/trevordmiller-website.jpg'
+    baseRouteTitle="Home"
+    mainVisual="/static/trevordmiller-website.jpg"
     pathname={`https://trevordmiller.com`}
-    title='Home'
+    title="Home"
     description={baseRoutes[0].description}
     sections={[
       ...baseRoutes
@@ -16,7 +16,7 @@ export default () => (
         .map((baseRoute, index) => ({
           title: baseRoute.title,
           component: (
-            <Teaser 
+            <Teaser
               key={index}
               visual={baseRoute.visual}
               description={baseRoute.description}
@@ -24,11 +24,10 @@ export default () => (
                 {
                   description: `View ${baseRoute.title} page`,
                   href: baseRoute.path,
-                }
+                },
               ]}
             />
           ),
-        }))
+        })),
     ]}
   />
-)

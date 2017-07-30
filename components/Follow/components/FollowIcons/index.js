@@ -1,6 +1,13 @@
 import React from 'react'
-import {uiGroups, fontSizes, spacing} from '../../../../utils/styleGuide'
-import {githubUrl, npmUrl, twitterUrl, facebookUrl, linkedinUrl, rssUrl} from '../../../../utils/urls'
+import { uiGroups, fontSizes, spacing } from '../../../../utils/styleGuide'
+import {
+  githubUrl,
+  npmUrl,
+  twitterUrl,
+  facebookUrl,
+  linkedinUrl,
+  rssUrl,
+} from '../../../../utils/urls'
 import Anchor from '../../../Anchor'
 import Icon from '../../../Icon'
 
@@ -37,20 +44,21 @@ const followItems = [
   },
 ]
 
-export default () => (
-  <nav style={{
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  }}>
-    {followItems.map((followItem, index) => (
-      <Anchor 
-        key={index}
-        href={followItem.href}
-      >
-        <div style={{
-          padding: spacing.small,
-        }}>
+export default () =>
+  <nav
+    style={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+    }}
+  >
+    {followItems.map((followItem, index) =>
+      <Anchor key={index} href={followItem.href}>
+        <div
+          style={{
+            padding: spacing.small,
+          }}
+        >
           <Icon
             type={followItem.iconType}
             fill={uiGroups.userCurrentState}
@@ -58,6 +66,5 @@ export default () => (
           />
         </div>
       </Anchor>
-    ))}
+    )}
   </nav>
-)

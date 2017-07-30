@@ -1,5 +1,11 @@
 import React from 'react'
-import {spacing, borderRadii, fontSizes, uiGroups, fontFamilies} from '../../../../utils/styleGuide'
+import {
+  spacing,
+  borderRadii,
+  fontSizes,
+  uiGroups,
+  fontFamilies,
+} from '../../../../utils/styleGuide'
 
 const inputResetStyles = {
   fontFamily: fontFamilies.primary,
@@ -9,25 +15,25 @@ const inputResetStyles = {
   MozAppearance: 'none',
 }
 
-export default () => (
+export default () =>
   <aside>
     <form
-      action='//trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec'
-      method='post'
-      id='mc-embedded-subscribe-form'
-      name='mc-embedded-subscribe-form'
-      target='_blank'
+      action="//trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      target="_blank"
       style={{
         display: 'flex',
         justifyContent: 'center',
       }}
     >
       <input
-        type='email'
-        defaultValue=''
-        name='EMAIL'
-        id='mce-EMAIL'
-        placeholder='Email'
+        type="email"
+        defaultValue=""
+        name="EMAIL"
+        id="mce-EMAIL"
+        placeholder="Email"
         required
         style={{
           ...inputResetStyles,
@@ -40,10 +46,10 @@ export default () => (
         }}
       />
       <input
-        type='submit'
-        defaultValue='Subscribe'
-        name='subscribe'
-        id='mc-embedded-subscribe'
+        type="submit"
+        defaultValue="Subscribe"
+        name="subscribe"
+        id="mc-embedded-subscribe"
         style={{
           ...inputResetStyles,
           marginTop: spacing.medium,
@@ -55,4 +61,3 @@ export default () => (
       />
     </form>
   </aside>
-)

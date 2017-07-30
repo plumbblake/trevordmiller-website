@@ -34,27 +34,23 @@ export const levelSpecificStyles = {
   },
 }
 
-const Heading = ({
-  children,
-  level,
-}) => (
-  <div style={{
-    fontWeight: fontWeights.light,
-    overflowWrap: 'break-word',
-    ...levelSpecificStyles[level],
-  }}>
+const Heading = ({ children, level }) =>
+  <div
+    style={{
+      fontWeight: fontWeights.light,
+      overflowWrap: 'break-word',
+      ...levelSpecificStyles[level],
+    }}
+  >
     {children}
   </div>
-)
 
 Heading.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   level: PropTypes.oneOf(
-    Object.keys(levelSpecificStyles)
-      .map(levelString => parseInt(levelString, 10))
+    Object.keys(levelSpecificStyles).map(levelString =>
+      parseInt(levelString, 10)
+    )
   ).isRequired,
 }
 

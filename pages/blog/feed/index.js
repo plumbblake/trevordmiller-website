@@ -1,6 +1,6 @@
-import {Component} from 'react'
+import { Component } from 'react'
 import RSS from 'rss'
-import {posts} from '../'
+import { posts } from '../'
 
 const feed = new RSS({
   title: 'Trevor D. Miller blog',
@@ -13,7 +13,7 @@ const feed = new RSS({
   copyright: '2017 Trevor D. Miller',
 })
 
-Object.keys(posts).forEach((postKey) => {
+Object.keys(posts).forEach(postKey => {
   const post = posts[postKey]
   feed.item({
     title: post.title,
@@ -31,8 +31,8 @@ Object.keys(posts).forEach((postKey) => {
 const xml = feed.xml()
 
 export default class extends Component {
-  static async getInitialProps ({res}) {
+  static async getInitialProps({ res }) {
     res.write(xml)
-    res.end() 
+    res.end()
   }
 }

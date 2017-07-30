@@ -15,28 +15,23 @@ import Anchor from '../../../components/Anchor'
 import Heading from '../../../components/Heading'
 import List from '../../../components/List'
 import Image from '../../../components/Image'
-import {
-  Tab,
-  Tabs,
-  TabList,
-  TabPanel,
-} from 'react-tabs'
-import {projects} from '../'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { projects } from '../'
 
 const key = 'nova'
 
 const contributors = [
   {
     handle: '@AC_Design',
-    url: 'https://twitter.com/AC_Design'
+    url: 'https://twitter.com/AC_Design',
   },
   {
     handle: '@iammerrick',
-    url: 'http://merrickchristensen.com/'
+    url: 'http://merrickchristensen.com/',
   },
   {
     handle: '@trevordmiller',
-    url: '/'
+    url: '/',
   },
 ]
 
@@ -84,7 +79,8 @@ const characteristics = [
   },
   {
     title: 'Current',
-    description: 'First-class syntax highlighting for today\'s web development languages',
+    description:
+      "First-class syntax highlighting for today's web development languages",
   },
   {
     title: 'Soft',
@@ -108,14 +104,15 @@ const plugins = [
   {
     title: 'Vim',
     icon: 'vim',
-    screenshot: 'https://github.com/trevordmiller/nova-vim/blob/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-vim/blob/master/assets/screenshot.png?raw=true',
     steps: [
       'Install "trevordmiller/nova-vim" with your Vim plugin manager',
       'Add "colorscheme nova" to your ".vimrc" (after any other plugins or rules)',
       'Restart Vim',
     ],
     notes: [
-      'You\'ll need True Color support (latest Vim, Neovim, or GUI Vim)',
+      "You'll need True Color support (latest Vim, Neovim, or GUI Vim)",
       'For terminal Vim use, your terminal will also need True Color support',
       'Using the Nova Hyper or iTerm plugin is recommended',
       'If you use "vim-airline", it works automatically',
@@ -128,11 +125,13 @@ const plugins = [
     links: [
       {
         title: 'Example ".vimrc"',
-        url: 'https://github.com/trevordmiller/nova-vim/blob/master/assets/.vimrc',
+        url:
+          'https://github.com/trevordmiller/nova-vim/blob/master/assets/.vimrc',
       },
       {
         title: 'Contributing instructions',
-        url: 'https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -143,7 +142,8 @@ const plugins = [
   {
     title: 'Atom',
     icon: 'atom',
-    screenshot: 'https://github.com/trevordmiller/nova-atom-syntax/raw/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-atom-syntax/raw/master/assets/screenshot.png?raw=true',
     steps: [
       'In Atom, open your settings',
       'Tap on the "Install" pane',
@@ -160,11 +160,13 @@ const plugins = [
     links: [
       {
         title: 'Contributing instructions for the UI plugin',
-        url: 'https://github.com/trevordmiller/nova-atom-ui/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-atom-ui/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Contributing instructions for the syntax plugin',
-        url: 'https://github.com/trevordmiller/nova-atom-syntax/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-atom-syntax/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code for the UI plugin',
@@ -179,7 +181,8 @@ const plugins = [
   {
     title: 'Hyper',
     icon: 'hyper',
-    screenshot: 'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
     steps: [
       'Add "nova-hyperterm" to the "plugins" array in your "~/.hyper.js"',
       'Restart Hyper',
@@ -187,11 +190,13 @@ const plugins = [
     links: [
       {
         title: 'Example ".hyper.js"',
-        url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
+        url:
+          'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
       },
       {
         title: 'Contributing instructions',
-        url: 'https://github.com/trevordmiller/nova-hyperterm/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-hyperterm/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -202,7 +207,8 @@ const plugins = [
   {
     title: 'iTerm',
     icon: 'iterm',
-    screenshot: 'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
     steps: [
       'Download "nova.itermcolors"',
       'In iTerm, open your preferences',
@@ -212,11 +218,13 @@ const plugins = [
     links: [
       {
         title: 'nova.itermcolors',
-        url: 'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
+        url:
+          'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
       },
       {
         title: 'Contributing instructions',
-        url: 'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -227,55 +235,57 @@ const plugins = [
   {
     title: 'Git',
     icon: 'git',
-    screenshot: 'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
     steps: [
       'Install a Nova plugin for your terminal',
       'Use ANSI color variables in your ".gitconfig"',
       'For Nova color meanings, see the example ".gitconfig"',
     ],
     notes: [
-      'You\'ll need a version of Git that supports the latest color options (git 2.10)',
+      "You'll need a version of Git that supports the latest color options (git 2.10)",
     ],
     links: [
       {
         title: 'Example ".gitconfig"',
-        url: 'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
+        url:
+          'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
       },
     ],
   },
   {
     title: 'tmux',
     icon: 'tmux',
-    screenshot: 'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
+    screenshot:
+      'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
     steps: [
       'Install a Nova plugin for your terminal',
       'Use ANSI color variables in your ".tmux.conf"',
       'For Nova color meanings, see the example ".tmux.conf"',
     ],
     notes: [
-      'You\'ll need a version of tmux that supports True Color (tmux 2.2+)',
+      "You'll need a version of tmux that supports True Color (tmux 2.2+)",
     ],
     links: [
       {
         title: 'Example ".tmux.conf"',
-        url: 'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
+        url:
+          'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
       },
     ],
   },
   {
     title: 'npm',
     icon: 'npm',
-    steps: [
-      'npm install -S nova-colors',
-      'import {group} from \'nova-colors\''
-    ],
+    steps: ['npm install -S nova-colors', "import {group} from 'nova-colors'"],
     notes: [
       'The package provides the Nova color values mapped by group type (syntax, UI, version control etc.)',
     ],
     links: [
       {
         title: 'API',
-        url: 'https://github.com/trevordmiller/nova-colors/blob/master/src/index.js',
+        url:
+          'https://github.com/trevordmiller/nova-colors/blob/master/src/index.js',
       },
       {
         title: 'Example plugin using nova-colors directly',
@@ -287,7 +297,8 @@ const plugins = [
       },
       {
         title: 'Contributing instructions',
-        url: 'https://github.com/trevordmiller/nova-colors/blob/master/CONTRIBUTING.md',
+        url:
+          'https://github.com/trevordmiller/nova-colors/blob/master/CONTRIBUTING.md',
       },
       {
         title: 'Source code',
@@ -319,7 +330,6 @@ const faq = [
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
 
 class Plugins extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -336,27 +346,30 @@ class Plugins extends React.Component {
   render() {
     return (
       <Tabs>
-        <TabList style={{
-          margin: 0,
-          listStyle: 'none',
-          padding: 0,
-          display: 'flex',
-          overflowX: 'scroll',
-          borderTop: tabBorder,
-          borderRight: tabBorder,
-          borderLeft: tabBorder,
-          borderTopRightRadius: borderRadii.medium,
-          borderTopLeftRadius: borderRadii.medium,
-        }}>
-          {plugins.map((plugin, index) => (
+        <TabList
+          style={{
+            margin: 0,
+            listStyle: 'none',
+            padding: 0,
+            display: 'flex',
+            overflowX: 'scroll',
+            borderTop: tabBorder,
+            borderRight: tabBorder,
+            borderLeft: tabBorder,
+            borderTopRightRadius: borderRadii.medium,
+            borderTopLeftRadius: borderRadii.medium,
+          }}
+        >
+          {plugins.map((plugin, index) =>
             <Tab
               key={index}
               onClick={this.handleTabClick.bind(this, index)}
               style={{
                 flex: '1',
-                background: index === this.state.activeTab
-                  ? uiGroups.background
-                  : uiGroups.backgroundShade,
+                background:
+                  index === this.state.activeTab
+                    ? uiGroups.background
+                    : uiGroups.backgroundShade,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -377,167 +390,176 @@ class Plugins extends React.Component {
                   }
                 />
               </div>
-              <div style={{
-                marginTop: spacing.small,
-                color: index === this.state.activeTab
-                  ? uiGroups.userCurrentState
-                  : uiGroups.gray3,
-              }}>
+              <div
+                style={{
+                  marginTop: spacing.small,
+                  color:
+                    index === this.state.activeTab
+                      ? uiGroups.userCurrentState
+                      : uiGroups.gray3,
+                }}
+              >
                 {plugin.title}
               </div>
             </Tab>
-          ))}
+          )}
         </TabList>
-        {plugins.map((plugin, index) => (
+        {plugins.map((plugin, index) =>
           <TabPanel
             key={index}
-            style={index === this.state.activeTab
-              ? {
-                  borderRight: tabBorder,
-                  borderBottom: tabBorder,
-                  borderLeft: tabBorder,
-                  borderBottomRightRadius: borderRadii.medium,
-                  borderBottomLeftRadius: borderRadii.medium,
-                  paddingTop: spacing.large,
-                  paddingBottom: spacing.large,
-                  paddingRight: spacing.medium,
-                  paddingLeft: spacing.medium,
-                }
-              : {}
+            style={
+              index === this.state.activeTab
+                ? {
+                    borderRight: tabBorder,
+                    borderBottom: tabBorder,
+                    borderLeft: tabBorder,
+                    borderBottomRightRadius: borderRadii.medium,
+                    borderBottomLeftRadius: borderRadii.medium,
+                    paddingTop: spacing.large,
+                    paddingBottom: spacing.large,
+                    paddingRight: spacing.medium,
+                    paddingLeft: spacing.medium,
+                  }
+                : {}
             }
           >
             <Heading level={4}>
               {plugin.title}
             </Heading>
-            <div style={{
-              marginTop: spacing.large,
-            }}>
+            <div
+              style={{
+                marginTop: spacing.large,
+              }}
+            >
               {plugin.screenshot
-                ? <div style={{
-                    marginBottom: spacing.medium,
-                  }}>
+                ? <div
+                    style={{
+                      marginBottom: spacing.medium,
+                    }}
+                  >
                     <Image
                       src={plugin.screenshot}
                       description={`Screenshot of Nova plugin for ${plugin.title}`}
                       quiet={true}
                     />
                   </div>
-                : null
-              }
+                : null}
               {plugin.steps
-                ? <div style={{
-                    marginBottom: (plugin.notes || plugin.links)
-                      ? spacing.medium
-                      : 0,
-                  }}>
-                    <Heading level={3}>
-                      Instructions
-                    </Heading>
-                    <div style={{
-                      paddingBottom: spacing.medium,
-                    }}>
-                      <List
-                        items={plugin.steps}
-                        type='number'
-                      />
+                ? <div
+                    style={{
+                      marginBottom:
+                        plugin.notes || plugin.links ? spacing.medium : 0,
+                    }}
+                  >
+                    <Heading level={3}>Instructions</Heading>
+                    <div
+                      style={{
+                        paddingBottom: spacing.medium,
+                      }}
+                    >
+                      <List items={plugin.steps} type="number" />
                     </div>
                   </div>
-                : null
-              }
+                : null}
               {plugin.notes
-                ? <div style={{
-                    marginBottom: (plugin.links)
-                      ? spacing.medium
-                      : 0,
-                  }}>
-                    <Heading level={3}>
-                      Notes
-                    </Heading>
-                    <div style={{
-                      paddingBottom: spacing.medium,
-                    }}>
+                ? <div
+                    style={{
+                      marginBottom: plugin.links ? spacing.medium : 0,
+                    }}
+                  >
+                    <Heading level={3}>Notes</Heading>
+                    <div
+                      style={{
+                        paddingBottom: spacing.medium,
+                      }}
+                    >
                       <List items={plugin.notes} />
                     </div>
                   </div>
-                : null
-              }
+                : null}
               {plugin.links
                 ? <div>
-                    <Heading level={3}>
-                      Links
-                    </Heading>
+                    <Heading level={3}>Links</Heading>
                     <List
-                      items={plugin.links.map(link => (
+                      items={plugin.links.map(link =>
                         <Anchor href={link.url}>
                           {link.title}
                         </Anchor>
-                      ))}
-                      type='link'
+                      )}
+                      type="link"
                     />
                   </div>
-                : null
-              }
+                : null}
             </div>
           </TabPanel>
-        ))}
+        )}
       </Tabs>
     )
   }
 }
 
-export default () => (
+export default () =>
   <Screen
-    baseRouteTitle='Projects'
+    baseRouteTitle="Projects"
     mainVisual={projects[key].mainVisual}
     pathname={`https://trevordmiller.com/projects/${key}`}
-    title='Nova'
-    description='A color scheme for modern web development'
+    title="Nova"
+    description="A color scheme for modern web development"
     showDescription
     sections={[
       {
         component: (
-          <div style={{
-            textAlign: 'center',
-            fontSize: fontSizes.small,
-          }}>
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-              Built with 
-              <div style={{
-                marginLeft: spacing.xsmall,
-                marginRight: spacing.xsmall,
+          <div
+            style={{
+              textAlign: 'center',
+              fontSize: fontSizes.small,
+            }}
+          >
+            <div
+              style={{
                 display: 'flex',
+                justifyContent: 'center',
                 alignItems: 'center',
-              }}>
+              }}
+            >
+              Built with
+              <div
+                style={{
+                  marginLeft: spacing.xsmall,
+                  marginRight: spacing.xsmall,
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
                 <Icon
-                  type='heart'
+                  type="heart"
                   fill={colorValues.colors.red}
                   size={fontSizes.medium}
                 />
               </div>
               by
             </div>
-            <div style={{
-              opacity: opacities.subtle,
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-            }}>
-              {contributors.map((contributor, index) => (
+            <div
+              style={{
+                opacity: opacities.subtle,
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}
+            >
+              {contributors.map((contributor, index) =>
                 <span
                   key={index}
                   style={{
-                    marginRight: (index + 1 < contributors.length) ? spacing.medium : 0,
+                    marginRight:
+                      index + 1 < contributors.length ? spacing.medium : 0,
                   }}
                 >
                   <Anchor href={contributor.url}>
                     {contributor.handle}
                   </Anchor>
                 </span>
-              ))}
+              )}
             </div>
           </div>
         ),
@@ -545,7 +567,7 @@ export default () => (
       {
         component: (
           <div>
-            {colorMeanings.map((group, index) => (
+            {colorMeanings.map((group, index) =>
               <div
                 key={index}
                 style={{
@@ -553,42 +575,50 @@ export default () => (
                   flexWrap: 'wrap',
                 }}
               >
-                {group.map((color, index) => (
+                {group.map((color, index) =>
                   <div
                     key={index}
                     style={{
-                      marginRight: (index + 1 < group.length) ? spacing.medium : 0,
-                      marginBottom: (index + 1 < group.length) ? spacing.large : 0,
+                      marginRight:
+                        index + 1 < group.length ? spacing.medium : 0,
+                      marginBottom:
+                        index + 1 < group.length ? spacing.large : 0,
                       textAlign: 'center',
                       width: 72,
                     }}
                   >
-                    <div style={{
-                      marginBottom: spacing.small,
-                    }}>
-                      <div style={{
-                        background: color.value,
-                        borderRadius: borderRadii.medium,
-                        width: 72,
-                        height: 72,
-                      }} />
+                    <div
+                      style={{
+                        marginBottom: spacing.small,
+                      }}
+                    >
+                      <div
+                        style={{
+                          background: color.value,
+                          borderRadius: borderRadii.medium,
+                          width: 72,
+                          height: 72,
+                        }}
+                      />
                     </div>
-                    <div style={{
-                      fontSize: fontSizes.small,
-                    }}>
+                    <div
+                      style={{
+                        fontSize: fontSizes.small,
+                      }}
+                    >
                       {color.meaning}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
-            ))}
+            )}
           </div>
         ),
       },
       {
         component: (
           <Image
-            src='/static/nova-example-code-screenshot.png'
+            src="/static/nova-example-code-screenshot.png"
             description={`Nova example code screenshot`}
             quiet
           />
@@ -598,17 +628,22 @@ export default () => (
         title: 'Characteristics',
         component: (
           <div>
-            {characteristics.map((characteristic, index) => (
+            {characteristics.map((characteristic, index) =>
               <div
                 key={index}
                 style={{
-                  marginBottom: (index + 1 < characteristics.length) ? spacing.large : 0,
+                  marginBottom:
+                    index + 1 < characteristics.length ? spacing.large : 0,
                 }}
               >
-                <Heading level={4}>{characteristic.title}</Heading>
-                <div>{characteristic.description}</div>
+                <Heading level={4}>
+                  {characteristic.title}
+                </Heading>
+                <div>
+                  {characteristic.description}
+                </div>
               </div>
-            ))}
+            )}
           </div>
         ),
       },
@@ -620,13 +655,11 @@ export default () => (
         title: 'Frequently Asked Questions',
         component: (
           <div>
-            {faq.map((item, index) => (
+            {faq.map((item, index) =>
               <div
                 key={index}
                 style={{
-                  marginBottom: (index + 1 < faq.length)
-                    ? spacing.large
-                    : 0,
+                  marginBottom: index + 1 < faq.length ? spacing.large : 0,
                 }}
               >
                 <Heading level={4}>
@@ -636,10 +669,9 @@ export default () => (
                   {item.answer}
                 </div>
               </div>
-            ))}
+            )}
           </div>
         ),
       },
     ]}
   />
-)
