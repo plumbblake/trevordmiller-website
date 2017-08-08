@@ -5,11 +5,15 @@ import Teaser from '../../components/Teaser'
 
 export const projects = {
   hideaway: {
-    tags: [tags.inProgress, tags.react, tags.node],
+    tags: [tags.react, tags.node],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
-    description: `When trying to focus on a task there are often a lot of distractions. I'm building a Mac app to escape distractions for a set amount of time. You start the timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. I'm building it with Node (Electron) and React (Next.js).`,
+    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js).`,
     links: [
+      {
+        description: 'Project website',
+        href: '/projects/hideaway',
+      },
       {
         description: 'Code',
         href: 'https://github.com/trevordmiller/hideaway',
