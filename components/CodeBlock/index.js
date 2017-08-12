@@ -9,7 +9,7 @@ import {
 } from '../../utils/styleGuide'
 import nova from './utils/nova'
 
-const CodeBlock = ({ children, fileName, output }) =>
+const CodeBlock = ({ children, fileName, output, language = 'javascript' }) =>
   <div
     style={{
       border: `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`,
@@ -34,7 +34,7 @@ const CodeBlock = ({ children, fileName, output }) =>
       }}
     >
       <SyntaxHighlighter
-        language="javascript"
+        language={language}
         style={nova}
         customStyle={{
           padding: 0,
@@ -70,6 +70,7 @@ CodeBlock.propTypes = {
   children: PropTypes.string.isRequired,
   fileName: PropTypes.string,
   output: PropTypes.node,
+  language: PropTypes.oneOf(['javascript', 'bash']),
 }
 
 export default CodeBlock
