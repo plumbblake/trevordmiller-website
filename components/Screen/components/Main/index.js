@@ -3,7 +3,7 @@ import { screenSizes } from '../../../../utils/styleGuide'
 import Header from './components/Header'
 import Section from './components/Section'
 
-export default ({ title, description, sections }) =>
+export default ({ title, mainVisual, description, sections }) =>
   <main>
     <div
       style={{
@@ -12,7 +12,7 @@ export default ({ title, description, sections }) =>
         minHeight: '100vh',
       }}
     >
-      <Header title={title} description={description} />
+      <Header title={title} mainVisual={mainVisual} description={description} />
       {sections.map((section, index) =>
         <Section key={index} title={section.title}>
           {section.component}

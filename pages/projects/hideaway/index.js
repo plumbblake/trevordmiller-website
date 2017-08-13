@@ -21,11 +21,32 @@ const Hideaway = ({ latestDownloadUrl }) =>
   <Screen
     baseRouteTitle="Projects"
     mainVisual={projects[key].mainVisual}
+    showMainVisual
     pathname={`https://trevordmiller.com/projects/${key}`}
     title="Hideaway"
     description="A Mac app to escape distractions for a set amount of time"
     showDescription
     sections={[
+      {
+        component: (
+          <div
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            <Anchor
+              href={
+                latestDownloadUrl ||
+                'https://github.com/trevordmiller/hideaway/releases/latest'
+              }
+            >
+              <Button big>Download</Button>
+            </Anchor>
+            <Label>macOS Sierra or later required</Label>
+          </div>
+        ),
+      },
+
       {
         title: 'Choose how long. Hit start. Work in peace.',
         component: (
@@ -47,22 +68,6 @@ const Hideaway = ({ latestDownloadUrl }) =>
               amount of time you have set. When the timer is done, it shows your
               dock and allows notifications again.
             </Paragraph>
-
-            <div
-              style={{
-                textAlign: 'center',
-              }}
-            >
-              <Anchor
-                href={
-                  latestDownloadUrl ||
-                  'https://github.com/trevordmiller/hideaway/releases/latest'
-                }
-              >
-                <Button>Download</Button>
-              </Anchor>
-              <Label>macOS Sierra or later required</Label>
-            </div>
           </div>
         ),
       },

@@ -18,7 +18,7 @@ const stylesByType = {
   },
 }
 
-export default ({ onClick, type = 'primary', children }) =>
+export default ({ onClick, type = 'primary', children, big }) =>
   <button
     onClick={onClick}
     style={{
@@ -30,7 +30,7 @@ export default ({ onClick, type = 'primary', children }) =>
       display: 'inline-block',
       textAlign: 'center',
       border: 'none',
-      fontSize: fontSizes.medium,
+      fontSize: big ? fontSizes.xlarge : fontSizes.medium,
       fontFamily: fontFamilies.primary,
       outline: 'none',
       borderRadius: borderRadii.medium,

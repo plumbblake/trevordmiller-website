@@ -18,6 +18,7 @@ export default class Screen extends Component {
   static propTypes = {
     baseRouteTitle: PropTypes.oneOf(baseRouteTitles).isRequired,
     mainVisual: PropTypes.string.isRequired,
+    showMainVisual: PropTypes.bool,
     pathname: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -40,6 +41,7 @@ export default class Screen extends Component {
     const {
       baseRouteTitle,
       mainVisual,
+      showMainVisual,
       pathname,
       title,
       description,
@@ -147,6 +149,7 @@ export default class Screen extends Component {
 
           <Main
             title={title}
+            mainVisual={showMainVisual ? mainVisual : null}
             description={showDescription ? description : null}
             sections={sections}
           />
