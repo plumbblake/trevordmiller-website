@@ -1,12 +1,14 @@
 import React from 'react'
+import fetch from 'node-fetch'
 import Screen from '../../../components/Screen'
 import Video from '../../../components/Video'
 import Image from '../../../components/Image'
 import Paragraph from '../../../components/Paragraph'
 import CodeBlock from '../../../components/CodeBlock'
 import Code from '../../../components/Code'
-import Button from '../../../components/Button'
 import Anchor from '../../../components/Anchor'
+import Button from '../../../components/Button'
+import Label from '../../../components/Label'
 import { projects } from '../'
 import {
   exampleStartScript,
@@ -15,7 +17,7 @@ import {
 
 const key = 'hideaway'
 
-export default () =>
+const Hideaway = ({ latestDownloadUrl }) =>
   <Screen
     baseRouteTitle="Projects"
     mainVisual={projects[key].mainVisual}
@@ -25,21 +27,42 @@ export default () =>
     showDescription
     sections={[
       {
-        title: 'Choose length. Hit start. Work in peace.',
+        title: 'Choose how long. Hit start. Work in peace.',
         component: (
           <div>
-            <Video src="/static/hideaway-example.mp4" autoplay loop muted />
+            <Video
+              src="/static/hideaway-example.mp4"
+              autoplay
+              loop
+              muted
+              controls={false}
+            />
 
             <Paragraph>
-              Hideaway closes all apps and websites, hides your dock, and turns
-              on Do Not Disturb for the amount of time you set. When the timer
-              is done, it shows your dock and allows notifications again.
+              Working at a computer brings regular distruptions of calendar
+              events, emails, texts, etc. Hideaway is a mac app that helps you
+              get rid of these distractions for a set amount of time so you can
+              focus. When you hit "Start Hideaway", it closes all apps +
+              websites, hides your dock, and turns on Do Not Disturb for the
+              amount of time you have set. When the timer is done, it shows your
+              dock and allows notifications again.
             </Paragraph>
 
-            <Anchor href="https://github.com/trevordmiller/hideaway/releases/latest">
-              <Button>Download</Button>
-            </Anchor>
-            <Paragraph>macOS Sierra or later required</Paragraph>
+            <div
+              style={{
+                textAlign: 'center',
+              }}
+            >
+              <Anchor
+                href={
+                  latestDownloadUrl ||
+                  'https://github.com/trevordmiller/hideaway/releases/latest'
+                }
+              >
+                <Button>Download</Button>
+              </Anchor>
+              <Label>macOS Sierra or later required</Label>
+            </div>
           </div>
         ),
       },
@@ -79,7 +102,7 @@ export default () =>
             </CodeBlock>
 
             <Paragraph>
-              Then for the finish script we could stop playing the music and
+              Then for the finish script, you could stop playing the music and
               open up the apps and websites you need to check throughout the day
               to stay caught up (Slack, email, calendar, text messages etc.).
             </Paragraph>
@@ -87,8 +110,26 @@ export default () =>
             <CodeBlock language="bash">
               {exampleFinishScript}
             </CodeBlock>
+
+            <Paragraph>
+              This gives you dedicated focus time during Hideaway sessions, but
+              you'll still have all the updates waiting for you when the timer
+              is done.
+            </Paragraph>
           </div>
         ),
       },
     ]}
   />
+
+Hideaway.getInitialProps = async () => {
+  const res = await fetch(
+    'https://api.github.com/repos/trevordmiller/hideaway/releases/latest'
+  )
+  const json = await res.json()
+  return {
+    latestDownloadUrl: json.assets[0] && json.assets[0].browser_download_url,
+  }
+}
+
+export default Hideaway

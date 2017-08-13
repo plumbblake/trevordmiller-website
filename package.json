@@ -55,6 +55,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "next": "^2.4.1",
+    "node-fetch": "^1.7.2",
     "nova-colors": "^2.1.5",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",

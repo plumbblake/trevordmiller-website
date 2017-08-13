@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { uiGroups } from '../../utils/styleGuide'
 
-const Video = ({ src, autoplay, loop, muted }) =>
+const Video = ({ src, autoplay, loop, muted, controls = 'true' }) =>
   <div
     style={{
       background: uiGroups.gray2,
@@ -13,7 +13,7 @@ const Video = ({ src, autoplay, loop, muted }) =>
       autoPlay={autoplay}
       loop={loop}
       muted={muted}
-      controls
+      controls={controls}
       style={{
         width: '100%',
         display: 'block',
@@ -26,6 +26,7 @@ Video.propTypes = {
   autoplay: PropTypes.bool,
   loop: PropTypes.bool,
   muted: PropTypes.bool,
+  controls: PropTypes.bool,
 }
 
 export default Video
