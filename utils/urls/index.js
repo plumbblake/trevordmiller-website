@@ -4,7 +4,7 @@ export const npmUrl = 'https://www.npmjs.com/~trevordmiller'
 
 export const twitterUrl = 'https://twitter.com/trevordmiller'
 
-export const facebookUrl = 'https://www.facebook.com/trevordmillerpage'
+export const facebookUrl = 'https://www.facebook.com/trevordmillercom'
 
 export const linkedinUrl = 'https://www.linkedin.com/in/trevordmiller'
 
