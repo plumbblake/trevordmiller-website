@@ -500,7 +500,7 @@ class Plugins extends React.Component {
 
 export default () =>
   <Screen
-    baseRouteTitle="Projects"
+    baseRouteTitle="projects"
     mainVisual={projects[key].mainVisual}
     pathname={`https://trevordmiller.com/projects/${key}`}
     title="Nova"

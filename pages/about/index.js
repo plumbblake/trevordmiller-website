@@ -87,10 +87,10 @@ const lifeAspects = [
 
 export default () =>
   <Screen
-    baseRouteTitle="About"
+    baseRouteTitle="about"
     mainVisual="/static/trevordmiller-website.jpg"
     pathname={`https://trevordmiller.com/about`}
-    title="About"
+    title="about"
     description="Aspects from the life of Trevor D. Miller"
     sections={[
       {

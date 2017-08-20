@@ -4,10 +4,10 @@ import Follow from '../../components/Follow'
 
 export default () =>
   <Screen
-    baseRouteTitle="Follow"
+    baseRouteTitle="follow"
     mainVisual="/static/trevordmiller-website.jpg"
     pathname="https://trevordmiller.com/follow"
-    title="Follow"
+    title="follow"
     description="Follow along with my newsletter, social media, and whatnot"
     sections={[
       {

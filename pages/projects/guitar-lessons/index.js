@@ -281,7 +281,7 @@ export default class extends React.Component {
 
     return (
       <Screen
-        baseRouteTitle="Projects"
+        baseRouteTitle="projects"
         mainVisual={projects[key].mainVisual}
         pathname={`https://trevordmiller.com/projects/${key}`}
         title="Guitar lessons"

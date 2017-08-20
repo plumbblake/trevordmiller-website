@@ -89,10 +89,10 @@ const postKeys = Object.keys(posts)
 
 export default () =>
   <Screen
-    baseRouteTitle="Blog"
+    baseRouteTitle="blog"
     mainVisual={posts[postKeys[0]].mainVisual}
     pathname="https://trevordmiller.com/blog"
-    title="Blog"
+    title="blog"
     description="Articles from Trevor D. Miller, mostly posts about code."
     sections={postKeys.map(postKey => {
       const post = posts[postKey]

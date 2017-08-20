@@ -8,8 +8,8 @@ export default () =>
   <section>
     <Info>
       <div>
-        Subscribe to my newsletter if you want to get emailed when I publish new
-        blog posts and projects. No spam.
+        Submit your email if you'd like occasional updates. No spam. Your email
+        will not be shared with anyone else.
       </div>
       <Subscribe />
       <div
@@ -17,7 +17,7 @@ export default () =>
           marginTop: spacing.large,
         }}
       >
-        Follow elsewhere if you want to see my updates. Mostly posts about code.
+        Follow elsewhere if you'd like :)
       </div>
       <div>
         <FollowIcons />

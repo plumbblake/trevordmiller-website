@@ -36,7 +36,7 @@ const maxPlayerSize = 250
 
 export default () =>
   <Screen
-    baseRouteTitle="Projects"
+    baseRouteTitle="projects"
     mainVisual={projects[key].mainVisual}
     pathname={`https://trevordmiller.com/projects/${key}`}
     title="Perfect Particle"

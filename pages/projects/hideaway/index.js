@@ -19,7 +19,7 @@ const key = 'hideaway'
 
 const Hideaway = ({ latestDownloadUrl }) =>
   <Screen
-    baseRouteTitle="Projects"
+    baseRouteTitle="projects"
     mainVisual={projects[key].mainVisual}
     showMainVisual
     pathname={`https://trevordmiller.com/projects/${key}`}
