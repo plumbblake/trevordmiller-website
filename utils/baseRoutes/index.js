@@ -29,7 +29,7 @@ const baseRoutes = [
   {
     path: '/follow',
     title: 'follow',
-    description: 'Follow along with my newsletter, social media, and whatnot',
+    description: 'Follow along with my email lists, social media, and whatnot',
     visual: 'userPlus',
   },
 ]

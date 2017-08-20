@@ -8,7 +8,7 @@ export default () =>
     mainVisual="/static/trevordmiller-website.jpg"
     pathname="https://trevordmiller.com/follow"
     title="follow"
-    description="Follow along with my newsletter, social media, and whatnot"
+    description="Follow along with my email lists, social media, and whatnot"
     sections={[
       {
         component: <Follow />,
