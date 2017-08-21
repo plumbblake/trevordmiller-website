@@ -129,8 +129,13 @@ class Subscribe extends Component {
                     }}
                   >
                     <label htmlFor="mce-UPGRADE">Content Upgrade</label>
-                    <select name="UPGRADE" id="mce-UPGRADE">
-                      <option value={contentUpgrade.key} selected>
+                    <select
+                      name="UPGRADE"
+                      id="mce-UPGRADE"
+                      value={contentUpgrade.key}
+                      readOnly
+                    >
+                      <option value={contentUpgrade.key}>
                         {contentUpgrade.key}
                       </option>
                     </select>
