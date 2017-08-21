@@ -29,11 +29,11 @@ export default `
     color: ${uiGroups.backgroundShade};
   }
 
-  a, input {
+  a, button, input[type='submit'] {
     transition: opacity 0.2s;
   }
 
-  a:hover, input:hover {
+  a:hover, button:hover, input[type='submit']:hover {
     opacity: 0.5;
     cursor: pointer;
   }

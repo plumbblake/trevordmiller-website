@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   spacing,
   borderRadii,
@@ -6,6 +6,9 @@ import {
   uiGroups,
   fontFamilies,
 } from '../../../../utils/styleGuide'
+import Heading from '../../../Heading'
+import Button from '../../../Button'
+import Checkbox from '../../../Checkbox'
 
 const inputResetStyles = {
   fontFamily: fontFamilies.primary,
@@ -15,49 +18,133 @@ const inputResetStyles = {
   MozAppearance: 'none',
 }
 
-export default () =>
-  <aside>
-    <form
-      action="//trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec"
-      method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      target="_blank"
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <input
-        type="email"
-        defaultValue=""
-        name="EMAIL"
-        id="mce-EMAIL"
-        placeholder="Email"
-        required
-        style={{
-          ...inputResetStyles,
-          width: '100%',
-          marginTop: spacing.medium,
-          padding: spacing.small,
-          background: uiGroups.gray2,
-          color: uiGroups.gray6,
-          borderRadius: `${borderRadii.medium}px 0 0 ${borderRadii.medium}px`,
-        }}
-      />
-      <input
-        type="submit"
-        defaultValue="Subscribe"
-        name="subscribe"
-        id="mc-embedded-subscribe"
-        style={{
-          ...inputResetStyles,
-          marginTop: spacing.medium,
-          padding: spacing.small,
-          background: uiGroups.userCurrentState,
-          color: uiGroups.backgroundShade,
-          borderRadius: `0 ${borderRadii.medium}px ${borderRadii.medium}px 0`,
-        }}
-      />
-    </form>
-  </aside>
+const submitUrl =
+  'https://trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec'
+
+class Subscribe extends Component {
+  state = {
+    isOpen: false,
+  }
+
+  handleToggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    })
+  }
+
+  render() {
+    const { isOpen } = this.state
+
+    return (
+      <div>
+        {isOpen
+          ? <div
+              style={{
+                marginBottom: spacing.xlarge,
+              }}
+            >
+              <div>
+                Submit your email if you'd like occasional updates. No spam.
+                Your email will not be shared with anyone else.
+              </div>
+
+              <form
+                action={submitUrl}
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                target="_blank"
+              >
+                <div
+                  style={{
+                    marginTop: spacing.medium,
+                  }}
+                >
+                  <Heading level={3}>Email</Heading>
+                  <input
+                    type="email"
+                    defaultValue=""
+                    name="EMAIL"
+                    id="mce-EMAIL"
+                    placeholder="you@wherever.com"
+                    required
+                    style={{
+                      ...inputResetStyles,
+                      width: '100%',
+                      padding: spacing.small,
+                      background: uiGroups.gray2,
+                      color: uiGroups.gray6,
+                      borderRadius: borderRadii.medium,
+                    }}
+                  />
+                </div>
+
+                <div
+                  style={{
+                    marginTop: spacing.medium,
+                  }}
+                >
+                  <Heading level={3}>When do you want to be emailed?</Heading>
+                  <Checkbox
+                    label="New courses*"
+                    value="1"
+                    name="group[20246][1]"
+                    id="mce-group[20246]-20246-0"
+                    defaultChecked
+                    required
+                  />
+
+                  <Checkbox
+                    label="New projects"
+                    value="2"
+                    name="group[20246][2]"
+                    id="mce-group[20246]-20246-1"
+                  />
+
+                  <Checkbox
+                    label="New blog posts"
+                    value="4"
+                    name="group[20246][4]"
+                    id="mce-group[20246]-20246-2"
+                  />
+                </div>
+
+                <div
+                  style={{
+                    marginTop: spacing.medium,
+                  }}
+                >
+                  <input
+                    type="submit"
+                    defaultValue="Submit"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    style={{
+                      ...inputResetStyles,
+                      marginTop: spacing.medium,
+                      background: uiGroups.userCurrentState,
+                      color: uiGroups.backgroundShade,
+                      borderRadius: borderRadii.medium,
+                      paddingTop: spacing.medium,
+                      paddingBottom: spacing.medium,
+                      paddingLeft: spacing.large,
+                      paddingRight: spacing.large,
+                      cursor: 'pointer',
+                    }}
+                  />
+                </div>
+              </form>
+            </div>
+          : <div
+              style={{
+                textAlign: 'center',
+              }}
+            >
+              <Button onClick={this.handleToggle}>Subscribe to emails</Button>
+            </div>}
+      </div>
+    )
+  }
+}
+
+export default Subscribe

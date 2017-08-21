@@ -3,9 +3,9 @@ import Toggle from '../Toggle'
 
 const Accordion = ({ teaser, details }) =>
   <Toggle>
-    {(isOpen, handleToggleClick) =>
+    {(isOpen, handleToggle) =>
       <section>
-        <a onClick={handleToggleClick}>
+        <a onClick={handleToggle}>
           {`${isOpen ? '-' : '+'} ${teaser}`}
         </a>
         {isOpen && details}

@@ -3,7 +3,7 @@ import Toggle from '../Toggle'
 
 const Thumbnail = ({ src, teaser }) =>
   <Toggle>
-    {(isOpen, handleToggleClick) =>
+    {(isOpen, handleToggle) =>
       <div>
         <div>
           {teaser}
@@ -11,7 +11,7 @@ const Thumbnail = ({ src, teaser }) =>
         <img
           src={src}
           alt={teaser}
-          onClick={handleToggleClick}
+          onClick={handleToggle}
           style={{
             maxWidth: isOpen ? '100%' : 150,
           }}

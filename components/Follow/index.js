@@ -7,19 +7,19 @@ import FollowIcons from './components/FollowIcons'
 export default () =>
   <section>
     <Info>
-      <div>
-        Submit your email if you'd like occasional updates. No spam. Your email
-        will not be shared with anyone else.
+      <div
+        style={{
+          marginTop: spacing.small,
+        }}
+      >
+        <Subscribe />
       </div>
-      <Subscribe />
+
       <div
         style={{
           marginTop: spacing.large,
         }}
       >
-        Follow elsewhere if you'd like :)
-      </div>
-      <div>
         <FollowIcons />
       </div>
     </Info>

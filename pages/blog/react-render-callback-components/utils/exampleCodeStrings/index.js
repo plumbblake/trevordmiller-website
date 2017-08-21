@@ -60,7 +60,7 @@ class Toggle extends Component {
     isOpen: false,
   }
 
-  handleToggleClick = () => {
+  handleToggle = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     })
@@ -69,7 +69,7 @@ class Toggle extends Component {
   render() {
     return this.props.children(
       this.state.isOpen, 
-      this.handleToggleClick
+      this.handleToggle
     )
   }
 }
@@ -82,9 +82,9 @@ import Toggle from './Toggle'
 
 const Accordion = ({teaser, details}) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
+    {(isOpen, handleToggle) => (
       <section>
-        <a onClick={handleToggleClick}>
+        <a onClick={handleToggle}>
           {\`\${isOpen ? '-' : '+'} \${teaser}\`}
         </a>
         {isOpen && details}
@@ -101,8 +101,8 @@ import Toggle from './Toggle'
 
 const Modal = ({teaser, details}) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
-      <div onClick={handleToggleClick}>
+    {(isOpen, handleToggle) => (
+      <div onClick={handleToggle}>
         {teaser}
         {isOpen && (
           <div>
@@ -140,13 +140,13 @@ import Toggle from './Toggle'
 
 const Thumbnail = ({src, teaser}) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
+    {(isOpen, handleToggle) => (
       <div>
         <div>{teaser}</div>
         <img
           src={src}
           alt={teaser}
-          onClick={handleToggleClick}
+          onClick={handleToggle}
           style={{
             maxWidth: isOpen ? '100%' : 150
           }}

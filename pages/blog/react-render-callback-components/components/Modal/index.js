@@ -3,8 +3,8 @@ import Toggle from '../Toggle'
 
 const Modal = ({ teaser, details }) =>
   <Toggle>
-    {(isOpen, handleToggleClick) =>
-      <div onClick={handleToggleClick}>
+    {(isOpen, handleToggle) =>
+      <div onClick={handleToggle}>
         {teaser}
         {isOpen &&
           <div>

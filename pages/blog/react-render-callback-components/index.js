@@ -114,7 +114,7 @@ export default () =>
 
             <Paragraph>
               Now components that use <Code>Toggle</Code> will have access to
-              their own <Code>isOpen</Code> and <Code>handleToggleClick</Code>{' '}
+              their own <Code>isOpen</Code> and <Code>handleToggle</Code>{' '}
               arguments without having to wire up the state code. The instances
               of <Code>Toggle</Code> (<Code>Accordion</Code>, <Code>Modal</Code>,
               and <Code>Thumbnail</Code>) can just be stateless function

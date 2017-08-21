@@ -5,14 +5,14 @@ class Toggle extends Component {
     isOpen: false,
   }
 
-  handleToggleClick = () => {
+  handleToggle = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     })
   }
 
   render() {
-    return this.props.children(this.state.isOpen, this.handleToggleClick)
+    return this.props.children(this.state.isOpen, this.handleToggle)
   }
 }
 
