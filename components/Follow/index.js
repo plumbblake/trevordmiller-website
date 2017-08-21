@@ -1,7 +1,7 @@
 import React from 'react'
 import { spacing } from '../../utils/styleGuide'
 import Info from '../Info'
-import Subscribe from './components/Subscribe'
+import Subscribe from '../Subscribe'
 import FollowIcons from './components/FollowIcons'
 
 export default () =>

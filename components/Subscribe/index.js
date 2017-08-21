@@ -5,10 +5,10 @@ import {
   fontSizes,
   uiGroups,
   fontFamilies,
-} from '../../../../utils/styleGuide'
-import Heading from '../../../Heading'
-import Button from '../../../Button'
-import Checkbox from '../../../Checkbox'
+} from '../../utils/styleGuide'
+import Heading from '../Heading'
+import Button from '../Button'
+import Checkbox from '../Checkbox'
 
 const inputResetStyles = {
   fontFamily: fontFamilies.primary,
@@ -33,6 +33,7 @@ class Subscribe extends Component {
   }
 
   render() {
+    const { contentUpgrade } = this.props
     const { isOpen } = this.state
 
     return (
@@ -43,9 +44,20 @@ class Subscribe extends Component {
                 marginBottom: spacing.xlarge,
               }}
             >
+              <Heading level={4}>
+                {contentUpgrade
+                  ? `To get "${contentUpgrade.title}", submit your email`
+                  : `Submit your email for occasional updates`}
+              </Heading>
+
               <div>
-                Submit your email if you'd like occasional updates. No spam.
-                Your email will not be shared with anyone else.
+                {contentUpgrade &&
+                  <span>
+                    {`Once you've confirmed your email you'll get another email with your download. `}
+                  </span>}
+                <span>
+                  I'll never spam you or share your email with anyone else.
+                </span>
               </div>
 
               <form
@@ -71,6 +83,7 @@ class Subscribe extends Component {
                     style={{
                       ...inputResetStyles,
                       width: '100%',
+                      maxWidth: 300,
                       padding: spacing.small,
                       background: uiGroups.gray2,
                       color: uiGroups.gray6,
@@ -109,6 +122,20 @@ class Subscribe extends Component {
                   />
                 </div>
 
+                {contentUpgrade &&
+                  <div
+                    style={{
+                      display: 'none',
+                    }}
+                  >
+                    <label htmlFor="mce-UPGRADE">Content Upgrade</label>
+                    <select name="UPGRADE" id="mce-UPGRADE">
+                      <option value={contentUpgrade.key} selected>
+                        {contentUpgrade.key}
+                      </option>
+                    </select>
+                  </div>}
+
                 <div
                   style={{
                     marginTop: spacing.medium,
@@ -122,13 +149,14 @@ class Subscribe extends Component {
                     style={{
                       ...inputResetStyles,
                       marginTop: spacing.medium,
-                      background: uiGroups.userCurrentState,
-                      color: uiGroups.backgroundShade,
-                      borderRadius: borderRadii.medium,
                       paddingTop: spacing.medium,
                       paddingBottom: spacing.medium,
                       paddingLeft: spacing.large,
                       paddingRight: spacing.large,
+                      minWidth: 175,
+                      background: uiGroups.userCurrentState,
+                      color: uiGroups.backgroundShade,
+                      borderRadius: borderRadii.medium,
                       cursor: 'pointer',
                     }}
                   />
@@ -140,7 +168,11 @@ class Subscribe extends Component {
                 textAlign: 'center',
               }}
             >
-              <Button onClick={this.handleToggle}>Join the email list</Button>
+              <Button onClick={this.handleToggle}>
+                {contentUpgrade
+                  ? contentUpgrade.description
+                  : 'Join the email list'}
+              </Button>
             </div>}
       </div>
     )

@@ -4,6 +4,14 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
+  'most-used-git-commands': {
+    tags: [tags.git],
+    mainVisual: '/static/dotfiles.png',
+    title: `My most used git commands`,
+    description: `Examples of using Git commands to deal with common situations while coding.`,
+    date: 'August 20, 2017',
+  },
+
   dotfiles: {
     tags: [tags.unix, tags.git],
     mainVisual: '/static/dotfiles.png',

@@ -16,7 +16,6 @@ const Checkbox = ({ label, value, name, id, defaultChecked, required }) =>
       defaultChecked={defaultChecked}
       required={required}
       style={{
-        transform: 'scale(1.5)',
         marginRight: spacing.medium,
       }}
     />

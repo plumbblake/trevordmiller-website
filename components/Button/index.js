@@ -26,6 +26,7 @@ export default ({ onClick, type = 'primary', children, big }) =>
       paddingBottom: spacing.medium,
       paddingLeft: spacing.large,
       paddingRight: spacing.large,
+      minWidth: 175,
       cursor: 'pointer',
       display: 'inline-block',
       textAlign: 'center',
