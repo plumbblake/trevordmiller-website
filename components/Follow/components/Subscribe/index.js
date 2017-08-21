@@ -140,7 +140,7 @@ class Subscribe extends Component {
                 textAlign: 'center',
               }}
             >
-              <Button onClick={this.handleToggle}>Subscribe to emails</Button>
+              <Button onClick={this.handleToggle}>Join the email list</Button>
             </div>}
       </div>
     )
