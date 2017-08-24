@@ -4,12 +4,12 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
-  'most-used-git-commands': {
+  'essential-git-commands': {
     tags: [tags.git],
-    mainVisual: '/static/dotfiles.png',
-    title: `My most used git commands`,
-    description: `Examples of using Git commands to deal with common situations while coding.`,
-    date: 'August 20, 2017',
+    mainVisual: '/static/git-sadness.jpg',
+    title: `Essential Git commands`,
+    description: `A subset of only the most critical Git commands for dealing with common situations.`,
+    date: 'August 23, 2017',
   },
 
   dotfiles: {

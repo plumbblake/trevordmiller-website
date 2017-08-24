@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
   spacing,
   borderRadii,
+  borderSizes,
   fontSizes,
   uiGroups,
   fontFamilies,
@@ -26,27 +27,56 @@ class Subscribe extends Component {
     isOpen: false,
   }
 
-  handleToggle = () => {
+  handleToggle = event => {
+    event.preventDefault()
     this.setState({
       isOpen: !this.state.isOpen,
     })
   }
 
   render() {
-    const { contentUpgrade } = this.props
+    const { contentUpgrade, kind = 'button' } = this.props
     const { isOpen } = this.state
+
+    const closedOutputByKind = {
+      button: (
+        <div
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          <Button onClick={this.handleToggle}>
+            {contentUpgrade
+              ? `Download your ${contentUpgrade.title}`
+              : 'Join the email list'}
+          </Button>
+        </div>
+      ),
+
+      box: (
+        <div>
+          <Button onClick={this.handleToggle} type="inline">
+            {contentUpgrade
+              ? `Get the ${contentUpgrade.title}`
+              : 'Subscribe to the email list'}
+          </Button>
+        </div>
+      ),
+    }
 
     return (
       <div>
         {isOpen
           ? <div
               style={{
-                marginBottom: spacing.xlarge,
+                border: `${borderSizes.medium}px solid ${uiGroups.userCurrentState}`,
+                padding: spacing.large,
+                borderRadius: borderRadii.medium,
               }}
             >
               <Heading level={4}>
                 {contentUpgrade
-                  ? `To get "${contentUpgrade.title}", submit your email`
+                  ? `To get your ${contentUpgrade.title}, submit your email`
                   : `Submit your email for occasional updates`}
               </Heading>
 
@@ -168,17 +198,7 @@ class Subscribe extends Component {
                 </div>
               </form>
             </div>
-          : <div
-              style={{
-                textAlign: 'center',
-              }}
-            >
-              <Button onClick={this.handleToggle}>
-                {contentUpgrade
-                  ? contentUpgrade.description
-                  : 'Join the email list'}
-              </Button>
-            </div>}
+          : closedOutputByKind[kind]}
       </div>
     )
   }

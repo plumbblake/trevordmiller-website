@@ -29,6 +29,11 @@ export default `
     color: ${uiGroups.backgroundShade};
   }
 
+  button {
+    padding: 0;
+    margin: 0;
+  }
+
   a, button, input[type='submit'] {
     transition: opacity 0.2s;
   }
