@@ -2,7 +2,6 @@ import React from 'react'
 import { uiGroups, fontSizes, spacing } from '../../../../utils/styleGuide'
 import {
   githubUrl,
-  npmUrl,
   twitterUrl,
   facebookUrl,
   linkedinUrl,
@@ -17,26 +16,25 @@ const followItems = [
     label: 'GitHub',
     href: githubUrl,
   },
-  {
-    iconType: 'npm',
-    label: 'npm',
-    href: npmUrl,
-  },
+
   {
     iconType: 'twitter',
     label: 'Twitter',
     href: twitterUrl,
   },
+
   {
     iconType: 'facebook',
     label: 'Facebook',
     href: facebookUrl,
   },
+
   {
     iconType: 'linkedin',
     label: 'LinkedIn',
     href: linkedinUrl,
   },
+
   {
     iconType: 'rss',
     label: 'RSS',
