@@ -16,7 +16,7 @@ const Checkbox = ({ label, value, name, id, defaultChecked, required }) =>
       defaultChecked={defaultChecked}
       required={required}
       style={{
-        marginRight: spacing.medium,
+        marginRight: spacing.xsmall,
       }}
     />
     <label htmlFor={id}>

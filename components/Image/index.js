@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { uiGroups, borderRadii, borderSizes } from '../../utils/styleGuide'
 
 const maxWidthsBySize = {
-  medium: '400',
+  medium: 400,
 }
 
 const Image = ({ src, description, quiet = false, style, size }) =>
