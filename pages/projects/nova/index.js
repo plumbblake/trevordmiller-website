@@ -380,15 +380,15 @@ class Plugins extends React.Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: spacing.large,
-                lineHeight: 0,
+                padding: spacing.small,
+                lineHeight: 1,
                 cursor: 'pointer',
               }}
             >
               <div>
                 <Icon
                   type={plugin.icon}
-                  size={fontSizes.xlarge}
+                  size={fontSizes.large}
                   fill={
                     index === this.state.activeTab
                       ? uiGroups.userCurrentState
@@ -396,9 +396,12 @@ class Plugins extends React.Component {
                   }
                 />
               </div>
+
               <div
                 style={{
-                  marginTop: spacing.small,
+                  fontSize: fontSizes.small,
+                  marginTop: spacing.xxsmall,
+                  textAlign: 'center',
                   color:
                     index === this.state.activeTab
                       ? uiGroups.userCurrentState
