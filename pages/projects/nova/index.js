@@ -102,6 +102,50 @@ const characteristics = [
 
 const plugins = [
   {
+    title: 'Git',
+    icon: 'git',
+    screenshot:
+      'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Install a Nova plugin for your terminal',
+      'Use ANSI color variables in your ".gitconfig"',
+      'For Nova color meanings, see the example ".gitconfig"',
+    ],
+    notes: [
+      "You'll need a version of Git that supports the latest color options (git 2.10)",
+    ],
+    links: [
+      {
+        title: 'Example ".gitconfig"',
+        url:
+          'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
+      },
+    ],
+  },
+
+  {
+    title: 'tmux',
+    icon: 'tmux',
+    screenshot:
+      'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Install a Nova plugin for your terminal',
+      'Use ANSI color variables in your ".tmux.conf"',
+      'For Nova color meanings, see the example ".tmux.conf"',
+    ],
+    notes: [
+      "You'll need a version of tmux that supports True Color (tmux 2.2+)",
+    ],
+    links: [
+      {
+        title: 'Example ".tmux.conf"',
+        url:
+          'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
+      },
+    ],
+  },
+
+  {
     title: 'Vim',
     icon: 'vim',
     screenshot:
@@ -139,6 +183,63 @@ const plugins = [
       },
     ],
   },
+
+  {
+    title: 'iTerm',
+    icon: 'iterm',
+    screenshot:
+      'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Download "nova.itermcolors"',
+      'In iTerm, open your preferences',
+      'Tap on "Profiles" > "Colors" > "Color Presets" > "Import"',
+      'Select the "nova.itermcolors" you downloaded',
+    ],
+    links: [
+      {
+        title: 'nova.itermcolors',
+        url:
+          'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/trevordmiller/nova-iterm',
+      },
+    ],
+  },
+
+  {
+    title: 'Hyper',
+    icon: 'hyper',
+    screenshot:
+      'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyper.js"',
+      'Restart Hyper',
+    ],
+    links: [
+      {
+        title: 'Example ".hyper.js"',
+        url:
+          'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/trevordmiller/nova-hyperterm/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/trevordmiller/nova-hyperterm',
+      },
+    ],
+  },
+
   {
     title: 'Atom',
     icon: 'atom',
@@ -178,102 +279,7 @@ const plugins = [
       },
     ],
   },
-  {
-    title: 'Hyper',
-    icon: 'hyper',
-    screenshot:
-      'https://github.com/trevordmiller/nova-hyperterm/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Add "nova-hyperterm" to the "plugins" array in your "~/.hyper.js"',
-      'Restart Hyper',
-    ],
-    links: [
-      {
-        title: 'Example ".hyper.js"',
-        url:
-          'https://github.com/trevordmiller/nova-hyperterm/blob/master/assets/.hyperterm.js',
-      },
-      {
-        title: 'Contributing instructions',
-        url:
-          'https://github.com/trevordmiller/nova-hyperterm/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code',
-        url: 'https://github.com/trevordmiller/nova-hyperterm',
-      },
-    ],
-  },
-  {
-    title: 'iTerm',
-    icon: 'iterm',
-    screenshot:
-      'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Download "nova.itermcolors"',
-      'In iTerm, open your preferences',
-      'Tap on "Profiles" > "Colors" > "Color Presets" > "Import"',
-      'Select the "nova.itermcolors" you downloaded',
-    ],
-    links: [
-      {
-        title: 'nova.itermcolors',
-        url:
-          'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
-      },
-      {
-        title: 'Contributing instructions',
-        url:
-          'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code',
-        url: 'https://github.com/trevordmiller/nova-iterm',
-      },
-    ],
-  },
-  {
-    title: 'Git',
-    icon: 'git',
-    screenshot:
-      'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Install a Nova plugin for your terminal',
-      'Use ANSI color variables in your ".gitconfig"',
-      'For Nova color meanings, see the example ".gitconfig"',
-    ],
-    notes: [
-      "You'll need a version of Git that supports the latest color options (git 2.10)",
-    ],
-    links: [
-      {
-        title: 'Example ".gitconfig"',
-        url:
-          'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
-      },
-    ],
-  },
-  {
-    title: 'tmux',
-    icon: 'tmux',
-    screenshot:
-      'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Install a Nova plugin for your terminal',
-      'Use ANSI color variables in your ".tmux.conf"',
-      'For Nova color meanings, see the example ".tmux.conf"',
-    ],
-    notes: [
-      "You'll need a version of tmux that supports True Color (tmux 2.2+)",
-    ],
-    links: [
-      {
-        title: 'Example ".tmux.conf"',
-        url:
-          'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
-      },
-    ],
-  },
+
   {
     title: 'npm',
     icon: 'npm',
