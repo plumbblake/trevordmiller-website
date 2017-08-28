@@ -4,6 +4,7 @@ import Screen from '../../components/Screen'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
+  /*
   'essential-git-commands': {
     tags: [tags.git],
     mainVisual: '/static/git-sadness.jpg',
@@ -11,6 +12,7 @@ export const posts = {
     description: `A subset of only the most critical Git commands for dealing with common situations.`,
     date: 'August 23, 2017',
   },
+  */
 
   dotfiles: {
     tags: [tags.unix, tags.git],

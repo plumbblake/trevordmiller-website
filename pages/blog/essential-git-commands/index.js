@@ -1,9 +1,9 @@
 import React from 'react'
-import { spacing } from '../../../utils/styleGuide'
+// import { spacing } from '../../../utils/styleGuide'
 import Screen from '../../../components/Screen'
-import Subscribe from '../../../components/Subscribe'
-import Paragraph from '../../../components/Paragraph'
-import Image from '../../../components/Image'
+// import Subscribe from '../../../components/Subscribe'
+// import Paragraph from '../../../components/Paragraph'
+// import Image from '../../../components/Image'
 import { posts } from '../'
 
 const key = 'essential-git-commands'
@@ -17,6 +17,7 @@ export default () =>
     description={posts[key].description}
     showDescription
     sections={[
+      /*
       {
         title: 'My Git journey',
         component: (
@@ -106,5 +107,6 @@ export default () =>
           </div>
         ),
       },
+      */
     ]}
   />
