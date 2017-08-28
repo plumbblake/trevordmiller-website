@@ -241,6 +241,30 @@ const plugins = [
   },
 
   {
+    title: 'GNOME Terminal',
+    icon: 'gnomeTerminal',
+    screenshot:
+      'https://github.com/agarrharr/nova-gnome-terminal/blob/master/assets/screenshot.png?raw=true',
+    steps: ['Download the install.sh file', 'Run "install.sh Default"'],
+    links: [
+      {
+        title: 'install.sh',
+        url:
+          'https://github.com/agarrharr/nova-gnome-terminal/blob/master/build/install.sh',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/agarrharr/nova-gnome-terminal/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/agarrharr/nova-gnome-terminal',
+      },
+    ],
+  },
+
+  {
     title: 'Atom',
     icon: 'atom',
     screenshot:
