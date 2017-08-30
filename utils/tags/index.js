@@ -2,25 +2,25 @@ import { uiGroups } from '../styleGuide'
 
 const tags = {
   inProgress: {
-    label: 'In Progress',
+    label: 'in-progress',
     color: uiGroups.userActionNeeded,
     icon: 'timer',
   },
 
   general: {
-    label: 'General',
+    label: 'general',
     color: uiGroups.userCurrentState,
     icon: 'tag',
   },
 
-  unix: {
-    label: 'Unix',
+  terminal: {
+    label: 'terminal',
     color: uiGroups.userCurrentState,
     icon: 'terminal',
   },
 
   git: {
-    label: 'Git',
+    label: 'git',
     color: uiGroups.userCurrentState,
     icon: 'git',
   },
@@ -32,25 +32,25 @@ const tags = {
   },
 
   react: {
-    label: 'React',
+    label: 'react',
     color: uiGroups.userCurrentState,
     icon: 'react',
   },
 
   node: {
-    label: 'Node',
+    label: 'node',
     color: uiGroups.userCurrentState,
     icon: 'node',
   },
 
   graphQl: {
-    label: 'GraphQL',
+    label: 'graphql',
     color: uiGroups.userCurrentState,
     icon: 'graphql',
   },
 
   hardware: {
-    label: 'Hardware',
+    label: 'hardware',
     color: uiGroups.userCurrentState,
     icon: 'plug',
   },

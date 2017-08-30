@@ -78,10 +78,6 @@ export default () =>
                   colors, etc.
                 </span>,
                 <span>
-                  <Code>.hyper.js</Code> is used by the terminal emulator I use
-                  to set up my terminal styles and plugins.
-                </span>,
-                <span>
                   <Code>.tmux.conf</Code> is used by tmux (a window manager for
                   the terminal) to set up keyboard shortcuts, styles etc..
                 </span>,

@@ -43,7 +43,7 @@ export const projects = {
   },
 
   'dog-bathroom-button': {
-    tags: [tags.unix, tags.node, tags.hardware],
+    tags: [tags.terminal, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Dog Bathroom Button`,
     description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
@@ -60,7 +60,7 @@ export const projects = {
   },
 
   dotfiles: {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/github.png',
     title: `Dotfiles`,
     description: `I organize my tooling settings in dotfiles.`,
@@ -77,7 +77,7 @@ export const projects = {
   },
 
   'shell-scripts': {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/github.png',
     title: `Shell Scripts`,
     description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
@@ -145,10 +145,10 @@ export const projects = {
   },
 
   'egghead-practical-git': {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/egghead-practical-git.png',
     title: `Practical Git for Everyday Professional Use`,
-    description: `Many coders struggle with the command line. Over the years, the command line has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
+    description: `Many coders struggle with the command line. Over the years, the terminal has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
     links: [
       {
         description: 'Videos',
@@ -163,7 +163,7 @@ export const projects = {
   },
 
   'egghead-publish-npm': {
-    tags: [tags.unix, tags.npm, tags.node],
+    tags: [tags.terminal, tags.npm, tags.node],
     mainVisual: '/static/egghead-publish-npm.png',
     title: `Publish JavaScript packages on npm`,
     description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
