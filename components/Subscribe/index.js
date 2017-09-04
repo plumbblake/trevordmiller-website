@@ -35,7 +35,7 @@ class Subscribe extends Component {
   }
 
   render() {
-    const { contentUpgrade, kind = 'button' } = this.props
+    const { download, kind = 'button' } = this.props
     const { isOpen } = this.state
 
     const closedOutputByKind = {
@@ -46,8 +46,8 @@ class Subscribe extends Component {
           }}
         >
           <Button onClick={this.handleToggle}>
-            {contentUpgrade
-              ? `Download your ${contentUpgrade.title}`
+            {download
+              ? `Download your ${download.title}`
               : 'Join the email list'}
           </Button>
         </div>
@@ -56,8 +56,8 @@ class Subscribe extends Component {
       box: (
         <div>
           <Button onClick={this.handleToggle} type="inline">
-            {contentUpgrade
-              ? `Get the ${contentUpgrade.title}`
+            {download
+              ? `Get the ${download.title}`
               : 'Subscribe to the email list'}
           </Button>
         </div>
@@ -75,13 +75,13 @@ class Subscribe extends Component {
               }}
             >
               <Heading level={4}>
-                {contentUpgrade
-                  ? `To get your ${contentUpgrade.title}, submit your email`
+                {download
+                  ? `To get your ${download.title}, submit your email`
                   : `Submit your email for occasional updates`}
               </Heading>
 
               <div>
-                {contentUpgrade &&
+                {download &&
                   <span>
                     {`Once you've confirmed your email you'll get another email with your download. `}
                   </span>}
@@ -152,21 +152,21 @@ class Subscribe extends Component {
                   />
                 </div>
 
-                {contentUpgrade &&
+                {download &&
                   <div
                     style={{
                       display: 'none',
                     }}
                   >
-                    <label htmlFor="mce-UPGRADE">Content Upgrade</label>
+                    <label htmlFor="mce-DOWNLOAD">Download</label>
                     <select
-                      name="UPGRADE"
-                      id="mce-UPGRADE"
-                      value={contentUpgrade.key}
+                      name="DOWNLOAD"
+                      id="mce-DOWNLOAD"
+                      value={download.key}
                       readOnly
                     >
-                      <option value={contentUpgrade.key}>
-                        {contentUpgrade.key}
+                      <option value={download.key}>
+                        {download.key}
                       </option>
                     </select>
                   </div>}

@@ -73,7 +73,7 @@ export default () =>
             </Paragraph>
 
             <Subscribe
-              contentUpgrade={{
+              download={{
                 key: 'essential-git-commands',
                 title: 'Essential Git commands PDF',
               }}
@@ -98,7 +98,7 @@ export default () =>
               }}
             >
               <Subscribe
-                contentUpgrade={{
+                download={{
                   key: 'essential-git-commands',
                   title: 'Essential Git commands PDF',
                 }}
