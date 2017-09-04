@@ -58,6 +58,11 @@ export default class Screen extends Component {
           <meta name="description" content={description} />
           <meta name="author" content="Trevor D. Miller" />
 
+          <meta
+            name="google-site-verification"
+            content="iiD9QTq2hXNz_Uth1Iwwwie9X7XKwfGplWNyjDa2OOI"
+          />
+
           <meta property="og:title" content={title} />
           <meta property="og:type" content="article" />
           <meta property="og:url" content={pathname} />
