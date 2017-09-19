@@ -10,7 +10,7 @@ export const posts = {
     mainVisual: '/static/git-sadness.jpg',
     title: `Essential Git commands`,
     description: `A subset of only the most critical Git commands for dealing with common situations.`,
-    date: 'August 23, 2017',
+    date: 'September 17, 2017',
   },
   */
 

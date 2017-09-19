@@ -1,9 +1,10 @@
 import React from 'react'
-// import { spacing } from '../../../utils/styleGuide'
+import { spacing } from '../../../utils/styleGuide'
 import Screen from '../../../components/Screen'
-// import Subscribe from '../../../components/Subscribe'
-// import Paragraph from '../../../components/Paragraph'
-// import Image from '../../../components/Image'
+import Subscribe from '../../../components/Subscribe'
+import Paragraph from '../../../components/Paragraph'
+import Image from '../../../components/Image'
+import EssentialGitCommandsDownload from '../../../downloads/EssentialGitCommandsDownload'
 import { posts } from '../'
 
 const key = 'essential-git-commands'
@@ -17,7 +18,6 @@ export default () =>
     description={posts[key].description}
     showDescription
     sections={[
-      /*
       {
         title: 'My Git journey',
         component: (
@@ -46,7 +46,7 @@ export default () =>
 
             <Image
               src="/static/git-confidence.jpg"
-              description="No longer afraid of using Git meme"
+              description="Git all the things meme"
               quiet
               size="medium"
             />
@@ -59,26 +59,15 @@ export default () =>
         component: (
           <div>
             <Paragraph>
-              You could spend months digging through the Git documentation, but
-              I find myself using the same small set of commands for most
-              situations. Below are the commands I find myself using the
-              majority of the time, with explanations of how they work. I made a
-              pretty PDF version of these commands which you can download for
-              reference if you'd like.
+              You could spend months digging through the Git documentation and
+              loads of tutorials like I did, but I find myself using the same
+              small set of commands for most situations. Below are the commands
+              I find myself using the majority of the time, with explanations of
+              how they work. I made a pretty PDF version of these commands which
+              you can download for reference if you'd like.
             </Paragraph>
 
-            <Paragraph>
-              Pro tip: print it out and tape it up by your toilet for maximum
-              learning potential.
-            </Paragraph>
-
-            <Subscribe
-              download={{
-                key: 'essential-git-commands',
-                title: 'Essential Git commands PDF',
-              }}
-              kind="box"
-            />
+            <EssentialGitCommandsDownload />
           </div>
         ),
       },
@@ -104,9 +93,13 @@ export default () =>
                 }}
               />
             </div>
+
+            <Paragraph>
+              Pro tip: print it out and tape it up by your toilet for maximum
+              learning potential.
+            </Paragraph>
           </div>
         ),
       },
-      */
     ]}
   />

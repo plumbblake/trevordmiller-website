@@ -47,7 +47,7 @@ class Subscribe extends Component {
         >
           <Button onClick={this.handleToggle}>
             {download
-              ? `Download your ${download.title}`
+              ? `Download the ${download.title}`
               : 'Join the email list'}
           </Button>
         </div>
@@ -57,7 +57,7 @@ class Subscribe extends Component {
         <div>
           <Button onClick={this.handleToggle} type="inline">
             {download
-              ? `Get the ${download.title}`
+              ? `Download the ${download.title}`
               : 'Subscribe to the email list'}
           </Button>
         </div>
@@ -76,7 +76,7 @@ class Subscribe extends Component {
             >
               <Heading level={4}>
                 {download
-                  ? `To get your ${download.title}, submit your email`
+                  ? `To download the ${download.title}, submit your email`
                   : `Submit your email for occasional updates`}
               </Heading>
 
