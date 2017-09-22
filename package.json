@@ -9,6 +9,7 @@
     "build": "next build",
     "stage": "git checkout master && git pull && now",
     "release": "now alias",
+    "postrelease": "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com",
     "start": "next start"
   },
   "eslintConfig": {
