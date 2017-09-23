@@ -138,17 +138,17 @@ class Subscribe extends Component {
                   />
 
                   <Checkbox
-                    label="New projects"
-                    value="2"
-                    name="group[20246][2]"
-                    id="mce-group[20246]-20246-1"
-                  />
-
-                  <Checkbox
                     label="New blog posts"
                     value="4"
                     name="group[20246][4]"
                     id="mce-group[20246]-20246-2"
+                  />
+
+                  <Checkbox
+                    label="New projects"
+                    value="2"
+                    name="group[20246][2]"
+                    id="mce-group[20246]-20246-1"
                   />
                 </div>
 
