@@ -15,7 +15,7 @@ export const posts = {
   */
 
   dotfiles: {
-    tags: [tags.terminal, tags.git],
+    tags: [tags.unix, tags.git],
     mainVisual: '/static/dotfiles.png',
     title: `Organizing tooling settings using dotfiles`,
     description: `Examples of using dotfiles to manage and back-up the config for git, shells, editors, etc.`,
@@ -39,7 +39,7 @@ export const posts = {
   },
 
   'raspberry-pi-button': {
-    tags: [tags.terminal, tags.node, tags.hardware],
+    tags: [tags.unix, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Running a Node server on a Raspberry Pi with a physical button`,
     description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, using the latest Node and npm, and creating a Node server to send a text message when the button is pressed.`,

@@ -5,10 +5,10 @@ import Teaser from '../components/Teaser'
 
 export default () =>
   <Screen
-    baseRouteTitle="home"
+    baseRouteTitle="~"
     mainVisual="/static/trevordmiller-website.jpg"
     pathname={`https://trevordmiller.com`}
-    title="home"
+    title="~"
     description={baseRoutes[0].description}
     sections={[
       ...baseRoutes

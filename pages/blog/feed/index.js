@@ -6,9 +6,19 @@ const feed = new RSS({
   title: 'Trevor D. Miller blog',
   feed_url: 'https://trevordmiller.com/blog/feed',
   site_url: 'https://trevordmiller.com',
-  description: 'Blog posts from Trevor',
+  description:
+    'Blog posts about coding, focused on the terminal (Unix, Vim, Git, etc.)',
   image_url: 'https://trevordmiller.com/static/avatar.jpg',
-  categories: ['Programming', 'Software Engineering', 'Productivity'],
+  categories: [
+    'Code',
+    'Programming',
+    'Software Engineering',
+    'terminal',
+    'command line',
+    'Unix',
+    'Vim',
+    'Git',
+  ],
   language: 'en',
   copyright: '2017 Trevor D. Miller',
 })

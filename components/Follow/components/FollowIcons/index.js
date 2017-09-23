@@ -5,7 +5,6 @@ import {
   twitterUrl,
   facebookUrl,
   linkedinUrl,
-  rssUrl,
 } from '../../../../utils/urls'
 import Anchor from '../../../Anchor'
 import Icon from '../../../Icon'
@@ -33,12 +32,6 @@ const followItems = [
     iconType: 'linkedin',
     label: 'LinkedIn',
     href: linkedinUrl,
-  },
-
-  {
-    iconType: 'rss',
-    label: 'RSS',
-    href: rssUrl,
   },
 ]
 

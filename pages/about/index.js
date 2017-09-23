@@ -1,12 +1,6 @@
 import React from 'react'
 import { spacing } from '../../utils/styleGuide'
-import {
-  githubUrl,
-  npmUrl,
-  twitterUrl,
-  spotifyUrl,
-  freshlyMarriedUrl,
-} from '../../utils/urls'
+import { githubUrl, freshlyMarriedUrl } from '../../utils/urls'
 import Screen from '../../components/Screen'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
@@ -15,47 +9,24 @@ import Teaser from '../../components/Teaser'
 const lifeAspects = [
   {
     visual: 'terminal',
-    label: 'Software Engineer',
-    description: `I work as a Software Engineer. I love learning and solving problems. My current tech focus is with React and Node. Being a programmer isn't just a job for me, it's a hobby too; I especially enjoy contributing to open source.`,
+    label: `coder`,
+    description: `I work as a Software Engineer. I love learning and solving problems. Being a programmer isn't just a job for me, it's a hobby too. I especially enjoy working in the terminal and contributing to open source. I strive to learn new things every day and share what I learn.`,
     links: [
-      {
-        description: 'Current and past projects',
-        href: '/projects',
-      },
-      {
-        description: 'Code on GitHub',
-        href: githubUrl,
-      },
-      {
-        description: 'Libraries on npm',
-        href: npmUrl,
-      },
       {
         description: 'Blog posts',
         href: '/blog',
       },
       {
-        description: 'Tweets',
-        href: twitterUrl,
-      },
-    ],
-  },
-  {
-    visual: 'music',
-    label: 'musician',
-    description: `I play, write, and record music. My main instrument is guitar. I've published some music under the artist name "Perfect Particle". I mainly enjoy modern jazz, math rock, ambient, and electronic styles.`,
-    links: [
-      {
-        description: 'Perfect Particle',
-        href: '/projects/perfect-particle',
+        description: 'Current and past projects',
+        href: '/projects',
       },
       {
-        description: 'Guitar lessons',
-        href: '/projects/guitar-lessons',
+        description: 'Open source code on GitHub',
+        href: githubUrl,
       },
       {
-        description: 'Spotify playlists',
-        href: spotifyUrl,
+        description: 'Quick posts on social media',
+        href: '/follow',
       },
     ],
   },
@@ -110,7 +81,7 @@ export default () =>
             >
               <Avatar />
             </div>
-            <Heading level={2}>Well, hello there! My name is Trevor.</Heading>
+            <Heading level={2}>Well hello there! My name is Trevor.</Heading>
           </div>
         ),
       },

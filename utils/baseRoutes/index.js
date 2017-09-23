@@ -1,8 +1,15 @@
 const baseRoutes = [
   {
     path: '/',
-    title: 'home',
+    title: '~',
     description: `An overview of what is on the website`,
+  },
+
+  {
+    path: '/blog',
+    title: 'blog',
+    description: 'Posts about code',
+    visual: 'newspaper',
   },
 
   {
@@ -13,23 +20,16 @@ const baseRoutes = [
   },
 
   {
-    path: '/blog',
-    title: 'blog',
-    description: 'Posts about code.',
-    visual: 'newspaper',
-  },
-
-  {
     path: '/about',
     title: 'about',
-    description: 'Aspects about me',
+    description: 'A bit about me',
     visual: 'profile',
   },
 
   {
     path: '/follow',
     title: 'follow',
-    description: 'Follow along with my email lists, social media, and whatnot',
+    description: 'Follow along with my email list, social media, and whatnot',
     visual: 'userPlus',
   },
 ]

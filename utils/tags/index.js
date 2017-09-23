@@ -13,8 +13,8 @@ const tags = {
     icon: 'tag',
   },
 
-  terminal: {
-    label: 'terminal',
+  unix: {
+    label: 'unix',
     color: uiGroups.userCurrentState,
     icon: 'terminal',
   },
