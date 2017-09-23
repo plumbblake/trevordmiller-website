@@ -4,7 +4,6 @@ import Screen from '../../../components/Screen'
 import Subscribe from '../../../components/Subscribe'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
-import EssentialGitCommandsDownload from '../../../downloads/EssentialGitCommandsDownload'
 import { posts } from '../'
 
 const key = 'essential-git-commands'
@@ -66,8 +65,6 @@ export default () =>
               how they work. I made a pretty PDF version of these commands which
               you can download for reference if you'd like.
             </Paragraph>
-
-            <EssentialGitCommandsDownload />
           </div>
         ),
       },
