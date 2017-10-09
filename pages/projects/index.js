@@ -8,7 +8,7 @@ export const projects = {
     tags: [tags.react, tags.node],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
-    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js).`,
+    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js). I created Hideaway mainly as an exercise for learning Electron, but you can use it for real if you want too.`,
     links: [
       {
         description: 'Project website',
