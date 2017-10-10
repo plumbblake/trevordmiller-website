@@ -1,9 +1,7 @@
 import React from 'react'
 import {
-  colorValues,
   spacing,
   fontSizes,
-  opacities,
   borderRadii,
   borderSizes,
   syntaxGroups,
@@ -19,21 +17,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import { projects } from '../'
 
 const key = 'nova'
-
-const contributors = [
-  {
-    handle: '@AC_Design',
-    url: 'https://twitter.com/AC_Design',
-  },
-  {
-    handle: '@iammerrick',
-    url: 'http://merrickchristensen.com/',
-  },
-  {
-    handle: '@trevordmiller',
-    url: '/',
-  },
-]
 
 const colorMeanings = [
   [
@@ -102,6 +85,86 @@ const characteristics = [
 
 const plugins = [
   {
+    title: 'Vim',
+    icon: 'vim',
+    screenshot:
+      'https://github.com/trevordmiller/nova-vim/blob/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Install "trevordmiller/nova-vim" with your Vim plugin manager',
+      'Add "colorscheme nova" to your ".vimrc" (after any other plugins or rules)',
+      'Restart Vim',
+    ],
+    notes: [
+      `You'll need True Color support (latest Vim, Neovim, or GUI Vim)`,
+      'For terminal Vim use, your terminal will also need True Color support',
+      'Using the Nova Hyper or iTerm plugin is recommended',
+      'If you use "vim-airline", it works automatically',
+      'Install "pangloss/vim-javascript", for full JS colors',
+      'Install "othree/html5.vim" for full HTML colors',
+      'Install "hail2u/vim-css3-syntax" for full CSS colors',
+      'Install "mxw/vim-jsx" for full React colors',
+      'Install "pangloss/vim-javascript" and add "let g:javascript_plugin_flow = 1" to your .vimrc for full Flow colors',
+      'Install "HerringtonDarkholme/yats.vim" for full TypeScript colors',
+    ],
+    links: [
+      {
+        title: 'Example ".vimrc"',
+        url:
+          'https://github.com/trevordmiller/nova-vim/blob/master/assets/.vimrc',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/trevordmiller/nova-vim',
+      },
+    ],
+  },
+
+  {
+    title: 'Atom',
+    icon: 'atom',
+    screenshot:
+      'https://github.com/trevordmiller/nova-atom-syntax/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'In Atom, open your settings',
+      'Tap on the "Install" pane',
+      'Tap on "Themes"',
+      'Search for "Nova"',
+      'Tap the "Install" button for both "nova-atom-ui" and "nova-atom-syntax"',
+      'Tap on the "Themes" pane',
+      'Select "Nova Atom" for both the "UI Theme" and "Syntax Theme"',
+    ],
+    notes: [
+      'Install "language-babel" for full JS colors',
+      'Install "language-babel" for full JSX colors',
+    ],
+    links: [
+      {
+        title: 'Contributing instructions for the UI plugin',
+        url:
+          'https://github.com/trevordmiller/nova-atom-ui/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Contributing instructions for the syntax plugin',
+        url:
+          'https://github.com/trevordmiller/nova-atom-syntax/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code for the UI plugin',
+        url: 'https://github.com/trevordmiller/nova-atom-ui',
+      },
+      {
+        title: 'Source code for the syntax plugin',
+        url: 'https://github.com/trevordmiller/nova-atom-syntax',
+      },
+    ],
+  },
+
+  {
     title: 'Git',
     icon: 'git',
     screenshot:
@@ -141,45 +204,6 @@ const plugins = [
         title: 'Example ".tmux.conf"',
         url:
           'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
-      },
-    ],
-  },
-
-  {
-    title: 'Vim',
-    icon: 'vim',
-    screenshot:
-      'https://github.com/trevordmiller/nova-vim/blob/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Install "trevordmiller/nova-vim" with your Vim plugin manager',
-      'Add "colorscheme nova" to your ".vimrc" (after any other plugins or rules)',
-      'Restart Vim',
-    ],
-    notes: [
-      "You'll need True Color support (latest Vim, Neovim, or GUI Vim)",
-      'For terminal Vim use, your terminal will also need True Color support',
-      'Using the Nova Hyper or iTerm plugin is recommended',
-      'If you use "vim-airline", it works automatically',
-      'Install "pangloss/vim-javascript", for full JS colors',
-      'Install "othree/html5.vim" for full HTML colors',
-      'Install "hail2u/vim-css3-syntax" for full CSS colors',
-      'Install "mxw/vim-jsx" for full React colors',
-      'Install "HerringtonDarkholme/yats.vim" for full TypeScript colors',
-    ],
-    links: [
-      {
-        title: 'Example ".vimrc"',
-        url:
-          'https://github.com/trevordmiller/nova-vim/blob/master/assets/.vimrc',
-      },
-      {
-        title: 'Contributing instructions',
-        url:
-          'https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code',
-        url: 'https://github.com/trevordmiller/nova-vim',
       },
     ],
   },
@@ -265,46 +289,6 @@ const plugins = [
   },
 
   {
-    title: 'Atom',
-    icon: 'atom',
-    screenshot:
-      'https://github.com/trevordmiller/nova-atom-syntax/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'In Atom, open your settings',
-      'Tap on the "Install" pane',
-      'Tap on "Themes"',
-      'Search for "Nova"',
-      'Tap the "Install" button for both "nova-atom-ui" and "nova-atom-syntax"',
-      'Tap on the "Themes" pane',
-      'Select "Nova Atom" for both the "UI Theme" and "Syntax Theme"',
-    ],
-    notes: [
-      'Install "language-babel" for full JS colors',
-      'Install "language-babel" for full JSX colors',
-    ],
-    links: [
-      {
-        title: 'Contributing instructions for the UI plugin',
-        url:
-          'https://github.com/trevordmiller/nova-atom-ui/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Contributing instructions for the syntax plugin',
-        url:
-          'https://github.com/trevordmiller/nova-atom-syntax/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code for the UI plugin',
-        url: 'https://github.com/trevordmiller/nova-atom-ui',
-      },
-      {
-        title: 'Source code for the syntax plugin',
-        url: 'https://github.com/trevordmiller/nova-atom-syntax',
-      },
-    ],
-  },
-
-  {
     title: 'npm',
     icon: 'npm',
     steps: ['npm install -S nova-colors', "import {group} from 'nova-colors'"],
@@ -341,7 +325,7 @@ const plugins = [
 const faq = [
   {
     question: `Where is editor/plugin {x}?`,
-    answer: `If you don't see it in the list, it doesn't exist yet! The Nova admins only maintain the Vim, Atom, Hyper, and iTerm plugins, but the community has built or is building others.`,
+    answer: `If you don't see it in the list, it doesn't exist yet! The Nova admins only maintain the plugins listed.`,
   },
   {
     question: `Is there an {x} version?`,
@@ -382,7 +366,8 @@ class Plugins extends React.Component {
             listStyle: 'none',
             padding: 0,
             display: 'flex',
-            overflowX: 'scroll',
+            flexDirection: 'row',
+            overflowX: 'auto',
             borderTop: tabBorder,
             borderRight: tabBorder,
             borderLeft: tabBorder,
@@ -542,63 +527,6 @@ export default () =>
     sections={[
       {
         component: (
-          <div
-            style={{
-              textAlign: 'center',
-              fontSize: fontSizes.small,
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              Built with
-              <div
-                style={{
-                  marginLeft: spacing.xsmall,
-                  marginRight: spacing.xsmall,
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <Icon
-                  type="heart"
-                  fill={colorValues.colors.red}
-                  size={fontSizes.medium}
-                />
-              </div>
-              by
-            </div>
-            <div
-              style={{
-                opacity: opacities.subtle,
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
-              }}
-            >
-              {contributors.map((contributor, index) =>
-                <span
-                  key={index}
-                  style={{
-                    marginRight:
-                      index + 1 < contributors.length ? spacing.medium : 0,
-                  }}
-                >
-                  <Anchor href={contributor.url}>
-                    {contributor.handle}
-                  </Anchor>
-                </span>
-              )}
-            </div>
-          </div>
-        ),
-      },
-      {
-        component: (
           <div>
             {colorMeanings.map((group, index) =>
               <div
@@ -648,6 +576,7 @@ export default () =>
           </div>
         ),
       },
+
       {
         component: (
           <Image
@@ -657,6 +586,7 @@ export default () =>
           />
         ),
       },
+
       {
         title: 'Characteristics',
         component: (
@@ -680,10 +610,12 @@ export default () =>
           </div>
         ),
       },
+
       {
         title: 'Plugins',
         component: <Plugins />,
       },
+
       {
         title: 'Frequently Asked Questions',
         component: (
