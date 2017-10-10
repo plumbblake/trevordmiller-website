@@ -125,6 +125,24 @@ const plugins = [
   },
 
   {
+    title: 'VS Code',
+    icon: 'vscode',
+    screenshot:
+      'https://github.com/rebornix/vscode-nova/raw/master/assets/screenshot.png?raw=true',
+    links: [
+      {
+        title: 'Install from the VS Code marketplace',
+        url:
+          'https://marketplace.visualstudio.com/items?itemName=rebornix.nova',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/rebornix/vscode-nova',
+      },
+    ],
+  },
+
+  {
     title: 'Atom',
     icon: 'atom',
     screenshot:
