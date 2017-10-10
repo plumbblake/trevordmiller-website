@@ -5,29 +5,26 @@ import Teaser from '../components/Teaser'
 
 export default () =>
   <Screen
-    baseRouteTitle="~"
     mainVisual="/static/trevordmiller-website.jpg"
     pathname={`https://trevordmiller.com`}
-    title="~"
-    description={baseRoutes[0].description}
+    title="home"
+    description="trevordmiller.com"
     sections={[
-      ...baseRoutes
-        .filter((baseRoute, index) => index !== 0)
-        .map((baseRoute, index) => ({
-          title: baseRoute.title,
-          component: (
-            <Teaser
-              key={index}
-              visual={baseRoute.visual}
-              description={baseRoute.description}
-              links={[
-                {
-                  description: `View ${baseRoute.title} page`,
-                  href: baseRoute.path,
-                },
-              ]}
-            />
-          ),
-        })),
+      ...baseRoutes.map((baseRoute, index) => ({
+        title: baseRoute.title,
+        component: (
+          <Teaser
+            key={index}
+            visual={baseRoute.visual}
+            description={baseRoute.description}
+            links={[
+              {
+                description: `View ${baseRoute.title} page`,
+                href: baseRoute.path,
+              },
+            ]}
+          />
+        ),
+      })),
     ]}
   />

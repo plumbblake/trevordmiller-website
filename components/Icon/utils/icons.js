@@ -2,6 +2,115 @@ import React from 'react'
 import { uiGroups } from '../../../utils/styleGuide'
 
 export default {
+  trevordmiller: {
+    viewBox: 640,
+    elements: (
+      <g>
+        <defs>
+          <path d="M0 0L640 0L640 640L0 640L0 0Z" id="c2puqAweFg" />
+          <path
+            d="M249.19 173.6C249.19 214 216.39 246.8 175.99 246.8C135.59 246.8 102.79 214 102.79 173.6C102.79 133.2 135.59 100.4 175.99 100.4C216.39 100.4 249.19 133.2 249.19 173.6Z"
+            id="eILwLVMpr"
+          />
+          <path
+            d="M0 164.51L106.36 164.51L106.36 182.69L0 182.69L0 164.51Z"
+            id="a619L4zRe"
+          />
+          <path
+            d="M550.29 320C550.29 360.4 517.49 393.2 477.09 393.2C436.69 393.2 403.89 360.4 403.89 320C403.89 279.6 436.69 246.8 477.09 246.8C517.49 246.8 550.29 279.6 550.29 320Z"
+            id="bi4SGZbxJ"
+          />
+          <path
+            d="M0 310.91L403.89 310.91L403.89 329.09L0 329.09L0 310.91Z"
+            id="c7B201J4R0"
+          />
+          <path
+            d="M349.8 466.4C349.8 506.8 317 539.6 276.6 539.6C236.2 539.6 203.4 506.8 203.4 466.4C203.4 426 236.2 393.2 276.6 393.2C317 393.2 349.8 426 349.8 466.4Z"
+            id="h4yG7Ndrx"
+          />
+          <path
+            d="M0 457.31L206.97 457.31L206.97 475.49L0 475.49L0 457.31Z"
+            id="a5dKvVnUkY"
+          />
+        </defs>
+        <g>
+          <g>
+            <g>
+              <use
+                xlinkHref="#c2puqAweFg"
+                opacity="1"
+                fill="#7fc1ca"
+                fillOpacity="1"
+              />
+            </g>
+            <g>
+              <g>
+                <g>
+                  <use
+                    xlinkHref="#eILwLVMpr"
+                    opacity="1"
+                    fillOpacity="0"
+                    stroke="#ffffff"
+                    strokeWidth="16"
+                    strokeOpacity="1"
+                  />
+                </g>
+              </g>
+              <g>
+                <use
+                  xlinkHref="#a619L4zRe"
+                  opacity="1"
+                  fill="#ffffff"
+                  fillOpacity="1"
+                />
+              </g>
+              <g>
+                <g>
+                  <use
+                    xlinkHref="#bi4SGZbxJ"
+                    opacity="1"
+                    fillOpacity="0"
+                    stroke="#ffffff"
+                    strokeWidth="16"
+                    strokeOpacity="1"
+                  />
+                </g>
+              </g>
+              <g>
+                <use
+                  xlinkHref="#c7B201J4R0"
+                  opacity="1"
+                  fill="#ffffff"
+                  fillOpacity="1"
+                />
+              </g>
+              <g>
+                <g>
+                  <use
+                    xlinkHref="#h4yG7Ndrx"
+                    opacity="1"
+                    fillOpacity="0"
+                    stroke="#ffffff"
+                    strokeWidth="16"
+                    strokeOpacity="1"
+                  />
+                </g>
+              </g>
+              <g>
+                <use
+                  xlinkHref="#a5dKvVnUkY"
+                  opacity="1"
+                  fill="#ffffff"
+                  fillOpacity="1"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    ),
+  },
+
   stack: {
     viewBox: 32,
     elements: (

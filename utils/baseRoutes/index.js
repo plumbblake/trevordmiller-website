@@ -1,11 +1,5 @@
 const baseRoutes = [
   {
-    path: '/',
-    title: '~',
-    description: `An overview of what is on the website`,
-  },
-
-  {
     path: '/blog',
     title: 'blog',
     description: 'Posts about code',

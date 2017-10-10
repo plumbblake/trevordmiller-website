@@ -16,7 +16,7 @@ import Footer from './components/Footer'
 
 export default class Screen extends Component {
   static propTypes = {
-    baseRouteTitle: PropTypes.oneOf(baseRouteTitles).isRequired,
+    baseRouteTitle: PropTypes.oneOf(baseRouteTitles),
     mainVisual: PropTypes.string.isRequired,
     showMainVisual: PropTypes.bool,
     pathname: PropTypes.string.isRequired,
