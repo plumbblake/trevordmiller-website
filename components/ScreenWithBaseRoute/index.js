@@ -5,7 +5,7 @@ import { baseRoutes } from '../../pages'
 const ScreenWithBaseRoute = ({ id, sections, footer = true }) =>
   <Screen
     baseRouteKey={id}
-    mainVisual="/static/trevordmiller-website.jpg"
+    mainVisual="/static/trevordmiller-website.png"
     pathname={`https://trevordmiller.com/${id}`}
     title={baseRoutes[id].title}
     description={baseRoutes[id].description}

@@ -21,7 +21,7 @@ export default () =>
               </Anchor>.
             </Paragraph>
             <Image
-              src="/static/trevordmiller-website.jpg"
+              src="/static/trevordmiller-website.png"
               description="The home page of trevordmiller.com"
             />
           </div>

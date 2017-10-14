@@ -6,7 +6,7 @@ import Teaser from '../../components/Teaser'
 export const projects = {
   'trevordmiller-website': {
     tags: [tags.inProgress, tags.react],
-    mainVisual: '/static/trevordmiller-website.jpg',
+    mainVisual: '/static/trevordmiller-website.png',
     title: `trevordmiller.com`,
     description: `I built this website using React rendered with Next.js. It is hosted on now. I add new courses, blog posts, and projects to it regularly.`,
     links: [

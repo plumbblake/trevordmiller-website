@@ -14,14 +14,15 @@ export const baseRoutes = {
   blog: {
     path: '/blog',
     title: 'blog',
-    description: 'Posts about code',
+    description:
+      'Articles about coding, focused on the terminal (Unix, Vim, Git, etc.)',
     visual: 'newspaper',
   },
 
   projects: {
     path: '/projects',
     title: 'projects',
-    description: 'Info and links to some of my projects and code',
+    description: 'Information about my projects',
     visual: 'stack',
   },
 
@@ -35,7 +36,7 @@ export const baseRoutes = {
   follow: {
     path: '/follow',
     title: 'follow',
-    description: 'Follow along with my email list, social media, and whatnot',
+    description: 'Follow along with my email list and social media',
     visual: 'userPlus',
   },
 }
@@ -44,7 +45,7 @@ export const baseRouteKeys = Object.keys(baseRoutes)
 
 export default () =>
   <Screen
-    mainVisual="/static/trevordmiller-website.jpg"
+    mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
     title="home"
     description="trevordmiller.com"

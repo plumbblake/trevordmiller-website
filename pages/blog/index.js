@@ -88,7 +88,7 @@ export const blogPosts = {
 
   'rebuilding-my-website': {
     tags: [tags.react, tags.node],
-    mainVisual: '/static/trevordmiller-website.jpg',
+    mainVisual: '/static/trevordmiller-website.png',
     title: `Rebuilding my website to aggregate all my stuff`,
     description: `Since I started programming in high school, I've accumulated personal domains, websites, and apps spread across the internet. I decided I wanted to consolidate these into a single app with a shared set of components, so that it is easier to maintain. So now all my web projects live under https://trevordmiller.com; this includes my portfolio, open source project documentation, guitar lessons, blog etc.`,
     date: 'December 1, 2016',
