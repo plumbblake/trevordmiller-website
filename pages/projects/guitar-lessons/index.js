@@ -2,12 +2,9 @@ import React, { Component } from 'react'
 import { startCase, first } from 'lodash'
 import Link from 'next/link'
 import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
-import Screen from '../../../components/Screen'
+import ScreenWithProject from '../../../components/ScreenWithProject'
 import Heading from '../../../components/Heading'
 import Button from '../../../components/Button'
-import { projects } from '../'
-
-const key = 'guitar-lessons'
 
 const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
 const doubleOctave = octave.concat(octave)
@@ -280,12 +277,8 @@ export default class extends React.Component {
     const { selectedDegree, selectedType } = this.props
 
     return (
-      <Screen
-        baseRouteTitle="projects"
-        mainVisual={projects[key].mainVisual}
-        pathname={`https://trevordmiller.com/projects/${key}`}
-        title="Guitar lessons"
-        description="Diatonic (in-key) chord and scale diagrams to help you go beyond tabs and memorizing songs"
+      <ScreenWithProject
+        id="guitar-lessons"
         sections={[
           {
             title: 'The in-key pattern',

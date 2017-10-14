@@ -7,16 +7,13 @@ import {
   syntaxGroups,
   uiGroups,
 } from '../../../utils/theme'
-import Screen from '../../../components/Screen'
+import ScreenWithProject from '../../../components/ScreenWithProject'
 import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'
 import Heading from '../../../components/Heading'
 import List from '../../../components/List'
 import Image from '../../../components/Image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import { projects } from '../'
-
-const key = 'nova'
 
 const colorMeanings = [
   [
@@ -535,13 +532,8 @@ class Plugins extends React.Component {
 }
 
 export default () =>
-  <Screen
-    baseRouteTitle="projects"
-    mainVisual={projects[key].mainVisual}
-    pathname={`https://trevordmiller.com/projects/${key}`}
-    title="Nova"
-    description="A color scheme for modern web development"
-    showDescription
+  <ScreenWithProject
+    id="nova"
     sections={[
       {
         component: (

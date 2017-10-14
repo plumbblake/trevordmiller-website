@@ -1,6 +1,6 @@
 import React from 'react'
 import fetch from 'node-fetch'
-import Screen from '../../../components/Screen'
+import ScreenWithProject from '../../../components/ScreenWithProject'
 import Video from '../../../components/Video'
 import Image from '../../../components/Image'
 import Paragraph from '../../../components/Paragraph'
@@ -9,23 +9,14 @@ import Code from '../../../components/Code'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
 import Label from '../../../components/Label'
-import { projects } from '../'
 import {
   exampleStartScript,
   exampleFinishScript,
 } from './utils/exampleCodeStrings'
 
-const key = 'hideaway'
-
 const Hideaway = ({ latestDownloadUrl }) =>
-  <Screen
-    baseRouteTitle="projects"
-    mainVisual={projects[key].mainVisual}
-    showMainVisual
-    pathname={`https://trevordmiller.com/projects/${key}`}
-    title="Hideaway"
-    description="A Mac app to escape distractions for a set amount of time"
-    showDescription
+  <ScreenWithProject
+    id="hideaway"
     sections={[
       {
         component: (

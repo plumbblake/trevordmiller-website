@@ -1,13 +1,10 @@
 import React from 'react'
 import { spacing } from '../../../utils/theme'
-import Screen from '../../../components/Screen'
+import ScreenWithProject from '../../../components/ScreenWithProject'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
 import Audio from '../../../components/Audio'
-import { projects } from '../'
-
-const key = 'perfect-particle'
 
 const releases = [
   {
@@ -35,13 +32,8 @@ const releases = [
 const maxPlayerSize = 250
 
 export default () =>
-  <Screen
-    baseRouteTitle="projects"
-    mainVisual={projects[key].mainVisual}
-    pathname={`https://trevordmiller.com/projects/${key}`}
-    title="Perfect Particle"
-    description="An instrumental blend of math rock, modern jazz, ambient, and electronic music"
-    showDescription
+  <ScreenWithProject
+    id="perfect-particle"
     sections={releases.map(release => ({
       title: release.title,
       component: (
