@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing } from '../../../utils/styleGuide'
+import { spacing } from '../../../utils/theme'
 import Screen from '../../../components/Screen'
 import Image from '../../../components/Image'
 import List from '../../../components/List'

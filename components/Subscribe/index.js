@@ -6,7 +6,7 @@ import {
   fontSizes,
   uiGroups,
   fontFamilies,
-} from '../../utils/styleGuide'
+} from '../../utils/theme'
 import Heading from '../Heading'
 import Button from '../Button'
 import Checkbox from '../Checkbox'

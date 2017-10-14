@@ -1,5 +1,5 @@
 import React from 'react'
-import { syntaxGroups } from '../../utils/styleGuide'
+import { syntaxGroups } from '../../utils/theme'
 
 export default ({ children }) =>
   <span

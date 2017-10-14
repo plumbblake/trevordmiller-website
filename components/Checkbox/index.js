@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing } from '../../utils/styleGuide'
+import { spacing } from '../../utils/theme'
 
 const Checkbox = ({ label, value, name, id, defaultChecked, required }) =>
   <div

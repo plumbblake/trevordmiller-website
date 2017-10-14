@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing } from '../../../utils/styleGuide'
+import { spacing } from '../../../utils/theme'
 import Screen from '../../../components/Screen'
 import Subscribe from '../../../components/Subscribe'
 import Paragraph from '../../../components/Paragraph'

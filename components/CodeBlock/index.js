@@ -6,7 +6,7 @@ import {
   uiGroups,
   borderRadii,
   borderSizes,
-} from '../../utils/styleGuide'
+} from '../../utils/theme'
 import nova from './utils/nova'
 
 const CodeBlock = ({ children, fileName, output, language = 'javascript' }) =>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { uiGroups, fontSizes, spacing } from '../../../../utils/styleGuide'
+import { uiGroups, fontSizes, spacing } from '../../../../utils/theme'
 import {
   githubUrl,
   twitterUrl,

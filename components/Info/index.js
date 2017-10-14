@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing, borderRadii, screenSizes } from '../../utils/styleGuide'
+import { spacing, borderRadii, screenSizes } from '../../utils/theme'
 
 export default ({ children }) =>
   <div

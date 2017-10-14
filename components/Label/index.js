@@ -1,5 +1,5 @@
 import React from 'react'
-import { uiGroups, fontSizes } from '../../utils/styleGuide'
+import { uiGroups, fontSizes } from '../../utils/theme'
 
 export default ({ children }) =>
   <p

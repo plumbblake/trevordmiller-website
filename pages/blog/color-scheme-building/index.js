@@ -85,7 +85,7 @@ export default () =>
             <Paragraph>
               The nice thing about having <Code>nova-colors</Code> as its own
               package is it can be used anywhere; for example,{' '}
-              <Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/styleGuide/index.js#L1-L10">
+              <Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/theme/index.js#L1-L10">
                 I'm using it on my own website as part of the style guide module
               </Anchor>.
             </Paragraph>

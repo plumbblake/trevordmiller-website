@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { colorValues } from '../../utils/styleGuide'
+import { colorValues } from '../../utils/theme'
 import icons from './utils/icons'
 
 const Icon = ({ type, fill = colorValues.grays.gray6, style, size = '100%' }) =>

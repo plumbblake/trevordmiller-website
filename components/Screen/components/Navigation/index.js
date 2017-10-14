@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Icon from '../../../Icon'
 import baseRoutes from '../../../../utils/baseRoutes'
-import { uiGroups, spacing, fontSizes } from '../../../../utils/styleGuide'
+import { uiGroups, spacing, fontSizes } from '../../../../utils/theme'
 
 export const baseRouteTitles = baseRoutes.map(baseRoute => baseRoute.title)
 

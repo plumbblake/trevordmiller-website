@@ -128,7 +128,7 @@ export default () =>
           <div>
             <Paragraph>
               The project uses{' '}
-              <Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/styleGuide/index.js">
+              <Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/theme/index.js">
                 a module for a style guide
               </Anchor>. This is the source for shared styles like colors,
               spacing (padding/margin), font sizes, etc. The color scheme is{' '}

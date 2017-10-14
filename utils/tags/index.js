@@ -1,4 +1,4 @@
-import { uiGroups } from '../styleGuide'
+import { uiGroups } from '../theme'
 
 const tags = {
   inProgress: {

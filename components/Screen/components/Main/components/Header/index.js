@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing, screenSizes } from '../../../../../../utils/styleGuide'
+import { spacing, screenSizes } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 import Image from '../../../../../Image'
 

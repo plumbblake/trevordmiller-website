@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing } from '../../utils/styleGuide'
+import { spacing } from '../../utils/theme'
 import { githubUrl, freshlyMarriedUrl } from '../../utils/urls'
 import Screen from '../../components/Screen'
 import Avatar from '../../components/Avatar'

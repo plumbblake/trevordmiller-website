@@ -7,7 +7,7 @@ import {
   lineHeights,
   fontSizes,
   fontWeights,
-} from '../../utils/styleGuide'
+} from '../../utils/theme'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
 import Navigation, { baseRouteTitles } from './components/Navigation'

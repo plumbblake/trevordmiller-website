@@ -6,7 +6,7 @@ import {
   screenSizes,
   borderRadii,
   borderSizes,
-} from '../../utils/styleGuide'
+} from '../../utils/theme'
 import List from '../List'
 import Anchor from '../Anchor'
 import Image from '../Image'

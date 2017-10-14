@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { startCase, first } from 'lodash'
 import Link from 'next/link'
-import { uiGroups, spacing, borderSizes } from '../../../utils/styleGuide'
+import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
 import Screen from '../../../components/Screen'
 import Heading from '../../../components/Heading'
 import Button from '../../../components/Button'

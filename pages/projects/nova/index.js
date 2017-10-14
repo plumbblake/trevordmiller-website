@@ -6,7 +6,7 @@ import {
   borderSizes,
   syntaxGroups,
   uiGroups,
-} from '../../../utils/styleGuide'
+} from '../../../utils/theme'
 import Screen from '../../../components/Screen'
 import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'

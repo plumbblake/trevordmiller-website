@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { uiGroups } from '../../utils/styleGuide'
+import { uiGroups } from '../../utils/theme'
 
 const Video = ({ src, autoplay, loop, muted, controls = 'true' }) =>
   <div

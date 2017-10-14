@@ -6,7 +6,7 @@ import {
   borderRadii,
   fontSizes,
   fontFamilies,
-} from '../../utils/styleGuide'
+} from '../../utils/theme'
 
 const stylesByType = {
   primary: {
