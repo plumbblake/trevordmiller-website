@@ -1,10 +1,10 @@
 import React from 'react'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="spaced-repetition-software"
     sections={[
       {

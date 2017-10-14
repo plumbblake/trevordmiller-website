@@ -1,11 +1,11 @@
 import React from 'react'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Video from '../../../components/Video'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="minimal-office"
     sections={[
       {

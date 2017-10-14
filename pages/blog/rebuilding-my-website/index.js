@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
@@ -7,7 +7,7 @@ import Button from '../../../components/Button'
 import Code from '../../../components/Code'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="rebuilding-my-website"
     sections={[
       {

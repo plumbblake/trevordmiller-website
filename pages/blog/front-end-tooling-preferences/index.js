@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import List from '../../../components/List'
 import Teaser from '../../../components/Teaser'
@@ -7,7 +7,7 @@ import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="front-end-tooling-preferences"
     sections={[
       {

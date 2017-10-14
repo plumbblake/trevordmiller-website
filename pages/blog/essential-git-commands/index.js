@@ -1,12 +1,12 @@
 import React from 'react'
 import { spacing } from '../../../utils/theme'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Subscribe from '../../../components/Subscribe'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="essential-git-commands"
     sections={[
       {

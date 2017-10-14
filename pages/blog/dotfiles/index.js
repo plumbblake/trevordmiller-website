@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlog from '../../../components/ScreenWithBlog'
+import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
@@ -8,7 +8,7 @@ import Image from '../../../components/Image'
 import List from '../../../components/List'
 
 export default () =>
-  <ScreenWithBlog
+  <ScreenWithBlogPost
     id="dotfiles"
     sections={[
       {
