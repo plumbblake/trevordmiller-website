@@ -6,7 +6,7 @@ import Teaser from '../../components/Teaser'
 export const blogPosts = {
   /*
   'essential-git-commands': {
-    tags: [tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/git-sadness.jpg',
     title: `Essential Git commands`,
     description: `A subset of only the most critical Git commands for dealing with common situations.`,
@@ -15,7 +15,7 @@ export const blogPosts = {
   */
 
   dotfiles: {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',
     title: `Organizing tooling settings using dotfiles`,
     description: `Examples of using dotfiles to manage and back-up the config for git, shells, editors, etc.`,
@@ -39,7 +39,7 @@ export const blogPosts = {
   },
 
   'raspberry-pi-button': {
-    tags: [tags.unix, tags.node, tags.hardware],
+    tags: [tags.terminal, tags.unix, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Running a Node server on a Raspberry Pi with a physical button`,
     description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, using the latest Node and npm, and creating a Node server to send a text message when the button is pressed.`,
@@ -47,7 +47,7 @@ export const blogPosts = {
   },
 
   'color-scheme-building': {
-    tags: [tags.npm],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
     mainVisual: '/static/nova-example-code-screenshot.png',
     title: `Building the Nova color scheme`,
     description: `By using an npm module for color values, we were able to generate color schemes for multiple editors and tools from one source.`,
@@ -79,7 +79,7 @@ export const blogPosts = {
   },
 
   'wholesome-media': {
-    tags: [tags.hardware],
+    tags: [tags.general],
     mainVisual: '/static/opendns.jpg',
     title: `Configuring devices for wholesome media`,
     description: `I use a combination of filters and settings to help keep media in my home wholesome.`,
@@ -87,7 +87,7 @@ export const blogPosts = {
   },
 
   'rebuilding-my-website': {
-    tags: [tags.react, tags.node],
+    tags: [tags.react, tags.npm, tags.node],
     mainVisual: '/static/trevordmiller-website.png',
     title: `Rebuilding my website to aggregate all my stuff`,
     description: `Since I started programming in high school, I've accumulated personal domains, websites, and apps spread across the internet. I decided I wanted to consolidate these into a single app with a shared set of components, so that it is easier to maintain. So now all my web projects live under https://trevordmiller.com; this includes my portfolio, open source project documentation, guitar lessons, blog etc.`,

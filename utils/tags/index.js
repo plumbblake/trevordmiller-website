@@ -3,56 +3,68 @@ import { uiGroups } from '../theme'
 const tags = {
   inProgress: {
     label: 'in-progress',
-    color: uiGroups.userActionNeeded,
+    color: uiGroups.userCurrentState,
     icon: 'timer',
   },
 
-  general: {
-    label: 'general',
-    color: uiGroups.userCurrentState,
-    icon: 'tag',
+  terminal: {
+    label: 'terminal',
+    color: uiGroups.backgroundShade,
+    icon: 'terminal',
   },
 
   unix: {
     label: 'unix',
-    color: uiGroups.userCurrentState,
-    icon: 'terminal',
+    color: uiGroups.backgroundShade,
+    icon: 'unix',
+  },
+
+  vim: {
+    label: 'vim',
+    color: uiGroups.backgroundShade,
+    icon: 'vim',
   },
 
   git: {
     label: 'git',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'git',
   },
 
   npm: {
     label: 'npm',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'npm',
   },
 
   react: {
     label: 'react',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'react',
   },
 
   node: {
     label: 'node',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'node',
   },
 
   graphQl: {
     label: 'graphql',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'graphql',
   },
 
   hardware: {
     label: 'hardware',
-    color: uiGroups.userCurrentState,
+    color: uiGroups.backgroundShade,
     icon: 'plug',
+  },
+
+  general: {
+    label: 'general',
+    color: uiGroups.backgroundShade,
+    icon: 'tag',
   },
 }
 

@@ -3,6 +3,7 @@ import { uiGroups, fontSizes, spacing } from '../../../../utils/theme'
 import {
   githubUrl,
   twitterUrl,
+  redditUrl,
   facebookUrl,
   linkedinUrl,
 } from '../../../../utils/urls'
@@ -20,6 +21,12 @@ const followItems = [
     iconType: 'twitter',
     label: 'Twitter',
     href: twitterUrl,
+  },
+
+  {
+    iconType: 'reddit',
+    label: 'Reddit',
+    href: redditUrl,
   },
 
   {

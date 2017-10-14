@@ -5,7 +5,16 @@ import Teaser from '../../components/Teaser'
 
 export const projects = {
   'trevordmiller-website': {
-    tags: [tags.inProgress, tags.react],
+    tags: [
+      tags.inProgress,
+      tags.terminal,
+      tags.unix,
+      tags.vim,
+      tags.git,
+      tags.react,
+      tags.npm,
+      tags.node,
+    ],
     mainVisual: '/static/trevordmiller-website.png',
     title: `trevordmiller.com`,
     description: `I built this website using React rendered with Next.js. It is hosted on now. I add new courses, blog posts, and projects to it regularly.`,
@@ -35,7 +44,7 @@ export const projects = {
   },
 
   dotfiles: {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
     mainVisual: '/static/github.png',
     title: `Dotfiles`,
     description: `I organize my tooling settings in dotfiles.`,
@@ -52,7 +61,7 @@ export const projects = {
   },
 
   'shell-scripts': {
-    tags: [tags.unix, tags.git],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
     mainVisual: '/static/github.png',
     title: `Shell Scripts`,
     description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
@@ -65,7 +74,7 @@ export const projects = {
   },
 
   nova: {
-    tags: [tags.npm],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
     description: 'A color scheme for modern web development.',
@@ -90,7 +99,7 @@ export const projects = {
   },
 
   'dog-bathroom-button': {
-    tags: [tags.unix, tags.node, tags.hardware],
+    tags: [tags.terminal, tags.unix, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Dog Bathroom Button`,
     description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,

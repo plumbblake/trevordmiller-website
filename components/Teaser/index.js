@@ -17,7 +17,7 @@ export default ({ visual, description, links, tags }) =>
     {tags
       ? <div
           style={{
-            marginBottom: spacing.medium,
+            marginBottom: spacing.large,
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -27,15 +27,16 @@ export default ({ visual, description, links, tags }) =>
             <div
               key={tag.label}
               style={{
-                border: `${borderSizes.small}px solid ${tag.color}`,
+                border: `${borderSizes.xsmall}px solid ${tag.color}`,
                 borderRadius: borderRadii.medium,
                 color: tag.color,
-                paddingTop: spacing.xsmall,
-                paddingBottom: spacing.xsmall,
-                paddingRight: spacing.medium,
-                paddingLeft: spacing.medium,
-                marginRight: spacing.small,
-                marginBottom: spacing.small,
+                fontSize: fontSizes.small,
+                paddingTop: spacing.xxsmall,
+                paddingBottom: spacing.xxsmall,
+                paddingRight: spacing.small,
+                paddingLeft: spacing.small,
+                marginRight: spacing.xsmall,
+                marginBottom: spacing.xsmall,
               }}
             >
               <div
@@ -48,12 +49,12 @@ export default ({ visual, description, links, tags }) =>
                   ? <Icon
                       type={tag.icon}
                       fill={tag.color}
-                      size={fontSizes.large}
+                      size={fontSizes.medium}
                     />
                   : null}
                 <div
                   style={{
-                    marginLeft: tag.icon ? spacing.small : 0,
+                    marginLeft: tag.icon ? spacing.xsmall : 0,
                   }}
                 >
                   {tag.label}
