@@ -3,7 +3,7 @@ import tags from '../../utils/tags'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
-export const posts = {
+export const blogPosts = {
   /*
   'essential-git-commands': {
     tags: [tags.git],
@@ -95,24 +95,24 @@ export const posts = {
   },
 }
 
-const postKeys = Object.keys(posts)
+const blogPostKeys = Object.keys(blogPosts)
 
 export default () =>
   <ScreenWithBaseRoute
     id="blog"
-    sections={postKeys.map(postKey => {
-      const post = posts[postKey]
+    sections={blogPostKeys.map(blogPostKey => {
+      const blogPost = blogPosts[blogPostKey]
       return {
-        title: post.title,
+        title: blogPost.title,
         component: (
           <Teaser
-            tags={post.tags}
-            visual={post.mainVisual}
-            description={post.description}
+            tags={blogPost.tags}
+            visual={blogPost.mainVisual}
+            description={blogPost.description}
             links={[
               {
                 description: 'View',
-                href: `/blog/${postKey}`,
+                href: `/blog/${blogPostKey}`,
               },
             ]}
           />
