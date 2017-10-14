@@ -1,60 +1,22 @@
 import React from 'react'
 import tags from '../../utils/tags'
-import Screen from '../../components/Screen'
+import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
-  hideaway: {
-    tags: [tags.react, tags.node],
-    mainVisual: '/static/hideaway.png',
-    title: `Hideaway`,
-    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js). I created Hideaway mainly as an exercise for learning Electron, but you can use it for real if you want too.`,
-    links: [
-      {
-        description: 'Project website',
-        href: '/projects/hideaway',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/hideaway',
-      },
-    ],
-  },
-
-  cortex: {
-    tags: [tags.react, tags.node, tags.graphQl],
-    mainVisual: '/static/cortex.png',
-    title: `Cortex`,
-    description: `A proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This was primarily a learning experience for me, rather than a real application to be used by others; I wanted to see if I could use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Relay Modern to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
-    links: [
-      {
-        description: 'Code for GraphQL API',
-        href: 'https://github.com/trevordmiller/cortex-api',
-      },
-      {
-        description: 'Code for component library',
-        href: 'https://github.com/trevordmiller/cortex-components',
-      },
-      {
-        description: 'Code for clients',
-        href: 'https://github.com/trevordmiller/cortex-clients',
-      },
-    ],
-  },
-
-  'dog-bathroom-button': {
-    tags: [tags.unix, tags.node, tags.hardware],
-    mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Dog Bathroom Button`,
-    description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
+  'trevordmiller-website': {
+    tags: [tags.inProgress, tags.react],
+    mainVisual: '/static/trevordmiller-website.jpg',
+    title: `This website`,
+    description: `I built this website using React rendered with Next.js. It is hosted on now. I add new courses, blog posts, and projects to it regularly.`,
     links: [
       {
         description: 'Code',
-        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
       {
         description: 'Blog post',
-        href: '/blog/raspberry-pi-button',
+        href: '/blog/rebuilding-my-website',
       },
     ],
   },
@@ -114,6 +76,78 @@ export const projects = {
     ],
   },
 
+  'dog-bathroom-button': {
+    tags: [tags.unix, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Dog Bathroom Button`,
+    description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
+    links: [
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+      },
+      {
+        description: 'Blog post',
+        href: '/blog/raspberry-pi-button',
+      },
+    ],
+  },
+
+  hideaway: {
+    tags: [tags.react, tags.node],
+    mainVisual: '/static/hideaway.png',
+    title: `Hideaway`,
+    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js). I created Hideaway mainly as an exercise for learning Electron, but you can use it for real if you want too.`,
+    links: [
+      {
+        description: 'Project website',
+        href: '/projects/hideaway',
+      },
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/hideaway',
+      },
+    ],
+  },
+
+  cortex: {
+    tags: [tags.react, tags.node, tags.graphQl],
+    mainVisual: '/static/cortex.png',
+    title: `Cortex`,
+    description: `A proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This was primarily a learning experience for me, rather than a real application to be used by others; I wanted to see if I could use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Relay Modern to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
+    links: [
+      {
+        description: 'Code for GraphQL API',
+        href: 'https://github.com/trevordmiller/cortex-api',
+      },
+      {
+        description: 'Code for component library',
+        href: 'https://github.com/trevordmiller/cortex-components',
+      },
+      {
+        description: 'Code for clients',
+        href: 'https://github.com/trevordmiller/cortex-clients',
+      },
+    ],
+  },
+
+  'guitar-lessons': {
+    tags: [tags.react],
+    mainVisual: '/static/guitar-lessons.png',
+    title: `Guitar Lessons`,
+    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
+    links: [
+      {
+        description: 'Web app',
+        href: '/projects/guitar-lessons',
+      },
+      {
+        description: 'Code',
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
+      },
+    ],
+  },
+
   'egghead-instructor-center': {
     tags: [tags.react],
     mainVisual: '/static/egghead-instructor-center.png',
@@ -140,92 +174,6 @@ export const projects = {
       {
         description: 'Code',
         href: 'https://github.com/eggheadio/egghead-ui',
-      },
-    ],
-  },
-
-  'egghead-practical-git': {
-    tags: [tags.unix, tags.git],
-    mainVisual: '/static/egghead-practical-git.png',
-    title: `Practical Git for Everyday Professional Use`,
-    description: `Many coders struggle with the command line. Over the years, the terminal has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
-    links: [
-      {
-        description: 'Videos',
-        href:
-          'https://egghead.io/courses/practical-git-for-everyday-professional-use',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/example-utility-functions',
-      },
-    ],
-  },
-
-  'egghead-publish-npm': {
-    tags: [tags.unix, tags.npm, tags.node],
-    mainVisual: '/static/egghead-publish-npm.png',
-    title: `Publish JavaScript packages on npm`,
-    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
-    links: [
-      {
-        description: 'Videos',
-        href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/sensitive-words',
-      },
-    ],
-  },
-
-  'egghead-react-testing': {
-    tags: [tags.react, tags.node],
-    mainVisual: '/static/egghead-react-testing.png',
-    title: `React Testing Cookbook`,
-    description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my web apps.`,
-    links: [
-      {
-        description: 'Videos',
-        href: 'https://egghead.io/courses/react-testing-cookbook',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/example-favorite-quotes',
-      },
-    ],
-  },
-
-  'trevordmiller-website': {
-    tags: [tags.react],
-    mainVisual: '/static/trevordmiller-website.jpg',
-    title: `This website`,
-    description: `I built this website using React rendered with Next.js. It is hosted on now. I try to update it often and use it as an example  of my current technology choices.`,
-    links: [
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
-      },
-      {
-        description: 'Blog post',
-        href: '/blog/rebuilding-my-website',
-      },
-    ],
-  },
-
-  'guitar-lessons': {
-    tags: [tags.react],
-    mainVisual: '/static/guitar-lessons.png',
-    title: `Guitar Lessons`,
-    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
-    links: [
-      {
-        description: 'Web app',
-        href: '/projects/guitar-lessons',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },
