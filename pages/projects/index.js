@@ -55,7 +55,7 @@ export const projects = {
     tags: [tags.npm],
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
-    description: `I enjoy things that are simple, beautiful, and easy to use. I always wanted to create a custom color scheme to use with my different tools and projects, so I teamed up with a designer and created it. I built it as a stand-alone npm library that I could use across my code editor, terminal, and even personal websites and apps - like this one! It includes my favorite colors in my favorite flat/pastel style. Although I built it primarily for myself, I made it open source so anyone can use it if they also happen to like the style.`,
+    description: 'A color scheme for modern web development.',
     links: [
       {
         description: 'Project website',
@@ -97,7 +97,7 @@ export const projects = {
     tags: [tags.react, tags.node],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
-    description: `When trying to focus on a task there are often a lot of distractions. I built this little Mac app to escape distractions for a set amount of time. You start a timer to "hideaway" from the distractions. This closes extra apps, turns on do not disturb, hides the dock, and lets you run any other scripts you'd like. Then, when the timer is done, it resets your Mac back to the state it was in before the hideaway session. It's built with Node (using Electron) and React (using Next.js). I created Hideaway mainly as an exercise for learning Electron, but you can use it for real if you want too.`,
+    description: 'A Mac app to escape distractions for a set amount of time.',
     links: [
       {
         description: 'Project website',
