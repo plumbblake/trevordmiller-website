@@ -1,22 +1,14 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import List from '../../../components/List'
 import Teaser from '../../../components/Teaser'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
-import { posts } from '../'
-
-const key = 'front-end-tooling-preferences'
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="front-end-tooling-preferences"
     sections={[
       {
         title: `The tooling holy wars`,

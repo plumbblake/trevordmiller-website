@@ -1,22 +1,14 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 import List from '../../../components/List'
-import { posts } from '../'
-
-const key = 'task-list'
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="task-list"
     sections={[
       {
         title: 'Task list',

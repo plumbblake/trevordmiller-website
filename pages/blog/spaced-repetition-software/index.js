@@ -1,19 +1,11 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
-import { posts } from '../'
-
-const key = 'spaced-repetition-software'
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="spaced-repetition-software"
     sections={[
       {
         title: `Recording learning`,

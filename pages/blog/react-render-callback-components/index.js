@@ -1,12 +1,11 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import Code from '../../../components/Code'
 import CodeBlock from '../../../components/CodeBlock'
 import Heading from '../../../components/Heading'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
-import { posts } from '../'
 import {
   exampleDefine,
   exampleUse,
@@ -18,16 +17,9 @@ import {
 } from './utils/exampleCodeStrings'
 import ExampleApp from './components/ExampleApp'
 
-const key = 'react-render-callback-components'
-
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="react-render-callback-components"
     sections={[
       {
         title: 'What about Higher Order Components?',

@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
@@ -7,18 +7,10 @@ import Image from '../../../components/Image'
 import Video from '../../../components/Video'
 import Code from '../../../components/Code'
 import Button from '../../../components/Button'
-import { posts } from '../'
-
-const key = 'raspberry-pi-button'
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="raspberry-pi-button"
     sections={[
       {
         title: `Background`,

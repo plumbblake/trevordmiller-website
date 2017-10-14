@@ -1,20 +1,12 @@
 import React from 'react'
-import Screen from '../../../components/Screen'
+import ScreenWithBlog from '../../../components/ScreenWithBlog'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Video from '../../../components/Video'
-import { posts } from '../'
-
-const key = 'minimal-office'
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[key].mainVisual}
-    pathname={`https://trevordmiller.com/blog/${key}`}
-    title={posts[key].title}
-    description={posts[key].description}
-    showDescription
+  <ScreenWithBlog
+    id="minimal-office"
     sections={[
       {
         title: `Video walkthrough`,
