@@ -7,7 +7,7 @@ export const projects = {
   'trevordmiller-website': {
     tags: [tags.inProgress, tags.react],
     mainVisual: '/static/trevordmiller-website.jpg',
-    title: `This website`,
+    title: `trevordmiller.com`,
     description: `I built this website using React rendered with Next.js. It is hosted on now. I add new courses, blog posts, and projects to it regularly.`,
     links: [
       {
@@ -17,6 +17,19 @@ export const projects = {
       {
         description: 'Blog post',
         href: '/blog/rebuilding-my-website',
+      },
+    ],
+  },
+
+  ropig: {
+    tags: [tags.inProgress, tags.react, tags.graphQl],
+    mainVisual: '/static/github.png',
+    title: 'Ropig',
+    description: `For my full-time job, I'm currently working on a new product called Ropig. Ropig is a new alert management tool that breaks down the firehose of events from your monitoring apps.`,
+    links: [
+      {
+        description: 'Information website',
+        href: 'https://ropig.com',
       },
     ],
   },
