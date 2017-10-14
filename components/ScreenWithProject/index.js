@@ -4,7 +4,7 @@ import { projects } from '../../pages/projects'
 
 const ScreenWithProject = ({ id, sections }) =>
   <Screen
-    baseRouteTitle="projects"
+    baseRouteKey="projects"
     mainVisual={projects[id].mainVisual}
     pathname={`https://trevordmiller.com/projects/${id}`}
     title={projects[id].title}

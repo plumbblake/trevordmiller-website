@@ -1,6 +1,6 @@
 import React from 'react'
 import tags from '../../utils/tags'
-import Screen from '../../components/Screen'
+import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const posts = {
@@ -98,12 +98,8 @@ export const posts = {
 const postKeys = Object.keys(posts)
 
 export default () =>
-  <Screen
-    baseRouteTitle="blog"
-    mainVisual={posts[postKeys[0]].mainVisual}
-    pathname="https://trevordmiller.com/blog"
-    title="blog"
-    description="Articles from Trevor D. Miller, mostly posts about code."
+  <ScreenWithBaseRoute
+    id="blog"
     sections={postKeys.map(postKey => {
       const post = posts[postKey]
       return {

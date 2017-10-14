@@ -4,7 +4,7 @@ import { posts } from '../../pages/blog'
 
 const ScreenWithBlogPost = ({ id, sections }) =>
   <Screen
-    baseRouteTitle="blog"
+    baseRouteKey="blog"
     mainVisual={posts[id].mainVisual}
     pathname={`https://trevordmiller.com/blog/${id}`}
     title={posts[id].title}

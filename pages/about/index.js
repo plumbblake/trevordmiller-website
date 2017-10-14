@@ -1,7 +1,7 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
 import { githubUrl, freshlyMarriedUrl } from '../../utils/urls'
-import Screen from '../../components/Screen'
+import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
 import Teaser from '../../components/Teaser'
@@ -57,12 +57,8 @@ const lifeAspects = [
 ]
 
 export default () =>
-  <Screen
-    baseRouteTitle="about"
-    mainVisual="/static/trevordmiller-website.jpg"
-    pathname={`https://trevordmiller.com/about`}
-    title="about"
-    description="Aspects from the life of Trevor D. Miller"
+  <ScreenWithBaseRoute
+    id="about"
     sections={[
       {
         component: (

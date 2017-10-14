@@ -265,13 +265,8 @@ export const projects = {
 const projectKeys = Object.keys(projects)
 
 export default () =>
-  <Screen
-    baseRouteTitle="projects"
-    mainVisual={projects[projectKeys[0]].mainVisual}
-    pathname="https://trevordmiller.com/projects"
-    title="projects"
-    description="Info and links to some of my projects and code"
-    showDescription
+  <ScreenWithBaseRoute
+    id="projects"
     sections={projectKeys.map(projectKey => {
       const project = projects[projectKey]
       return {

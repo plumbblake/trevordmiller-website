@@ -8,15 +8,16 @@ import {
   fontSizes,
   fontWeights,
 } from '../../utils/theme'
+import { baseRouteKeys } from '../../pages'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
-import Navigation, { baseRouteTitles } from './components/Navigation'
+import Navigation from './components/Navigation'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
 export default class Screen extends Component {
   static propTypes = {
-    baseRouteTitle: PropTypes.oneOf(baseRouteTitles),
+    baseRouteKey: PropTypes.oneOf(baseRouteKeys),
     mainVisual: PropTypes.string.isRequired,
     showMainVisual: PropTypes.bool,
     pathname: PropTypes.string.isRequired,
@@ -39,7 +40,7 @@ export default class Screen extends Component {
 
   render() {
     const {
-      baseRouteTitle,
+      baseRouteKey,
       mainVisual,
       showMainVisual,
       pathname,
@@ -145,7 +146,7 @@ export default class Screen extends Component {
             backgroundRepeat: 'no-repeat, no-repeat',
           }}
         >
-          <Navigation baseRouteTitle={baseRouteTitle} />
+          <Navigation baseRouteKey={baseRouteKey} />
 
           <Main
             title={title}

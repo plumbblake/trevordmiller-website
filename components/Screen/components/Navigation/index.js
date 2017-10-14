@@ -1,12 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import Icon from '../../../Icon'
-import baseRoutes from '../../../../utils/baseRoutes'
+import { baseRoutes, baseRouteKeys } from '../../../../pages'
 import { uiGroups, spacing, fontSizes } from '../../../../utils/theme'
 
-export const baseRouteTitles = baseRoutes.map(baseRoute => baseRoute.title)
-
-export default ({ baseRouteTitle }) =>
+export default ({ baseRouteKey }) =>
   <nav
     style={{
       background: uiGroups.backgroundShade,
@@ -27,21 +25,25 @@ export default ({ baseRouteTitle }) =>
       </a>
     </Link>
 
-    {baseRoutes.map((baseRoute, index) =>
-      <Link prefetch key={index} href={baseRoute.path}>
-        <a
-          style={{
-            textDecoration: 'none',
-            padding: spacing.medium,
-            color:
-              baseRouteTitle === baseRoute.title
-                ? uiGroups.userCurrentState
-                : uiGroups.gray3,
-            fontSize: fontSizes.large,
-          }}
-        >
-          {baseRoute.title}
-        </a>
-      </Link>
-    )}
+    {baseRouteKeys.map((innerBaseRouteKey, index) => {
+      const baseRoute = baseRoutes[innerBaseRouteKey]
+
+      return (
+        <Link prefetch key={index} href={baseRoute.path}>
+          <a
+            style={{
+              textDecoration: 'none',
+              padding: spacing.medium,
+              color:
+                baseRouteKey === innerBaseRouteKey
+                  ? uiGroups.userCurrentState
+                  : uiGroups.gray3,
+              fontSize: fontSizes.large,
+            }}
+          >
+            {baseRoute.title}
+          </a>
+        </Link>
+      )
+    })}
   </nav>
