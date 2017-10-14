@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import {
-  spacing,
-  uiGroups,
-  borderRadii,
-  borderSizes,
-} from '../../utils/theme'
+import { spacing, uiGroups, borderRadii, borderSizes } from '../../utils/theme'
 import nova from './utils/nova'
 
 const CodeBlock = ({ children, fileName, output, language = 'javascript' }) =>
