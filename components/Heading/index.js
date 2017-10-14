@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   colorValues,
+  fontFamilies,
   fontSizes,
-  fontWeights,
   spacing,
   lineHeights,
 } from '../../utils/theme'
@@ -37,7 +37,7 @@ export const levelSpecificStyles = {
 const Heading = ({ children, level }) =>
   <div
     style={{
-      fontWeight: fontWeights.light,
+      fontFamily: fontFamilies.headline,
       overflowWrap: 'break-word',
       ...levelSpecificStyles[level],
     }}

@@ -2,7 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import Icon from '../../../Icon'
 import { baseRoutes, baseRouteKeys } from '../../../../pages'
-import { uiGroups, spacing, fontSizes } from '../../../../utils/theme'
+import {
+  uiGroups,
+  spacing,
+  fontFamilies,
+  fontSizes,
+} from '../../../../utils/theme'
 
 export default ({ baseRouteKey }) =>
   <nav
@@ -32,6 +37,7 @@ export default ({ baseRouteKey }) =>
         <Link prefetch key={index} href={baseRoute.path}>
           <a
             style={{
+              fontFamily: fontFamilies.headline,
               textDecoration: 'none',
               padding: spacing.medium,
               color:
