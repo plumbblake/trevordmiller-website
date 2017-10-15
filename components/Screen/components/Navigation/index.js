@@ -43,7 +43,7 @@ export default ({ baseRouteKey }) =>
               color:
                 baseRouteKey === innerBaseRouteKey
                   ? uiGroups.userCurrentState
-                  : uiGroups.gray3,
+                  : uiGroups.gray4,
               fontSize: fontSizes.large,
             }}
           >
