@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   colorValues,
   fontFamilies,
+  fontWeights,
   fontSizes,
   spacing,
   lineHeights,
@@ -38,6 +39,7 @@ const Heading = ({ children, level }) =>
   <div
     style={{
       fontFamily: fontFamilies.headline,
+      fontWeight: fontWeights.normal,
       overflowWrap: 'break-word',
       ...levelSpecificStyles[level],
     }}

@@ -30,6 +30,7 @@ export const fontSizes = {
 }
 
 export const fontWeights = {
+  bold: 600,
   normal: 400,
   light: 300,
 }
