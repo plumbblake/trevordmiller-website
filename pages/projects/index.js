@@ -17,15 +17,15 @@ export const projects = {
     ],
     mainVisual: '/static/trevordmiller-website.png',
     title: `trevordmiller.com`,
-    description: `I built this website using React rendered with Next.js. It is hosted on now. I add new courses, blog posts, and projects to it regularly.`,
+    description: `I add new courses, blog posts, and projects to my website (this website) regularly.`,
     links: [
       {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
+        description: 'Read the blog post on how it works',
+        href: '/blog/rebuilding-my-website',
       },
       {
-        description: 'Blog post',
-        href: '/blog/rebuilding-my-website',
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const projects = {
     description: `For my full-time job, I'm currently working on a new product called Ropig. Ropig is a new alert management tool that breaks down the firehose of events from your monitoring apps.`,
     links: [
       {
-        description: 'Information website',
+        description: `Go to the app`,
         href: 'https://ropig.com',
       },
     ],
@@ -50,12 +50,12 @@ export const projects = {
     description: `I organize my tooling settings in dotfiles.`,
     links: [
       {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/dotfiles',
+        description: 'Read the blog post on how I use these dotfiles',
+        href: '/blog/dotfiles',
       },
       {
-        description: 'Blog post',
-        href: '/blog/dotfiles',
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/dotfiles',
       },
     ],
   },
@@ -67,7 +67,7 @@ export const projects = {
     description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
     links: [
       {
-        description: 'Code',
+        description: `See the code`,
         href: 'https://github.com/trevordmiller/shell-scripts',
       },
     ],
@@ -80,20 +80,20 @@ export const projects = {
     description: 'A color scheme for modern web development.',
     links: [
       {
-        description: 'Project website',
+        description: `View the project's website`,
         href: '/projects/nova',
       },
       {
-        description: 'Code for color library',
+        description: 'Read the blog post on how Nova was built',
+        href: '/blog/color-scheme-building',
+      },
+      {
+        description: 'See the code for the color library',
         href: 'https://github.com/trevordmiller/nova-colors',
       },
       {
-        description: 'Code for editor plugins and tools',
+        description: 'See the code for the plugins',
         href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
-      },
-      {
-        description: 'Blog post',
-        href: '/blog/color-scheme-building',
       },
     ],
   },
@@ -105,12 +105,12 @@ export const projects = {
     description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
     links: [
       {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+        description: 'Read the blog post on how it was built',
+        href: '/blog/raspberry-pi-button',
       },
       {
-        description: 'Blog post',
-        href: '/blog/raspberry-pi-button',
+        description: 'See the code',
+        href: 'https://github.com/trevordmiller/dog-bathroom-button',
       },
     ],
   },
@@ -122,11 +122,11 @@ export const projects = {
     description: 'A Mac app to escape distractions for a set amount of time.',
     links: [
       {
-        description: 'Project website',
+        description: `View the app`,
         href: '/projects/hideaway',
       },
       {
-        description: 'Code',
+        description: 'See the code',
         href: 'https://github.com/trevordmiller/hideaway',
       },
     ],
@@ -136,18 +136,18 @@ export const projects = {
     tags: [tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
-    description: `A proof of concept for rendering the same set of React components across targets (web, native mobile, native desktop, and email). This was primarily a learning experience for me, rather than a real application to be used by others; I wanted to see if I could use a single set of GraphQL connected React components across multiple platforms. This project has a GraphQL API using Node connected to dummy data, an npm component library using Relay Modern to connect component data to the API, and a set of clients that consume the component library with some wrapping platform-specific code; the clients include web (using React DOM with Next.js), native mobile (using React Native with Expo), and native desktop (using Electron with Next.js).`,
+    description: `A proof of concept for rendering the same set of GraphQL connected React components across targets (web, native mobile, and native desktop).`,
     links: [
       {
-        description: 'Code for GraphQL API',
+        description: 'See the code for the GraphQL API',
         href: 'https://github.com/trevordmiller/cortex-api',
       },
       {
-        description: 'Code for component library',
+        description: 'See the code for the component library',
         href: 'https://github.com/trevordmiller/cortex-components',
       },
       {
-        description: 'Code for clients',
+        description: 'See the code for the clients',
         href: 'https://github.com/trevordmiller/cortex-clients',
       },
     ],
@@ -157,15 +157,11 @@ export const projects = {
     tags: [tags.react],
     mainVisual: '/static/guitar-lessons.png',
     title: `Guitar Lessons`,
-    description: `A collection of guitar lessons using the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
+    description: `A collection of guitar lessons with the way I understand music. Designed to help guitarists go beyond tabs and memorizing songs to really understanding how everything works together.`,
     links: [
       {
-        description: 'Web app',
+        description: 'View the app',
         href: '/projects/guitar-lessons',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },
@@ -174,10 +170,10 @@ export const projects = {
     tags: [tags.react],
     mainVisual: '/static/egghead-instructor-center.png',
     title: `egghead Instructor Center`,
-    description: `I built the initial production egghead Instructor Center. It was a React web app. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
+    description: `I built the initial production egghead Instructor Center. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
     links: [
       {
-        description: 'Code',
+        description: 'See the code',
         href: 'https://github.com/eggheadio/egghead-instructor-center',
       },
     ],
@@ -187,14 +183,14 @@ export const projects = {
     tags: [tags.npm, tags.react],
     mainVisual: '/static/egghead-ui.png',
     title: `egghead component library`,
-    description: `I built the initial production egghead.io React component library which is used across egghead apps. It contains React components, pages of composed components, and general JavaScript utilities. It outputs an npm library as well as a living stle guide / documentation app from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
+    description: `I built the initial production egghead.io component library which is used across egghead apps.  It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
     links: [
       {
-        description: 'Web app',
+        description: `Go to the project's website`,
         href: 'https://styleguide.egghead.io',
       },
       {
-        description: 'Code',
+        description: 'See the code',
         href: 'https://github.com/eggheadio/egghead-ui',
       },
     ],
@@ -204,29 +200,25 @@ export const projects = {
     tags: [tags.react, tags.node],
     mainVisual: '/static/domo.png',
     title: `Domo Mobile Web`,
-    description: `I helped create the initial production mobile web app for Domo. It was built with React, Redux, complex data transformation, realtime chat, Node scripts, many other features and tools.`,
+    description: `I helped create the initial production mobile web app for Domo.`,
   },
 
   'church-history': {
     tags: [tags.node],
     mainVisual: '/static/church-history.png',
     title: `LDS Church History`,
-    description: `I helped create the LDS Church History web app, which at the time included some new complex challenges like using Node for our API, server side rendering, interactive maps, and mobile first immersive visual effects.`,
+    description: `I helped create the LDS Church History web app. Which at the time included some new complex challenges like using Node for our API, server side rendering, interactive maps, and mobile first immersive visual effects.`,
   },
 
   'perfect-particle': {
     tags: [tags.react],
     mainVisual: '/static/spectrum-artwork.jpg',
     title: `Perfect Particle`,
-    description: `I love music. I also enjoy composing. Perfect Particle is the name I use to release my recordings. I mainly create instrumental music that blends multiple styles like post rock, math rock, modern jazz, and ambient. I'm a guitarist at heart. I primarily compose with and play guitar, but I layer bits of synth and other instruments together.`,
+    description: `Instrumental music that blends multiple styles like post rock, math rock, modern jazz, and ambient.`,
     links: [
       {
-        description: 'Project website',
+        description: `View the project's website`,
         href: '/projects/perfect-particle',
-      },
-      {
-        description: 'Code',
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },

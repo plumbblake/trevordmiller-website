@@ -16,8 +16,8 @@ export const screenSizes = {
 }
 
 export const fontFamilies = {
-  primary: 'Helvetica, Arial, sans-serif',
-  headline: '"Courier New", Courier, monospace',
+  sansserif: 'Helvetica, Arial, sans-serif',
+  monospace: '"Courier New", Courier, monospace',
 }
 
 export const fontSizes = {

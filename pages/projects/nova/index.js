@@ -456,14 +456,7 @@ class Plugins extends React.Component {
                 : {}
             }
           >
-            <Heading level={4}>
-              {plugin.title}
-            </Heading>
-            <div
-              style={{
-                marginTop: spacing.large,
-              }}
-            >
+            <div>
               {plugin.screenshot
                 ? <div
                     style={{
@@ -484,7 +477,7 @@ class Plugins extends React.Component {
                         plugin.notes || plugin.links ? spacing.medium : 0,
                     }}
                   >
-                    <Heading level={3}>Instructions</Heading>
+                    <Heading level={4}>Instructions</Heading>
                     <div
                       style={{
                         paddingBottom: spacing.medium,
@@ -500,7 +493,7 @@ class Plugins extends React.Component {
                       marginBottom: plugin.links ? spacing.medium : 0,
                     }}
                   >
-                    <Heading level={3}>Notes</Heading>
+                    <Heading level={4}>Notes</Heading>
                     <div
                       style={{
                         paddingBottom: spacing.medium,
@@ -512,7 +505,7 @@ class Plugins extends React.Component {
                 : null}
               {plugin.links
                 ? <div>
-                    <Heading level={3}>Links</Heading>
+                    <Heading level={4}>Links</Heading>
                     <List
                       items={plugin.links.map(link =>
                         <Anchor href={link.url}>

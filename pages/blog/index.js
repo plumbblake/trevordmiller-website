@@ -34,7 +34,7 @@ export const blogPosts = {
     tags: [tags.git, tags.npm, tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/front-end-tooling-preferences.jpg',
     title: `My current front-end tooling preferences`,
-    description: `An opinionated list of my current favorite options for front-end code projects. This includes the reasoning behind why I picked each option and an example project to show how they can all fit together.`,
+    description: `An opinionated list of my current favorite options for front-end code projects.`,
     date: 'June 21, 2017',
   },
 
@@ -66,7 +66,7 @@ export const blogPosts = {
     tags: [tags.general],
     mainVisual: '/static/minimal-office-first-person.jpg',
     title: `My minimal office set up`,
-    description: `For years I had a cheap office: a $30 plastic folding desk and an external monitor I'd plug into and that was it. But recently, I took the plunge and set up my dream office and I'm ecstatic with how it turned out.`,
+    description: `I set up my dream office and I'm ecstatic with how it turned out.`,
     date: 'March 1, 2017',
   },
 
@@ -82,7 +82,7 @@ export const blogPosts = {
     tags: [tags.general],
     mainVisual: '/static/opendns.jpg',
     title: `Configuring devices for wholesome media`,
-    description: `I use a combination of filters and settings to help keep media in my home wholesome.`,
+    description: `How I use a combination of filters and settings to help keep media in my home wholesome.`,
     date: 'January 1, 2017',
   },
 
@@ -90,7 +90,7 @@ export const blogPosts = {
     tags: [tags.react, tags.npm, tags.node],
     mainVisual: '/static/trevordmiller-website.png',
     title: `Rebuilding my website to aggregate all my stuff`,
-    description: `Since I started programming in high school, I've accumulated personal domains, websites, and apps spread across the internet. I decided I wanted to consolidate these into a single app with a shared set of components, so that it is easier to maintain. So now all my web projects live under https://trevordmiller.com; this includes my portfolio, open source project documentation, guitar lessons, blog etc.`,
+    description: `How I consolidated all of my code projects under one website.`,
     date: 'December 1, 2016',
   },
 }
@@ -111,7 +111,7 @@ export default () =>
             description={blogPost.description}
             links={[
               {
-                description: 'View',
+                description: 'Read the blog post',
                 href: `/blog/${blogPostKey}`,
               },
             ]}
