@@ -42,7 +42,7 @@ export default ({ onClick, type = 'primary', children, big }) =>
       textAlign: 'center',
       border: 'none',
       fontSize: big ? fontSizes.xlarge : fontSizes.medium,
-      fontFamily: fontFamilies.primary,
+      fontFamily: fontFamilies.sansserif,
       outline: 'none',
       borderRadius: borderRadii.medium,
       ...stylesByType[type],

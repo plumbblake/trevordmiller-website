@@ -1,9 +1,10 @@
 import React from 'react'
-import { syntaxGroups } from '../../utils/theme'
+import { syntaxGroups, fontFamilies } from '../../utils/theme'
 
 export default ({ children }) =>
   <span
     style={{
+      fontFamily: fontFamilies.monospace,
       color: syntaxGroups.statement,
     }}
   >

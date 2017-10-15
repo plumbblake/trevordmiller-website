@@ -37,7 +37,7 @@ export default ({ baseRouteKey }) =>
         <Link prefetch key={index} href={baseRoute.path}>
           <a
             style={{
-              fontFamily: fontFamilies.headline,
+              fontFamily: fontFamilies.monospace,
               textDecoration: 'none',
               padding: spacing.medium,
               color:

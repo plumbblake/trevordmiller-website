@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { spacing, uiGroups, borderRadii, borderSizes } from '../../utils/theme'
+import {
+  spacing,
+  uiGroups,
+  fontFamilies,
+  borderRadii,
+  borderSizes,
+} from '../../utils/theme'
 import nova from './utils/nova'
 
 const CodeBlock = ({ children, fileName, output, language = 'javascript' }) =>
   <div
     style={{
+      fontFamily: fontFamilies.monospace,
       border: `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`,
       borderRadius: borderRadii.medium,
       marginTop: spacing.medium,
@@ -54,6 +61,8 @@ const CodeBlock = ({ children, fileName, output, language = 'javascript' }) =>
           style={{
             padding: spacing.large,
             background: uiGroups.gray6,
+            color: uiGroups.backgroundShade,
+            fontFamily: fontFamilies.sansserif,
           }}
         >
           {output}

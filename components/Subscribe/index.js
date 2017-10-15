@@ -12,7 +12,7 @@ import Button from '../Button'
 import Checkbox from '../Checkbox'
 
 const inputResetStyles = {
-  fontFamily: fontFamilies.primary,
+  fontFamily: fontFamilies.sansserif,
   fontSize: fontSizes.medium,
   border: 0,
   WebkitAppearance: 'none',

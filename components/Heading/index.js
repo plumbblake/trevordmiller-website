@@ -38,7 +38,7 @@ export const levelSpecificStyles = {
 const Heading = ({ children, level }) =>
   <div
     style={{
-      fontFamily: fontFamilies.headline,
+      fontFamily: fontFamilies.monospace,
       fontWeight: fontWeights.normal,
       overflowWrap: 'break-word',
       ...levelSpecificStyles[level],
