@@ -110,12 +110,7 @@ export default ({ visual, description, links, tags }) =>
             >
               <List
                 items={links.map(link =>
-                  <span
-                    key={link.href}
-                    style={{
-                      fontSize: fontSizes.large,
-                    }}
-                  >
+                  <span key={link.href}>
                     <Anchor href={link.href}>
                       {link.description}
                     </Anchor>

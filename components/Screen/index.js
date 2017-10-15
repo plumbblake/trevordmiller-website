@@ -129,7 +129,7 @@ export default class Screen extends Component {
 
         <div
           style={{
-            color: uiGroups.gray4,
+            color: uiGroups.gray5,
             fontFamily: fontFamilies.primary,
             fontSize: fontSizes.medium,
             fontWeight: fontWeights.normal,

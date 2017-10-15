@@ -23,15 +23,15 @@ export const levelSpecificStyles = {
     marginBottom: spacing.medium,
   },
   3: {
-    color: colorValues.grays.gray6,
-    fontSize: fontSizes.large,
-    marginBottom: spacing.medium,
-  },
-  4: {
     color: colorValues.colors.cyan,
     fontSize: fontSizes.xlarge,
     lineHeight: 1,
-    marginBottom: spacing.xsmall,
+    marginBottom: spacing.medium,
+  },
+  4: {
+    color: colorValues.grays.gray6,
+    fontSize: fontSizes.large,
+    marginBottom: spacing.small,
   },
 }
 
