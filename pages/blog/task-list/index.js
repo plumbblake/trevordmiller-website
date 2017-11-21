@@ -72,7 +72,7 @@ export default () =>
           <div>
             <Paragraph>
               I keep{' '}
-              <Anchor href="https://github.com/trevordmiller/device-setup">
+              <Anchor href="https://github.com/trevordmiller/shell-scripts/blob/master/scripts/setup">
                 all of my device settings in one place
               </Anchor>. I also use{' '}
               <Anchor href="https://github.com/trevordmiller/shell-scripts">
@@ -97,33 +97,6 @@ export default () =>
                 `Email: for task input. I have all of my other websites and apps send me emails so that I don’t have to check them individually. I also unsubscribe from anything that isn’t valuable, so that each email I get is valuable for me.`,
                 `Calendar: to track time-specific events.`,
                 `Texts: to communicate with family and friends.`,
-              ]}
-            />
-            <Paragraph>
-              I also have other scripts to automate things I do regularly; for
-              example:
-            </Paragraph>
-            <List
-              items={[
-                <span>
-                  Starting a new project (<Code>create-js-project</Code>)
-                </span>,
-                <span>
-                  Working on existing projects (ie{' '}
-                  <Code>trevordmiller-website</Code>)
-                </span>,
-                <span>
-                  Stopping processes on my computer (<Code>stop</Code>)
-                </span>,
-                <span>
-                  Cleaning up garbage files/directories (<Code>clean</Code>)
-                </span>,
-                <span>
-                  Upgrading my operating system/apps/packages/plugins (<Code>upgrade</Code>)
-                </span>,
-                <span>
-                  Quitting everything at the end of a work day (<Code>quit</Code>)
-                </span>,
               ]}
             />
           </div>

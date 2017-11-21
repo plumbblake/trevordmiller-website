@@ -73,7 +73,7 @@ export default () =>
               ISPs.
             </Paragraph>
             <Image
-              src="/static/opendns-porn.jpg"
+              src="/static/opendns.jpg"
               description="OpenDNS Family Shield porn blocker"
             />
             <Image

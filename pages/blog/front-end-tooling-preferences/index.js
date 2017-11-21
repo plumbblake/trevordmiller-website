@@ -248,16 +248,6 @@ export default () =>
             <Anchor href="https://github.com/trevordmiller/example-web-app">
               <Button>View example project</Button>
             </Anchor>
-            <Paragraph>
-              I wrote a script that I use to scaffold new projects like this
-              with all the tools mentioned in this post. I find it helps me
-              create more projects without worrying about project setup, and
-              then when my preferences change I just update the script for
-              future projects to get the updates as well.
-            </Paragraph>
-            <Anchor href="https://github.com/trevordmiller/shell-scripts/blob/master/scripts/create-js-project">
-              <Button>View the script</Button>
-            </Anchor>
           </div>
         ),
       },
