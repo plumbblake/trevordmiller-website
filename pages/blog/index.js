@@ -22,35 +22,19 @@ export const blogPosts = {
     date: 'July 23, 2017',
   },
 
-  'react-render-callback-components': {
-    tags: [tags.react],
-    mainVisual: '/static/react-render-callback-components.png',
-    title: `Sharing stateful UI logic in React apps using Render Callback components`,
-    description: `A few examples of abstracting shared logic across multiple components using the Render Callback pattern (aka Function as Child components).`,
-    date: 'July 15, 2017',
-  },
-
-  'front-end-tooling-preferences': {
-    tags: [tags.git, tags.npm, tags.react, tags.node, tags.graphQl],
-    mainVisual: '/static/front-end-tooling-preferences.jpg',
-    title: `My current front-end tooling preferences`,
-    description: `An opinionated list of my current favorite options for front-end code projects.`,
-    date: 'June 21, 2017',
-  },
-
   'raspberry-pi-button': {
-    tags: [tags.terminal, tags.unix, tags.node, tags.hardware],
+    tags: [tags.terminal, tags.unix, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Running a Node server on a Raspberry Pi with a physical button`,
-    description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, using the latest Node and npm, and creating a Node server to send a text message when the button is pressed.`,
+    title: `Running a server on a Raspberry Pi with a physical button`,
+    description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, and creating a server to send a text message when the button is pressed.`,
     date: 'June 1, 2017',
   },
 
   'color-scheme-building': {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
     mainVisual: '/static/nova-example-code-screenshot.png',
     title: `Building the Nova color scheme`,
-    description: `By using an npm module for color values, we were able to generate color schemes for multiple editors and tools from one source.`,
+    description: `By using an module for color values, we were able to generate color schemes for multiple editors and tools from one source.`,
     date: 'May 1, 2017',
   },
 
@@ -78,16 +62,8 @@ export const blogPosts = {
     date: 'February 1, 2017',
   },
 
-  'wholesome-media': {
-    tags: [tags.general],
-    mainVisual: '/static/opendns.jpg',
-    title: `Configuring devices for wholesome media`,
-    description: `How I use a combination of filters and settings to help keep media in my home wholesome.`,
-    date: 'January 1, 2017',
-  },
-
   'rebuilding-my-website': {
-    tags: [tags.react, tags.npm, tags.node],
+    tags: [tags.general],
     mainVisual: '/static/trevordmiller-website.png',
     title: `Rebuilding my website to aggregate all my stuff`,
     description: `How I consolidated all of my code projects under one website.`,

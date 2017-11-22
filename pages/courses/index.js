@@ -14,18 +14,18 @@ export const courses = {
   },
 
   'egghead-publish-npm': {
-    tags: [tags.terminal, tags.git, tags.npm, tags.node],
+    tags: [tags.terminal, tags.git, tags.npm],
     mainVisual: '/static/egghead-publish-npm.png',
-    title: `Publish JavaScript packages on npm`,
+    title: `Publish packages on npm`,
     description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
     href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
   },
 
   'egghead-react-testing': {
-    tags: [tags.terminal, tags.react],
+    tags: [tags.terminal],
     mainVisual: '/static/egghead-react-testing.png',
-    title: `React Testing Cookbook`,
-    description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my web apps.`,
+    title: `Testing Cookbook`,
+    description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
     href: 'https://egghead.io/courses/react-testing-cookbook',
   },
 }

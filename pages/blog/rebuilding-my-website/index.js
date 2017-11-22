@@ -28,20 +28,6 @@ export default () =>
         ),
       },
       {
-        title: `The technology stack`,
-        component: (
-          <div>
-            <Paragraph>
-              I use my website as a testing ground for my latest "favorite" tech
-              stack, so it is using the tooling from that list.
-            </Paragraph>
-            <Anchor href="/blog/front-end-tooling-preferences">
-              <Button>View tooling preferences</Button>
-            </Anchor>
-          </div>
-        ),
-      },
-      {
         title: `Scripts`,
         component: (
           <div>
