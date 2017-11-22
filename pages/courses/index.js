@@ -25,7 +25,7 @@ export const courses = {
     tags: [tags.terminal],
     mainVisual: '/static/egghead-react-testing.png',
     title: `Testing Cookbook`,
-    description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
+    description: `I've grown to like testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code. The examples are in JavaScript and React, but the principles apply to testing any code.`,
     href: 'https://egghead.io/courses/react-testing-cookbook',
   },
 }
