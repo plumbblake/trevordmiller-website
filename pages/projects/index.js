@@ -77,7 +77,7 @@ export const projects = {
     tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
-    description: 'A color scheme for modern web development.',
+    description: 'A color scheme where each color has a dedicated purpose.',
     links: [
       {
         description: `View the project's website`,

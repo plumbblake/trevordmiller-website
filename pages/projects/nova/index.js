@@ -55,12 +55,12 @@ const colorMeanings = [
 const characteristics = [
   {
     title: 'Intentional',
-    description: 'Colors have a dedicated meaning',
+    description: 'Each color has a purpose',
   },
   {
     title: 'Current',
     description:
-      "First-class syntax highlighting for today's web development languages",
+      "First-class syntax highlighting for today's programming languages",
   },
   {
     title: 'Soft',
@@ -68,7 +68,7 @@ const characteristics = [
   },
   {
     title: 'Balanced',
-    description: 'Designed by a designer who knows color theory',
+    description: 'Designed by a designer with color theory in mind',
   },
   {
     title: 'Maintainable',
@@ -117,6 +117,79 @@ const plugins = [
       {
         title: 'Source code',
         url: 'https://github.com/trevordmiller/nova-vim',
+      },
+    ],
+  },
+
+  {
+    title: 'Git',
+    icon: 'git',
+    screenshot:
+      'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Install a Nova plugin for your terminal',
+      'Use ANSI color variables in your ".gitconfig"',
+      'For Nova color meanings, see the example ".gitconfig"',
+    ],
+    notes: [
+      "You'll need a version of Git that supports the latest color options (git 2.10)",
+    ],
+    links: [
+      {
+        title: 'Example ".gitconfig"',
+        url:
+          'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
+      },
+    ],
+  },
+
+  {
+    title: 'tmux',
+    icon: 'tmux',
+    screenshot:
+      'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Install a Nova plugin for your terminal',
+      'Use ANSI color variables in your ".tmux.conf"',
+      'For Nova color meanings, see the example ".tmux.conf"',
+    ],
+    notes: [
+      "You'll need a version of tmux that supports True Color (tmux 2.2+)",
+    ],
+    links: [
+      {
+        title: 'Example ".tmux.conf"',
+        url:
+          'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
+      },
+    ],
+  },
+
+  {
+    title: 'iTerm2',
+    icon: 'iterm2',
+    screenshot:
+      'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
+    steps: [
+      'Download "nova.itermcolors"',
+      'In iTerm, open your preferences',
+      'Tap on "Profiles" > "Colors" > "Color Presets" > "Import"',
+      'Select the "nova.itermcolors" you downloaded',
+    ],
+    links: [
+      {
+        title: 'nova.itermcolors',
+        url:
+          'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/trevordmiller/nova-iterm',
       },
     ],
   },
@@ -175,79 +248,6 @@ const plugins = [
       {
         title: 'Source code for the syntax plugin',
         url: 'https://github.com/trevordmiller/nova-atom-syntax',
-      },
-    ],
-  },
-
-  {
-    title: 'Git',
-    icon: 'git',
-    screenshot:
-      'https://github.com/trevordmiller/nova-git/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Install a Nova plugin for your terminal',
-      'Use ANSI color variables in your ".gitconfig"',
-      'For Nova color meanings, see the example ".gitconfig"',
-    ],
-    notes: [
-      "You'll need a version of Git that supports the latest color options (git 2.10)",
-    ],
-    links: [
-      {
-        title: 'Example ".gitconfig"',
-        url:
-          'https://github.com/trevordmiller/nova-git/blob/master/assets/.gitconfig',
-      },
-    ],
-  },
-
-  {
-    title: 'tmux',
-    icon: 'tmux',
-    screenshot:
-      'https://github.com/trevordmiller/nova-tmux/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Install a Nova plugin for your terminal',
-      'Use ANSI color variables in your ".tmux.conf"',
-      'For Nova color meanings, see the example ".tmux.conf"',
-    ],
-    notes: [
-      "You'll need a version of tmux that supports True Color (tmux 2.2+)",
-    ],
-    links: [
-      {
-        title: 'Example ".tmux.conf"',
-        url:
-          'https://github.com/trevordmiller/nova-tmux/blob/master/assets/.tmux.conf',
-      },
-    ],
-  },
-
-  {
-    title: 'iTerm',
-    icon: 'iterm',
-    screenshot:
-      'https://github.com/trevordmiller/nova-iterm/raw/master/assets/screenshot.png?raw=true',
-    steps: [
-      'Download "nova.itermcolors"',
-      'In iTerm, open your preferences',
-      'Tap on "Profiles" > "Colors" > "Color Presets" > "Import"',
-      'Select the "nova.itermcolors" you downloaded',
-    ],
-    links: [
-      {
-        title: 'nova.itermcolors',
-        url:
-          'https://raw.githubusercontent.com/trevordmiller/nova-iterm/master/build/nova.itermcolors',
-      },
-      {
-        title: 'Contributing instructions',
-        url:
-          'https://github.com/trevordmiller/nova-iterm/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code',
-        url: 'https://github.com/trevordmiller/nova-iterm',
       },
     ],
   },

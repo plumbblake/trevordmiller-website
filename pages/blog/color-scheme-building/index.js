@@ -15,11 +15,11 @@ export default () =>
         component: (
           <div>
             <Paragraph>
-              This post is about how the {' '}
+              This post is about how {' '}
               <Anchor href="/projects/nova">
-                Nova - A color scheme for modern web development
+                Nova - A color scheme with meaning
               </Anchor>{' '}
-              color scheme was built.{' '}
+              was built.{' '}
             </Paragraph>
           </div>
         ),
