@@ -3,7 +3,6 @@ import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
-import Button from '../../../components/Button'
 import Code from '../../../components/Code'
 
 export default () =>
