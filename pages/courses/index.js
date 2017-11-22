@@ -8,7 +8,7 @@ export const courses = {
     tags: [tags.terminal, tags.unix, tags.git],
     mainVisual: '/static/egghead-practical-git.png',
     title: `Practical Git for Everyday Professional Use`,
-    description: `Many coders struggle with the command line. Over the years, the terminal has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
+    description: `Many coders struggle with the terminal. Over the years, working from the command line has become increasingly important in my workflow and it is absolutely amazing. I created this video course to help developers feel confident with using Git from the command line.`,
     href:
       'https://egghead.io/courses/practical-git-for-everyday-professional-use',
   },
