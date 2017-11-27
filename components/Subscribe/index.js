@@ -5,6 +5,7 @@ import {
   borderSizes,
   fontSizes,
   uiGroups,
+  colorValues,
   fontFamilies,
 } from '../../utils/theme'
 import Heading from '../Heading'
@@ -189,7 +190,7 @@ class Subscribe extends Component {
                       paddingLeft: spacing.large,
                       paddingRight: spacing.large,
                       minWidth: 175,
-                      background: uiGroups.userCurrentState,
+                      background: colorValues.colors.blue,
                       color: uiGroups.backgroundShade,
                       borderRadius: borderRadii.medium,
                       cursor: 'pointer',
