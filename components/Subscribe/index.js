@@ -74,7 +74,7 @@ class Subscribe extends Component {
                 borderRadius: borderRadii.medium,
               }}
             >
-              <Heading level={4}>
+              <Heading level={3}>
                 {download
                   ? `To download the ${download.title}, submit your email`
                   : `Submit your email for occasional updates`}
@@ -102,7 +102,7 @@ class Subscribe extends Component {
                     marginTop: spacing.medium,
                   }}
                 >
-                  <Heading level={3}>Email</Heading>
+                  <Heading level={4}>Email</Heading>
                   <input
                     type="email"
                     defaultValue=""
@@ -127,7 +127,7 @@ class Subscribe extends Component {
                     marginTop: spacing.medium,
                   }}
                 >
-                  <Heading level={3}>When do you want to be emailed?</Heading>
+                  <Heading level={4}>When do you want to be emailed?</Heading>
                   <Checkbox
                     label="New courses*"
                     value="1"

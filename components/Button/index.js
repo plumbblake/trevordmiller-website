@@ -14,7 +14,7 @@ const stylesByType = {
     paddingBottom: spacing.medium,
     paddingLeft: spacing.large,
     paddingRight: spacing.large,
-    background: uiGroups.userCurrentState,
+    background: colorValues.colors.blue,
     color: uiGroups.background,
   },
   secondary: {

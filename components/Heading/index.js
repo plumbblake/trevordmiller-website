@@ -11,25 +11,21 @@ import {
 
 export const levelSpecificStyles = {
   1: {
-    color: colorValues.colors.cyan,
     fontSize: fontSizes.xxxlarge,
     lineHeight: lineHeights.xxlarge,
     textAlign: 'center',
   },
   2: {
-    color: colorValues.grays.gray6,
     fontSize: fontSizes.large,
     textAlign: 'center',
     marginBottom: spacing.medium,
   },
   3: {
-    color: colorValues.colors.cyan,
     fontSize: fontSizes.xlarge,
     lineHeight: 1,
     marginBottom: spacing.medium,
   },
   4: {
-    color: colorValues.grays.gray6,
     fontSize: fontSizes.large,
     marginBottom: spacing.small,
   },
@@ -38,6 +34,7 @@ export const levelSpecificStyles = {
 const Heading = ({ children, level }) =>
   <div
     style={{
+      color: colorValues.colors.cyan,
       fontFamily: fontFamilies.monospace,
       fontWeight: fontWeights.normal,
       overflowWrap: 'break-word',

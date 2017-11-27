@@ -1,5 +1,5 @@
 import React from 'react'
-import { uiGroups, fontSizes, spacing } from '../../../../utils/theme'
+import { colorValues, fontSizes, spacing } from '../../../../utils/theme'
 import {
   githubUrl,
   twitterUrl,
@@ -59,7 +59,7 @@ export default () =>
         >
           <Icon
             type={followItem.iconType}
-            fill={uiGroups.userCurrentState}
+            fill={colorValues.colors.blue}
             size={fontSizes.xlarge}
           />
         </div>
