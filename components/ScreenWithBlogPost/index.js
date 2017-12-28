@@ -9,7 +9,6 @@ const ScreenWithBlogPost = ({ id, sections }) =>
     pathname={`https://trevordmiller.com/blog/${id}`}
     title={blogPosts[id].title}
     description={blogPosts[id].description}
-    showDescription
     sections={sections}
   />
 

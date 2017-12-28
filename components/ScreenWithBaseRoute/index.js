@@ -9,7 +9,7 @@ const ScreenWithBaseRoute = ({ id, sections, footer = true }) =>
     pathname={`https://trevordmiller.com/${id}`}
     title={baseRoutes[id].title}
     description={baseRoutes[id].description}
-    showDescription
+    info={baseRoutes[id].info}
     sections={sections}
     footer={footer}
   />

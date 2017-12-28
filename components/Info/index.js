@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing, borderRadii, screenSizes } from '../../utils/theme'
+import { spacing, borderRadii } from '../../utils/theme'
 
 export default ({ children }) =>
   <div
@@ -8,8 +8,7 @@ export default ({ children }) =>
       marginBottom: spacing.large,
       borderRadius: borderRadii.medium,
       background: 'rgba(0, 0, 0, 0.25)',
-      maxWidth: screenSizes.large - screenSizes.large / 2.5,
-      margin: 'auto',
+      textAlign: 'center',
     }}
   >
     {children}

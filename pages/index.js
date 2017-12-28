@@ -4,9 +4,10 @@ import Teaser from '../components/Teaser'
 
 export const baseRoutes = {
   courses: {
-    path: 'https://trevordmiller.teachable.com',
+    path: '/courses',
     title: 'Courses',
     description: 'Timeless courses for coders',
+    info: `Across the web, you'll find loads of programming courses covering languages, frameworks, and libraries. While these are valuable for learning skills specific to your current job, the courses here are unique because they only cover timeless topics. Each course you complete through trevordmiller.com will give you timeless skills you can use throughout your career!`,
     visual: 'film',
   },
 
@@ -20,7 +21,7 @@ export const baseRoutes = {
   projects: {
     path: '/projects',
     title: 'Projects',
-    description: 'Information about my own code projects',
+    description: 'My own code projects',
     visual: 'stack',
   },
 
@@ -34,8 +35,7 @@ export const baseRoutes = {
   follow: {
     path: '/follow',
     title: 'Follow',
-    description:
-      'Follow along with my email list and other accounts accross the web',
+    description: 'My email list and accounts accross the web',
     visual: 'userPlus',
   },
 }
@@ -47,7 +47,7 @@ export default () =>
     mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
     title="Home"
-    description="Links to each section of the website"
+    description="Index"
     sections={baseRouteKeys.map((baseRouteKey, index) => {
       const baseRoute = baseRoutes[baseRouteKey]
 

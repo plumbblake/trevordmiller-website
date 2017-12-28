@@ -235,10 +235,10 @@ export default () =>
         title: project.title,
         component: (
           <Teaser
+            tags={project.tags}
             visual={project.mainVisual}
             description={project.description}
             links={project.links}
-            tags={project.tags}
           />
         ),
       }

@@ -2,8 +2,9 @@ import React from 'react'
 import { spacing, screenSizes } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 import Image from '../../../../../Image'
+import Info from '../../../../../Info'
 
-export default ({ title, mainVisual, description }) =>
+export default ({ title, mainVisual, description, info, cta }) =>
   <header
     style={{
       maxWidth: screenSizes.large,
@@ -17,16 +18,17 @@ export default ({ title, mainVisual, description }) =>
     <Heading level={1}>
       {title}
     </Heading>
-    {description &&
-      <div
-        style={{
-          marginTop: spacing.small,
-        }}
-      >
-        <Heading level={2}>
-          {description}
-        </Heading>
-      </div>}
+
+    <div
+      style={{
+        marginTop: spacing.small,
+      }}
+    >
+      <Heading level={2}>
+        {description}
+      </Heading>
+    </div>
+
     {mainVisual &&
       <div
         style={{
@@ -35,5 +37,26 @@ export default ({ title, mainVisual, description }) =>
         }}
       >
         <Image src={mainVisual} description="Decorative overview image" quiet />
+      </div>}
+
+    {cta &&
+      <div
+        style={{
+          marginTop: spacing.small,
+          textAlign: 'center',
+        }}
+      >
+        {cta}
+      </div>}
+
+    {info &&
+      <div
+        style={{
+          marginTop: spacing.small,
+        }}
+      >
+        <Info>
+          {info}
+        </Info>
       </div>}
   </header>

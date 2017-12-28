@@ -9,7 +9,6 @@ const ScreenWithProject = ({ id, sections }) =>
     pathname={`https://trevordmiller.com/projects/${id}`}
     title={projects[id].title}
     description={projects[id].description}
-    showDescription
     sections={sections}
   />
 
