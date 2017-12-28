@@ -4,38 +4,36 @@ import Teaser from '../components/Teaser'
 
 export const baseRoutes = {
   courses: {
-    path: '/courses',
-    title: 'courses',
-    description:
-      'Video courses about coding, focused on the terminal (Unix, Vim, Git, etc.)',
+    path: 'https://trevordmiller.teachable.com',
+    title: 'Courses',
+    description: 'Timeless courses for coders',
     visual: 'film',
   },
 
   blog: {
     path: '/blog',
-    title: 'blog',
-    description:
-      'Articles about coding, focused on the terminal (Unix, Vim, Git, etc.)',
+    title: 'Blog',
+    description: 'Timeless articles for coders',
     visual: 'newspaper',
   },
 
   projects: {
     path: '/projects',
-    title: 'projects',
-    description: 'Information about my projects',
+    title: 'Projects',
+    description: 'Information about my own code projects',
     visual: 'stack',
   },
 
   about: {
     path: '/about',
-    title: 'about',
+    title: 'About',
     description: 'A bit about me',
     visual: 'profile',
   },
 
   follow: {
     path: '/follow',
-    title: 'follow',
+    title: 'Follow',
     description:
       'Follow along with my email list and other accounts accross the web',
     visual: 'userPlus',
@@ -48,8 +46,8 @@ export default () =>
   <Screen
     mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
-    title="home"
-    description="trevordmiller.com"
+    title="Home"
+    description="Links to each section of the website"
     sections={baseRouteKeys.map((baseRouteKey, index) => {
       const baseRoute = baseRoutes[baseRouteKey]
 
