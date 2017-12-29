@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
-  colorValues,
+  uiGroups,
   fontFamilies,
   fontWeights,
   fontSizes,
@@ -11,21 +11,25 @@ import {
 
 export const levelSpecificStyles = {
   1: {
+    color: uiGroups.userCurrentState,
     fontSize: fontSizes.xxxlarge,
     lineHeight: lineHeights.xxlarge,
     textAlign: 'center',
   },
   2: {
+    color: uiGroups.gray4,
     fontSize: fontSizes.large,
     textAlign: 'center',
     marginBottom: spacing.medium,
   },
   3: {
+    color: uiGroups.userCurrentState,
     fontSize: fontSizes.xlarge,
     lineHeight: 1,
     marginBottom: spacing.medium,
   },
   4: {
+    color: uiGroups.userCurrentState,
     fontSize: fontSizes.large,
     marginBottom: spacing.small,
   },
@@ -34,7 +38,6 @@ export const levelSpecificStyles = {
 const Heading = ({ children, level }) =>
   <div
     style={{
-      color: colorValues.colors.cyan,
       fontFamily: fontFamilies.monospace,
       fontWeight: fontWeights.normal,
       overflowWrap: 'break-word',

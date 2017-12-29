@@ -1,4 +1,4 @@
-import { uiGroups } from '../theme'
+import { uiGroups, syntaxGroups } from '../theme'
 
 const tags = {
   inProgress: {
@@ -9,61 +9,61 @@ const tags = {
 
   terminal: {
     label: 'terminal',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'terminal',
   },
 
   unix: {
     label: 'unix',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'unix',
   },
 
   vim: {
     label: 'vim',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'vim',
   },
 
   git: {
     label: 'git',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'git',
   },
 
   npm: {
     label: 'npm',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'npm',
   },
 
   react: {
     label: 'react',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'react',
   },
 
   node: {
     label: 'node',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'node',
   },
 
   graphQl: {
     label: 'graphql',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'graphql',
   },
 
   hardware: {
     label: 'hardware',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'plug',
   },
 
   general: {
     label: 'general',
-    color: uiGroups.gray4,
+    color: syntaxGroups.type,
     icon: 'tag',
   },
 }

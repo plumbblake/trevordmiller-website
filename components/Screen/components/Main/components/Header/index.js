@@ -32,7 +32,7 @@ export default ({ title, mainVisual, description, info, cta }) =>
     {mainVisual &&
       <div
         style={{
-          maxWidth: 250,
+          maxWidth: 350,
           margin: '0 auto',
         }}
       >

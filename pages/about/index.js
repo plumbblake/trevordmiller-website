@@ -13,19 +13,23 @@ const lifeAspects = [
     description: `I work as a Software Engineer. I love learning and solving problems. Being a programmer isn't just a job for me, it's a hobby too. I especially enjoy working in the terminal and contributing to open source. I strive to learn new things every day and share what I learn.`,
     links: [
       {
-        description: 'Blog posts',
+        description: 'Watch my video courses',
+        href: '/courses',
+      },
+      {
+        description: 'Read my blog posts',
         href: '/blog',
       },
       {
-        description: 'Current and past projects',
+        description: 'See my current and past projects',
         href: '/projects',
       },
       {
-        description: 'Open source code on GitHub',
+        description: 'Check out my open source code on GitHub',
         href: githubUrl,
       },
       {
-        description: 'Quick posts on social media',
+        description: 'Subscribe to my email lists and social media posts',
         href: '/follow',
       },
     ],
@@ -37,7 +41,7 @@ const lifeAspects = [
     description: `No kids yet. We like playing board games, watching shows, going on walks - we are pretty boring but we like it! My wife runs a neat project called Freshly Married to help couples strengthen their relationships.`,
     links: [
       {
-        description: 'Freshly Married',
+        description: 'View Freshly Married',
         href: freshlyMarriedUrl,
       },
     ],
@@ -49,7 +53,7 @@ const lifeAspects = [
     description: `I've got plenty of weaknesses, but I strive to follow Jesus Christ.`,
     links: [
       {
-        description: 'Info on Mormons',
+        description: 'Learn about Mormons',
         href: 'https://www.mormon.org',
       },
     ],

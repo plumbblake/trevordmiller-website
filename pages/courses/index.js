@@ -8,12 +8,12 @@ export const courses = {
     tags: [tags.terminal, tags.unix, tags.git],
     mainVisual: '/static/real-world-git.png',
     title: `Real-world Git: manage code history with confidence`,
-    description: `Everything you need to know about using Git from the terminal`,
-    info: `Git is a staple of almost every programming job. It is powerful. But, it can also be confusing. You can accidentally make big mistakes on your codebase with just a few keystrokes. Because of this, many developers rely on graphical apps to use Git. While this works fine for a lot of people, I think knowing how to use Git directly from the command line is a lot more flexible once you understand a few things. It's also a lot of fun! Running Git commands from your terminal makes you feel like a wizard and can accomplish powerful things for you and your team. Once you complete the course you'll know how to do all the most important Git things from the terminal.`,
+    description: `Learn the most important Git commands`,
     cost: 0,
     time: '1 hour',
     enrollHref:
       'https://sso.teachable.com/secure/158085/users/sign_up?after_success_url=%2Fsecure%2F158085%2Fcheckout%2F504126%2Freal-world-git',
+    about: `Git is a staple of almost every programming job. It is powerful. But, it can also be confusing. You can accidentally make big mistakes on your codebase with just a few keystrokes. Because of this, many developers rely on graphical apps to use Git. While this works fine for a lot of people, I think knowing how to use Git directly from the command line is a lot more flexible once you understand a few things. It's also a lot of fun! Running Git commands from your terminal makes you feel like a wizard.`,
     curriculum: [
       {
         title: `Basics`,

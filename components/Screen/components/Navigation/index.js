@@ -23,7 +23,10 @@ export default ({ baseRouteKey }) =>
         style={{
           display: 'flex',
           alignItems: 'center',
-          padding: spacing.medium,
+          paddingTop: spacing.medium,
+          paddingBottom: spacing.medium,
+          paddingLeft: spacing.large,
+          paddingRight: spacing.large,
         }}
       >
         <Icon type="trevordmiller" size={fontSizes.xlarge} />
@@ -37,17 +40,37 @@ export default ({ baseRouteKey }) =>
         <Link prefetch key={index} href={baseRoute.path}>
           <a
             style={{
-              fontFamily: fontFamilies.monospace,
               textDecoration: 'none',
-              padding: spacing.medium,
-              color:
-                baseRouteKey === innerBaseRouteKey
-                  ? uiGroups.userCurrentState
-                  : uiGroups.gray4,
-              fontSize: fontSizes.large,
+              paddingTop: spacing.medium,
+              paddingBottom: spacing.medium,
+              paddingLeft: spacing.large,
+              paddingRight: spacing.large,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            {baseRoute.title}
+            <Icon
+              type={baseRoute.visual}
+              size={fontSizes.large}
+              fill={
+                baseRouteKey === innerBaseRouteKey
+                  ? uiGroups.userCurrentState
+                  : uiGroups.gray4
+              }
+            />
+            <span
+              style={{
+                marginLeft: spacing.xsmall,
+                fontFamily: fontFamilies.monospace,
+                color:
+                  baseRouteKey === innerBaseRouteKey
+                    ? uiGroups.userCurrentState
+                    : uiGroups.gray4,
+                fontSize: fontSizes.large,
+              }}
+            >
+              {baseRoute.title}
+            </span>
           </a>
         </Link>
       )

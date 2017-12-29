@@ -5,14 +5,9 @@ import Anchor from '../Anchor'
 import Button from '../Button'
 import Avatar from '../Avatar'
 import Icon from '../Icon'
+import List from '../List'
 import { courses } from '../../pages/courses'
-import {
-  spacing,
-  fontSizes,
-  fontWeights,
-  uiGroups,
-  syntaxGroups,
-} from '../../utils/theme'
+import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
 
 const ScreenWithCourse = ({ id }) => {
   const course = courses[id]
@@ -58,17 +53,33 @@ const ScreenWithCourse = ({ id }) => {
       cta={enrollButton}
       sections={[
         {
-          title: 'Curriculum',
+          title: 'About the course',
           component: (
             <div>
-              <div
-                style={{
-                  marginBottom: spacing.medium,
-                  color: syntaxGroups.special,
-                }}
-              >
-                {`${course.time} long. ${videoCount} videos. Sample code included.`}
-              </div>
+              {course.about}
+            </div>
+          ),
+        },
+        {
+          title: `What you get for ${course.cost === 0
+            ? 'free'
+            : `$${course.cost}`}`,
+          component: (
+            <List
+              items={[
+                `${videoCount} videos`,
+                `${course.time} to watch`,
+                `Example code to download and practice with`,
+                `Quizzes after each section to make sure you understand`,
+                `A discussion forum to get help from your instructor and discuss with fellow students`,
+              ]}
+            />
+          ),
+        },
+        {
+          title: 'Course curriculum',
+          component: (
+            <div>
               {course.curriculum.map((section, index) =>
                 <div
                   key={index}
@@ -91,15 +102,13 @@ const ScreenWithCourse = ({ id }) => {
                       >
                         <Icon
                           type="film"
-                          fill={uiGroups.backgroundShade}
+                          fill={syntaxGroups.type}
                           size={fontSizes.medium}
                         />
                         <div
-                          key={index}
                           style={{
                             fontSize: fontSizes.small,
-                            fontWeight: fontWeights.bold,
-                            color: uiGroups.backgroundShade,
+                            color: uiGroups.gray4,
                             marginLeft: spacing.small,
                           }}
                         >
@@ -107,6 +116,27 @@ const ScreenWithCourse = ({ id }) => {
                         </div>
                       </div>
                     )}
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <Icon
+                        type="newspaper"
+                        fill={syntaxGroups.type}
+                        size={fontSizes.medium}
+                      />
+                      <div
+                        style={{
+                          fontSize: fontSizes.small,
+                          color: uiGroups.gray4,
+                          marginLeft: spacing.small,
+                        }}
+                      >
+                        Quiz
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

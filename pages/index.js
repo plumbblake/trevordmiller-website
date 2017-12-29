@@ -7,14 +7,14 @@ export const baseRoutes = {
     path: '/courses',
     title: 'Courses',
     description: 'Timeless courses for coders',
-    info: `Across the web, you'll find loads of programming courses covering languages, frameworks, and libraries. While these are valuable for learning skills specific to your current job, the courses here are unique because they only cover timeless topics. Each course you complete through trevordmiller.com will give you timeless skills you can use throughout your career!`,
+    info: `Across the web, you'll find loads of programming courses covering languages, frameworks, and libraries. While these are valuable for learning skills specific to your current job, the courses here on trevordmiller.com are unique because they only cover timeless topics. Each course you complete through trevordmiller.com gives you timeless skills you can use throughout your career!`,
     visual: 'film',
   },
 
   blog: {
     path: '/blog',
     title: 'Blog',
-    description: 'Timeless articles for coders',
+    description: 'Articles for coders',
     visual: 'newspaper',
   },
 
@@ -35,7 +35,7 @@ export const baseRoutes = {
   follow: {
     path: '/follow',
     title: 'Follow',
-    description: 'My email list and accounts accross the web',
+    description: 'My email list and social media accounts',
     visual: 'userPlus',
   },
 }
@@ -47,7 +47,7 @@ export default () =>
     mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
     title="Home"
-    description="Index"
+    description="Courses, articles, and other goodies for coders"
     sections={baseRouteKeys.map((baseRouteKey, index) => {
       const baseRoute = baseRoutes[baseRouteKey]
 
@@ -60,7 +60,7 @@ export default () =>
             description={baseRoute.description}
             links={[
               {
-                description: `View ${baseRoute.title} page`,
+                description: `View ${baseRoute.title}`,
                 href: baseRoute.path,
               },
             ]}

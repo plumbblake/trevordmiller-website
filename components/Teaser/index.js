@@ -81,14 +81,7 @@ export default ({ visual, description, links, tags }) =>
           >
             {visual && visual.startsWith('/')
               ? <Image src={visual} description="Decorative image" quiet />
-              : <Icon
-                  type={visual}
-                  fill={uiGroups.userCurrentState}
-                  style={{
-                    color: uiGroups.userCurrentState,
-                  }}
-                  size={70}
-                />}
+              : <Icon type={visual} fill={uiGroups.gray2} size={70} />}
           </div>
         : null}
 

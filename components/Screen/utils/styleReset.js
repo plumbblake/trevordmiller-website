@@ -23,7 +23,7 @@ export default `
 
   ::selection {
     background: ${uiGroups.userCurrentState};
-    color: ${uiGroups.backgroundShade};
+    color: ${uiGroups.background};
   }
 
   input::placeholder {
