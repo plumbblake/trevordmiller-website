@@ -7,7 +7,7 @@ export const baseRoutes = {
     path: '/courses',
     title: 'Courses',
     description: 'Timeless courses for coders',
-    info: `Across the web, you'll find loads of programming courses covering languages, frameworks, and libraries. While these are valuable for learning skills specific to your current job, the courses here on trevordmiller.com are unique because they only cover timeless topics. Each course you complete through trevordmiller.com gives you timeless skills you can use throughout your career!`,
+    info: `Across the web, there are loads of programming courses. They cover all sorts of languages, frameworks, and libraries. These types of courses are valuable for learning short-term skills. But, these courses also lose their value as technology changes. The courses here on trevordmiller.com are different. They only cover timeless topics. Topics that haven't changed much in years. So each course here gives you core skills that should last your entire career.`,
     visual: 'film',
   },
 
