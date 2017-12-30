@@ -6,6 +6,7 @@ import Button from '../Button'
 import Avatar from '../Avatar'
 import Icon from '../Icon'
 import List from '../List'
+import Video from '../Video'
 import { baseRoutes } from '../../pages'
 import { courses } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
@@ -53,6 +54,16 @@ const ScreenWithCourse = ({ id }) => {
       info={course.info}
       cta={enrollButton}
       sections={[
+        {
+          title: 'Course preview video',
+          component: (
+            <Video
+              src={course.previewVideo}
+              thumbnail={course.previewVideoThumbnail}
+            />
+          ),
+        },
+
         {
           title: 'About trevordmiller.com courses',
           component: (

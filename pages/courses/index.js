@@ -7,6 +7,9 @@ export const courses = {
   'real-world-git': {
     tags: [tags.terminal, tags.unix, tags.git],
     mainVisual: '/static/real-world-git.png',
+    previewVideo: '/static/real-world-git-course-preview.mp4',
+    previewVideoThumbnail:
+      '/static/real-world-git-coruse-preview-thumbnail.png',
     title: `Real-world Git: manage code history with confidence`,
     description: `Learn the most important Git commands`,
     cost: 0,
