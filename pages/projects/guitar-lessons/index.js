@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { startCase, first } from 'lodash'
 import Link from 'next/link'
 import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
 import ScreenWithProject from '../../../components/ScreenWithProject'
@@ -85,7 +84,7 @@ const GuitarPattern = ({
   highlightedDegreesByString,
   noteSize = 20,
   fretSize = 60,
-}) =>
+}) => (
   <div
     style={{
       marginTop: spacing.medium,
@@ -98,14 +97,14 @@ const GuitarPattern = ({
         display: 'inline-block',
       }}
     >
-      {strings.map((string, stringIndex) =>
+      {strings.map((string, stringIndex) => (
         <div
           key={stringIndex}
           style={{
             display: 'flex',
           }}
         >
-          {string.map((degree, noteIndex) =>
+          {string.map((degree, noteIndex) => (
             <div
               key={noteIndex}
               style={{
@@ -116,7 +115,9 @@ const GuitarPattern = ({
                 alignItems: 'center',
                 paddingTop: spacing.xxsmall + noteSize / 3,
                 paddingBottom: spacing.xxsmall + noteSize / 3,
-                borderLeft: `${borderSizes.small}px solid ${uiGroups.background}`,
+                borderLeft: `${borderSizes.small}px solid ${
+                  uiGroups.background
+                }`,
                 borderRight:
                   noteIndex === string.length - 1
                     ? `${borderSizes.small}px solid ${uiGroups.background}`
@@ -148,13 +149,14 @@ const GuitarPattern = ({
                 }}
               />
             </div>
-          )}
+          ))}
         </div>
-      )}
+      ))}
     </div>
   </div>
+)
 
-const SelectorItem = ({ children }) =>
+const SelectorItem = ({ children }) => (
   <div
     style={{
       marginRight: spacing.small,
@@ -163,12 +165,11 @@ const SelectorItem = ({ children }) =>
   >
     {children}
   </div>
+)
 
-const Selector = ({ title, children }) =>
+const Selector = ({ title, children }) => (
   <div>
-    <Heading level={4}>
-      {title}
-    </Heading>
+    <Heading level={4}>{title}</Heading>
 
     <div
       style={{
@@ -180,11 +181,12 @@ const Selector = ({ title, children }) =>
       {children}
     </div>
   </div>
+)
 
 class GuitarPatternsSelector extends Component {
   static defaultProps = {
-    selectedDegree: first(degreeOptions),
-    selectedType: first(typeOptions),
+    selectedDegree: degreeOptions[0],
+    selectedType: typeOptions[0],
   }
 
   render() {
@@ -236,29 +238,31 @@ class GuitarPatternsSelector extends Component {
         </div>
 
         <Selector title="Degree">
-          {degreeOptions.map(degree =>
+          {degreeOptions.map(degree => (
             <SelectorItem key={degree}>
               <Link href={createUrl(degree, selectedType)} scroll={false}>
                 <Button
                   type={selectedDegree === degree ? 'primary' : 'secondary'}
                 >
-                  {startCase(degree)}
+                  {degree}
                 </Button>
               </Link>
             </SelectorItem>
-          )}
+          ))}
         </Selector>
 
         <Selector title="Type">
-          {typeOptions.map(type =>
+          {typeOptions.map(type => (
             <SelectorItem key={type}>
               <Link href={createUrl(selectedDegree, type)} scroll={false}>
                 <Button type={selectedType === type ? 'primary' : 'secondary'}>
-                  {startCase(type)}
+                  {`${type.charAt(0).toUpperCase()}${type
+                    .replace(/([A-Z])/g, ' $1')
+                    .slice(1)}`}
                 </Button>
               </Link>
             </SelectorItem>
-          )}
+          ))}
         </Selector>
       </div>
     )
@@ -301,7 +305,7 @@ export default class extends React.Component {
                 <GuitarPattern
                   strings={[doubleOctave.slice(0, 13)]}
                   highlightedDegreesByString={{
-                    1: [first(degreeOptions)],
+                    1: [degreeOptions[0]],
                   }}
                 />
               </div>

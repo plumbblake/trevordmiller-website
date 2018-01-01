@@ -5,7 +5,7 @@ import Subscribe from '../../../components/Subscribe'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="essential-git-commands"
     sections={[
@@ -92,3 +92,4 @@ export default () =>
       },
     ]}
   />
+)

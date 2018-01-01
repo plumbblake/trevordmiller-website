@@ -5,7 +5,7 @@ import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="rebuilding-my-website"
     sections={[
@@ -137,3 +137,4 @@ export default () =>
       },
     ]}
   />
+)

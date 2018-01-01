@@ -58,7 +58,7 @@ export const blogPosts = {
     tags: [tags.general],
     mainVisual: '/static/anki-card-question.jpg',
     title: `Retaining what I learn through Spaced Repetition Software (SRS)`,
-    description: `When I learn something new, I add it to my SRS. Then, each morning I review what my SRS suggests I\'m about to forget, to ingrain it in my long-term memory.`,
+    description: `When I learn something new, I add it to my SRS. Then, each morning I review what my SRS suggests I'm about to forget, to ingrain it in my long-term memory.`,
     date: 'February 1, 2017',
   },
 
@@ -73,7 +73,7 @@ export const blogPosts = {
 
 const blogPostKeys = Object.keys(blogPosts)
 
-export default () =>
+export default () => (
   <ScreenWithBaseRoute
     id="blog"
     sections={blogPostKeys.map(blogPostKey => {
@@ -96,3 +96,4 @@ export default () =>
       }
     })}
   />
+)

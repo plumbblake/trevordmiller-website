@@ -9,20 +9,15 @@ const Anchor = ({ href, children }) => {
     lineHeight: 0,
   }
 
-  return href.startsWith('/')
-    ? <Link prefetch href={href}>
-        <a style={linkStyle}>
-          {children}
-        </a>
-      </Link>
-    : <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={linkStyle}
-      >
-        {children}
-      </a>
+  return href.startsWith('/') ? (
+    <Link prefetch href={href}>
+      <a style={linkStyle}>{children}</a>
+    </Link>
+  ) : (
+    <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+      {children}
+    </a>
+  )
 }
 
 Anchor.propTypes = {

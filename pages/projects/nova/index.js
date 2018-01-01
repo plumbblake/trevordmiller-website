@@ -390,7 +390,7 @@ class Plugins extends React.Component {
             borderTopLeftRadius: borderRadii.medium,
           }}
         >
-          {plugins.map((plugin, index) =>
+          {plugins.map((plugin, index) => (
             <Tab
               key={index}
               onClick={this.handleTabClick.bind(this, index)}
@@ -435,9 +435,9 @@ class Plugins extends React.Component {
                 {plugin.title}
               </div>
             </Tab>
-          )}
+          ))}
         </TabList>
-        {plugins.map((plugin, index) =>
+        {plugins.map((plugin, index) => (
           <TabPanel
             key={index}
             style={
@@ -457,81 +457,81 @@ class Plugins extends React.Component {
             }
           >
             <div>
-              {plugin.screenshot
-                ? <div
+              {plugin.screenshot ? (
+                <div
+                  style={{
+                    marginBottom: spacing.medium,
+                  }}
+                >
+                  <Image
+                    src={plugin.screenshot}
+                    description={`Screenshot of Nova plugin for ${
+                      plugin.title
+                    }`}
+                    quiet={true}
+                  />
+                </div>
+              ) : null}
+              {plugin.steps ? (
+                <div
+                  style={{
+                    marginBottom:
+                      plugin.notes || plugin.links ? spacing.medium : 0,
+                  }}
+                >
+                  <Heading level={4}>Instructions</Heading>
+                  <div
                     style={{
-                      marginBottom: spacing.medium,
+                      paddingBottom: spacing.medium,
                     }}
                   >
-                    <Image
-                      src={plugin.screenshot}
-                      description={`Screenshot of Nova plugin for ${plugin.title}`}
-                      quiet={true}
-                    />
+                    <List items={plugin.steps} type="number" />
                   </div>
-                : null}
-              {plugin.steps
-                ? <div
+                </div>
+              ) : null}
+              {plugin.notes ? (
+                <div
+                  style={{
+                    marginBottom: plugin.links ? spacing.medium : 0,
+                  }}
+                >
+                  <Heading level={4}>Notes</Heading>
+                  <div
                     style={{
-                      marginBottom:
-                        plugin.notes || plugin.links ? spacing.medium : 0,
+                      paddingBottom: spacing.medium,
                     }}
                   >
-                    <Heading level={4}>Instructions</Heading>
-                    <div
-                      style={{
-                        paddingBottom: spacing.medium,
-                      }}
-                    >
-                      <List items={plugin.steps} type="number" />
-                    </div>
+                    <List items={plugin.notes} />
                   </div>
-                : null}
-              {plugin.notes
-                ? <div
-                    style={{
-                      marginBottom: plugin.links ? spacing.medium : 0,
-                    }}
-                  >
-                    <Heading level={4}>Notes</Heading>
-                    <div
-                      style={{
-                        paddingBottom: spacing.medium,
-                      }}
-                    >
-                      <List items={plugin.notes} />
-                    </div>
-                  </div>
-                : null}
-              {plugin.links
-                ? <div>
-                    <Heading level={4}>Links</Heading>
-                    <List
-                      items={plugin.links.map(link =>
-                        <Anchor href={link.url}>
-                          {link.title}
-                        </Anchor>
-                      )}
-                      type="link"
-                    />
-                  </div>
-                : null}
+                </div>
+              ) : null}
+              {plugin.links ? (
+                <div>
+                  <Heading level={4}>Links</Heading>
+                  <List
+                    items={plugin.links.map(link => (
+                      <Anchor href={link.url}>{link.title}</Anchor>
+                    ))}
+                    type="link"
+                  />
+                </div>
+              ) : null}
             </div>
           </TabPanel>
-        )}
+        ))}
       </Tabs>
     )
   }
 }
 
-export default () =>
+export default () => (
   <ScreenWithProject
     id="nova"
     sections={[
       {
         component: (
           <div>
-            {colorMeanings.map((group, index) =>
+            {colorMeanings.map((group, index) => (
               <div
                 key={index}
                 style={{
@@ -539,7 +539,7 @@ export default () =>
                   flexWrap: 'wrap',
                 }}
               >
-                {group.map((color, index) =>
+                {group.map((color, index) => (
                   <div
                     key={index}
                     style={{
@@ -573,9 +573,9 @@ export default () =>
                       {color.meaning}
                     </div>
                   </div>
-                )}
+                ))}
               </div>
-            )}
+            ))}
           </div>
         ),
       },
@@ -594,7 +594,7 @@ export default () =>
         title: 'Characteristics',
         component: (
           <div>
-            {characteristics.map((characteristic, index) =>
+            {characteristics.map((characteristic, index) => (
               <div
                 key={index}
                 style={{
@@ -602,14 +602,10 @@ export default () =>
                     index + 1 < characteristics.length ? spacing.large : 0,
                 }}
               >
-                <Heading level={4}>
-                  {characteristic.title}
-                </Heading>
-                <div>
-                  {characteristic.description}
-                </div>
+                <Heading level={4}>{characteristic.title}</Heading>
+                <div>{characteristic.description}</div>
               </div>
-            )}
+            ))}
           </div>
         ),
       },
@@ -623,23 +619,20 @@ export default () =>
         title: 'Frequently Asked Questions',
         component: (
           <div>
-            {faq.map((item, index) =>
+            {faq.map((item, index) => (
               <div
                 key={index}
                 style={{
                   marginBottom: index + 1 < faq.length ? spacing.large : 0,
                 }}
               >
-                <Heading level={4}>
-                  {item.question}
-                </Heading>
-                <div>
-                  {item.answer}
-                </div>
+                <Heading level={4}>{item.question}</Heading>
+                <div>{item.answer}</div>
               </div>
-            )}
+            ))}
           </div>
         ),
       },
     ]}
   />
+)

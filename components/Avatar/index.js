@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Avatar = () =>
+const Avatar = () => (
   <img
     src="/static/avatar.jpg"
     alt="An avatar of Trevor"
@@ -9,5 +9,6 @@ const Avatar = () =>
       borderRadius: '50%',
     }}
   />
+)
 
 export default Avatar

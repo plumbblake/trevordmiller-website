@@ -4,7 +4,7 @@ import Info from '../Info'
 import Subscribe from '../Subscribe'
 import FollowIcons from './components/FollowIcons'
 
-export default () =>
+export default () => (
   <section
     style={{
       maxWidth: screenSizes.large - screenSizes.large / 2.5,
@@ -29,3 +29,4 @@ export default () =>
       </div>
     </Info>
   </section>
+)

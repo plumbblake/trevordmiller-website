@@ -2,7 +2,7 @@ import React from 'react'
 import Screen from '../Screen'
 import { baseRoutes } from '../../pages'
 
-const ScreenWithBaseRoute = ({ id, sections, footer = true }) =>
+const ScreenWithBaseRoute = ({ id, sections, footer = true }) => (
   <Screen
     baseRouteKey={id}
     mainVisual="/static/trevordmiller-website.png"
@@ -13,5 +13,6 @@ const ScreenWithBaseRoute = ({ id, sections, footer = true }) =>
     sections={sections}
     footer={footer}
   />
+)
 
 export default ScreenWithBaseRoute

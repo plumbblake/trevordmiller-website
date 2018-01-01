@@ -35,7 +35,7 @@ export const levelSpecificStyles = {
   },
 }
 
-const Heading = ({ children, level }) =>
+const Heading = ({ children, level }) => (
   <div
     style={{
       fontFamily: fontFamilies.monospace,
@@ -46,6 +46,7 @@ const Heading = ({ children, level }) =>
   >
     {children}
   </div>
+)
 
 Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),

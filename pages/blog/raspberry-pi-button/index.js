@@ -8,7 +8,7 @@ import Video from '../../../components/Video'
 import Code from '../../../components/Code'
 import Button from '../../../components/Button'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="raspberry-pi-button"
     sections={[
@@ -314,3 +314,4 @@ export default () =>
       },
     ]}
   />
+)

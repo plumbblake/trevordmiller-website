@@ -60,7 +60,7 @@ const lifeAspects = [
   },
 ]
 
-export default () =>
+export default () => (
   <ScreenWithBaseRoute
     id="about"
     sections={[
@@ -98,3 +98,4 @@ export default () =>
       })),
     ]}
   />
+)

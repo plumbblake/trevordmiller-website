@@ -1,7 +1,7 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
 
-const Checkbox = ({ label, value, name, id, defaultChecked, required }) =>
+const Checkbox = ({ label, value, name, id, defaultChecked, required }) => (
   <div
     style={{
       display: 'flex',
@@ -19,9 +19,8 @@ const Checkbox = ({ label, value, name, id, defaultChecked, required }) =>
         marginRight: spacing.xsmall,
       }}
     />
-    <label htmlFor={id}>
-      {label}
-    </label>
+    <label htmlFor={id}>{label}</label>
   </div>
+)
 
 export default Checkbox

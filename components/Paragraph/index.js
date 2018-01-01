@@ -1,7 +1,7 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
 
-export default ({ children }) =>
+export default ({ children }) => (
   <p
     style={{
       marginTop: spacing.medium,
@@ -10,3 +10,4 @@ export default ({ children }) =>
   >
     {children}
   </p>
+)

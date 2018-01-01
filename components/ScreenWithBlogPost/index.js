@@ -2,7 +2,7 @@ import React from 'react'
 import Screen from '../Screen'
 import { blogPosts } from '../../pages/blog'
 
-const ScreenWithBlogPost = ({ id, sections }) =>
+const ScreenWithBlogPost = ({ id, sections }) => (
   <Screen
     baseRouteKey="blog"
     mainVisual={blogPosts[id].mainVisual}
@@ -11,5 +11,6 @@ const ScreenWithBlogPost = ({ id, sections }) =>
     description={blogPosts[id].description}
     sections={sections}
   />
+)
 
 export default ScreenWithBlogPost

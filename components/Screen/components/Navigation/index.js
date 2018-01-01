@@ -9,7 +9,7 @@ import {
   fontSizes,
 } from '../../../../utils/theme'
 
-export default ({ baseRouteKey }) =>
+export default ({ baseRouteKey }) => (
   <nav
     style={{
       background: uiGroups.backgroundShade,
@@ -76,3 +76,4 @@ export default ({ baseRouteKey }) =>
       )
     })}
   </nav>
+)

@@ -7,7 +7,7 @@ import Code from '../../../components/Code'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="dotfiles"
     sections={[
@@ -126,3 +126,4 @@ export default () =>
       },
     ]}
   />
+)

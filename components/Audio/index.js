@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Audio = ({ src }) =>
+const Audio = ({ src }) => (
   <audio
     src={src}
     controls
@@ -9,6 +9,7 @@ const Audio = ({ src }) =>
       width: '100%',
     }}
   />
+)
 
 Audio.propTypes = {
   src: PropTypes.string.isRequired,

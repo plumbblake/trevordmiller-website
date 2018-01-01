@@ -6,7 +6,7 @@ const maxWidthsBySize = {
   medium: 400,
 }
 
-const Image = ({ src, description, quiet = false, style, size }) =>
+const Image = ({ src, description, quiet = false, style, size }) => (
   <img
     style={{
       border: quiet ? 0 : `${borderSizes.medium}px solid ${uiGroups.gray2}`,
@@ -18,6 +18,7 @@ const Image = ({ src, description, quiet = false, style, size }) =>
     src={src}
     alt={description}
   />
+)
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,

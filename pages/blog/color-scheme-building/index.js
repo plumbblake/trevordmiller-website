@@ -6,7 +6,7 @@ import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 import List from '../../../components/List'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="color-scheme-building"
     sections={[
@@ -15,7 +15,7 @@ export default () =>
         component: (
           <div>
             <Paragraph>
-              This post is about how {' '}
+              This post is about how{' '}
               <Anchor href="/projects/nova">
                 Nova - A color scheme with meaning
               </Anchor>{' '}
@@ -123,3 +123,4 @@ export default () =>
       },
     ]}
   />
+)

@@ -9,7 +9,7 @@ const List = ({ items, type = 'bullet' }) => {
 
   return (
     <div>
-      {items.map((item, index) =>
+      {items.map((item, index) => (
         <div
           key={index}
           style={{
@@ -22,17 +22,19 @@ const List = ({ items, type = 'bullet' }) => {
               marginRight: spacing.xsmall,
             }}
           >
-            {type === 'number'
-              ? `${index + 1})`
-              : <Icon
-                  type={type}
-                  fill={symbolColor}
-                  size={type === 'bullet' ? fontSizes.small : fontSizes.medium}
-                />}
+            {type === 'number' ? (
+              `${index + 1})`
+            ) : (
+              <Icon
+                type={type}
+                fill={symbolColor}
+                size={type === 'bullet' ? fontSizes.small : fontSizes.medium}
+              />
+            )}
           </span>
           {item}
         </div>
-      )}
+      ))}
     </div>
   )
 }

@@ -31,7 +31,7 @@ const releases = [
 
 const maxPlayerSize = 250
 
-export default () =>
+export default () => (
   <ScreenWithProject
     id="perfect-particle"
     sections={releases.map(release => ({
@@ -78,11 +78,9 @@ export default () =>
               You can buy it through most digital music stores.
             </div>
             <List
-              items={release.stores.map(store =>
-                <Anchor href={store.href}>
-                  {store.title}
-                </Anchor>
-              )}
+              items={release.stores.map(store => (
+                <Anchor href={store.href}>{store.title}</Anchor>
+              ))}
               type="link"
             />
           </div>
@@ -90,3 +88,4 @@ export default () =>
       ),
     }))}
   />
+)

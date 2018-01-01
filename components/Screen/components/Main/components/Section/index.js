@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { spacing } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 
-const Section = ({ children, title }) =>
+const Section = ({ children, title }) => (
   <section
     id={title}
     style={{
@@ -12,13 +12,10 @@ const Section = ({ children, title }) =>
       paddingRight: spacing.large,
     }}
   >
-    {title
-      ? <Heading level={3}>
-          {title}
-        </Heading>
-      : null}
+    {title ? <Heading level={3}>{title}</Heading> : null}
     {children}
   </section>
+)
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,

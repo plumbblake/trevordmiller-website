@@ -4,7 +4,7 @@ import Heading from '../../../../../Heading'
 import Image from '../../../../../Image'
 import Info from '../../../../../Info'
 
-export default ({ title, mainVisual, description, info, cta }) =>
+export default ({ title, mainVisual, description, info, cta }) => (
   <header
     style={{
       maxWidth: screenSizes.large,
@@ -15,21 +15,17 @@ export default ({ title, mainVisual, description, info, cta }) =>
       paddingRight: spacing.large,
     }}
   >
-    <Heading level={1}>
-      {title}
-    </Heading>
+    <Heading level={1}>{title}</Heading>
 
     <div
       style={{
         marginTop: spacing.small,
       }}
     >
-      <Heading level={2}>
-        {description}
-      </Heading>
+      <Heading level={2}>{description}</Heading>
     </div>
 
-    {mainVisual &&
+    {mainVisual && (
       <div
         style={{
           maxWidth: 350,
@@ -37,9 +33,10 @@ export default ({ title, mainVisual, description, info, cta }) =>
         }}
       >
         <Image src={mainVisual} description="Decorative overview image" quiet />
-      </div>}
+      </div>
+    )}
 
-    {cta &&
+    {cta && (
       <div
         style={{
           marginTop: spacing.small,
@@ -47,16 +44,17 @@ export default ({ title, mainVisual, description, info, cta }) =>
         }}
       >
         {cta}
-      </div>}
+      </div>
+    )}
 
-    {info &&
+    {info && (
       <div
         style={{
           marginTop: spacing.small,
         }}
       >
-        <Info>
-          {info}
-        </Info>
-      </div>}
+        <Info>{info}</Info>
+      </div>
+    )}
   </header>
+)

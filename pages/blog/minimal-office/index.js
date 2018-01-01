@@ -4,7 +4,7 @@ import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Video from '../../../components/Video'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="minimal-office"
     sections={[
@@ -137,3 +137,4 @@ export default () =>
       },
     ]}
   />
+)

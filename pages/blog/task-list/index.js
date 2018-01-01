@@ -6,7 +6,7 @@ import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 import List from '../../../components/List'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="task-list"
     sections={[
@@ -182,3 +182,4 @@ export default () =>
       },
     ]}
   />
+)

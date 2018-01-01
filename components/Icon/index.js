@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { colorValues } from '../../utils/theme'
 import icons from './utils/icons'
 
-const Icon = ({ type, fill = colorValues.grays.gray6, size = '100%' }) =>
+const Icon = ({ type, fill = colorValues.grays.gray6, size = '100%' }) => (
   <svg
     viewBox={`0 0 ${icons[type].viewBox} ${icons[type].viewBox}`}
     fill={fill}
@@ -16,6 +16,7 @@ const Icon = ({ type, fill = colorValues.grays.gray6, size = '100%' }) =>
   >
     {icons[type].elements}
   </svg>
+)
 
 Icon.propTypes = {
   type: PropTypes.oneOf(Object.keys(icons)).isRequired,

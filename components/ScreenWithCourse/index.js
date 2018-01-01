@@ -16,9 +16,9 @@ const ScreenWithCourse = ({ id }) => {
 
   const enrollButton = (
     <Anchor href={course.enrollHref}>
-      <Button>{`Enroll in course for ${course.cost === 0
-        ? 'free'
-        : `$${course.cost}`}`}</Button>
+      <Button>{`Enroll in course for ${
+        course.cost === 0 ? 'free' : `$${course.cost}`
+      }`}</Button>
     </Anchor>
   )
 
@@ -66,26 +66,18 @@ const ScreenWithCourse = ({ id }) => {
 
         {
           title: 'About trevordmiller.com courses',
-          component: (
-            <div>
-              {baseRoutes.courses.info}
-            </div>
-          ),
+          component: <div>{baseRoutes.courses.info}</div>,
         },
 
         {
           title: 'About this course',
-          component: (
-            <div>
-              {course.about}
-            </div>
-          ),
+          component: <div>{course.about}</div>,
         },
 
         {
-          title: `What you get for ${course.cost === 0
-            ? 'free'
-            : `$${course.cost}`}`,
+          title: `What you get for ${
+            course.cost === 0 ? 'free' : `$${course.cost}`
+          }`,
           component: (
             <List
               items={[
@@ -104,7 +96,7 @@ const ScreenWithCourse = ({ id }) => {
           title: 'Course curriculum',
           component: (
             <div>
-              {course.curriculum.map((section, index) =>
+              {course.curriculum.map((section, index) => (
                 <div
                   key={index}
                   style={{
@@ -112,11 +104,9 @@ const ScreenWithCourse = ({ id }) => {
                       index + 1 < course.curriculum.length ? spacing.large : 0,
                   }}
                 >
-                  <Heading level={4}>
-                    {section.title}
-                  </Heading>
+                  <Heading level={4}>{section.title}</Heading>
                   <div>
-                    {section.items.map((item, index) =>
+                    {section.items.map((item, index) => (
                       <div
                         key={index}
                         style={{
@@ -139,7 +129,7 @@ const ScreenWithCourse = ({ id }) => {
                           {item.title}
                         </div>
                       </div>
-                    )}
+                    ))}
                     <div
                       style={{
                         display: 'flex',
@@ -163,7 +153,7 @@ const ScreenWithCourse = ({ id }) => {
                     </div>
                   </div>
                 </div>
-              )}
+              ))}
             </div>
           ),
         },
@@ -211,21 +201,17 @@ const ScreenWithCourse = ({ id }) => {
           title: 'Frequently Asked Questions',
           component: (
             <div>
-              {faq.map((item, index) =>
+              {faq.map((item, index) => (
                 <div
                   key={index}
                   style={{
                     marginBottom: index + 1 < faq.length ? spacing.large : 0,
                   }}
                 >
-                  <Heading level={4}>
-                    {item.question}
-                  </Heading>
-                  <div>
-                    {item.answer}
-                  </div>
+                  <Heading level={4}>{item.question}</Heading>
+                  <div>{item.answer}</div>
                 </div>
-              )}
+              ))}
             </div>
           ),
         },

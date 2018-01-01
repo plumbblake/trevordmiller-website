@@ -55,9 +55,7 @@ export default class Screen extends Component {
     return (
       <div>
         <Head>
-          <title>
-            {title}
-          </title>
+          <title>{title}</title>
           <meta name="description" content={description} />
           <meta name="author" content="Trevor D. Miller" />
 
@@ -92,9 +90,7 @@ export default class Screen extends Component {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <style>
-            {styleReset}
-          </style>
+          <style>{styleReset}</style>
 
           <link rel="manifest" href="/static/manifest.json" />
           <link

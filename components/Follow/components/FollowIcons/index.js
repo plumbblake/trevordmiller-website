@@ -42,7 +42,7 @@ const followItems = [
   },
 ]
 
-export default () =>
+export default () => (
   <nav
     style={{
       display: 'flex',
@@ -50,7 +50,7 @@ export default () =>
       justifyContent: 'center',
     }}
   >
-    {followItems.map((followItem, index) =>
+    {followItems.map((followItem, index) => (
       <Anchor key={index} href={followItem.href}>
         <div
           style={{
@@ -64,5 +64,6 @@ export default () =>
           />
         </div>
       </Anchor>
-    )}
+    ))}
   </nav>
+)

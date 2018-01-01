@@ -3,7 +3,7 @@ import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 
-export default () =>
+export default () => (
   <ScreenWithBlogPost
     id="spaced-repetition-software"
     sections={[
@@ -111,3 +111,4 @@ export default () =>
       },
     ]}
   />
+)
