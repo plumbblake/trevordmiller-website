@@ -169,7 +169,21 @@ const ScreenWithCourse = ({ id }) => {
         },
 
         {
-          title: 'Your Instructor',
+          title: 'Languages and tools used',
+          component: (
+            <div>
+              trevordmiller.com courses show timeless principles applied. The
+              examples show specific coding languages and tools. But these are
+              only for example to apply the timeless principles. You don’t need
+              to know the specific languages or tools shown. The principles
+              apply to whatever coding language, editor, terminal emulator etc.
+              that you work with.
+            </div>
+          ),
+        },
+
+        {
+          title: 'Your instructor',
           component: (
             <div>
               <div
