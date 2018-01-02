@@ -82,7 +82,13 @@ export default () => (
               <Avatar />
             </div>
             <Heading level={2}>Well hello there! My name is Trevor.</Heading>
-            {JSON.parse('{')}
+            <a
+              onClick={() => {
+                throw new Error('woops')
+              }}
+            >
+              Temp make runtime error
+            </a>
           </div>
         ),
       },
