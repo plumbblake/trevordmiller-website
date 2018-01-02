@@ -11,6 +11,7 @@ import {
 import { baseRouteKeys } from '../../pages'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
+import ErrorBoundary from './components/ErrorBoundary'
 import Navigation from './components/Navigation'
 import Main from './components/Main'
 import Footer from './components/Footer'
@@ -53,7 +54,7 @@ export default class Screen extends Component {
       footer = true,
     } = this.props
     return (
-      <div>
+      <ErrorBoundary>
         <Head>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -142,18 +143,20 @@ export default class Screen extends Component {
         >
           <Navigation baseRouteKey={baseRouteKey} />
 
-          <Main
-            title={title}
-            mainVisual={showMainVisual ? mainVisual : null}
-            description={description}
-            info={info}
-            cta={cta}
-            sections={sections}
-          />
+          <ErrorBoundary>
+            <Main
+              title={title}
+              mainVisual={showMainVisual ? mainVisual : null}
+              description={description}
+              info={info}
+              cta={cta}
+              sections={sections}
+            />
+          </ErrorBoundary>
 
           {footer ? <Footer /> : null}
         </div>
-      </div>
+      </ErrorBoundary>
     )
   }
 }

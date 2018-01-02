@@ -82,6 +82,7 @@ export default () => (
               <Avatar />
             </div>
             <Heading level={2}>Well hello there! My name is Trevor.</Heading>
+            {JSON.parse('{')}
           </div>
         ),
       },
