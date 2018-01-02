@@ -34,7 +34,7 @@ class ErrorBoundary extends Component {
 
         <p>
           Trevor has been notified that you ran into an error, but if you could
-          fill out a report for him that would be awesome
+          fill out a report for him that would be awesome.
         </p>
 
         <Button onClick={() => Raven.lastEventId() && Raven.showReportDialog()}>

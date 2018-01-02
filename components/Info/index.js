@@ -8,7 +8,6 @@ export default ({ children }) => (
       marginBottom: spacing.large,
       borderRadius: borderRadii.medium,
       background: 'rgba(0, 0, 0, 0.25)',
-      textAlign: 'center',
     }}
   >
     {children}
