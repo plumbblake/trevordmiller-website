@@ -12,7 +12,9 @@ class ErrorBoundary extends Component {
     this.state = {
       error: null,
     }
-    Raven.config(SENTRY_PUBLIC_DSN).install()
+    Raven.config(SENTRY_PUBLIC_DSN, {
+      ignoreUrls: ['localhost', '127.0.0.1'],
+    }).install()
   }
 
   componentDidCatch(error, errorInfo) {
