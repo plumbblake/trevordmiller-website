@@ -159,11 +159,11 @@ const ScreenWithCourse = ({ id }) => {
           component: (
             <div>
               trevordmiller.com courses show timeless principles applied. The
-              examples show specific coding languages and tools. But these are
-              only for example to apply the timeless principles. You don’t need
-              to know the specific languages or tools shown. The principles
-              apply to whatever coding language, editor, terminal emulator etc.
-              that you work with.
+              examples in the course use specific languages and tools, but serve
+              only to illustrate one way of applying those timeless principles.
+              You don’t need to know the specific languages or tools shown. The
+              lessons work with whatever coding language, editor, terminal
+              emulator etc. that you use.
             </div>
           ),
         },
@@ -202,10 +202,10 @@ const ScreenWithCourse = ({ id }) => {
 
               <div>
                 I've been programming for over 10 years. I've been teaching
-                programming for over 5 years (through coding bootcamps,
-                workshops, meetups, conferences, and online courses). I was the
-                Director of Instruction at egghead.io. All in all, I've taught
-                thousands of people how to be more effective engineers.
+                programming for over 5 years through coding bootcamps,
+                workshops, meetups, conferences, online courses, and as the
+                former Director of Instruction at egghead.io. All in all, I've
+                taught thousands of people how to be more effective engineers.
               </div>
             </div>
           ),
