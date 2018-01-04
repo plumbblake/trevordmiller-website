@@ -174,20 +174,38 @@ const ScreenWithCourse = ({ id }) => {
             <div>
               <div
                 style={{
-                  width: 100,
                   marginBottom: spacing.small,
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
               >
-                <Avatar />
+                <div
+                  style={{
+                    width: 100,
+                    minWidth: 100,
+                  }}
+                >
+                  <Avatar />
+                </div>
+                <div
+                  style={{
+                    marginLeft: spacing.medium,
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Heading level={2}>
+                    Well hello there! My name is Trevor.
+                  </Heading>
+                </div>
               </div>
 
-              <Heading level={4}>Trevor D. Miller</Heading>
               <div>
-                I work as a Software Engineer. I love learning and solving
-                problems. Being a programmer isn't just a job for me, it's a
-                hobby too. I especially enjoy working in the terminal and
-                contributing to open source. I strive to learn new things every
-                day and share what I learn.
+                I've been programming for over 10 years. I've been teaching
+                programming for over 5 years (through coding bootcamps,
+                workshops, meetups, conferences, and online courses). I was the
+                Director of Instruction at egghead.io. All in all, I've taught
+                thousands of people how to be more effective engineers.
               </div>
             </div>
           ),
