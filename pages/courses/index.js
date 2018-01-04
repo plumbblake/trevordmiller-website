@@ -10,7 +10,7 @@ export const courses = {
     previewVideo: '/static/real-world-git-course-preview.mp4',
     previewVideoThumbnail:
       '/static/real-world-git-coruse-preview-thumbnail.png',
-    title: `Real-world Git: manage code history with confidence`,
+    title: `Real-world Git`,
     description: `Learn the most important Git commands`,
     cost: 0,
     time: '1 hour',
