@@ -53,7 +53,7 @@ export default () => (
           <div>
             <Paragraph>
               My laptop is placed in a keyboard tray mounted under the desk so I
-              can easily plug it in to the USB hub and remove it to use outside
+              can easily plug it into the USB hub and remove it to use outside
               my office.
             </Paragraph>
             <Image

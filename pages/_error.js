@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Screen from '../components/Screen'
 import Anchor from '../components/Anchor'
+import Button from '../components/Button'
 
 export default class Error extends Component {
   static getInitialProps({ res, err }) {
@@ -22,7 +23,11 @@ export default class Error extends Component {
         sections={[
           {
             title: 'Try again',
-            component: <Anchor href="/">Navigate home</Anchor>,
+            component: (
+              <Anchor href="/">
+                <Button>Navigate to home page</Button>
+              </Anchor>
+            ),
           },
         ]}
       />

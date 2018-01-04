@@ -82,7 +82,7 @@ const ScreenWithCourse = ({ id }) => {
                 `Example code to download and practice with`,
                 `Quizzes after each section to make sure you understand`,
                 `Comments on each video to get help from your instructor and discuss with fellow students`,
-                `All videos can be downloaded so you aren't locked in to where you can view them`,
+                `All videos can be downloaded so you aren't locked into where you can view them`,
               ]}
             />
           ),
