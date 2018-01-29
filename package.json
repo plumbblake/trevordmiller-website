@@ -54,7 +54,7 @@
     "prettier": "^1.9.2"
   },
   "dependencies": {
-    "next": "^4.2.1",
+    "next": "^4.2.3",
     "nova-colors": "^2.1.5",
     "prop-types": "^15.6.0",
     "raven-js": "^3.21.0",
