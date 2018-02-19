@@ -30,15 +30,122 @@ export const projects = {
     ],
   },
 
+  edgar: {
+    tags: [tags.react, tags.node],
+    mainVisual: '/static/edgar.jpg',
+    title: 'Edgar',
+    description: `I'm currently working on Edgar. Edgar is a tool that automatically recycles a social media library to save you time.`,
+    links: [
+      {
+        description: `Go to the app`,
+        href: 'https://meetedgar.com',
+      },
+    ],
+  },
+
   ropig: {
-    tags: [tags.inProgress, tags.react, tags.graphQl],
-    mainVisual: '/static/github.png',
+    tags: [tags.react, tags.node, tags.graphQl],
+    mainVisual: '/static/ropig.jpg',
     title: 'Ropig',
-    description: `For my full-time job, I'm currently working on a new product called Ropig. Ropig is a new alert management tool that breaks down the firehose of events from your monitoring apps.`,
+    description: `I helped build a product called Ropig. Ropig is an alert management tool that breaks down the firehose of events from your monitoring apps.`,
     links: [
       {
         description: `Go to the app`,
         href: 'https://ropig.com',
+      },
+    ],
+  },
+
+  'real-world-git': {
+    tags: [tags.terminal, tags.unix, tags.git],
+    mainVisual: '/static/real-world-git.png',
+    title: `Real-world Git`,
+    description: `Git is one of the most important tools for almost all developers. I made this hour long video course to help developers learn how to use Git from the command line.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: '/courses/real-world-git',
+      },
+    ],
+  },
+
+  'egghead-testing-cookbook': {
+    tags: [tags.terminal, tags.node, tags.react],
+    mainVisual: '/static/egghead-testing-cookbook.png',
+    title: `Testing Cookbook`,
+    description: `I've grown to love testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: 'https://egghead.io/courses/react-testing-cookbook',
+      },
+    ],
+  },
+
+  'egghead-publish-npm': {
+    tags: [tags.terminal, tags.git, tags.npm],
+    mainVisual: '/static/egghead-publish-npm.png',
+    title: `Publish packages on npm`,
+    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
+      },
+    ],
+  },
+
+  'egghead-instructor-center': {
+    tags: [tags.react],
+    mainVisual: '/static/egghead-instructor-center.png',
+    title: `egghead Instructor Center`,
+    description: `I built the initial production egghead Instructor Center. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
+    links: [
+      {
+        description: 'See the code',
+        href: 'https://github.com/eggheadio/egghead-instructor-center',
+      },
+    ],
+  },
+
+  'egghead-ui': {
+    tags: [tags.npm, tags.react],
+    mainVisual: '/static/egghead-ui.png',
+    title: `egghead component library`,
+    description: `I built the initial production egghead.io component library which is used across egghead apps.  It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
+    links: [
+      {
+        description: `Go to the project's website`,
+        href: 'https://styleguide.egghead.io',
+      },
+      {
+        description: 'See the code',
+        href: 'https://github.com/eggheadio/egghead-ui',
+      },
+    ],
+  },
+
+  nova: {
+    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
+    mainVisual: '/static/nova-colors.png',
+    title: `Nova`,
+    description: 'A color scheme where each color has a dedicated purpose.',
+    links: [
+      {
+        description: `View the project's website`,
+        href: '/projects/nova',
+      },
+      {
+        description: 'Read the blog post on how Nova was built',
+        href: '/blog/color-scheme-building',
+      },
+      {
+        description: 'See the code for the color library',
+        href: 'https://github.com/trevordmiller/nova-colors',
+      },
+      {
+        description: 'See the code for the plugins',
+        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
       },
     ],
   },
@@ -69,70 +176,6 @@ export const projects = {
       {
         description: `See the code`,
         href: 'https://github.com/trevordmiller/shell-scripts',
-      },
-    ],
-  },
-
-  'real-world-git': {
-    tags: [tags.terminal, tags.unix, tags.git],
-    mainVisual: '/static/real-world-git.png',
-    title: `Real-world Git`,
-    description: `Git is one of the most important tools for almost all developers. I made this hour long video course to help developers learn how to use Git from the command line.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: '/courses/real-world-git',
-      },
-    ],
-  },
-
-  'egghead-publish-npm': {
-    tags: [tags.terminal, tags.git, tags.npm],
-    mainVisual: '/static/egghead-publish-npm.png',
-    title: `Publish packages on npm`,
-    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
-      },
-    ],
-  },
-
-  'egghead-react-testing': {
-    tags: [tags.terminal, tags.node, tags.react],
-    mainVisual: '/static/egghead-react-testing.png',
-    title: `Testing Cookbook`,
-    description: `I've grown to love testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: 'https://egghead.io/courses/react-testing-cookbook',
-      },
-    ],
-  },
-
-  nova: {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
-    mainVisual: '/static/nova-colors.png',
-    title: `Nova`,
-    description: 'A color scheme where each color has a dedicated purpose.',
-    links: [
-      {
-        description: `View the project's website`,
-        href: '/projects/nova',
-      },
-      {
-        description: 'Read the blog post on how Nova was built',
-        href: '/blog/color-scheme-building',
-      },
-      {
-        description: 'See the code for the color library',
-        href: 'https://github.com/trevordmiller/nova-colors',
-      },
-      {
-        description: 'See the code for the plugins',
-        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
       },
     ],
   },
@@ -201,36 +244,6 @@ export const projects = {
       {
         description: 'View the app',
         href: '/projects/guitar-lessons',
-      },
-    ],
-  },
-
-  'egghead-instructor-center': {
-    tags: [tags.react],
-    mainVisual: '/static/egghead-instructor-center.png',
-    title: `egghead Instructor Center`,
-    description: `I built the initial production egghead Instructor Center. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
-    links: [
-      {
-        description: 'See the code',
-        href: 'https://github.com/eggheadio/egghead-instructor-center',
-      },
-    ],
-  },
-
-  'egghead-ui': {
-    tags: [tags.npm, tags.react],
-    mainVisual: '/static/egghead-ui.png',
-    title: `egghead component library`,
-    description: `I built the initial production egghead.io component library which is used across egghead apps.  It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
-    links: [
-      {
-        description: `Go to the project's website`,
-        href: 'https://styleguide.egghead.io',
-      },
-      {
-        description: 'See the code',
-        href: 'https://github.com/eggheadio/egghead-ui',
       },
     ],
   },
