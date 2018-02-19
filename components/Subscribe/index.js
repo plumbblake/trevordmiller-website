@@ -36,7 +36,7 @@ class Subscribe extends Component {
   }
 
   render() {
-    const { download, kind = 'button' } = this.props
+    const { kind = 'button' } = this.props
     const { isOpen } = this.state
 
     const closedOutputByKind = {
@@ -46,18 +46,14 @@ class Subscribe extends Component {
             textAlign: 'center',
           }}
         >
-          <Button onClick={this.handleToggle}>
-            {download ? `Download the ${download.title}` : 'Join my email list'}
-          </Button>
+          <Button onClick={this.handleToggle}>Join my email list</Button>
         </div>
       ),
 
       box: (
         <div>
           <Button onClick={this.handleToggle} type="inline">
-            {download
-              ? `Download the ${download.title}`
-              : 'Subscribe to my email list'}
+            Subscribe to my email list
           </Button>
         </div>
       ),
@@ -76,21 +72,10 @@ class Subscribe extends Component {
             }}
           >
             <Heading level={3}>
-              {download
-                ? `To download the ${download.title}, submit your email`
-                : `Submit your email for occasional updates`}
+              Submit your email for occasional updates
             </Heading>
 
-            <div>
-              {download && (
-                <span>
-                  {`Once you've confirmed your email you'll get another email with your download. `}
-                </span>
-              )}
-              <span>
-                I'll never spam you or share your email with anyone else.
-              </span>
-            </div>
+            <div>I'll never spam you or share your email with anyone else.</div>
 
             <form
               action={submitUrl}
@@ -153,24 +138,6 @@ class Subscribe extends Component {
                   id="mce-group[20246]-20246-1"
                 />
               </div>
-
-              {download && (
-                <div
-                  style={{
-                    display: 'none',
-                  }}
-                >
-                  <label htmlFor="mce-DOWNLOAD">Download</label>
-                  <select
-                    name="DOWNLOAD"
-                    id="mce-DOWNLOAD"
-                    value={download.key}
-                    readOnly
-                  >
-                    <option value={download.key}>{download.key}</option>
-                  </select>
-                </div>
-              )}
 
               <div
                 style={{

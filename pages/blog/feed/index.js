@@ -9,17 +9,21 @@ const feed = new RSS({
   description:
     'Blog posts about coding, focused on the terminal (Unix, Vim, Git, etc.)',
   categories: [
-    'Unix',
-    'Vim',
-    'Git',
+    'unix',
+    'vim',
+    'git',
     'terminal',
     'command line',
-    'Code',
-    'Programming',
-    'Software Engineering',
+    'testing',
+    'code',
+    'programming',
+    'programmer',
+    'software development',
+    'softare developer',
+    'software engineering',
   ],
   language: 'en',
-  copyright: '2017 Trevor D. Miller',
+  copyright: '2018 Trevor D. Miller',
 })
 
 Object.keys(blogPosts).forEach(blogPostKey => {

@@ -4,16 +4,6 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
-  /*
-  'essential-git-commands': {
-    tags: [tags.terminal, tags.git],
-    mainVisual: '/static/git-sadness.jpg',
-    title: `Essential Git commands`,
-    description: `A subset of only the most critical Git commands for dealing with common situations.`,
-    date: 'September 17, 2017',
-  },
-  */
-
   dotfiles: {
     tags: [tags.terminal, tags.unix, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',

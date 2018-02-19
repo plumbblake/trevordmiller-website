@@ -205,7 +205,7 @@ const ScreenWithCourse = ({ id }) => {
                 programming for over 5 years through coding bootcamps,
                 workshops, meetups, conferences, online courses, and as the
                 former Director of Instruction at egghead.io. All in all, I've
-                taught thousands of people how to be more effective engineers.
+                taught thousands of people how to be more effective developers.
               </div>
             </div>
           ),

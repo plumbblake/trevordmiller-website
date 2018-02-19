@@ -10,7 +10,7 @@ const lifeAspects = [
   {
     visual: 'terminal',
     label: `coder`,
-    description: `I work as a Software Engineer. I love learning and solving problems. Being a programmer isn't just a job for me, it's a hobby too. I especially enjoy working in the terminal and contributing to open source. I strive to learn new things every day and share what I learn.`,
+    description: `I work as a software developer. I love learning and solving problems. I strive to learn new things every day and share what I learn.`,
     links: [
       {
         description: 'Watch my video courses',
@@ -38,7 +38,7 @@ const lifeAspects = [
   {
     visual: 'couple',
     label: 'family man',
-    description: `No kids yet. We like playing board games, watching shows, going on walks - we are pretty boring but we like it! My wife runs a neat project called Freshly Married to help couples strengthen their relationships.`,
+    description: `One dog. No kids (yet). We like playing video games, watching shows, going on walks - we are pretty boring but we like it! My wife runs a neat project called Freshly Married to help couples strengthen their relationships.`,
     links: [
       {
         description: 'View Freshly Married',
@@ -50,7 +50,7 @@ const lifeAspects = [
   {
     visual: 'suit',
     label: 'Mormon',
-    description: `I've got plenty of weaknesses, but I strive to follow Jesus Christ.`,
+    description: `I've got plenty of weaknesses, but I strive to be a good Christian.`,
     links: [
       {
         description: 'Learn about Mormons',
