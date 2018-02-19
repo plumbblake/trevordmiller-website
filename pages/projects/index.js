@@ -73,6 +73,45 @@ export const projects = {
     ],
   },
 
+  'real-world-git': {
+    tags: [tags.terminal, tags.unix, tags.git],
+    mainVisual: '/static/real-world-git.png',
+    title: `Real-world Git`,
+    description: `Git is one of the most important tools for almost all developers. I made this hour long video course to help developers learn how to use Git from the command line.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: '/courses/real-world-git',
+      },
+    ],
+  },
+
+  'egghead-publish-npm': {
+    tags: [tags.terminal, tags.git, tags.npm],
+    mainVisual: '/static/egghead-publish-npm.png',
+    title: `Publish packages on npm`,
+    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
+      },
+    ],
+  },
+
+  'egghead-react-testing': {
+    tags: [tags.terminal, tags.node, tags.react],
+    mainVisual: '/static/egghead-react-testing.png',
+    title: `Testing Cookbook`,
+    description: `I've grown to love testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
+    links: [
+      {
+        description: 'View the video course',
+        href: 'https://egghead.io/courses/react-testing-cookbook',
+      },
+    ],
+  },
+
   nova: {
     tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
     mainVisual: '/static/nova-colors.png',
