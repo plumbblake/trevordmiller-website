@@ -10,7 +10,7 @@ const lifeAspects = [
   {
     visual: 'terminal',
     label: `coder`,
-    description: `I work as a software developer. I love learning and solving problems. I strive to learn new things every day and share what I learn.`,
+    description: `I'm a software developer. I love learning and solving problems. I strive to learn new things every day and share what I learn.`,
     links: [
       {
         description: 'Watch my video courses',
