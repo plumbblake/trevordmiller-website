@@ -52,6 +52,14 @@ export const blogPosts = {
     date: 'February 1, 2017',
   },
 
+  'wholesome-media': {
+    tags: [tags.general],
+    mainVisual: '/static/opendns.jpg',
+    title: `Configuring devices for wholesome media`,
+    description: `How I use a combination of filters and settings to help keep media in my home wholesome.`,
+    date: 'January 1, 2017',
+  },
+
   'rebuilding-my-website': {
     tags: [tags.general],
     mainVisual: '/static/trevordmiller-website.png',
