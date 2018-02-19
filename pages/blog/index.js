@@ -54,7 +54,7 @@ export const blogPosts = {
 
   'wholesome-media': {
     tags: [tags.general],
-    mainVisual: '/static/opendns.jpg',
+    mainVisual: '/static/common-sense-media.png',
     title: `Configuring devices for wholesome media`,
     description: `How I use a combination of filters and settings to help keep media in my home wholesome.`,
     date: 'January 1, 2017',
