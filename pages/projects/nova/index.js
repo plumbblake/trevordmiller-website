@@ -94,14 +94,7 @@ const plugins = [
     notes: [
       `You'll need True Color support (latest Vim, Neovim, or GUI Vim)`,
       'For terminal Vim use, your terminal will also need True Color support',
-      'Using the Nova Hyper or iTerm plugin is recommended',
-      'If you use "vim-airline", it works automatically',
-      'Install "pangloss/vim-javascript", for full JS colors',
-      'Install "othree/html5.vim" for full HTML colors',
-      'Install "hail2u/vim-css3-syntax" for full CSS colors',
-      'Install "mxw/vim-jsx" for full React colors',
-      'Install "pangloss/vim-javascript" and add "let g:javascript_plugin_flow = 1" to your .vimrc for full Flow colors',
-      'Install "HerringtonDarkholme/yats.vim" for full TypeScript colors',
+      'Install "sheerun/vim-polyglot", for better language syntax support and colors',
     ],
     links: [
       {
