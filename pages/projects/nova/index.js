@@ -60,7 +60,7 @@ const characteristics = [
   {
     title: 'Current',
     description:
-      "First-class syntax highlighting for today's programming languages",
+      'First-class syntax highlighting for modern programming languages',
   },
   {
     title: 'Soft',
@@ -68,11 +68,12 @@ const characteristics = [
   },
   {
     title: 'Balanced',
-    description: 'Designed by a designer with color theory in mind',
+    description: 'Designed with color theory',
   },
   {
     title: 'Maintainable',
-    description: 'Single-source-of-truth for color values and documentation',
+    description:
+      'Uses a single-source-of-truth for color values and documentation',
   },
   {
     title: 'Free',
@@ -80,21 +81,20 @@ const characteristics = [
   },
 ]
 
-const plugins = [
+const officialPlugins = [
   {
     title: 'Vim',
     icon: 'vim',
     screenshot:
       'https://github.com/trevordmiller/nova-vim/blob/master/assets/screenshot.png?raw=true',
     steps: [
-      'Install "trevordmiller/nova-vim" with your Vim plugin manager',
-      'Add "colorscheme nova" to your ".vimrc" (after any other plugins or rules)',
+      'Install "sheerun/vim-polyglot" and "trevordmiller/nova-vim" to your Vim plugin manager',
+      'Add "colorscheme nova" to your ".vimrc"',
       'Restart Vim',
     ],
     notes: [
       `You'll need True Color support (latest Vim, Neovim, or GUI Vim)`,
       'For terminal Vim use, your terminal will also need True Color support',
-      'Install "sheerun/vim-polyglot", for better language syntax support and colors',
     ],
     links: [
       {
@@ -187,6 +187,41 @@ const plugins = [
     ],
   },
 
+  {
+    title: 'npm',
+    icon: 'npm',
+    steps: ['npm install -S nova-colors', "import {group} from 'nova-colors'"],
+    notes: [
+      'The package provides the Nova color values mapped by group type (syntax, UI, version control etc.)',
+    ],
+    links: [
+      {
+        title: 'API',
+        url:
+          'https://github.com/trevordmiller/nova-colors/blob/master/src/index.js',
+      },
+      {
+        title: 'Example plugin using nova-colors directly',
+        url: 'https://github.com/trevordmiller/nova-hyperterm',
+      },
+      {
+        title: 'Example plugin using nova-colors with a build step',
+        url: 'https://github.com/trevordmiller/nova-vim',
+      },
+      {
+        title: 'Contributing instructions',
+        url:
+          'https://github.com/trevordmiller/nova-colors/blob/master/CONTRIBUTING.md',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/trevordmiller/nova-colors',
+      },
+    ],
+  },
+]
+
+const communityPlugins = [
   {
     title: 'VS Code',
     icon: 'vscode',
@@ -295,63 +330,26 @@ const plugins = [
       },
     ],
   },
-
-  {
-    title: 'npm',
-    icon: 'npm',
-    steps: ['npm install -S nova-colors', "import {group} from 'nova-colors'"],
-    notes: [
-      'The package provides the Nova color values mapped by group type (syntax, UI, version control etc.)',
-    ],
-    links: [
-      {
-        title: 'API',
-        url:
-          'https://github.com/trevordmiller/nova-colors/blob/master/src/index.js',
-      },
-      {
-        title: 'Example plugin using nova-colors directly',
-        url: 'https://github.com/trevordmiller/nova-hyperterm',
-      },
-      {
-        title: 'Example plugin using nova-colors with a build step',
-        url: 'https://github.com/trevordmiller/nova-vim',
-      },
-      {
-        title: 'Contributing instructions',
-        url:
-          'https://github.com/trevordmiller/nova-colors/blob/master/CONTRIBUTING.md',
-      },
-      {
-        title: 'Source code',
-        url: 'https://github.com/trevordmiller/nova-colors',
-      },
-    ],
-  },
 ]
 
 const faq = [
   {
     question: `Where is editor/plugin {x}?`,
-    answer: `If you don't see it in the list, it doesn't exist yet! The Nova admins only maintain the plugins listed.`,
-  },
-  {
-    question: `Is there an {x} version?`,
-    answer: `Nope. The Nova admins only support one version. Feel free to fork, override, or use another theme if you don't like it.`,
+    answer: `If you don't see it here it doesn't exist (yet). I only maintain the official plugins listed here. But I welcome more community plugins if you'd like to build one. Use the official plugins' source code as a template and the "nova-colors" package for color values.`,
   },
   {
     question: `Can you change {x}?`,
-    answer: `If it is a bug or syntax not following the Nova color meanings, yes! Please submit an issue on the related GitHub repo. If it is personal preference, sorry we can't accomodate everyone. Feel free to fork, override, or use another theme.`,
+    answer: `If it is a bug or syntax not following the Nova color meanings, yes! Please submit an issue on the related GitHub repo.`,
   },
   {
     question: `Can I contribute?`,
-    answer: `Yes! We would love to have your help. Just follow the "CONTRIBUTING.md" in the related repo.`,
+    answer: `Yes! I'd love to have your help. Follow the "CONTRIBUTING.md" in the related repo.`,
   },
 ]
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
 
-class Plugins extends React.Component {
+class PluginsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -366,6 +364,8 @@ class Plugins extends React.Component {
   }
 
   render() {
+    const { plugins } = this.props
+
     return (
       <Tabs>
         <TabList
@@ -405,7 +405,7 @@ class Plugins extends React.Component {
               <div>
                 <Icon
                   type={plugin.icon}
-                  size={fontSizes.large}
+                  size={fontSizes.xlarge}
                   fill={
                     index === this.state.activeTab
                       ? uiGroups.userCurrentState
@@ -604,8 +604,13 @@ export default () => (
       },
 
       {
-        title: 'Plugins',
-        component: <Plugins />,
+        title: 'Official plugins',
+        component: <PluginsList plugins={officialPlugins} />,
+      },
+
+      {
+        title: 'Community plugins',
+        component: <PluginsList plugins={communityPlugins} />,
       },
 
       {
