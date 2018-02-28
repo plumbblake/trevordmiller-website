@@ -5,7 +5,7 @@ import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
   dotfiles: {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
+    tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',
     title: `Organizing tooling settings using dotfiles`,
     description: `Examples of using dotfiles to manage and back-up the config for git, shells, editors, etc.`,
@@ -13,7 +13,7 @@ export const blogPosts = {
   },
 
   'raspberry-pi-button': {
-    tags: [tags.terminal, tags.unix, tags.hardware],
+    tags: [tags.terminal, tags.hardware, tags.node],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Running a server on a Raspberry Pi with a physical button`,
     description: `All the pieces needed to set up a Raspberry Pi with a physical button. Covers buying hardware, running a Raspberry Pi, wiring up a physical button, and creating a server to send a text message when the button is pressed.`,
@@ -21,7 +21,7 @@ export const blogPosts = {
   },
 
   'color-scheme-building': {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
+    tags: [tags.terminal, tags.vim, tags.git, tags.node],
     mainVisual: '/static/nova-example-code-screenshot.png',
     title: `Building the Nova color scheme`,
     description: `By using an module for color values, we were able to generate color schemes for multiple editors and tools from one source.`,

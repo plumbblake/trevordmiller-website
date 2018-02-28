@@ -190,7 +190,7 @@ const officialPlugins = [
   {
     title: 'npm',
     icon: 'npm',
-    steps: ['npm install -S nova-colors', "import {group} from 'nova-colors'"],
+    steps: ['npm install nova-colors', "import {group} from 'nova-colors'"],
     notes: [
       'The package provides the Nova color values mapped by group type (syntax, UI, version control etc.)',
     ],

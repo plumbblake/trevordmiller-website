@@ -23,7 +23,7 @@ export default ({ visual, description, links, tags }) => (
           alignItems: 'center',
         }}
       >
-        {tags.map(tag => (
+        {tags.sort((a, b) => a.order - b.order).map(tag => (
           <div
             key={tag.label}
             style={{
@@ -31,12 +31,12 @@ export default ({ visual, description, links, tags }) => (
               borderRadius: borderRadii.medium,
               color: tag.color,
               fontSize: fontSizes.small,
-              paddingTop: spacing.xxsmall,
-              paddingBottom: spacing.xxsmall,
+              paddingTop: spacing.xsmall,
+              paddingBottom: spacing.xsmall,
               paddingRight: spacing.small,
               paddingLeft: spacing.small,
-              marginRight: spacing.xsmall,
-              marginBottom: spacing.xsmall,
+              marginRight: spacing.small,
+              marginBottom: spacing.small,
             }}
           >
             <div
@@ -46,11 +46,7 @@ export default ({ visual, description, links, tags }) => (
               }}
             >
               {tag.icon ? (
-                <Icon
-                  type={tag.icon}
-                  fill={tag.color}
-                  size={fontSizes.medium}
-                />
+                <Icon type={tag.icon} fill={tag.color} size={fontSizes.large} />
               ) : null}
               <div
                 style={{

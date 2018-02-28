@@ -8,11 +8,9 @@ export const projects = {
     tags: [
       tags.inProgress,
       tags.terminal,
-      tags.unix,
       tags.vim,
       tags.git,
       tags.react,
-      tags.npm,
       tags.node,
     ],
     mainVisual: '/static/trevordmiller-website.png',
@@ -31,7 +29,7 @@ export const projects = {
   },
 
   edgar: {
-    tags: [tags.react, tags.node],
+    tags: [tags.postgresql, tags.ruby, tags.react],
     mainVisual: '/static/edgar.jpg',
     title: 'Edgar',
     description: `I'm currently working on Edgar. Edgar is a tool that automatically recycles a social media library to save you time.`,
@@ -57,7 +55,7 @@ export const projects = {
   },
 
   'real-world-git': {
-    tags: [tags.terminal, tags.unix, tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/real-world-git.png',
     title: `Real-world Git`,
     description: `Git is one of the most important tools for almost all developers. I made this hour long video course to help developers learn how to use Git from the command line.`,
@@ -83,7 +81,7 @@ export const projects = {
   },
 
   'egghead-publish-npm': {
-    tags: [tags.terminal, tags.git, tags.npm],
+    tags: [tags.terminal, tags.git, tags.node],
     mainVisual: '/static/egghead-publish-npm.png',
     title: `Publish packages on npm`,
     description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
@@ -109,7 +107,7 @@ export const projects = {
   },
 
   'egghead-ui': {
-    tags: [tags.npm, tags.react],
+    tags: [tags.node, tags.react],
     mainVisual: '/static/egghead-ui.png',
     title: `egghead component library`,
     description: `I built the initial production egghead.io component library which is used across egghead apps.  It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
@@ -126,7 +124,7 @@ export const projects = {
   },
 
   nova: {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git, tags.npm],
+    tags: [tags.terminal, tags.vim, tags.git, tags.node],
     mainVisual: '/static/nova-colors.png',
     title: `Nova`,
     description: 'A color scheme where each color has a dedicated purpose.',
@@ -151,7 +149,7 @@ export const projects = {
   },
 
   dotfiles: {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
+    tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/github.png',
     title: `Dotfiles`,
     description: `I organize my tooling settings in dotfiles.`,
@@ -168,7 +166,7 @@ export const projects = {
   },
 
   'shell-scripts': {
-    tags: [tags.terminal, tags.unix, tags.vim, tags.git],
+    tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/github.png',
     title: `Shell Scripts`,
     description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
@@ -181,7 +179,7 @@ export const projects = {
   },
 
   'dog-bathroom-button': {
-    tags: [tags.terminal, tags.unix, tags.node, tags.hardware],
+    tags: [tags.terminal, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
     title: `Dog Bathroom Button`,
     description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,

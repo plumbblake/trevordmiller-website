@@ -17,12 +17,12 @@ export default () => (
           <div>
             <Paragraph>
               Dotfiles are a file that has a filename prefixed with a dot
-              (period) like <Code>.npmrc</Code>, <Code>.gitconfig</Code>, and{' '}
+              (period) like <Code>.bashrc</Code>, <Code>.gitconfig</Code>, and{' '}
               <Code>.vimrc</Code>. This means they are hidden by default on most
               operating systems. Most of them live in your home directory
               (although projects can have local dotfiles that override global
-              settings such as <Code>.gitignore</Code>, <Code>.npmrc</Code>,{' '}
-              <Code>.eslintrc.json</Code>, <Code>.travis.yml</Code> etc).
+              settings such as <Code>.gitignore</Code>, <Code>.travis.yml</Code>{' '}
+              etc).
             </Paragraph>
 
             <Paragraph>

@@ -5,7 +5,7 @@ import Teaser from '../../components/Teaser'
 
 export const courses = {
   'real-world-git': {
-    tags: [tags.terminal, tags.unix, tags.git],
+    tags: [tags.terminal, tags.git],
     mainVisual: '/static/real-world-git.png',
     previewVideo: '/static/real-world-git-course-preview.mp4',
     previewVideoThumbnail:

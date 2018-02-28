@@ -1,13 +1,13 @@
 import { Component } from 'react'
 import RSS from 'rss'
+import { baseRoutes } from '../../'
 import { blogPosts } from '../'
 
 const feed = new RSS({
   title: 'Trevor D. Miller blog',
   feed_url: 'https://trevordmiller.com/blog/feed',
   site_url: 'https://trevordmiller.com',
-  description:
-    'Blog posts about coding, focused on the terminal (Unix, Vim, Git, etc.)',
+  description: baseRoutes.blog.description,
   categories: [
     'unix',
     'vim',
