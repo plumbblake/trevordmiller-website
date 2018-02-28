@@ -4,6 +4,45 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
+  edgar: {
+    tags: [tags.inProgress, tags.postgresql, tags.ruby, tags.react],
+    mainVisual: '/static/edgar.jpg',
+    title: 'Edgar',
+    description: `I'm currently working full-time as a full-stack software developer on Edgar. Edgar is a tool that automatically recycles your social media library. It is built with PostgreSQL, Ruby, Rails, React, Redux and friends.`,
+    links: [
+      {
+        description: `Go to the app`,
+        href: 'https://meetedgar.com',
+      },
+    ],
+  },
+
+  nova: {
+    tags: [tags.inProgress, tags.terminal, tags.vim, tags.git, tags.node],
+    mainVisual: '/static/nova-colors.png',
+    title: `Nova`,
+    description:
+      'A coding color scheme where each color has a dedicated purpose.',
+    links: [
+      {
+        description: `View the project's website`,
+        href: '/projects/nova',
+      },
+      {
+        description: 'Read the blog post on how Nova was built',
+        href: '/blog/color-scheme-building',
+      },
+      {
+        description: 'See the code for the color library',
+        href: 'https://github.com/trevordmiller/nova-colors',
+      },
+      {
+        description: 'See the code for the plugins',
+        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
+      },
+    ],
+  },
+
   'trevordmiller-website': {
     tags: [
       tags.inProgress,
@@ -18,7 +57,7 @@ export const projects = {
     description: `I add new courses, blog posts, and projects to my website (this website) regularly.`,
     links: [
       {
-        description: 'Read the blog post on how it works',
+        description: 'Read the blog post on how I built it',
         href: '/blog/rebuilding-my-website',
       },
       {
@@ -28,24 +67,11 @@ export const projects = {
     ],
   },
 
-  edgar: {
-    tags: [tags.postgresql, tags.ruby, tags.react],
-    mainVisual: '/static/edgar.jpg',
-    title: 'Edgar',
-    description: `I'm currently working on Edgar. Edgar is a tool that automatically recycles a social media library to save you time.`,
-    links: [
-      {
-        description: `Go to the app`,
-        href: 'https://meetedgar.com',
-      },
-    ],
-  },
-
   ropig: {
     tags: [tags.react, tags.node, tags.graphQl],
     mainVisual: '/static/ropig.jpg',
     title: 'Ropig',
-    description: `I helped build a product called Ropig. Ropig is an alert management tool that breaks down the firehose of events from your monitoring apps.`,
+    description: `I built the entire front-end for the initial release of Ropig. Ropig is an alert management tool that breaks down the firehose of events from developer monitoring apps. It was built with GraphQL, Apollo, React and friends.`,
     links: [
       {
         description: `Go to the app`,
@@ -94,56 +120,31 @@ export const projects = {
   },
 
   'egghead-instructor-center': {
-    tags: [tags.react],
+    tags: [tags.ruby, tags.react],
     mainVisual: '/static/egghead-instructor-center.png',
     title: `egghead Instructor Center`,
-    description: `I built the initial production egghead Instructor Center. It was for egghead instructors to get onboarded, submit lessons, view their royalties etc.`,
+    description: `I built the entire first release of the egghead.io Instructor Center. It was built to help egghead instructors submit lessons, view their royalties etc. It was built with Ruby, Rails, React, Redux, and friends.`,
     links: [
       {
-        description: 'See the code',
+        description: 'See the open source portion of the code',
         href: 'https://github.com/eggheadio/egghead-instructor-center',
       },
     ],
   },
 
   'egghead-ui': {
-    tags: [tags.node, tags.react],
+    tags: [tags.react],
     mainVisual: '/static/egghead-ui.png',
     title: `egghead component library`,
-    description: `I built the initial production egghead.io component library which is used across egghead apps.  It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when placed in different situations.`,
+    description: `I built the entire first release of the egghead.io component library which is used across egghead apps. It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when composed with other components.`,
     links: [
       {
         description: `Go to the project's website`,
         href: 'https://styleguide.egghead.io',
       },
       {
-        description: 'See the code',
+        description: 'See the open source portion of the code',
         href: 'https://github.com/eggheadio/egghead-ui',
-      },
-    ],
-  },
-
-  nova: {
-    tags: [tags.terminal, tags.vim, tags.git, tags.node],
-    mainVisual: '/static/nova-colors.png',
-    title: `Nova`,
-    description: 'A color scheme where each color has a dedicated purpose.',
-    links: [
-      {
-        description: `View the project's website`,
-        href: '/projects/nova',
-      },
-      {
-        description: 'Read the blog post on how Nova was built',
-        href: '/blog/color-scheme-building',
-      },
-      {
-        description: 'See the code for the color library',
-        href: 'https://github.com/trevordmiller/nova-colors',
-      },
-      {
-        description: 'See the code for the plugins',
-        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
       },
     ],
   },
