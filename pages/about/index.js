@@ -1,6 +1,6 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
-import { githubUrl, freshlyMarriedUrl } from '../../utils/urls'
+import { resumeUrl, githubUrl, freshlyMarriedUrl } from '../../utils/urls'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
@@ -12,6 +12,10 @@ const lifeAspects = [
     label: `coder`,
     description: `I'm a software developer. I love learning and solving problems. I strive to learn new things every day and share what I learn.`,
     links: [
+      {
+        description: 'View my resume',
+        href: resumeUrl,
+      },
       {
         description: 'Watch my video courses',
         href: '/courses',
