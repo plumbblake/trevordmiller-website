@@ -7,8 +7,6 @@ import Avatar from '../Avatar'
 import Icon from '../Icon'
 import List from '../List'
 import Video from '../Video'
-import Info from '../Info'
-import { baseRoutes } from '../../pages'
 import { courses } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
 
@@ -233,15 +231,6 @@ const ScreenWithCourse = ({ id }) => {
         {
           title: 'Get started now!',
           component: enrollButton,
-        },
-
-        {
-          component: (
-            <Info>
-              <Heading level={4}>About all trevordmiller.com courses</Heading>
-              <div>{baseRoutes.courses.info}</div>
-            </Info>
-          ),
         },
       ]}
     />
