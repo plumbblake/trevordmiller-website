@@ -55,6 +55,14 @@ export const blogPosts = {
     date: 'July 23, 2017',
   },
 
+  'react-render-callback-components': {
+    tags: [tags.react],
+    mainVisual: '/static/react-render-callback-components.png',
+    title: `Sharing stateful UI logic in React apps using Render Callback components`,
+    description: `A few examples of abstracting shared logic across multiple components using the Render Callback pattern (aka Render Props or Function as Child components).`,
+    date: 'July 15, 2017',
+  },
+
   'raspberry-pi-button': {
     tags: [tags.terminal, tags.hardware, tags.node],
     mainVisual: '/static/dog-bathroom-button.jpg',
