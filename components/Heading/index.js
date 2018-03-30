@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   uiGroups,
-  fontFamilies,
   fontWeights,
   fontSizes,
   spacing,
@@ -38,8 +37,7 @@ export const levelSpecificStyles = {
 const Heading = ({ children, level }) => (
   <div
     style={{
-      fontFamily: fontFamilies.monospace,
-      fontWeight: fontWeights.normal,
+      fontWeight: fontWeights.light,
       overflowWrap: 'break-word',
       ...levelSpecificStyles[level],
     }}

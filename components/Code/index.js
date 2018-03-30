@@ -4,7 +4,7 @@ import { syntaxGroups, fontFamilies } from '../../utils/theme'
 export default ({ children }) => (
   <span
     style={{
-      fontFamily: fontFamilies.monospace,
+      fontFamily: fontFamilies.monoSpace,
       color: syntaxGroups.statement,
     }}
   >

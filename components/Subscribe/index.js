@@ -6,14 +6,12 @@ import {
   fontSizes,
   uiGroups,
   colorValues,
-  fontFamilies,
 } from '../../utils/theme'
 import Heading from '../Heading'
 import Button from '../Button'
 import Checkbox from '../Checkbox'
 
 const inputResetStyles = {
-  fontFamily: fontFamilies.sansserif,
   fontSize: fontSizes.medium,
   border: 0,
   WebkitAppearance: 'none',

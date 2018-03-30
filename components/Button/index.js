@@ -5,7 +5,6 @@ import {
   spacing,
   borderRadii,
   fontSizes,
-  fontFamilies,
 } from '../../utils/theme'
 
 const stylesByType = {
@@ -42,7 +41,6 @@ export default ({ onClick, type = 'primary', children }) => (
       textAlign: 'center',
       border: 'none',
       fontSize: fontSizes.medium,
-      fontFamily: fontFamilies.sansserif,
       outline: 'none',
       borderRadius: borderRadii.medium,
       ...stylesByType[type],

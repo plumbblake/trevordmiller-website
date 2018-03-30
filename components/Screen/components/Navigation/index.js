@@ -5,8 +5,8 @@ import { baseRoutes, baseRouteKeys } from '../../../../pages'
 import {
   uiGroups,
   spacing,
-  fontFamilies,
   fontSizes,
+  fontWeights,
 } from '../../../../utils/theme'
 
 export default ({ baseRouteKey }) => (
@@ -61,12 +61,12 @@ export default ({ baseRouteKey }) => (
             <span
               style={{
                 marginLeft: spacing.xsmall,
-                fontFamily: fontFamilies.monospace,
                 color:
                   baseRouteKey === innerBaseRouteKey
                     ? uiGroups.userCurrentState
                     : uiGroups.gray4,
                 fontSize: fontSizes.large,
+                fontWeight: fontWeights.light,
               }}
             >
               {baseRoute.title}
