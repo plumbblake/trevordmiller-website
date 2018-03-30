@@ -8,6 +8,4 @@ export const facebookUrl = 'https://www.facebook.com/trevordmillercom'
 
 export const linkedinUrl = 'https://www.linkedin.com/in/trevordmiller'
 
-export const resumeUrl = 'https://stackoverflow.com/cv/trevordmiller'
-
 export const freshlyMarriedUrl = 'https://freshlymarried.com'
