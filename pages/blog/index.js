@@ -4,6 +4,49 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
+  'brittle-css': {
+    tags: [tags.css],
+    mainVisual: '/static/brittle-css.jpg',
+    title: `How to find and fix brittle CSS`,
+    description: `This article shows examples of making CSS easier to maintain with Flexbox, fluid values, additive media queries etc.`,
+    date: 'March 12, 2018',
+    links: [
+      {
+        description: 'Read the blog post',
+        href: 'https://ropig.com/blog/find-fix-brittle-css/',
+      },
+    ],
+  },
+
+  'graphql-schema': {
+    tags: [tags.graphQl],
+    mainVisual: '/static/graphql-schema.jpg',
+    title: `Using a GraphQL schema to supercharge team collaboration`,
+    description: `Examples of using a GraphQL schema to automate data pieces across back-end and front-end.`,
+    date: 'December 13, 2017',
+    links: [
+      {
+        description: 'Read the blog post',
+        href:
+          'https://ropig.com/blog/using-graphql-schema-supercharge-team-collaboration/',
+      },
+    ],
+  },
+
+  'end-to-end-tests': {
+    tags: [tags.node],
+    mainVisual: '/static/end-to-end-tests.png',
+    title: `End-to-end Tests that Don’t Suck with Puppeteer`,
+    description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
+    date: 'October 16, 2017',
+    links: [
+      {
+        description: 'Read the blog post',
+        href: 'https://ropig.com/blog/end-end-tests-dont-suck-puppeteer/',
+      },
+    ],
+  },
+
   dotfiles: {
     tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',
@@ -83,12 +126,14 @@ export default () => (
             tags={blogPost.tags}
             visual={blogPost.mainVisual}
             description={blogPost.description}
-            links={[
-              {
-                description: 'Read the blog post',
-                href: `/blog/${blogPostKey}`,
-              },
-            ]}
+            links={
+              blogPost.links || [
+                {
+                  description: 'Read the blog post',
+                  href: `/blog/${blogPostKey}`,
+                },
+              ]
+            }
           />
         ),
       }

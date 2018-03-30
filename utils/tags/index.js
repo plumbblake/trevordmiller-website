@@ -64,18 +64,25 @@ const tags = {
     order: 8,
   },
 
+  css: {
+    label: 'CSS',
+    color: syntaxGroups.type,
+    icon: 'css',
+    order: 9,
+  },
+
   hardware: {
     label: 'Hardware',
     color: syntaxGroups.type,
     icon: 'plug',
-    order: 9,
+    order: 10,
   },
 
   general: {
     label: 'General',
     color: syntaxGroups.type,
     icon: 'tag',
-    order: 10,
+    order: 11,
   },
 }
 
