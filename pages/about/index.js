@@ -1,6 +1,6 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
-import { githubUrl, freshlyMarriedUrl } from '../../utils/urls'
+import { freshlyMarriedUrl } from '../../utils/urls'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
@@ -9,7 +9,7 @@ import Teaser from '../../components/Teaser'
 const lifeAspects = [
   {
     visual: 'terminal',
-    label: `coder`,
+    label: `software developer`,
     description: `I'm a software developer. I love learning and solving problems. I strive to learn new things every day and share what I learn. I especially enjoy open source, testing, and clean code.`,
     links: [
       {
@@ -25,8 +25,8 @@ const lifeAspects = [
         href: '/projects',
       },
       {
-        description: 'Check out my open source code on GitHub',
-        href: githubUrl,
+        description: 'View my resume',
+        href: '/resume',
       },
       {
         description: 'Subscribe to my email lists and social media posts',
@@ -38,7 +38,7 @@ const lifeAspects = [
   {
     visual: 'couple',
     label: 'family man',
-    description: `One dog. No kids (yet). We like playing video games, watching shows, going on walks - we are pretty boring but we like it! My wife runs a neat project called Freshly Married to help couples strengthen their relationships.`,
+    description: `I'm a family man. A wife, a dog, no kids (yet). We like playing video games, watching shows, going on walks - we are pretty boring but we like it! My wife runs a neat project called Freshly Married to help couples strengthen their relationships.`,
     links: [
       {
         description: 'View Freshly Married',
