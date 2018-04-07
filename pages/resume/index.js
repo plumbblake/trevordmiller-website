@@ -6,14 +6,20 @@ import List from '../../components/List'
 
 export const companies = {
   trevordmiller: {
-    tags: [tags.inProgress, tags.general],
+    tags: [
+      tags.inProgress,
+      tags.node,
+      tags.react,
+      tags.reactNative,
+      tags.typescript,
+    ],
     title: `Owner at trevordmiller`,
     description: (
       <List
         items={[
           `Maintaining open source libraries and apps`,
           `Building freelance apps and services`,
-          `Teaching thousands of developers through online courses, conferences, and local bootcamps`,
+          `Teaching thousands of developers through online courses, conferences, and local boot camps`,
         ]}
       />
     ),

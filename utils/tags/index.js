@@ -71,39 +71,60 @@ const tags = {
     order: 9,
   },
 
+  reactNative: {
+    label: 'React Native',
+    color: syntaxGroups.type,
+    icon: 'react',
+    order: 10,
+  },
+
+  typescript: {
+    label: 'TypeScript',
+    color: syntaxGroups.type,
+    icon: 'typescript',
+    order: 11,
+  },
+
+  flow: {
+    label: 'Flow',
+    color: syntaxGroups.type,
+    icon: 'flow',
+    order: 12,
+  },
+
   redux: {
     label: 'Redux',
     color: syntaxGroups.type,
     icon: 'redux',
-    order: 10,
+    order: 13,
   },
 
   javascript: {
     label: 'JavaScript',
     color: syntaxGroups.type,
     icon: 'javascript',
-    order: 11,
+    order: 14,
   },
 
   css: {
     label: 'CSS',
     color: syntaxGroups.type,
     icon: 'css',
-    order: 12,
+    order: 15,
   },
 
   php: {
     label: 'PHP',
     color: syntaxGroups.type,
     icon: 'php',
-    order: 13,
+    order: 16,
   },
 
   ruby: {
     label: 'Ruby',
     color: syntaxGroups.type,
     icon: 'ruby',
-    order: 14,
+    order: 17,
   },
 }
 
