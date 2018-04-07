@@ -75,7 +75,7 @@ export default () => (
                 marginBottom: spacing.small,
               }}
             >
-              You can buy it through most digital music stores.
+              You can get it through most digital music stores.
             </div>
             <List
               items={release.stores.map(store => (
