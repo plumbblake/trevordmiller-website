@@ -11,7 +11,7 @@ export const courses = {
     previewVideoThumbnail:
       '/static/real-world-git-coruse-preview-thumbnail.png',
     title: `Real-world Git`,
-    description: `Learn the most important Git commands`,
+    description: `Learn the most important Git commands.`,
     cost: 0,
     time: '1 hour',
     enrollHref:
@@ -112,28 +112,28 @@ export const courses = {
     ],
   },
 
-  'egghead-testing-cookbook': {
-    tags: [tags.terminal, tags.node, tags.react],
-    mainVisual: '/static/egghead-testing-cookbook.png',
-    title: `Testing Cookbook`,
-    description: `I've grown to love testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
-    links: [
-      {
-        description: 'View the videos',
-        href: 'https://egghead.io/courses/react-testing-cookbook',
-      },
-    ],
-  },
-
   'egghead-publish-npm': {
     tags: [tags.terminal, tags.git, tags.node],
     mainVisual: '/static/egghead-publish-npm.png',
     title: `Publish packages on npm`,
-    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
+    description: `Learn how to share your code through npm packages.`,
     links: [
       {
         description: 'View the videos',
         href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
+      },
+    ],
+  },
+
+  'egghead-testing-cookbook': {
+    tags: [tags.terminal, tags.node, tags.react],
+    mainVisual: '/static/egghead-testing-cookbook.png',
+    title: `React Testing Cookbook`,
+    description: `Learn how to test JavaScript modules, React components, and Redux pieces.`,
+    links: [
+      {
+        description: 'View the videos',
+        href: 'https://egghead.io/courses/react-testing-cookbook',
       },
     ],
   },
