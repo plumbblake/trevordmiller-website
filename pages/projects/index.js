@@ -4,15 +4,117 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
-  edgar: {
-    tags: [tags.inProgress, tags.postgresql, tags.ruby, tags.react],
-    mainVisual: '/static/edgar.jpg',
-    title: 'Edgar',
-    description: `I'm currently working full-time as a full-stack software developer on Edgar. Edgar is a tool that automatically recycles your social media library. It is built with PostgreSQL, Ruby, Rails, React, Redux and friends.`,
+  'dog-bathroom-button': {
+    tags: [tags.terminal, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Dog Bathroom Button`,
+    description: `A Node server for a Raspberry Pi which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
     links: [
       {
-        description: `Go to the app`,
-        href: 'https://meetedgar.com',
+        description: 'Read the blog post on how it was built',
+        href: '/blog/raspberry-pi-button',
+      },
+      {
+        description: 'See the code',
+        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+      },
+    ],
+  },
+
+  'shell-scripts': {
+    tags: [tags.terminal, tags.vim, tags.git],
+    mainVisual: '/static/github.png',
+    title: `Shell Scripts`,
+    description: `Shell scripts to automate repetitive tasks on my computer.`,
+    links: [
+      {
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/shell-scripts',
+      },
+    ],
+  },
+
+  dotfiles: {
+    tags: [tags.terminal, tags.vim, tags.git],
+    mainVisual: '/static/github.png',
+    title: `Dotfiles`,
+    description: `Dotfiles for all my tools and settings.`,
+    links: [
+      {
+        description: 'Read the blog post on how I use these dotfiles',
+        href: '/blog/dotfiles',
+      },
+      {
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/dotfiles',
+      },
+    ],
+  },
+
+  'egghead-instructor-center': {
+    tags: [tags.ruby, tags.react, tags.redux],
+    mainVisual: '/static/egghead-instructor-center.png',
+    title: `egghead Instructor Center`,
+    description: `A web app for egghead.io instructors to submit lessons, view their royalties etc.`,
+    links: [
+      {
+        description: 'See the open source portion of the code',
+        href: 'https://github.com/eggheadio/egghead-instructor-center',
+      },
+    ],
+  },
+
+  'egghead-ui': {
+    tags: [tags.react],
+    mainVisual: '/static/egghead-ui.png',
+    title: `egghead component library`,
+    description: `An npm component library and living style guide for egghead.io.`,
+    links: [
+      {
+        description: `Go to the project's website`,
+        href: 'https://styleguide.egghead.io',
+      },
+      {
+        description: 'See the open source portion of the code',
+        href: 'https://github.com/eggheadio/egghead-ui',
+      },
+    ],
+  },
+
+  cortex: {
+    tags: [tags.react, tags.node, tags.graphQl],
+    mainVisual: '/static/cortex.png',
+    title: `Cortex`,
+    description: `A proof of concept for rendering the same set of GraphQL connected React components across targets (web, native mobile, and native desktop).`,
+    links: [
+      {
+        description: 'See the code for the GraphQL API',
+        href: 'https://github.com/trevordmiller/cortex-api',
+      },
+      {
+        description: 'See the code for the component library',
+        href: 'https://github.com/trevordmiller/cortex-components',
+      },
+      {
+        description: 'See the code for the clients',
+        href: 'https://github.com/trevordmiller/cortex-clients',
+      },
+    ],
+  },
+
+  'trevordmiller-website': {
+    tags: [tags.inProgress, tags.react, tags.node],
+    mainVisual: '/static/trevordmiller-website.png',
+    title: `trevordmiller.com`,
+    description: `A website (this website) to aggregate all my stuff.`,
+    links: [
+      {
+        description: 'Read the blog post on how I built it',
+        href: '/blog/rebuilding-my-website',
+      },
+      {
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },
@@ -43,193 +145,20 @@ export const projects = {
     ],
   },
 
-  'trevordmiller-website': {
-    tags: [
-      tags.inProgress,
-      tags.terminal,
-      tags.vim,
-      tags.git,
-      tags.react,
-      tags.node,
-    ],
-    mainVisual: '/static/trevordmiller-website.png',
-    title: `trevordmiller.com`,
-    description: `I add new courses, blog posts, and projects to my website (this website) regularly.`,
-    links: [
-      {
-        description: 'Read the blog post on how I built it',
-        href: '/blog/rebuilding-my-website',
-      },
-      {
-        description: `See the code`,
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
-      },
-    ],
-  },
-
-  ropig: {
-    tags: [tags.react, tags.node, tags.graphQl],
-    mainVisual: '/static/ropig.jpg',
-    title: 'Ropig',
-    description: `I built the entire front-end for the initial release of Ropig. Ropig is an alert management tool that breaks down the firehose of events from developer monitoring apps. It was built with GraphQL, Apollo, React and friends.`,
-    links: [
-      {
-        description: `Go to the app`,
-        href: 'https://ropig.com',
-      },
-    ],
-  },
-
-  'real-world-git': {
-    tags: [tags.terminal, tags.git],
-    mainVisual: '/static/real-world-git.png',
-    title: `Real-world Git`,
-    description: `Git is one of the most important tools for almost all developers. I made this hour long video course to help developers learn how to use Git from the command line.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: '/courses/real-world-git',
-      },
-    ],
-  },
-
-  'egghead-testing-cookbook': {
-    tags: [tags.terminal, tags.node, tags.react],
-    mainVisual: '/static/egghead-testing-cookbook.png',
-    title: `Testing Cookbook`,
-    description: `I've grown to love testing, especially for creating "pure" modules that just transform data or render something. I taught this video course to show some of the ways I test my code.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: 'https://egghead.io/courses/react-testing-cookbook',
-      },
-    ],
-  },
-
-  'egghead-publish-npm': {
-    tags: [tags.terminal, tags.git, tags.node],
-    mainVisual: '/static/egghead-publish-npm.png',
-    title: `Publish packages on npm`,
-    description: `I made this 20 minute long video course to help programmers learn how to share their own code on npm. It can seem scary at first, but learning how to do this can open up a world of new possibilities for you and your team.`,
-    links: [
-      {
-        description: 'View the video course',
-        href: 'https://egghead.io/courses/publish-javascript-packages-on-npm',
-      },
-    ],
-  },
-
-  'egghead-instructor-center': {
-    tags: [tags.ruby, tags.react],
-    mainVisual: '/static/egghead-instructor-center.png',
-    title: `egghead Instructor Center`,
-    description: `I built the entire first release of the egghead.io Instructor Center. It was built to help egghead instructors submit lessons, view their royalties etc. It was built with Ruby, Rails, React, Redux, and friends.`,
-    links: [
-      {
-        description: 'See the open source portion of the code',
-        href: 'https://github.com/eggheadio/egghead-instructor-center',
-      },
-    ],
-  },
-
-  'egghead-ui': {
-    tags: [tags.react],
-    mainVisual: '/static/egghead-ui.png',
-    title: `egghead component library`,
-    description: `I built the entire first release of the egghead.io component library which is used across egghead apps. It outputs an npm library as well as a living style guide from the library source. The app lets you randomize component and utility input to ensure data input is flexible. It also lets you add padding and other "side effects" to see how the components work when composed with other components.`,
-    links: [
-      {
-        description: `Go to the project's website`,
-        href: 'https://styleguide.egghead.io',
-      },
-      {
-        description: 'See the open source portion of the code',
-        href: 'https://github.com/eggheadio/egghead-ui',
-      },
-    ],
-  },
-
-  dotfiles: {
-    tags: [tags.terminal, tags.vim, tags.git],
-    mainVisual: '/static/github.png',
-    title: `Dotfiles`,
-    description: `I organize my tooling settings in dotfiles.`,
-    links: [
-      {
-        description: 'Read the blog post on how I use these dotfiles',
-        href: '/blog/dotfiles',
-      },
-      {
-        description: `See the code`,
-        href: 'https://github.com/trevordmiller/dotfiles',
-      },
-    ],
-  },
-
-  'shell-scripts': {
-    tags: [tags.terminal, tags.vim, tags.git],
-    mainVisual: '/static/github.png',
-    title: `Shell Scripts`,
-    description: `I write shell scripts to automate repetitive tasks on my computer; this includes things like checking all git repo statuses, starting workflows for different projects, scaffolding a new project, stopping all processes on my computer, setting up a new computer etc.`,
-    links: [
-      {
-        description: `See the code`,
-        href: 'https://github.com/trevordmiller/shell-scripts',
-      },
-    ],
-  },
-
-  'dog-bathroom-button': {
-    tags: [tags.terminal, tags.node, tags.hardware],
-    mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Dog Bathroom Button`,
-    description: `I attached a physical button to a Raspberry Pi for my dog to press with his paw when he needs to go to the bathroom. The button runs a Node program which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
-    links: [
-      {
-        description: 'Read the blog post on how it was built',
-        href: '/blog/raspberry-pi-button',
-      },
-      {
-        description: 'See the code',
-        href: 'https://github.com/trevordmiller/dog-bathroom-button',
-      },
-    ],
-  },
-
   hideaway: {
     tags: [tags.react, tags.node],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
-    description: 'A Mac app to escape distractions for a set amount of time.',
+    description:
+      'A native Mac app to escape distractions for a set amount of time.',
     links: [
       {
-        description: `View the app`,
+        description: `View the app's website`,
         href: '/projects/hideaway',
       },
       {
         description: 'See the code',
         href: 'https://github.com/trevordmiller/hideaway',
-      },
-    ],
-  },
-
-  cortex: {
-    tags: [tags.react, tags.node, tags.graphQl],
-    mainVisual: '/static/cortex.png',
-    title: `Cortex`,
-    description: `A proof of concept for rendering the same set of GraphQL connected React components across targets (web, native mobile, and native desktop).`,
-    links: [
-      {
-        description: 'See the code for the GraphQL API',
-        href: 'https://github.com/trevordmiller/cortex-api',
-      },
-      {
-        description: 'See the code for the component library',
-        href: 'https://github.com/trevordmiller/cortex-components',
-      },
-      {
-        description: 'See the code for the clients',
-        href: 'https://github.com/trevordmiller/cortex-clients',
       },
     ],
   },
@@ -244,21 +173,11 @@ export const projects = {
         description: 'View the app',
         href: '/projects/guitar-lessons',
       },
+      {
+        description: 'See the code',
+        href: 'https://github.com/trevordmiller/hideaway',
+      },
     ],
-  },
-
-  'domo-mobile-web': {
-    tags: [tags.react, tags.node],
-    mainVisual: '/static/domo.png',
-    title: `Domo Mobile Web`,
-    description: `I helped create the initial production mobile web app for Domo.`,
-  },
-
-  'church-history': {
-    tags: [tags.node],
-    mainVisual: '/static/church-history.png',
-    title: `LDS Church History`,
-    description: `I helped create the LDS Church History web app. Which at the time included some new complex challenges like using Node for our API, server side rendering, interactive maps, and mobile first immersive visual effects.`,
   },
 
   'perfect-particle': {
@@ -268,8 +187,12 @@ export const projects = {
     description: `Instrumental music that blends multiple styles like post rock, math rock, modern jazz, and ambient.`,
     links: [
       {
-        description: `View the project's website`,
+        description: `View the website`,
         href: '/projects/perfect-particle',
+      },
+      {
+        description: 'See the code',
+        href: 'https://github.com/trevordmiller/hideaway',
       },
     ],
   },
