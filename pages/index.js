@@ -20,7 +20,7 @@ export const baseRoutes = {
   projects: {
     path: '/projects',
     title: 'Projects',
-    description: 'My work and open source projects.',
+    description: 'My open source code.',
     visual: 'folder',
   },
 

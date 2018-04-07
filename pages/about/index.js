@@ -21,11 +21,11 @@ const lifeAspects = [
         href: '/blog',
       },
       {
-        description: 'See my current and past projects',
+        description: 'See my open source code',
         href: '/projects',
       },
       {
-        description: 'View my resume',
+        description: 'View my work experience',
         href: '/resume',
       },
       {
