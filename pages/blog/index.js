@@ -4,6 +4,14 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
+  'windows-on-mac': {
+    tags: [tags.hardware],
+    mainVisual: '/static/macbook.jpg',
+    title: `Running Windows on Mac`,
+    description: `How to set up Windows on a Mac legally, for free, with native performance.`,
+    date: 'April 6, 2018',
+  },
+
   'brittle-css': {
     tags: [tags.css],
     mainVisual: '/static/brittle-css.jpg',
