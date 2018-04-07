@@ -64,25 +64,32 @@ const tags = {
     order: 8,
   },
 
+  redux: {
+    label: 'Redux',
+    color: syntaxGroups.type,
+    icon: 'redux',
+    order: 9,
+  },
+
   css: {
     label: 'CSS',
     color: syntaxGroups.type,
     icon: 'css',
-    order: 9,
+    order: 10,
   },
 
   hardware: {
     label: 'Hardware',
     color: syntaxGroups.type,
     icon: 'plug',
-    order: 10,
+    order: 11,
   },
 
   general: {
     label: 'General',
     color: syntaxGroups.type,
     icon: 'tag',
-    order: 11,
+    order: 12,
   },
 }
 
