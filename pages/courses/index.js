@@ -129,7 +129,7 @@ export const courses = {
     tags: [tags.terminal, tags.node, tags.react, tags.redux],
     mainVisual: '/static/egghead-testing-cookbook.png',
     title: `React Testing Cookbook`,
-    description: `Learn how to test JavaScript modules, React components, and Redux pieces.`,
+    description: `Learn how to test JavaScript modules, React components, and Redux pieces (a bit outdated).`,
     links: [
       {
         description: 'View the videos',
