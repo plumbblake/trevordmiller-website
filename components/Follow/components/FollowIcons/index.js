@@ -1,11 +1,6 @@
 import React from 'react'
 import { colorValues, fontSizes, spacing } from '../../../../utils/theme'
-import {
-  githubUrl,
-  twitterUrl,
-  facebookUrl,
-  linkedinUrl,
-} from '../../../../utils/urls'
+import { githubUrl, twitterUrl, linkedinUrl } from '../../../../utils/urls'
 import Anchor from '../../../Anchor'
 import Icon from '../../../Icon'
 
@@ -20,12 +15,6 @@ const followItems = [
     iconType: 'twitter',
     label: 'Twitter',
     href: twitterUrl,
-  },
-
-  {
-    iconType: 'facebook',
-    label: 'Facebook',
-    href: facebookUrl,
   },
 
   {
