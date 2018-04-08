@@ -152,7 +152,7 @@ export default () => (
           <Teaser
             tags={course.tags}
             visual={course.mainVisual}
-            description={course.description}
+            body={course.description}
             links={
               course.links || [
                 {

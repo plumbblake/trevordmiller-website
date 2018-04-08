@@ -63,7 +63,7 @@ export default () => (
           <Teaser
             key={index}
             visual={baseRoute.visual}
-            description={baseRoute.description}
+            body={baseRoute.description}
             links={[
               {
                 description: `View ${baseRoute.title} page`,

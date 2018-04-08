@@ -17,7 +17,7 @@ export const companies = {
       tags.typescript,
     ],
     title: `Owner at trevordmiller`,
-    description: (
+    responsibilities: (
       <List
         items={[
           `Maintaining open source libraries and apps`,
@@ -39,7 +39,7 @@ export const companies = {
       tags.redux,
     ],
     title: 'Senior Software Developer at MeetEdgar',
-    description: (
+    responsibilities: (
       <List
         items={[
           `Contributing to full-stack development of the Edgar web app`,
@@ -57,7 +57,7 @@ export const companies = {
   egghead: {
     tags: [tags.node, tags.react, tags.redux],
     title: 'Director of Instruction at egghead.io',
-    description: (
+    responsibilities: (
       <List
         items={[
           `Led onboarding of all new instructors`,
@@ -72,7 +72,7 @@ export const companies = {
   domo: {
     tags: [tags.node, tags.react],
     title: `Senior Software Developer at Domo`,
-    description: (
+    responsibilities: (
       <List
         items={[
           `Built the mobile web app`,
@@ -85,7 +85,7 @@ export const companies = {
   ics: {
     tags: [tags.node, tags.javascript, tags.css],
     title: `Software Developer at ICS`,
-    description: (
+    responsibilities: (
       <List
         items={[
           `Led mobile-first development for users across the world in over 70 languages`,
@@ -101,7 +101,7 @@ export const companies = {
   qualtrics: {
     tags: [tags.javascript, tags.css],
     title: `Software Developer at Qualtrics`,
-    description: (
+    responsibilities: (
       <List
         items={[
           `Built over 500 custom themes for important companies (Google, Microsoft, etc.)`,
@@ -117,7 +117,7 @@ export const companies = {
   byu: {
     tags: [tags.javascript, tags.css, tags.php],
     title: `Software Developer at Brigham Young University`,
-    description: (
+    responsibilities: (
       <List
         items={[
           `Maintained websites for 12 BYU programs`,
@@ -218,12 +218,13 @@ export default () => (
           </div>
         ),
       },
+
       ...companyKeys.map(companyKey => {
         const company = companies[companyKey]
         return {
           title: company.title,
           component: (
-            <Teaser tags={company.tags} description={company.description} />
+            <Teaser tags={company.tags} body={company.responsibilities} />
           ),
         }
       }),

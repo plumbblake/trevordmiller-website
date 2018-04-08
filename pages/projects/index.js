@@ -211,7 +211,7 @@ export default () => (
           <Teaser
             tags={project.tags}
             visual={project.mainVisual}
-            description={project.description}
+            body={project.description}
             links={project.links}
           />
         ),

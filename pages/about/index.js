@@ -91,7 +91,7 @@ export default () => (
           <Teaser
             key={index}
             visual={lifeAspect.visual}
-            description={lifeAspect.description}
+            body={lifeAspect.description}
             links={lifeAspect.links}
           />
         ),

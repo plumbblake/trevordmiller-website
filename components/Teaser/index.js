@@ -12,7 +12,7 @@ import Anchor from '../Anchor'
 import Image from '../Image'
 import Icon from '../Icon'
 
-export default ({ visual, description, links, tags }) => (
+export default ({ visual, body, links, tags }) => (
   <div>
     {tags ? (
       <div
@@ -89,7 +89,7 @@ export default ({ visual, description, links, tags }) => (
           flexBasis: screenSizes.small,
         }}
       >
-        <div>{description}</div>
+        <div>{body}</div>
         {links ? (
           <div
             style={{

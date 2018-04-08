@@ -141,7 +141,7 @@ export default () => (
           <Teaser
             tags={blogPost.tags}
             visual={blogPost.mainVisual}
-            description={blogPost.description}
+            body={blogPost.description}
             links={
               blogPost.links || [
                 {
