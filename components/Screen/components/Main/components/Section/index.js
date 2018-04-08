@@ -21,7 +21,9 @@ const Section = ({ children, note, title }) => (
         {note}
       </div>
     )}
+
     {title && <Heading level={3}>{title}</Heading>}
+
     {children}
   </section>
 )

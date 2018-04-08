@@ -1,4 +1,4 @@
-import { uiGroups } from '../../../utils/theme'
+import { spacing, uiGroups } from '../../../utils/theme'
 
 export default `
   body {
@@ -42,5 +42,27 @@ export default `
   a:hover, button:hover, input[type='submit']:hover {
     opacity: 0.5;
     cursor: pointer;
+  }
+
+  @media print {
+    @page {
+      margin: 0;
+    }
+
+    header,
+    footer {
+      display: none;
+    }
+
+    main {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    section {
+      page-break-inside: avoid;
+      padding-top: ${spacing.large}px !important;
+      padding-bottom: ${spacing.large}px !important;
+    }
   }
 `
