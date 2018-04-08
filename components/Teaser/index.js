@@ -31,12 +31,12 @@ export default ({ visual, description, links, tags }) => (
               borderRadius: borderRadii.medium,
               color: tag.color,
               fontSize: fontSizes.small,
-              paddingTop: spacing.xsmall,
-              paddingBottom: spacing.xsmall,
-              paddingRight: spacing.small,
-              paddingLeft: spacing.small,
-              marginRight: spacing.small,
-              marginBottom: spacing.small,
+              paddingTop: spacing.xxsmall,
+              paddingBottom: spacing.xxsmall,
+              paddingRight: spacing.xsmall,
+              paddingLeft: spacing.xsmall,
+              marginRight: spacing.xsmall,
+              marginBottom: spacing.xsmall,
             }}
           >
             <div
@@ -45,12 +45,11 @@ export default ({ visual, description, links, tags }) => (
                 alignItems: 'center',
               }}
             >
-              {tag.icon ? (
-                <Icon type={tag.icon} fill={tag.color} size={fontSizes.large} />
-              ) : null}
+              <Icon type={tag.icon} fill={tag.color} size={fontSizes.medium} />
+
               <div
                 style={{
-                  marginLeft: tag.icon ? spacing.xsmall : 0,
+                  marginLeft: spacing.xsmall,
                 }}
               >
                 {tag.label}
