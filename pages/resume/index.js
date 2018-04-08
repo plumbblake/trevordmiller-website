@@ -169,6 +169,7 @@ export default () => (
                     },
                   ].map(handle => (
                     <div
+                      key={handle.icon}
                       style={{
                         display: 'flex',
                         alignItems: 'center',
