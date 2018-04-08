@@ -1,8 +1,11 @@
 import React from 'react'
 import tags from '../../utils/tags'
+import { spacing, fontSizes, uiGroups } from '../../utils/theme'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 import List from '../../components/List'
+import Avatar from '../../components/Avatar'
+import Icon from '../../components/Icon'
 
 export const companies = {
   trevordmiller: {
@@ -130,14 +133,100 @@ const companyKeys = Object.keys(companies)
 export default () => (
   <ScreenWithBaseRoute
     id="resume"
-    sections={companyKeys.map(companyKey => {
-      const company = companies[companyKey]
-      return {
-        title: company.title,
+    sections={[
+      {
         component: (
-          <Teaser tags={company.tags} description={company.description} />
+          <div
+            style={{
+              marginBottom: spacing.small,
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <div
+              style={{
+                width: 100,
+                minWidth: 100,
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Avatar />
+            </div>
+
+            <div
+              style={{
+                marginLeft: spacing.medium,
+                fontSize: fontSizes.small,
+              }}
+            >
+              <div>Trevor D. Miller</div>
+              <div
+                style={{
+                  color: uiGroups.gray4,
+                }}
+              >
+                <div>Software Developer</div>
+                <div>https://trevordmiller.com</div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
+                >
+                  {[
+                    {
+                      icon: 'github',
+                      text: 'trevordmiller',
+                    },
+                    {
+                      icon: 'twitter',
+                      text: 'trevordmiller',
+                    },
+                    {
+                      icon: 'linkedin',
+                      text: 'trevordmiller',
+                    },
+                  ].map(handle => (
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginRight: spacing.medium,
+                      }}
+                    >
+                      <div
+                        style={{
+                          marginRight: spacing.xxsmall,
+                          display: 'flex',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <Icon
+                          type={handle.icon}
+                          size={fontSizes.small}
+                          fill={uiGroups.gray4}
+                        />
+                      </div>
+                      <div>{handle.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         ),
-      }
-    })}
+      },
+      ...companyKeys.map(companyKey => {
+        const company = companies[companyKey]
+        return {
+          title: company.title,
+          component: (
+            <Teaser tags={company.tags} description={company.description} />
+          ),
+        }
+      }),
+    ]}
   />
 )
