@@ -20,7 +20,7 @@ export default ({ title, mainVisual, description, info, cta, sections }) => (
         cta={cta}
       />
       {sections.map((section, index) => (
-        <Section key={index} title={section.title}>
+        <Section key={index} note={section.note} title={section.title}>
           {section.component}
         </Section>
       ))}

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing } from '../../../../../../utils/theme'
+import { spacing, uiGroups } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 
-const Section = ({ children, title }) => (
+const Section = ({ children, note, title }) => (
   <section
     id={title}
     style={{
@@ -12,7 +12,16 @@ const Section = ({ children, title }) => (
       paddingRight: spacing.large,
     }}
   >
-    {title ? <Heading level={3}>{title}</Heading> : null}
+    {note && (
+      <div
+        style={{
+          color: uiGroups.gray3,
+        }}
+      >
+        {note}
+      </div>
+    )}
+    {title && <Heading level={3}>{title}</Heading>}
     {children}
   </section>
 )

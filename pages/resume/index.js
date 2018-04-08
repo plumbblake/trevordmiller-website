@@ -17,15 +17,12 @@ export const companies = {
       tags.typescript,
     ],
     title: `Owner at trevordmiller`,
-    responsibilities: (
-      <List
-        items={[
-          `Maintaining open source libraries and apps`,
-          `Building freelance apps and services`,
-          `Teaching thousands of developers through online courses, conferences, and local boot camps`,
-        ]}
-      />
-    ),
+    dateRange: `January 2009 - Present`,
+    responsibilities: [
+      `Maintaining open source libraries and apps`,
+      `Building freelance apps and services`,
+      `Teaching thousands of developers through online courses, conferences, and local boot camps`,
+    ],
   },
 
   meetedgar: {
@@ -39,92 +36,74 @@ export const companies = {
       tags.redux,
     ],
     title: 'Senior Software Developer at MeetEdgar',
-    responsibilities: (
-      <List
-        items={[
-          `Contributing to full-stack development of the Edgar web app`,
-          `Converting desktop only styles to cross-platform responsive styles`,
-          `Managing tests, builds, and deployments in Continous Integration`,
-          `Refactored thousands of old tests`,
-          `Led front-end development of the Ropig web app`,
-          `Automated API layer between back-end and front-end`,
-          `Introduced end-to-end tests for critical features`,
-        ]}
-      />
-    ),
+    dateRange: `May 2017 - Present`,
+    responsibilities: [
+      `Contributing to full-stack development of the Edgar web app`,
+      `Converting desktop only styles to cross-platform responsive styles`,
+      `Managing tests, builds, and deployments in Continous Integration`,
+      `Refactored thousands of old tests`,
+      `Led front-end development of the Ropig web app`,
+      `Automated API layer between back-end and front-end`,
+      `Introduced end-to-end tests for critical features`,
+    ],
   },
 
   egghead: {
     tags: [tags.node, tags.react, tags.redux],
     title: 'Director of Instruction at egghead.io',
-    responsibilities: (
-      <List
-        items={[
-          `Led onboarding of all new instructors`,
-          `Developed the instructor web app for uploading videos, viewing royalties/stats etc.`,
-          `Built the component library shared across egghead apps`,
-          `Recorded and published my own courses as an instructor`,
-        ]}
-      />
-    ),
+    dateRange: `July 2015 - May 2017`,
+    responsibilities: [
+      `Led onboarding of all new instructors`,
+      `Developed the instructor web app for uploading videos, viewing royalties/stats etc.`,
+      `Built the component library shared across egghead apps`,
+      `Recorded and published my own courses as an instructor`,
+    ],
   },
 
   domo: {
     tags: [tags.node, tags.react],
     title: `Senior Software Developer at Domo`,
-    responsibilities: (
-      <List
-        items={[
-          `Built the mobile web app`,
-          `Applied complex logic for data visualizations, client-side caching, and realtime chat`,
-        ]}
-      />
-    ),
+    dateRange: `September 2015 - October 2016`,
+    responsibilities: [
+      `Built the mobile web app`,
+      `Applied complex logic for data visualizations, client-side caching, and realtime chat`,
+    ],
   },
 
   ics: {
     tags: [tags.node, tags.javascript, tags.css],
     title: `Software Developer at ICS`,
-    responsibilities: (
-      <List
-        items={[
-          `Led mobile-first development for users across the world in over 70 languages`,
-          `Authored and maintained an internal framework built for performance and accessibility`,
-          `Published npm modules for use across projects and teams`,
-          `Helped start the component library shared across projects`,
-          `Introduced unit testing to old and new code`,
-        ]}
-      />
-    ),
+    dateRange: `March 2014 - September 2015`,
+    responsibilities: [
+      `Led mobile-first development for users across the world in over 70 languages`,
+      `Authored and maintained an internal framework built for performance and accessibility`,
+      `Published npm modules for use across projects and teams`,
+      `Helped start the component library shared across projects`,
+      `Introduced unit testing to old and new code`,
+    ],
   },
 
   qualtrics: {
     tags: [tags.javascript, tags.css],
     title: `Software Developer at Qualtrics`,
-    responsibilities: (
-      <List
-        items={[
-          `Built over 500 custom themes for important companies (Google, Microsoft, etc.)`,
-          `Updated team templates to be responsive`,
-          `Created a custom Facebook app`,
-          `Interviewed potential new hires`,
-          `Trained new hires`,
-        ]}
-      />
-    ),
+    dateRange: `May 2013 - March 2014`,
+    responsibilities: [
+      `Built over 500 custom themes for important companies (Google, Microsoft, etc.)`,
+      `Updated team templates to be responsive`,
+      `Created a custom Facebook app`,
+      `Interviewed potential new hires`,
+      `Trained new hires`,
+    ],
   },
 
   byu: {
     tags: [tags.javascript, tags.css, tags.php],
     title: `Software Developer at Brigham Young University`,
-    responsibilities: (
-      <List
-        items={[
-          `Maintained websites for 12 BYU programs`,
-          `Updated team templates to be responsive`,
-        ]}
-      />
-    ),
+    dateRange: `August 2012 - May 2013`,
+    responsibilities: [
+      `Maintained websites for 12 BYU programs`,
+      `Updated team templates to be responsive`,
+    ],
   },
 }
 
@@ -222,9 +201,13 @@ export default () => (
       ...companyKeys.map(companyKey => {
         const company = companies[companyKey]
         return {
+          note: company.dateRange,
           title: company.title,
           component: (
-            <Teaser tags={company.tags} body={company.responsibilities} />
+            <Teaser
+              tags={company.tags}
+              body={<List items={company.responsibilities} />}
+            />
           ),
         }
       }),
