@@ -61,7 +61,7 @@ export const companies = {
   },
 
   domo: {
-    tags: [tags.node, tags.react],
+    tags: [tags.node, tags.react, tags.redux],
     title: `Senior Software Developer at Domo`,
     dateRange: `September 2015 - October 2016`,
     responsibilities: [
