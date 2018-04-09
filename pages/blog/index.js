@@ -4,28 +4,6 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
-  'windows-on-mac': {
-    tags: [tags.hardware],
-    mainVisual: '/static/macbook.jpg',
-    title: `Running Windows on Mac`,
-    description: `How to set up Windows on a Mac legally, for free, with native performance using Boot Camp.`,
-    date: 'April 6, 2018',
-  },
-
-  'brittle-css': {
-    tags: [tags.css],
-    mainVisual: '/static/brittle-css.jpg',
-    title: `How to find and fix brittle CSS`,
-    description: `Examples of making CSS easier to maintain with Flexbox, fluid values, additive media queries etc.`,
-    date: 'March 12, 2018',
-    links: [
-      {
-        description: 'Read the blog post',
-        href: 'https://ropig.com/blog/find-fix-brittle-css/',
-      },
-    ],
-  },
-
   'graphql-schema': {
     tags: [tags.graphQl],
     mainVisual: '/static/graphql-schema.jpg',
@@ -39,6 +17,14 @@ export const blogPosts = {
           'https://ropig.com/blog/using-graphql-schema-supercharge-team-collaboration/',
       },
     ],
+  },
+
+  'raspberry-pi-button': {
+    tags: [tags.terminal, tags.hardware, tags.node],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Running a server on a Raspberry Pi with a physical button`,
+    description: `How to set up a Raspberry Pi to send a text message when a button is pressed.`,
+    date: 'June 1, 2017',
   },
 
   'end-to-end-tests': {
@@ -71,12 +57,26 @@ export const blogPosts = {
     date: 'July 15, 2017',
   },
 
-  'raspberry-pi-button': {
-    tags: [tags.terminal, tags.hardware, tags.node],
-    mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Running a server on a Raspberry Pi with a physical button`,
-    description: `How to set up a Raspberry Pi to send a text message when a button is pressed.`,
-    date: 'June 1, 2017',
+  'windows-on-mac': {
+    tags: [tags.hardware],
+    mainVisual: '/static/macbook.jpg',
+    title: `Running Windows on Mac`,
+    description: `How to set up Windows on a Mac legally, for free, with native performance using Boot Camp.`,
+    date: 'April 6, 2018',
+  },
+
+  'brittle-css': {
+    tags: [tags.css],
+    mainVisual: '/static/brittle-css.jpg',
+    title: `How to find and fix brittle CSS`,
+    description: `Examples of making CSS easier to maintain with Flexbox, fluid values, additive media queries etc.`,
+    date: 'March 12, 2018',
+    links: [
+      {
+        description: 'Read the blog post',
+        href: 'https://ropig.com/blog/find-fix-brittle-css/',
+      },
+    ],
   },
 
   'color-scheme-building': {
