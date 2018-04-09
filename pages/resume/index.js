@@ -11,10 +11,12 @@ export const companies = {
   trevordmiller: {
     tags: [
       tags.inProgress,
+      tags.typescript,
+      tags.graphQl,
       tags.node,
       tags.react,
       tags.reactNative,
-      tags.typescript,
+      tags.electron,
     ],
     title: `Owner at trevordmiller`,
     dateRange: `January 2009 - Present`,
@@ -29,12 +31,13 @@ export const companies = {
   meetedgar: {
     tags: [
       tags.inProgress,
-      tags.postgresql,
-      tags.ruby,
-      tags.node,
       tags.graphQl,
+      tags.node,
       tags.react,
+      tags.flow,
       tags.redux,
+      tags.ruby,
+      tags.postgresql,
     ],
     title: 'Senior Software Developer at MeetEdgar',
     dateRange: `May 2017 - Present`,
@@ -50,7 +53,7 @@ export const companies = {
   },
 
   egghead: {
-    tags: [tags.node, tags.react, tags.redux],
+    tags: [tags.node, tags.react, tags.redux, tags.ruby, tags.postgresql],
     title: 'Director of Instruction at egghead.io',
     dateRange: `July 2015 - May 2017`,
     responsibilities: [
@@ -73,7 +76,7 @@ export const companies = {
 
   ics: {
     tags: [tags.node, tags.javascript, tags.css],
-    title: `Software Developer at ICS`,
+    title: `Senior Web Developer at The Church of Jesus Christ of Latter-day Saints`,
     dateRange: `March 2014 - September 2015`,
     responsibilities: [
       `Led mobile-first development for users across the world in over 70 languages`,
@@ -86,7 +89,7 @@ export const companies = {
 
   qualtrics: {
     tags: [tags.javascript, tags.css],
-    title: `Software Developer at Qualtrics`,
+    title: `Web Developer at Qualtrics`,
     dateRange: `May 2013 - March 2014`,
     responsibilities: [
       `Built over 500 custom themes for important companies (Google, Microsoft, etc.)`,
@@ -99,7 +102,7 @@ export const companies = {
 
   byu: {
     tags: [tags.javascript, tags.css, tags.php],
-    title: `Software Developer at Brigham Young University`,
+    title: `Web Developer at Brigham Young University`,
     dateRange: `August 2012 - May 2013`,
     responsibilities: [
       `Maintained websites for 12 BYU programs`,

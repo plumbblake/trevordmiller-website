@@ -23,7 +23,7 @@ export const projects = {
 
   'shell-scripts': {
     tags: [tags.terminal, tags.vim, tags.git],
-    mainVisual: '/static/github.png',
+    mainVisual: '/static/shell-scripts.jpg',
     title: `Shell Scripts`,
     description: `Shell scripts to automate repetitive tasks on my computer.`,
     links: [
@@ -36,7 +36,7 @@ export const projects = {
 
   dotfiles: {
     tags: [tags.terminal, tags.vim, tags.git],
-    mainVisual: '/static/github.png',
+    mainVisual: '/static/dotfiles.png',
     title: `Dotfiles`,
     description: `Dotfiles for all my tools and settings.`,
     links: [
@@ -47,6 +47,19 @@ export const projects = {
       {
         description: `See the code`,
         href: 'https://github.com/trevordmiller/dotfiles',
+      },
+    ],
+  },
+
+  'practice-problems': {
+    tags: [tags.typescript, tags.go],
+    mainVisual: '/static/code-1.jpg',
+    title: `Practice Problems`,
+    description: `Coding practice problems.`,
+    links: [
+      {
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/practice-problems',
       },
     ],
   },
@@ -82,7 +95,7 @@ export const projects = {
   },
 
   cortex: {
-    tags: [tags.react, tags.node, tags.graphQl],
+    tags: [tags.graphQl, tags.node, tags.react, tags.electron],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
     description: `A proof of concept for rendering the same set of GraphQL connected React components across targets (web, native mobile, and native desktop).`,
@@ -103,7 +116,7 @@ export const projects = {
   },
 
   'trevordmiller-website': {
-    tags: [tags.inProgress, tags.react, tags.node],
+    tags: [tags.inProgress, tags.node, tags.react],
     mainVisual: '/static/trevordmiller-website.png',
     title: `trevordmiller.com`,
     description: `A website (this website) to aggregate all my stuff.`,
@@ -146,7 +159,7 @@ export const projects = {
   },
 
   hideaway: {
-    tags: [tags.react, tags.node],
+    tags: [tags.node, tags.react, tags.electron],
     mainVisual: '/static/hideaway.png',
     title: `Hideaway`,
     description:

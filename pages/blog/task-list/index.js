@@ -80,7 +80,10 @@ export default () => (
               </Anchor>{' '}
               I have created to automate some of my tasks.
             </Paragraph>
-            <Image src="/static/scripts.jpg" description="My shell scripts" />
+            <Image
+              src="/static/shell-scripts.jpg"
+              description="My shell scripts"
+            />
             <Paragraph>
               I have a task to run my <Code>sync</Code> scripts a few times a
               day.

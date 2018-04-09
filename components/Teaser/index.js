@@ -23,7 +23,7 @@ export default ({ visual, body, links, tags }) => (
           alignItems: 'center',
         }}
       >
-        {tags.sort((a, b) => a.order - b.order).map(tag => (
+        {tags.map(tag => (
           <div
             key={tag.label}
             style={{
