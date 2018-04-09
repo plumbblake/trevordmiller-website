@@ -19,9 +19,10 @@ export const companies = {
     title: `Owner at trevordmiller`,
     dateRange: `January 2009 - Present`,
     responsibilities: [
+      `Teaching thousands of developers through video courses, blog posts, conferences, and local boot camps`,
       `Maintaining open source libraries and apps`,
       `Building freelance apps and services`,
-      `Teaching thousands of developers through online courses, conferences, and local boot camps`,
+      `Managing online developer communities`,
     ],
   },
 
