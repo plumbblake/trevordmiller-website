@@ -14,12 +14,16 @@ const List = ({ items, type = 'bullet' }) => {
           key={index}
           style={{
             marginBottom: index + 1 < items.length ? spacing.xsmall : 0,
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <span
             style={{
               color: symbolColor,
               marginRight: spacing.xsmall,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             {type === 'number' ? (
