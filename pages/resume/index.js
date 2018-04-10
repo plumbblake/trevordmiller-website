@@ -156,6 +156,7 @@ export default () => (
                   style={{
                     display: 'flex',
                     alignItems: 'center',
+                    flexWrap: 'wrap',
                   }}
                 >
                   {[
