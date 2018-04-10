@@ -1,4 +1,4 @@
-import { spacing, uiGroups } from '../../../utils/theme'
+import { uiGroups } from '../../../utils/theme'
 
 export default `
   body {
@@ -49,20 +49,8 @@ export default `
       margin: 0;
     }
 
-    header,
-    footer {
-      display: none;
-    }
-
-    main {
-      font-size: 15px;
-      line-height: 1.2;
-    }
-
     section {
       page-break-inside: avoid;
-      padding-top: ${spacing.large}px !important;
-      padding-bottom: ${spacing.large}px !important;
     }
   }
 `

@@ -128,8 +128,8 @@ export default () => (
           >
             <div
               style={{
-                width: 100,
-                minWidth: 100,
+                width: 85,
+                minWidth: 85,
                 display: 'flex',
                 alignItems: 'center',
               }}
