@@ -4,6 +4,21 @@ import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
+  'test-behavior': {
+    tags: [tags.general, tags.react],
+    mainVisual: '/static/test-tubes.jpg',
+    title: `How to avoid tying tests to implementation`,
+    description: `Examples of how you can test what your code should do instead of how it does it.`,
+    date: 'April 10, 2018',
+    links: [
+      {
+        description: 'Read the blog post',
+        href:
+          'https://ropig.com/blog/how-to-avoid-tying-tests-to-implementation/',
+      },
+    ],
+  },
+
   'raspberry-pi-button': {
     tags: [tags.terminal, tags.node, tags.hardware],
     mainVisual: '/static/dog-bathroom-button.jpg',
