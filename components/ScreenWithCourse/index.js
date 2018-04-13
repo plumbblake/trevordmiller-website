@@ -23,7 +23,7 @@ const ScreenWithCourse = ({ id }) => {
 
   const videoCount = course.curriculum.reduce(
     (memo, section) => memo + section.items.length,
-    0
+    0,
   )
 
   const faq = [

@@ -29,7 +29,7 @@ export default class Screen extends Component {
         label: PropTypes.string,
         color: PropTypes.string,
         icon: PropTypes.string,
-      })
+      }),
     ),
     info: PropTypes.string,
     cta: PropTypes.element,
@@ -37,7 +37,7 @@ export default class Screen extends Component {
       PropTypes.shape({
         title: PropTypes.string,
         component: PropTypes.element.isRequired,
-      })
+      }),
     ).isRequired,
     footer: PropTypes.bool,
   }

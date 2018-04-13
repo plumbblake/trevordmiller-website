@@ -2,7 +2,7 @@
   "name": "trevordmiller-website",
   "scripts": {
     "dev": "next",
-    "format": "prettier --no-semi --single-quote --trailing-comma es5 --write '{components,pages,utils}/**/*.js'",
+    "format": "prettier --write '{components,pages,utils}/**/*.js'",
     "lint": "eslint . --fix",
     "build": "next build",
     "verify": "npm run lint && npm run build",
@@ -11,39 +11,6 @@
     "release": "now alias",
     "postrelease": "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com",
     "start": "next start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "plugins": [
-      "react"
-    ],
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest": true,
-      "browser": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true,
-        "experimentalObjectRestSpread": true
-      }
-    },
-    "rules": {
-      "react/display-name": "off",
-      "react/prop-types": "off",
-      "react/no-unescaped-entities": "off",
-      "react/jsx-key": "off"
-    }
-  },
-  "now": {
-    "alias": "trevordmiller.com"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

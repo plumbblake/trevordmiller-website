@@ -138,7 +138,7 @@ const GuitarPattern = ({
                   background: degree
                     ? highlightedDegreesByString[stringIndex + 1] &&
                       highlightedDegreesByString[stringIndex + 1].includes(
-                        degree
+                        degree,
                       )
                       ? uiGroups.userCurrentState
                       : uiGroups.background
@@ -194,7 +194,7 @@ class GuitarPatternsSelector extends Component {
 
     const highlightedDegreesByString = getHighlightedDegreesByString(
       selectedDegree,
-      selectedType
+      selectedType,
     )
 
     const strings = [

@@ -50,8 +50,8 @@ Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   level: PropTypes.oneOf(
     Object.keys(levelSpecificStyles).map(levelString =>
-      parseInt(levelString, 10)
-    )
+      parseInt(levelString, 10),
+    ),
   ).isRequired,
 }
 
