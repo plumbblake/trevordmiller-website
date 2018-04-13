@@ -3,8 +3,9 @@ import { spacing, screenSizes } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 import Image from '../../../../../Image'
 import Info from '../../../../../Info'
+import Tags from '../../../../../Tags'
 
-export default ({ title, mainVisual, description, info, cta }) => (
+export default ({ title, mainVisual, description, tags, info, cta }) => (
   <header
     style={{
       maxWidth: screenSizes.large,
@@ -25,11 +26,23 @@ export default ({ title, mainVisual, description, info, cta }) => (
       <Heading level={2}>{description}</Heading>
     </div>
 
+    {tags ? (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Tags tags={tags} />
+      </div>
+    ) : null}
+
     {mainVisual && (
       <div
         style={{
           maxWidth: 350,
-          margin: '0 auto',
+          margin: 'auto',
+          marginTop: spacing.small,
         }}
       >
         <Image src={mainVisual} description="Decorative overview image" quiet />

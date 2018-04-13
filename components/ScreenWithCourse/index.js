@@ -50,6 +50,7 @@ const ScreenWithCourse = ({ id }) => {
       pathname={`https://trevordmiller.com/courses/${id}`}
       title={course.title}
       description={course.description}
+      tags={course.tags}
       info={course.info}
       cta={enrollButton}
       sections={[

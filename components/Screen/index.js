@@ -24,6 +24,13 @@ export default class Screen extends Component {
     pathname: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        color: PropTypes.string,
+        icon: PropTypes.string,
+      })
+    ),
     info: PropTypes.string,
     cta: PropTypes.element,
     sections: PropTypes.arrayOf(
@@ -48,6 +55,7 @@ export default class Screen extends Component {
       pathname,
       title,
       description,
+      tags,
       info,
       cta,
       sections,
@@ -147,6 +155,7 @@ export default class Screen extends Component {
             <Main
               title={title}
               mainVisual={showMainVisual ? mainVisual : null}
+              tags={tags}
               description={description}
               info={info}
               cta={cta}

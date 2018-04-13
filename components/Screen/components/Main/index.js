@@ -3,7 +3,15 @@ import { screenSizes } from '../../../../utils/theme'
 import Header from './components/Header'
 import Section from './components/Section'
 
-export default ({ title, mainVisual, description, info, cta, sections }) => (
+export default ({
+  title,
+  mainVisual,
+  description,
+  tags,
+  info,
+  cta,
+  sections,
+}) => (
   <main>
     <div
       style={{
@@ -16,6 +24,7 @@ export default ({ title, mainVisual, description, info, cta, sections }) => (
         title={title}
         mainVisual={mainVisual}
         description={description}
+        tags={tags}
         info={info}
         cta={cta}
       />

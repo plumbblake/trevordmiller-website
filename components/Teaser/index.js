@@ -1,62 +1,20 @@
 import React from 'react'
-import {
-  spacing,
-  uiGroups,
-  fontSizes,
-  screenSizes,
-  borderRadii,
-  borderSizes,
-} from '../../utils/theme'
+import { spacing, uiGroups, screenSizes } from '../../utils/theme'
 import List from '../List'
 import Anchor from '../Anchor'
 import Image from '../Image'
 import Icon from '../Icon'
+import Tags from '../Tags'
 
 export default ({ visual, body, links, tags }) => (
   <div>
     {tags ? (
       <div
         style={{
-          marginBottom: spacing.large,
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
+          marginBottom: spacing.medium - spacing.xsmall,
         }}
       >
-        {tags.map(tag => (
-          <div
-            key={tag.label}
-            style={{
-              border: `${borderSizes.xsmall}px solid ${tag.color}`,
-              borderRadius: borderRadii.medium,
-              color: tag.color,
-              fontSize: fontSizes.small,
-              paddingTop: spacing.xxsmall,
-              paddingBottom: spacing.xxsmall,
-              paddingRight: spacing.xsmall,
-              paddingLeft: spacing.xsmall,
-              marginRight: spacing.xsmall,
-              marginBottom: spacing.xsmall,
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <Icon type={tag.icon} fill={tag.color} size={fontSizes.medium} />
-
-              <div
-                style={{
-                  marginLeft: spacing.xsmall,
-                }}
-              >
-                {tag.label}
-              </div>
-            </div>
-          </div>
-        ))}
+        <Tags tags={tags} />
       </div>
     ) : null}
 
