@@ -1,8 +1,8 @@
 import React from 'react'
 import { spacing, screenSizes } from '../../utils/theme'
 import Info from '../Info'
-import Subscribe from '../Subscribe'
-import FollowIcons from './components/FollowIcons'
+import JoinEmailList from './components/JoinEmailList'
+import Accounts from './components/Accounts'
 
 export default () => (
   <section
@@ -17,7 +17,7 @@ export default () => (
           marginTop: spacing.small,
         }}
       >
-        <Subscribe />
+        <JoinEmailList />
       </div>
 
       <div
@@ -25,7 +25,7 @@ export default () => (
           marginTop: spacing.large,
         }}
       >
-        <FollowIcons />
+        <Accounts />
       </div>
     </Info>
   </section>

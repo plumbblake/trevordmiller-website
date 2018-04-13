@@ -1,26 +1,25 @@
 import React from 'react'
 import { colorValues, fontSizes, spacing } from '../../../../utils/theme'
-import { githubUrl, twitterUrl, linkedinUrl } from '../../../../utils/urls'
 import Anchor from '../../../Anchor'
 import Icon from '../../../Icon'
 
-const followItems = [
+const accounts = [
   {
     iconType: 'github',
     label: 'GitHub',
-    href: githubUrl,
+    href: 'https://github.com/trevordmiller',
   },
 
   {
     iconType: 'twitter',
     label: 'Twitter',
-    href: twitterUrl,
+    href: 'https://twitter.com/trevordmiller',
   },
 
   {
     iconType: 'linkedin',
     label: 'LinkedIn',
-    href: linkedinUrl,
+    href: 'https://www.linkedin.com/in/trevordmiller',
   },
 ]
 
@@ -32,15 +31,15 @@ export default () => (
       justifyContent: 'center',
     }}
   >
-    {followItems.map((followItem, index) => (
-      <Anchor key={index} href={followItem.href}>
+    {accounts.map((account, index) => (
+      <Anchor key={index} href={account.href}>
         <div
           style={{
             padding: spacing.small,
           }}
         >
           <Icon
-            type={followItem.iconType}
+            type={account.iconType}
             fill={colorValues.colors.blue}
             size={fontSizes.xlarge}
           />

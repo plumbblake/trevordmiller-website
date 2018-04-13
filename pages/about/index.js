@@ -1,6 +1,5 @@
 import React from 'react'
 import { spacing } from '../../utils/theme'
-import { freshlyMarriedUrl } from '../../utils/urls'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Avatar from '../../components/Avatar'
 import Heading from '../../components/Heading'
@@ -29,7 +28,7 @@ const lifeAspects = [
         href: '/resume',
       },
       {
-        description: 'Subscribe to my email lists and social media posts',
+        description: 'Join my email list',
         href: '/follow',
       },
     ],
@@ -42,7 +41,7 @@ const lifeAspects = [
     links: [
       {
         description: 'View Freshly Married',
-        href: freshlyMarriedUrl,
+        href: 'https://freshlymarried.com',
       },
     ],
   },

@@ -41,7 +41,7 @@ export const baseRoutes = {
   follow: {
     path: '/follow',
     title: 'Follow',
-    description: 'My email list and social media accounts.',
+    description: 'My email list and accounts across the web.',
     visual: 'internet',
   },
 }
