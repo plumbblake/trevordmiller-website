@@ -44,7 +44,7 @@ export const companies = {
     responsibilities: [
       `Contributing to full-stack development of the Edgar web app`,
       `Converting desktop only styles to cross-platform responsive styles`,
-      `Managing tests, builds, and deployments in Continous Integration`,
+      `Managing tests, builds, and deployments in Continuous Integration`,
       `Refactored thousands of old tests`,
       `Led front-end development of the Ropig web app`,
       `Automated API layer between back-end and front-end`,
