@@ -52,7 +52,16 @@
     "trailingComma": "all"
   },
   "now": {
-    "alias": "trevordmiller.com"
+    "alias": "trevordmiller.com",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": "auto"
+      }
+    }
   },
   "browser": {
     "rss": false
