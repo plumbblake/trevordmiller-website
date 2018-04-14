@@ -2,21 +2,25 @@
   "name": "trevordmiller-website",
   "scripts": {
     "dev": "next",
-    "format": "prettier --write '{components,pages,utils}/**/*.js'",
-    "lint": "eslint . --fix",
+    "format": "prettier --write",
+    "lint": "eslint .",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "ci": "npm run lint && npm run test",
     "build": "next build",
-    "verify": "npm run lint && npm run build",
-    "precommit": "npm run format && npm run verify",
+    "start": "next start",
     "stage": "git checkout master && git pull && now",
     "release": "now alias",
-    "postrelease": "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com",
-    "start": "next start"
+    "postrelease":
+      "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.4",
     "now": "^10.2.2",
     "prettier": "^1.11.1"
   },

@@ -1,6 +1,7 @@
 language: node_js
 node_js: 'node'
-script: npm run verify
+install: npm ci
+script: npm run ci
 notifications:
   email:
     on_success: never
