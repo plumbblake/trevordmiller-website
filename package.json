@@ -4,7 +4,7 @@
     "dev": "next",
     "precommit": "lint-staged",
     "verify": "npm run lint && npm run test",
-    "deploy": "git checkout master && git pull && now",
+    "deploy": "now",
     "alias": "now alias",
     "lint": "eslint .",
     "format": "prettier --write",
