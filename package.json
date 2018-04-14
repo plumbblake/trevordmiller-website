@@ -56,6 +56,9 @@
   "now": {
     "alias": "trevordmiller.com"
   },
+  "browser": {
+    "rss": false
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
