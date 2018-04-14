@@ -308,6 +308,25 @@ const communityPlugins = [
   },
 
   {
+    title: 'Alacritty',
+    icon: 'terminal',
+    screenshot:
+      'https://github.com/leonardt/nova-alacritty/raw/master/assets/screenshot.png?raw=true',
+    steps: ['Copy the contents of "colors.yml" to your "alacritty.yml"'],
+    links: [
+      {
+        title: 'colors.yml',
+        url:
+          'https://raw.githubusercontent.com/leonardt/nova-alacritty/master/colors.yml',
+      },
+      {
+        title: 'Source code',
+        url: 'https://github.com/leonardt/nova-alacritty',
+      },
+    ],
+  },
+
+  {
     title: 'GNOME Terminal',
     icon: 'gnomeTerminal',
     screenshot:
