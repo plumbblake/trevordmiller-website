@@ -2,17 +2,59 @@
   "name": "trevordmiller-website",
   "scripts": {
     "dev": "next",
-    "format": "prettier --write",
-    "lint": "eslint .",
-    "test": "jest",
     "precommit": "lint-staged",
-    "ci": "npm run lint && npm run test",
-    "build": "next build",
-    "start": "next start",
+    "verify": "npm run lint && npm run test",
     "stage": "git checkout master && git pull && now",
     "release": "now alias",
     "postrelease":
-      "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com"
+      "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com",
+    "lint": "eslint .",
+    "format": "prettier --write",
+    "test": "jest",
+    "build": "next build",
+    "start": "next start"
+  },
+  "lint-staged": {
+    "*.{json,md}": ["prettier --write", "git add"],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "eslintConfig": {
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "plugins": ["react"],
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "rules": {
+      "react/display-name": "off",
+      "react/prop-types": "off",
+      "react/no-unescaped-entities": "off",
+      "react/jsx-key": "off"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "now": {
+    "alias": "trevordmiller.com"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

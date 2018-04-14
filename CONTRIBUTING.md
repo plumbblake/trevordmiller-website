@@ -6,7 +6,7 @@
 * Run `npm run dev` to develop
 * _When you commit, `npm run precommit` runs automatically to ensure things are working as expected with your changes_
 * Submit a pull request to `master`
-* _In Continuous Integration `npm run ci` runs automatically to ensure things are working as expected with the entire codebase_
+* _In Continuous Integration `npm run verify` runs automatically to ensure things are working as expected with the entire codebase_
 * An admin releases your changes
   * Merges your pull request into `master`
   * Stages changes with `npm run stage`
