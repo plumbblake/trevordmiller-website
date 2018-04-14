@@ -56,24 +56,24 @@ export default () => (
 
             <List
               items={[
-                <span>
+                <span key="snippets">
                   <Code>.snippets</Code> is where I keep my code snippets.
                 </span>,
-                <span>
+                <span key="bash">
                   <Code>.bash_profile</Code> is run when my shell (Bash) starts.
                   This is where I set up my <Code>$PATH</Code>, shell prompt,
                   Unix command aliases, etc.
                 </span>,
-                <span>
+                <span key="gitconfig">
                   <Code>.gitconfig</Code> is used by Git for global
                   configuration. This includes my default Git options, logging
                   colors, etc.
                 </span>,
-                <span>
+                <span key="tmux">
                   <Code>.tmux.conf</Code> is used by tmux (a window manager for
                   the terminal) to set up keyboard shortcuts, styles etc..
                 </span>,
-                <span>
+                <span key="vimrc">
                   <Code>.vimrc</Code> is used by Vim (a terminal editor) to
                   configure editor settings, plugins, styles etc.
                 </span>,

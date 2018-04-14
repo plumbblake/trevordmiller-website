@@ -49,14 +49,14 @@ export default () => (
           <div>
             <List
               items={[
-                <span>Raspberry Pi 3</span>,
-                <span>8+ GB micro SD card pre-loaded with NOOBS</span>,
-                <span>Raspberry Pi 3 case</span>,
-                <span>2.5A 5V micro USB power supply</span>,
-                <span>
+                <span key="pi3">Raspberry Pi 3</span>,
+                <span key="sd">8+ GB micro SD card pre-loaded with NOOBS</span>,
+                <span key="case">Raspberry Pi 3 case</span>,
+                <span key="power">2.5A 5V micro USB power supply</span>,
+                <span key="button">
                   Momentary button with built-in resistor and GPIO wires
                 </span>,
-                <span>
+                <span key="peripherals">
                   An HDMI cable, USB keyboard, and USB mouse if you don't
                   already have them
                 </span>,
@@ -181,22 +181,22 @@ export default () => (
             </Paragraph>
             <List
               items={[
-                <span>
+                <span key="download">
                   Download the latest with{' '}
                   <Code>
                     wget
                     https://nodejs.org/dist/vX.Y.Z/node-vX.Y.Z-linux-armv7l.tar.gz
                   </Code>
                 </span>,
-                <span>
+                <span key="unpack">
                   Unpack the download with{' '}
                   <Code>tar -xvf node-vX.Y.Z-linux-armv7l.tar.gz</Code>
                 </span>,
-                <span>
+                <span key="cd">
                   Go into the unpacked download with{' '}
                   <Code>cd node-vX.Y.Z-linux-armv7l</Code>
                 </span>,
-                <span>
+                <span key="copy">
                   Copy the binaries with <Code>sudo cp -R * /usr/local/</Code>
                 </span>,
               ]}

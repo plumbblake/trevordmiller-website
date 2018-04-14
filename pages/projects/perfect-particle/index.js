@@ -79,7 +79,9 @@ export default () => (
             </div>
             <List
               items={release.stores.map(store => (
-                <Anchor href={store.href}>{store.title}</Anchor>
+                <Anchor key={store.title} href={store.href}>
+                  {store.title}
+                </Anchor>
               ))}
               type="link"
             />

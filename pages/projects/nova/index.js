@@ -522,7 +522,9 @@ class PluginsList extends React.Component {
                   <Heading level={4}>Links</Heading>
                   <List
                     items={plugin.links.map(link => (
-                      <Anchor href={link.url}>{link.title}</Anchor>
+                      <Anchor key={link.title} href={link.url}>
+                        {link.title}
+                      </Anchor>
                     ))}
                     type="link"
                   />

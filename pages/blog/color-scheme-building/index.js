@@ -86,19 +86,19 @@ export default () => (
             </Paragraph>
             <List
               items={[
-                <span>
+                <span key="merrick">
                   <Anchor href="http://merrickchristensen.com/">
                     Merrick Christensen
                   </Anchor>{' '}
                   for his help building the initial Nova plugins
                 </span>,
-                <span>
+                <span key="adam">
                   <Anchor href="https://twitter.com/AC_Design">
                     Adam Christiansen
                   </Anchor>{' '}
                   for designing the initial color palette
                 </span>,
-                <span>
+                <span key="alex">
                   <Anchor href="http://alexlafroscia.com/">
                     Alex LaFroscia
                   </Anchor>{' '}
