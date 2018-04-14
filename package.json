@@ -6,8 +6,6 @@
     "verify": "npm run lint && npm run test",
     "deploy": "git checkout master && git pull && now",
     "alias": "now alias",
-    "redirect":
-      "now -e REDIRECT_URL=https://trevordmiller.com timneutkens/now-redirect && now alias $(pbpaste) www.trevordmiller.com",
     "lint": "eslint .",
     "format": "prettier --write",
     "test": "jest",
