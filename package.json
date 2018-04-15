@@ -24,10 +24,12 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
       "plugin:react/recommended",
       "plugin:jest/recommended"
     ],
-    "plugins": ["react", "jest"],
+    "plugins": ["import", "react", "jest"],
     "parser": "babel-eslint",
     "env": {
       "node": true,
@@ -58,6 +60,7 @@
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
