@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from '../Screen'
+import Page from '../Page'
 import Heading from '../Heading'
 import Anchor from '../Anchor'
 import Button from '../Button'
@@ -10,7 +10,7 @@ import Video from '../Video'
 import { courses } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
 
-const ScreenWithCourse = ({ id }) => {
+const PageWithCourse = ({ id }) => {
   const course = courses[id]
 
   const enrollButton = (
@@ -43,7 +43,7 @@ const ScreenWithCourse = ({ id }) => {
         }),
   ]
   return (
-    <Screen
+    <Page
       baseRouteKey="courses"
       mainVisual={course.mainVisual}
       showMainVisual
@@ -238,4 +238,4 @@ const ScreenWithCourse = ({ id }) => {
   )
 }
 
-export default ScreenWithCourse
+export default PageWithCourse

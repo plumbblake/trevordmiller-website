@@ -1,9 +1,9 @@
 import React from 'react'
-import Screen from '../Screen'
+import Page from '../Page'
 import { blogPosts } from '../../pages/blog'
 
-const ScreenWithBlogPost = ({ id, sections }) => (
-  <Screen
+const PageWithBlogPost = ({ id, sections }) => (
+  <Page
     baseRouteKey="blog"
     mainVisual={blogPosts[id].mainVisual}
     pathname={`https://trevordmiller.com/blog/${id}`}
@@ -14,4 +14,4 @@ const ScreenWithBlogPost = ({ id, sections }) => (
   />
 )
 
-export default ScreenWithBlogPost
+export default PageWithBlogPost

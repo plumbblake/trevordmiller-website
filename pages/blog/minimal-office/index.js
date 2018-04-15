@@ -1,11 +1,11 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Video from '../../../components/Video'
 
 const MinimalOffice = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="minimal-office"
     sections={[
       {

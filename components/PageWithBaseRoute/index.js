@@ -1,9 +1,9 @@
 import React from 'react'
-import Screen from '../Screen'
+import Page from '../Page'
 import { baseRoutes } from '../../pages'
 
-const ScreenWithBaseRoute = ({ id, sections, footer = true }) => (
-  <Screen
+const PageWithBaseRoute = ({ id, sections, footer = true }) => (
+  <Page
     baseRouteKey={id}
     mainVisual="/static/trevordmiller-website.png"
     pathname={`https://trevordmiller.com/${id}`}
@@ -15,4 +15,4 @@ const ScreenWithBaseRoute = ({ id, sections, footer = true }) => (
   />
 )
 
-export default ScreenWithBaseRoute
+export default PageWithBaseRoute

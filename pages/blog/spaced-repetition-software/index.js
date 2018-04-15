@@ -1,10 +1,10 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 
 const SpacedRepetitionSoftware = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="spaced-repetition-software"
     sections={[
       {

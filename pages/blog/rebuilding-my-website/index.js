@@ -1,12 +1,12 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 
 const RebuildingMyWebsite = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="rebuilding-my-website"
     sections={[
       {

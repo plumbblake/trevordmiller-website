@@ -1,12 +1,12 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
 
 const WindowsOnMac = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="windows-on-mac"
     sections={[
       {

@@ -1,7 +1,7 @@
 import React from 'react'
 import tags from '../../utils/tags'
 import { spacing, fontSizes, uiGroups } from '../../utils/theme'
-import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
+import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 import List from '../../components/List'
 import Avatar from '../../components/Avatar'
@@ -114,7 +114,7 @@ export const companies = {
 const companyKeys = Object.keys(companies)
 
 const Resume = () => (
-  <ScreenWithBaseRoute
+  <PageWithBaseRoute
     id="resume"
     sections={[
       {

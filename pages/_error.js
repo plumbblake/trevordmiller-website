@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Screen from '../components/Screen'
+import Page from '../components/Page'
 import Anchor from '../components/Anchor'
 import Button from '../components/Button'
 
@@ -13,7 +13,7 @@ class Error extends Component {
     const { statusCode } = this.props
 
     return (
-      <Screen
+      <Page
         mainVisual="/static/trevordmiller-website.png"
         pathname="https://trevordmiller.com"
         title={statusCode === 404 ? '404' : 'Error'}

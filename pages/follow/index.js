@@ -1,9 +1,9 @@
 import React from 'react'
-import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
+import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Follow from '../../components/Follow'
 
 const FollowWrapper = () => (
-  <ScreenWithBaseRoute
+  <PageWithBaseRoute
     id="follow"
     sections={[
       {

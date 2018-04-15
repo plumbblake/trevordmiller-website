@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithProject from '../../../components/ScreenWithProject'
+import PageWithProject from '../../../components/PageWithProject'
 import Video from '../../../components/Video'
 import Paragraph from '../../../components/Paragraph'
 import Anchor from '../../../components/Anchor'
@@ -7,7 +7,7 @@ import Button from '../../../components/Button'
 import Label from '../../../components/Label'
 
 const Hideaway = () => (
-  <ScreenWithProject
+  <PageWithProject
     id="hideaway"
     sections={[
       {

@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Anchor from '../../../components/Anchor'
 import Button from '../../../components/Button'
@@ -8,7 +8,7 @@ import Image from '../../../components/Image'
 import List from '../../../components/List'
 
 const Dotfiles = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="dotfiles"
     sections={[
       {

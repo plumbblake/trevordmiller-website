@@ -7,7 +7,7 @@ import {
   syntaxGroups,
   uiGroups,
 } from '../../../utils/theme'
-import ScreenWithProject from '../../../components/ScreenWithProject'
+import PageWithProject from '../../../components/PageWithProject'
 import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'
 import Heading from '../../../components/Heading'
@@ -539,7 +539,7 @@ class PluginsList extends React.Component {
 }
 
 const Nova = () => (
-  <ScreenWithProject
+  <PageWithProject
     id="nova"
     sections={[
       {

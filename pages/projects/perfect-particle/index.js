@@ -1,6 +1,6 @@
 import React from 'react'
 import { spacing } from '../../../utils/theme'
-import ScreenWithProject from '../../../components/ScreenWithProject'
+import PageWithProject from '../../../components/PageWithProject'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
@@ -32,7 +32,7 @@ const releases = [
 const maxPlayerSize = 250
 
 const PerfectParticle = () => (
-  <ScreenWithProject
+  <PageWithProject
     id="perfect-particle"
     sections={releases.map(release => ({
       title: release.title,

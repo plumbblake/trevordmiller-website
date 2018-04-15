@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from '../components/Screen'
+import Page from '../components/Page'
 import Teaser from '../components/Teaser'
 
 export const baseRoutes = {
@@ -49,7 +49,7 @@ export const baseRoutes = {
 export const baseRouteKeys = Object.keys(baseRoutes)
 
 const Home = () => (
-  <Screen
+  <Page
     mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
     title="Home"

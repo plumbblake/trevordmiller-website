@@ -1,6 +1,6 @@
 import React from 'react'
 import tags from '../../utils/tags'
-import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
+import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
@@ -214,7 +214,7 @@ export const projects = {
 const projectKeys = Object.keys(projects)
 
 const Projects = () => (
-  <ScreenWithBaseRoute
+  <PageWithBaseRoute
     id="projects"
     sections={projectKeys.map(projectKey => {
       const project = projects[projectKey]

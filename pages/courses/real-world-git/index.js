@@ -1,6 +1,6 @@
 import React from 'react'
-import ScreenWithCourse from '../../../components/ScreenWithCourse'
+import PageWithCourse from '../../../components/PageWithCourse'
 
-const RealWorldGit = () => <ScreenWithCourse id="real-world-git" />
+const RealWorldGit = () => <PageWithCourse id="real-world-git" />
 
 export default RealWorldGit

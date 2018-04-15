@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
-import ScreenWithProject from '../../../components/ScreenWithProject'
+import PageWithProject from '../../../components/PageWithProject'
 import Heading from '../../../components/Heading'
 import Button from '../../../components/Button'
 
@@ -281,7 +281,7 @@ class GuitarLessons extends React.Component {
     const { selectedDegree, selectedType } = this.props
 
     return (
-      <ScreenWithProject
+      <PageWithProject
         id="guitar-lessons"
         sections={[
           {

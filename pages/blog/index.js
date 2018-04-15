@@ -1,6 +1,6 @@
 import React from 'react'
 import tags from '../../utils/tags'
-import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
+import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const blogPosts = {
@@ -146,7 +146,7 @@ export const blogPosts = {
 const blogPostKeys = Object.keys(blogPosts)
 
 const Blog = () => (
-  <ScreenWithBaseRoute
+  <PageWithBaseRoute
     id="blog"
     sections={blogPostKeys.map(blogPostKey => {
       const blogPost = blogPosts[blogPostKey]

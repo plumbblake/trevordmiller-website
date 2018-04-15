@@ -1,6 +1,6 @@
 import React from 'react'
 import tags from '../../utils/tags'
-import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
+import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const courses = {
@@ -142,7 +142,7 @@ export const courses = {
 const courseKeys = Object.keys(courses)
 
 const Courses = () => (
-  <ScreenWithBaseRoute
+  <PageWithBaseRoute
     id="courses"
     sections={courseKeys.map(courseKey => {
       const course = courses[courseKey]

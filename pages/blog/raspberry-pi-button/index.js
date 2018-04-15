@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
@@ -9,7 +9,7 @@ import Code from '../../../components/Code'
 import Button from '../../../components/Button'
 
 const RaspberryPiButton = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="raspberry-pi-button"
     sections={[
       {

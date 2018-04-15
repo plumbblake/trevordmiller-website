@@ -1,9 +1,9 @@
 import React from 'react'
-import Screen from '../Screen'
+import Page from '../Page'
 import { projects } from '../../pages/projects'
 
-const ScreenWithProject = ({ id, sections }) => (
-  <Screen
+const PageWithProject = ({ id, sections }) => (
+  <Page
     baseRouteKey="projects"
     mainVisual={projects[id].mainVisual}
     pathname={`https://trevordmiller.com/projects/${id}`}
@@ -13,4 +13,4 @@ const ScreenWithProject = ({ id, sections }) => (
   />
 )
 
-export default ScreenWithProject
+export default PageWithProject

@@ -1,5 +1,5 @@
 import React from 'react'
-import ScreenWithBlogPost from '../../../components/ScreenWithBlogPost'
+import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Code from '../../../components/Code'
 import CodeBlock from '../../../components/CodeBlock'
@@ -18,7 +18,7 @@ import {
 import ExampleApp from './components/ExampleApp'
 
 const ReactRenderCallbackComponents = () => (
-  <ScreenWithBlogPost
+  <PageWithBlogPost
     id="react-render-callback-components"
     sections={[
       {
