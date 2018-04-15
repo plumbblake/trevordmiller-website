@@ -214,16 +214,16 @@ class GuitarPatternsSelector extends Component {
           }}
         >
           We can apply the in-key pattern to the guitar. Each dot on the
-          fretboard below is a note that is 'in-key'. This entire pattern
-          repeats up and down so the ends 'connect'. The pattern is not specific
-          to any note or fret number - it can be shifted up or down depending on
-          the 'key' you are in. Scroll horizontally to view the entire pattern.
-          Tap a 'Degree' and 'Type' to highlight specific notes or chords inside
-          the pattern. The most common chord progressions in typical songs use
-          primarily the 1, 4, 5, and 6 degree chords. Most common songs will
-          resolve back to the 1 (Major) or 6 (Minor) degree chord. Once you find
-          the 'root' of a song, you can play any of the notes in the entire
-          in-key pattern and it is likely to sound good.
+          fretboard below is a note that in-key. This entire pattern repeats up
+          and down so the ends connect. The pattern is not specific to any note
+          or fret number - it can be shifted up or down depending on the key you
+          are in. Scroll horizontally to view the entire pattern. Tap a Degree
+          and Type to highlight specific notes or chords inside the pattern. The
+          most common chord progressions in typical songs use primarily the 1,
+          4, 5, and 6 degree chords. Most common songs will resolve back to the
+          1 (Major) or 6 (Minor) degree chord. Once you find the root of a song,
+          you can play any of the notes in the entire in-key pattern and it is
+          likely to sound good.
         </div>
 
         <div
@@ -293,13 +293,13 @@ class GuitarLessons extends React.Component {
                     marginBottom: spacing.medium,
                   }}
                 >
-                  In common music, most notes used are 'in-key'. Then, chords
+                  In common music, most notes used are in-key. Then, chords
                   (multiple notes played at a time) are built from these in-key
                   notes. There are only twelve notes in music, but they repeat
-                  in 'octaves'. Only seven of these notes are in-key. Below is
+                  in octaves. Only seven of these notes are in-key. Below is
                   what the pattern of in-key notes looks like. Scroll
                   horizontally to view the entire pattern. This pattern repeats
-                  infinitely up and down so the ends 'connect'.
+                  infinitely up and down so the ends connect.
                 </div>
 
                 <GuitarPattern

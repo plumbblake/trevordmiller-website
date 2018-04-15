@@ -26,8 +26,8 @@ const TaskList = () => (
               business hours, yellow is whenever, and gray is just before bed).
             </Paragraph>
             <Paragraph>
-              I work on tasks one at a time (aka "single tasking") by closing
-              all apps/websites other than what I need for the current task.
+              I work on tasks one at a time (aka single tasking) by closing all
+              apps/websites other than what I need for the current task.
             </Paragraph>
             <Paragraph>
               I use many repeating tasks so that maintaining my task list is

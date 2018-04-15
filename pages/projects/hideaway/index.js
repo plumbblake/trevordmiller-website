@@ -43,10 +43,10 @@ const Hideaway = () => (
               Working at a computer brings regular distruptions of calendar
               events, emails, texts, etc. Hideaway is a mac app that helps you
               get rid of these distractions for a set amount of time so you can
-              focus. When you hit "Start Hideaway", it closes all apps +
-              websites, hides your dock, and turns on Do Not Disturb for the
-              amount of time you have set. When the timer is done, it shows your
-              dock and allows notifications again.
+              focus. When you hit Start Hideaway, it closes all apps + websites,
+              hides your dock, and turns on Do Not Disturb for the amount of
+              time you have set. When the timer is done, it shows your dock and
+              allows notifications again.
             </Paragraph>
           </div>
         ),

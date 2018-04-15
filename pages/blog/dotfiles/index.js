@@ -91,8 +91,8 @@ const Dotfiles = () => (
               The beauty of dotfiles is it is how you like to use your tools
               organized in one place! You can move them to any computer you work
               on to feel right at home. I keep my dotfiles backed up in a Git
-              repo so I don't loose them and so they can be easily cloned and
-              used on any machine I am on.
+              repo so I don&apos;t loose them and so they can be easily cloned
+              and used on any machine I am on.
             </Paragraph>
 
             <Anchor href="https://github.com/trevordmiller/dotfiles">
@@ -117,9 +117,9 @@ const Dotfiles = () => (
           <div>
             <Paragraph>
               Dotfiles are a great way to organize your settings and are the
-              default option for many tools. I'd recommend organizing yours in a
-              Git repo like this so that you can keep track of and duplicate
-              your settings anywhere.
+              default option for many tools. I&apos;d recommend organizing yours
+              in a Git repo like this so that you can keep track of and
+              duplicate your settings anywhere.
             </Paragraph>
           </div>
         ),

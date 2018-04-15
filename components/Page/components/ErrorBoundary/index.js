@@ -32,7 +32,7 @@ class ErrorBoundary extends Component {
 
     return error ? (
       <div>
-        <Heading level={2}>Sorry, something's gone wrong :(</Heading>
+        <Heading level={2}>Sorry, something&apos;s gone wrong</Heading>
 
         <p>
           Trevor has been notified that you ran into an error, but if you could

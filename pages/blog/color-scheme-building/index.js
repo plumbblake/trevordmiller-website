@@ -70,7 +70,8 @@ const ColorSchemeBuilding = () => (
               The nice thing about having <Code>nova-colors</Code> as its own
               package is it can be used anywhere; for example,{' '}
               <Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/theme/index.js#L1-L10">
-                I'm using it on my own website as part of the style guide module
+                I&apos;m using it on my own website as part of the style guide
+                module
               </Anchor>.
             </Paragraph>
           </div>
@@ -81,8 +82,8 @@ const ColorSchemeBuilding = () => (
         component: (
           <div>
             <Paragraph>
-              I'd like to thank the following wonderful people for their help
-              with Nova
+              I&apos;d like to thank the following wonderful people for their
+              help with Nova
             </Paragraph>
             <List
               items={[

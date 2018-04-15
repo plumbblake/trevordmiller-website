@@ -34,9 +34,9 @@ const RaspberryPiButton = () => (
           <div>
             <Paragraph>
               It works! You press the button and it sends me a text message from
-              my dog saying "I need to go to the bathroom!". It would be cool to
-              additionally 3D print a case and button surface area extending
-              disc, but the functional pieces are here.
+              my dog saying &quot;I need to go to the bathroom!&quot;. It would
+              be cool to additionally 3D print a case and button surface area
+              extending disc, but the functional pieces are here.
             </Paragraph>
             <Video src="/static/dog-bathroom-button-final.mp4" />
           </div>
@@ -57,7 +57,7 @@ const RaspberryPiButton = () => (
                   Momentary button with built-in resistor and GPIO wires
                 </span>,
                 <span key="peripherals">
-                  An HDMI cable, USB keyboard, and USB mouse if you don't
+                  An HDMI cable, USB keyboard, and USB mouse if you don&apos;t
                   already have them
                 </span>,
               ]}
@@ -65,7 +65,7 @@ const RaspberryPiButton = () => (
             <Paragraph>
               The{' '}
               <Anchor href="https://www.amazon.com/gp/product/B01C6Q2GSY">
-                CanaKit "Complete Starter Kit"
+                CanaKit Complete Starter Kit
               </Anchor>{' '}
               and{' '}
               <Anchor href="https://www.amazon.com/gp/product/B0170B75EU">
@@ -131,7 +131,7 @@ const RaspberryPiButton = () => (
           <div>
             <Paragraph>
               The first time you connect power to the Raspberry Pi, you should
-              see the NOOBS install screen. Select Raspbian and then "Install".
+              see the NOOBS install screen. Select Raspbian and then Install.
             </Paragraph>
             <Image
               src="/static/dog-bathroom-button-noobs.png"
@@ -160,7 +160,7 @@ const RaspberryPiButton = () => (
             <Paragraph>
               To connect Wi-Fi, tap the network icon in the top menu bar and
               then the network to connect to. A popup will show to enter the
-              network's password.
+              network&apos;s password.
             </Paragraph>
             <Image
               src="/static/dog-bathroom-button-wifi.png"
@@ -210,8 +210,8 @@ const RaspberryPiButton = () => (
         component: (
           <div>
             <Paragraph>
-              Connect the button's wires to pin numbers five (GPIO 3) and six
-              (ground) on the Raspberry Pi GPIO header.
+              Connect the button&apos;s wires to pin numbers five (GPIO 3) and
+              six (ground) on the Raspberry Pi GPIO header.
             </Paragraph>
             <Video src="/static/dog-bathroom-button-gpio.mp4" />
           </div>
@@ -270,7 +270,7 @@ const RaspberryPiButton = () => (
           <div>
             <Paragraph>
               I set up a phone contact for my dog with his picture to make the
-              texts more clear. I also set up "Emergency Bypass" for the contact
+              texts more clear. I also set up Emergency Bypass for the contact
               (a feature on iOS that lets the contact through even if your phone
               is on silent) to ensure I always hear when my dog needs to go out.
             </Paragraph>
@@ -289,7 +289,7 @@ const RaspberryPiButton = () => (
             <Paragraph>
               When working on a Raspberry Pi, it should always be shut down
               safely before power is removed to avoid corrupting the SD card.
-              The easiest way to do this is tapping "Shutdown" from the "Menu"
+              The easiest way to do this is tapping Shutdown from the Menu
               button. When you want to use it again, just plug the power adapter
               in and it will take you to the Raspbian desktop again by default.
             </Paragraph>
@@ -302,9 +302,9 @@ const RaspberryPiButton = () => (
         component: (
           <div>
             <Paragraph>
-              This project was a lot of fun. Although I'm not sure how practical
-              it will be - if my dog can even use it - it was a great learning
-              experience. Embedded systems are powerful and with modern
+              This project was a lot of fun. Although I&apos;m not sure how
+              practical it will be - if my dog can even use it - it was a great
+              learning experience. Embedded systems are powerful and with modern
               technology can be controlled with languages like Node that are
               more traditionally seen in use on the web. Go forth and play with
               hardware!

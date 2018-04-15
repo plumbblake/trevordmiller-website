@@ -12,16 +12,16 @@ const SpacedRepetitionSoftware = () => (
         component: (
           <div>
             <Paragraph>
-              I've made a habit of making a note whenever I learn something.
-              These are things I learn while studying, working, talking with
-              people, etc. This includes code syntax, faces with names,
-              scriptures, and anything else I want to remember. I use a spaced
-              repetition software for these notes called Anki. Spaced repetition
-              software (aka SRS) is used to cement short term memory into long
-              term memory, just before you would normally forget something. So,
-              for example, I learned that on a Mac, you can open up mission
-              control with a keyboard shortcut (control + up arrow), so I made
-              this “card” in Anki:
+              I&apos;ve made a habit of making a note whenever I learn
+              something. These are things I learn while studying, working,
+              talking with people, etc. This includes code syntax, faces with
+              names, scriptures, and anything else I want to remember. I use a
+              spaced repetition software for these notes called Anki. Spaced
+              repetition software (aka SRS) is used to cement short term memory
+              into long term memory, just before you would normally forget
+              something. So, for example, I learned that on a Mac, you can open
+              up mission control with a keyboard shortcut (control + up arrow),
+              so I made this “card” in Anki:
             </Paragraph>
             <Image
               src="/static/anki-card-creation.jpg"
@@ -70,7 +70,7 @@ const SpacedRepetitionSoftware = () => (
         component: (
           <div>
             <Paragraph>
-              I have all of these cards organized into "decks" by category:
+              I have all of these cards organized into decks by category:
             </Paragraph>
             <Image
               src="/static/anki-decks.jpg"
@@ -101,10 +101,9 @@ const SpacedRepetitionSoftware = () => (
               No matter what your career or types of things you learn, I think
               using SRS can benefit your brain. SRS ingrains knowledge in
               calculated, ever-increasing intervals, just before I am about to
-              forget something. I've found it to be a fantastic way to retain
-              knowledge. I've been doing this for a few years and my skills,
-              knowledge, and memory have dramatically improved. I recommend
-              giving it a try!
+              retain knowledge. I&apos;ve been doing this for a few years and my
+              skills, knowledge, and memory have dramatically improved. I
+              recommend giving it a try!
             </Paragraph>
           </div>
         ),

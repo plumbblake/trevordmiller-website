@@ -80,7 +80,7 @@ const RebuildingMyWebsite = () => (
               <Anchor href="https://github.com/trevordmiller/trevordmiller-website/tree/master/pages">
                 The pages directory
               </Anchor>{' '}
-              holds app pages. A "page" is just a component, but it is special
+              holds app pages. A page is just a component, but it is special
               because Next.js wires up the file path to the matching route (ie{' '}
               <Code>pages/index.js</Code> becomes{' '}
               <Code>https://trevordmiller.com</Code> and{' '}
@@ -129,8 +129,9 @@ const RebuildingMyWebsite = () => (
         component: (
           <div>
             <Paragraph>
-              I'm happy with how this has turned out. It seems to be easy to
-              maintain and add-to. Let's see how it does going forward :)
+              I&apos;m happy with how this has turned out. It seems to be easy
+              to maintain and add-to. Let&apos;s see how it does going forward
+              :)
             </Paragraph>
           </div>
         ),

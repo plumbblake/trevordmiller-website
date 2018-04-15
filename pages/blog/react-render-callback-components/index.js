@@ -27,9 +27,9 @@ const ReactRenderCallbackComponents = () => (
           <div>
             <Paragraph>
               A common way to share stateful logic across React components is
-              using the "Higher Order Components" (HOC) pattern. This post will
+              using the Higher Order Components (HOC) pattern. This post will
               show an alternative that I feel is simpler and more flexible
-              called "Render Callback components" (AKA Function as Child
+              called Render Callback components (AKA Function as Child
               components).
             </Paragraph>
           </div>
@@ -41,10 +41,10 @@ const ReactRenderCallbackComponents = () => (
         component: (
           <div>
             <Paragraph>
-              A "Render Callback" is a component where the <Code>children</Code>{' '}
+              A Render Callback is a component where the <Code>children</Code>{' '}
               prop is a function; then shared logic is accessed through the
-              function's arguments. Render Callbacks are just functions - just
-              JavaScript!
+              function&apos;s arguments. Render Callbacks are just functions -
+              just JavaScript!
             </Paragraph>
           </div>
         ),
@@ -65,7 +65,7 @@ const ReactRenderCallbackComponents = () => (
             <Heading level={4}>Use</Heading>
             <Paragraph>
               To use a Render Callback you write an inline function with the
-              arguments you've shared.
+              arguments you&apos;ve shared.
             </Paragraph>
             <CodeBlock file="AnotherComponent.js">{exampleUse}</CodeBlock>
           </div>
@@ -89,10 +89,10 @@ const ReactRenderCallbackComponents = () => (
             </CodeBlock>
 
             <Paragraph>
-              What is common between them? They all can be "toggled"
-              open/closed. We could write each of them as a stateful class
-              component with the same wrapping code, but since they have the
-              same state setup - let's share it! Let's abstract the state into a{' '}
+              What is common between them? They all can be toggled open/closed.
+              We could write each of them as a stateful class component with the
+              same wrapping code, but since they have the same state setup -
+              let&apos;s share it! Let&apos;s abstract the state into a{' '}
               <Code>Toggle</Code> component (a Render Callback).
             </Paragraph>
 

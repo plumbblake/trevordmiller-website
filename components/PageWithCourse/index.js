@@ -200,11 +200,12 @@ const PageWithCourse = ({ id }) => {
               </div>
 
               <div>
-                I've been programming for over 10 years. I've been teaching
-                programming for over 5 years through coding bootcamps,
+                I&apos;ve been programming for over 10 years. I&apos;ve been
+                teaching programming for over 5 years through coding bootcamps,
                 workshops, meetups, conferences, online courses, and as the
-                former Director of Instruction at egghead.io. All in all, I've
-                taught thousands of people how to be more effective developers.
+                former Director of Instruction at egghead.io. All in all,
+                I&apos;ve taught thousands of people how to be more effective
+                developers.
               </div>
             </div>
           ),

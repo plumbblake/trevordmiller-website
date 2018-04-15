@@ -14,8 +14,8 @@ const WindowsOnMac = () => (
         component: (
           <div>
             <Paragraph>
-              In this post, we'll go over how to run Windows on Mac using Boot
-              Camp. You might want to do this so you can run Windows-only
+              In this post, we&apos;ll go over how to run Windows on Mac using
+              Boot Camp. You might want to do this so you can run Windows-only
               software, to test apps or websites in Windows etc. Although there
               are many options for running Windows on Mac, I recommend Boot Camp
               because:
@@ -71,8 +71,8 @@ const WindowsOnMac = () => (
           <div>
             <Paragraph>
               Now you can create a partition on your Mac for Windows. Open the
-              "Boot Camp Assistant" app. Select the ISO file you downloaded.
-              Specify a partition size; you can't resize this later without
+              Boot Camp Assistant app. Select the ISO file you downloaded.
+              Specify a partition size; you can&apos;t resize this later without
               re-partitioning, so choose wisely (for me, I have a 500GB Macbook
               Pro, so I gave my Windows partition 150GB).
             </Paragraph>
@@ -101,10 +101,10 @@ const WindowsOnMac = () => (
         component: (
           <div>
             <Paragraph>
-              To switch between Windows and Mac, choose "Restart" from either
-              operating system's menu. As your computer is restarting, hold down
-              the "Option" key until the partion selector screen shows up. You
-              can then choose to boot with Windows or Mac.
+              To switch between Windows and Mac, choose Restart from either
+              operating system&apos;s menu. As your computer is restarting, hold
+              down the Option key until the partion selector screen shows up.
+              You can then choose to boot with Windows or Mac.
             </Paragraph>
 
             <Image
@@ -120,10 +120,10 @@ const WindowsOnMac = () => (
         component: (
           <div>
             <Paragraph>
-              When you restart your computer and don't hold down "Option", by
+              When you restart your computer and don&apos;t hold down Option, by
               default it will go back to the operating system it was in last. If
-              you want to boot with Mac by default, select Mac from your
-              "Startup Disc" section of the "System Preferences" app.
+              you want to boot with Mac by default, select Mac from your Startup
+              Disc section of the System Preferences app.
             </Paragraph>
 
             <Image

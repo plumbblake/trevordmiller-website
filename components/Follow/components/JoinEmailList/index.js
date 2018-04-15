@@ -51,9 +51,9 @@ class JoinEmailList extends Component {
             }}
           >
             <div>
-              Submit your email if you'd like to be emailed when I publish new
-              courses, blog posts, and projects. No spam and your email will not
-              be shared with anyone else.
+              Submit your email if you&apos;d like to be emailed when I publish
+              new courses, blog posts, and projects. No spam and your email will
+              not be shared with anyone else.
             </div>
 
             <form

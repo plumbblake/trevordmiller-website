@@ -21,8 +21,8 @@ const MinimalOffice = () => (
         component: (
           <div>
             <Paragraph>
-              I'm a bit of a neat freak, so I decided to go all out with cable
-              management. Almost everything is mounted below the desk.
+              I&apos;m a bit of a neat freak, so I decided to go all out with
+              cable management. Almost everything is mounted below the desk.
             </Paragraph>
             <Image
               src="/static/minimal-office-under-desk.jpg"
@@ -127,10 +127,9 @@ const MinimalOffice = () => (
         component: (
           <div>
             <Paragraph>
-              I'm very happy with the result. I like having everything tidy and
-              minimal where I spend a good chunk of my life. To me it's worth
-              "sharpening the saw" occasionally like this with things I use a
-              lot.
+              I&apos;m very happy with the result. I like having everything tidy
+              and minimal where I spend a good chunk of my life. To me it&apos;s
+              worth optimizing occasionally like this with things I use a lot.
             </Paragraph>
           </div>
         ),

@@ -92,8 +92,8 @@ const WholesomeMedia = () => (
             />
             <Paragraph>
               One thing to note is that, although a network filter is helpful
-              for wifi and ethernet connections, it doesn't affect devices using
-              cellular data (not on your network).
+              for wifi and ethernet connections, it doesn&apos;t affect devices
+              using cellular data (not on your network).
             </Paragraph>
           </div>
         ),
