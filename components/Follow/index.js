@@ -4,7 +4,7 @@ import Info from '../Info'
 import JoinEmailList from './components/JoinEmailList'
 import Accounts from './components/Accounts'
 
-export default () => (
+const Follow = () => (
   <section
     style={{
       maxWidth: screenSizes.large - screenSizes.large / 2.5,
@@ -30,3 +30,5 @@ export default () => (
     </Info>
   </section>
 )
+
+export default Follow

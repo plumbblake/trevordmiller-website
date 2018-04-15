@@ -113,7 +113,7 @@ export const companies = {
 
 const companyKeys = Object.keys(companies)
 
-export default () => (
+const Resume = () => (
   <ScreenWithBaseRoute
     id="resume"
     sections={[
@@ -220,3 +220,5 @@ export default () => (
     ]}
   />
 )
+
+export default Resume

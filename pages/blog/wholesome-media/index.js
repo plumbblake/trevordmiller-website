@@ -5,7 +5,7 @@ import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 
-export default () => (
+const WholesomeMedia = () => (
   <ScreenWithBlogPost
     id="wholesome-media"
     sections={[
@@ -250,3 +250,5 @@ export default () => (
     ]}
   />
 )
+
+export default WholesomeMedia

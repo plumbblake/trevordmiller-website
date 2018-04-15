@@ -31,7 +31,7 @@ const stylesByType = {
   },
 }
 
-export default ({ onClick, type = 'primary', children }) => (
+const Button = ({ onClick, type = 'primary', children }) => (
   <button
     onClick={onClick}
     style={{
@@ -49,3 +49,5 @@ export default ({ onClick, type = 'primary', children }) => (
     {children}
   </button>
 )
+
+export default Button

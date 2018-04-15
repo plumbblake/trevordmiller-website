@@ -5,7 +5,7 @@ import Image from '../../../../../Image'
 import Info from '../../../../../Info'
 import Tags from '../../../../../Tags'
 
-export default ({ title, mainVisual, description, tags, info, cta }) => (
+const Header = ({ title, mainVisual, description, tags, info, cta }) => (
   <header
     style={{
       maxWidth: screenSizes.large,
@@ -71,3 +71,5 @@ export default ({ title, mainVisual, description, tags, info, cta }) => (
     )}
   </header>
 )
+
+export default Header

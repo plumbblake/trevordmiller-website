@@ -5,7 +5,7 @@ import Image from '../../../components/Image'
 import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
 
-export default () => (
+const WindowsOnMac = () => (
   <ScreenWithBlogPost
     id="windows-on-mac"
     sections={[
@@ -136,3 +136,5 @@ export default () => (
     ]}
   />
 )
+
+export default WindowsOnMac

@@ -2,7 +2,7 @@ import React from 'react'
 import ScreenWithBaseRoute from '../../components/ScreenWithBaseRoute'
 import Follow from '../../components/Follow'
 
-export default () => (
+const FollowWrapper = () => (
   <ScreenWithBaseRoute
     id="follow"
     sections={[
@@ -13,3 +13,5 @@ export default () => (
     footer={false}
   />
 )
+
+export default FollowWrapper

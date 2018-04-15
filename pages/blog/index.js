@@ -145,7 +145,7 @@ export const blogPosts = {
 
 const blogPostKeys = Object.keys(blogPosts)
 
-export default () => (
+const Blog = () => (
   <ScreenWithBaseRoute
     id="blog"
     sections={blogPostKeys.map(blogPostKey => {
@@ -171,3 +171,5 @@ export default () => (
     })}
   />
 )
+
+export default Blog

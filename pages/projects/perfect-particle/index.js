@@ -31,7 +31,7 @@ const releases = [
 
 const maxPlayerSize = 250
 
-export default () => (
+const PerfectParticle = () => (
   <ScreenWithProject
     id="perfect-particle"
     sections={releases.map(release => ({
@@ -91,3 +91,5 @@ export default () => (
     }))}
   />
 )
+
+export default PerfectParticle

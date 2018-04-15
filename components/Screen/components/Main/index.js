@@ -3,7 +3,7 @@ import { screenSizes } from '../../../../utils/theme'
 import Header from './components/Header'
 import Section from './components/Section'
 
-export default ({
+const Main = ({
   title,
   mainVisual,
   description,
@@ -36,3 +36,5 @@ export default ({
     </div>
   </main>
 )
+
+export default Main

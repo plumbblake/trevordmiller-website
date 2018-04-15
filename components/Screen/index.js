@@ -16,7 +16,7 @@ import Navigation from './components/Navigation'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
-export default class Screen extends Component {
+class Screen extends Component {
   static propTypes = {
     baseRouteKey: PropTypes.oneOf(baseRouteKeys),
     mainVisual: PropTypes.string.isRequired,
@@ -169,3 +169,5 @@ export default class Screen extends Component {
     )
   }
 }
+
+export default Screen

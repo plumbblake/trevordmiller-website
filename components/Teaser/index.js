@@ -6,7 +6,7 @@ import Image from '../Image'
 import Icon from '../Icon'
 import Tags from '../Tags'
 
-export default ({ visual, body, links, tags }) => (
+const Teaser = ({ visual, body, links, tags }) => (
   <div>
     {tags ? (
       <div
@@ -68,3 +68,5 @@ export default ({ visual, body, links, tags }) => (
     </div>
   </div>
 )
+
+export default Teaser

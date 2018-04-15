@@ -23,7 +23,7 @@ const accounts = [
   },
 ]
 
-export default () => (
+const Accounts = () => (
   <nav
     style={{
       display: 'flex',
@@ -48,3 +48,5 @@ export default () => (
     ))}
   </nav>
 )
+
+export default Accounts

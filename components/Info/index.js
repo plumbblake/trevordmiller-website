@@ -1,7 +1,7 @@
 import React from 'react'
 import { spacing, borderRadii } from '../../utils/theme'
 
-export default ({ children }) => (
+const Info = ({ children }) => (
   <div
     style={{
       padding: spacing.large,
@@ -13,3 +13,5 @@ export default ({ children }) => (
     {children}
   </div>
 )
+
+export default Info

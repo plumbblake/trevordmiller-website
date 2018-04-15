@@ -538,7 +538,7 @@ class PluginsList extends React.Component {
   }
 }
 
-export default () => (
+const Nova = () => (
   <ScreenWithProject
     id="nova"
     sections={[
@@ -655,3 +655,5 @@ export default () => (
     ]}
   />
 )
+
+export default Nova

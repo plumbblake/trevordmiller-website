@@ -43,9 +43,11 @@ Object.keys(blogPosts).forEach(blogPostKey => {
 
 const xml = feed.xml()
 
-export default class extends Component {
+class Feed extends Component {
   static async getInitialProps({ res }) {
     res.write(xml)
     res.end()
   }
 }
+
+export default Feed

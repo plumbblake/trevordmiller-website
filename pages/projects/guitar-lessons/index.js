@@ -269,7 +269,7 @@ class GuitarPatternsSelector extends Component {
   }
 }
 
-export default class extends React.Component {
+class GuitarLessons extends React.Component {
   static async getInitialProps({ query: { degree, type } }) {
     return {
       selectedDegree: degree,
@@ -329,3 +329,5 @@ export default class extends React.Component {
     )
   }
 }
+
+export default GuitarLessons

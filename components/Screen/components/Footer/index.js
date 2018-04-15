@@ -2,7 +2,7 @@ import React from 'react'
 import { spacing, screenSizes } from '../../../../utils/theme'
 import Follow from '../../../Follow'
 
-export default () => (
+const Footer = () => (
   <footer
     style={{
       paddingLeft: spacing.large,
@@ -16,3 +16,5 @@ export default () => (
     <Follow />
   </footer>
 )
+
+export default Footer

@@ -1,7 +1,7 @@
 import React from 'react'
 import { uiGroups, fontSizes } from '../../utils/theme'
 
-export default ({ children }) => (
+const Label = ({ children }) => (
   <p
     style={{
       fontSize: fontSizes.small,
@@ -11,3 +11,5 @@ export default ({ children }) => (
     {children}
   </p>
 )
+
+export default Label

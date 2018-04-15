@@ -213,7 +213,7 @@ export const projects = {
 
 const projectKeys = Object.keys(projects)
 
-export default () => (
+const Projects = () => (
   <ScreenWithBaseRoute
     id="projects"
     sections={projectKeys.map(projectKey => {
@@ -232,3 +232,5 @@ export default () => (
     })}
   />
 )
+
+export default Projects

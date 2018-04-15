@@ -48,7 +48,7 @@ export const baseRoutes = {
 
 export const baseRouteKeys = Object.keys(baseRoutes)
 
-export default () => (
+const Home = () => (
   <Screen
     mainVisual="/static/trevordmiller-website.png"
     pathname="https://trevordmiller.com"
@@ -76,3 +76,5 @@ export default () => (
     })}
   />
 )
+
+export default Home

@@ -7,7 +7,7 @@ import Code from '../../../components/Code'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
 
-export default () => (
+const Dotfiles = () => (
   <ScreenWithBlogPost
     id="dotfiles"
     sections={[
@@ -127,3 +127,5 @@ export default () => (
     ]}
   />
 )
+
+export default Dotfiles

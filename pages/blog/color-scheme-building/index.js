@@ -6,7 +6,7 @@ import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 import List from '../../../components/List'
 
-export default () => (
+const ColorSchemeBuilding = () => (
   <ScreenWithBlogPost
     id="color-scheme-building"
     sections={[
@@ -124,3 +124,5 @@ export default () => (
     ]}
   />
 )
+
+export default ColorSchemeBuilding

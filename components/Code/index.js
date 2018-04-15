@@ -1,7 +1,7 @@
 import React from 'react'
 import { syntaxGroups, fontFamilies } from '../../utils/theme'
 
-export default ({ children }) => (
+const Code = ({ children }) => (
   <span
     style={{
       fontFamily: fontFamilies.monoSpace,
@@ -11,3 +11,5 @@ export default ({ children }) => (
     {children}
   </span>
 )
+
+export default Code

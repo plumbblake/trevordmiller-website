@@ -17,7 +17,7 @@ import {
 } from './utils/exampleCodeStrings'
 import ExampleApp from './components/ExampleApp'
 
-export default () => (
+const ReactRenderCallbackComponents = () => (
   <ScreenWithBlogPost
     id="react-render-callback-components"
     sections={[
@@ -148,3 +148,5 @@ export default () => (
     ]}
   />
 )
+
+export default ReactRenderCallbackComponents

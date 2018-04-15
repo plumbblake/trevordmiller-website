@@ -141,7 +141,7 @@ export const courses = {
 
 const courseKeys = Object.keys(courses)
 
-export default () => (
+const Courses = () => (
   <ScreenWithBaseRoute
     id="courses"
     sections={courseKeys.map(courseKey => {
@@ -167,3 +167,5 @@ export default () => (
     })}
   />
 )
+
+export default Courses

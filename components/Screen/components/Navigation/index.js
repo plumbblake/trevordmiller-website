@@ -9,7 +9,7 @@ import {
   fontWeights,
 } from '../../../../utils/theme'
 
-export default ({ baseRouteKey }) => (
+const Navigation = ({ baseRouteKey }) => (
   <header>
     <nav
       style={{
@@ -79,3 +79,5 @@ export default ({ baseRouteKey }) => (
     </nav>
   </header>
 )
+
+export default Navigation

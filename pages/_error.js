@@ -3,7 +3,7 @@ import Screen from '../components/Screen'
 import Anchor from '../components/Anchor'
 import Button from '../components/Button'
 
-export default class Error extends Component {
+class Error extends Component {
   static getInitialProps({ res, err }) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null
     return { statusCode }
@@ -34,3 +34,5 @@ export default class Error extends Component {
     )
   }
 }
+
+export default Error
