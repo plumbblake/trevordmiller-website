@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { screenSizes } from '../../../../utils/theme'
 import Header from './components/Header'
 import Section from './components/Section'
@@ -36,5 +37,26 @@ const Main = ({
     </div>
   </main>
 )
+
+Main.propTypes = {
+  title: PropTypes.string.isRequired,
+  mainVisual: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      color: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+  ),
+  info: PropTypes.node,
+  cta: PropTypes.node,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.node.isRequired,
+    }),
+  ),
+}
 
 export default Main

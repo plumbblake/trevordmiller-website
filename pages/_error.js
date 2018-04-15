@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Page from '../components/Page'
 import Anchor from '../components/Anchor'
 import Button from '../components/Button'
@@ -33,6 +34,10 @@ class Error extends Component {
       />
     )
   }
+}
+
+Error.propTypes = {
+  statusCode: PropTypes.number.isRequired,
 }
 
 export default Error

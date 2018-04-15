@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   spacing,
   fontSizes,
@@ -536,6 +537,18 @@ class PluginsList extends React.Component {
       </Tabs>
     )
   }
+}
+
+PluginsList.propTypes = {
+  plugins: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      screenshot: PropTypes.string,
+      steps: PropTypes.array,
+      notes: PropTypes.array,
+      links: PropTypes.array,
+    }),
+  ).isRequired,
 }
 
 const Nova = () => (

@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Page from '../Page'
-import { blogPosts } from '../../pages/blog'
+import { blogPosts, blogPostKeys } from '../../pages/blog'
 
 const PageWithBlogPost = ({ id, sections }) => (
   <Page
@@ -13,5 +14,15 @@ const PageWithBlogPost = ({ id, sections }) => (
     sections={sections}
   />
 )
+
+PageWithBlogPost.propTypes = {
+  id: PropTypes.oneOf(blogPostKeys).isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.node.isRequired,
+    }),
+  ).isRequired,
+}
 
 export default PageWithBlogPost

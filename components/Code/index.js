@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { syntaxGroups, fontFamilies } from '../../utils/theme'
 
 const Code = ({ children }) => (
@@ -11,5 +12,9 @@ const Code = ({ children }) => (
     {children}
   </span>
 )
+
+Code.propTypes = {
+  children: PropTypes.string.isRequired,
+}
 
 export default Code

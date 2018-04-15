@@ -36,6 +36,7 @@ Video.propTypes = {
   loop: PropTypes.bool,
   muted: PropTypes.bool,
   controls: PropTypes.bool,
+  thumbnail: PropTypes.string,
 }
 
 export default Video

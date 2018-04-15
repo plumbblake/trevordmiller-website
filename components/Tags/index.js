@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { spacing, fontSizes, borderRadii, borderSizes } from '../../utils/theme'
 import Icon from '../Icon'
 
@@ -46,5 +47,15 @@ const Tags = ({ tags }) => (
     ))}
   </div>
 )
+
+Tags.propTypes = {
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      color: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+  ).isRequired,
+}
 
 export default Tags

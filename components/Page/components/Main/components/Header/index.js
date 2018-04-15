@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { spacing, screenSizes } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 import Image from '../../../../../Image'
@@ -71,5 +72,20 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
     )}
   </header>
 )
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  mainVisual: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      color: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+  ),
+  info: PropTypes.node,
+  cta: PropTypes.node,
+}
 
 export default Header

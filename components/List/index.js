@@ -42,8 +42,8 @@ const List = ({ items, type = 'bullet' }) => {
 }
 
 List.propTypes = {
-  items: PropTypes.array.isRequired,
-  ordered: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.node).isRequired,
+  type: PropTypes.oneOf(['bullet', 'link', 'number']),
 }
 
 export default List

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Toggle from '../Toggle'
 
 const Modal = ({ teaser, details }) => (
@@ -37,5 +38,10 @@ const Modal = ({ teaser, details }) => (
     )}
   </Toggle>
 )
+
+Modal.propTypes = {
+  teaser: PropTypes.node.isRequired,
+  details: PropTypes.node.isRequired,
+}
 
 export default Modal

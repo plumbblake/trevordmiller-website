@@ -143,7 +143,7 @@ export const blogPosts = {
   },
 }
 
-const blogPostKeys = Object.keys(blogPosts)
+export const blogPostKeys = Object.keys(blogPosts)
 
 const Blog = () => (
   <PageWithBaseRoute

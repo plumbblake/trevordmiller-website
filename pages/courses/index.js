@@ -139,7 +139,7 @@ export const courses = {
   },
 }
 
-const courseKeys = Object.keys(courses)
+export const courseKeys = Object.keys(courses)
 
 const Courses = () => (
   <PageWithBaseRoute

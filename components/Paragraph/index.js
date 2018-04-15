@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { spacing } from '../../utils/theme'
 
 const Paragraph = ({ children }) => (
@@ -11,5 +12,9 @@ const Paragraph = ({ children }) => (
     {children}
   </p>
 )
+
+Paragraph.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Paragraph

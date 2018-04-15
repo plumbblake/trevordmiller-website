@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
 import PageWithProject from '../../../components/PageWithProject'
@@ -156,6 +157,13 @@ const GuitarPattern = ({
   </div>
 )
 
+GuitarPattern.propTypes = {
+  strings: PropTypes.array,
+  highlightedDegreesByString: PropTypes.object,
+  noteSize: PropTypes.number,
+  fretSize: PropTypes.number,
+}
+
 const SelectorItem = ({ children }) => (
   <div
     style={{
@@ -166,6 +174,10 @@ const SelectorItem = ({ children }) => (
     {children}
   </div>
 )
+
+SelectorItem.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 const Selector = ({ title, children }) => (
   <div>
@@ -182,6 +194,11 @@ const Selector = ({ title, children }) => (
     </div>
   </div>
 )
+
+Selector.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
 
 class GuitarPatternsSelector extends Component {
   static defaultProps = {
@@ -269,6 +286,11 @@ class GuitarPatternsSelector extends Component {
   }
 }
 
+GuitarPatternsSelector.propTypes = {
+  selectedDegree: PropTypes.oneOf(degreeOptions).isRequired,
+  selectedType: PropTypes.oneOf(typeOptions).isRequired,
+}
+
 class GuitarLessons extends React.Component {
   static async getInitialProps({ query: { degree, type } }) {
     return {
@@ -328,6 +350,11 @@ class GuitarLessons extends React.Component {
       />
     )
   }
+}
+
+GuitarLessons.propTypes = {
+  selectedDegree: PropTypes.number.isRequired,
+  selectedType: PropTypes.oneOf(Object.keys(typeOptions)).isRequired,
 }
 
 export default GuitarLessons

@@ -30,6 +30,7 @@ const Section = ({ children, note, title }) => (
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
+  note: PropTypes.string,
   title: PropTypes.string,
 }
 

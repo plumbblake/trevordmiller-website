@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Raven from 'raven-js'
 import Heading from '../../../Heading'
 import Button from '../../../Button'
@@ -47,6 +48,10 @@ class ErrorBoundary extends Component {
       children
     )
   }
+}
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default ErrorBoundary

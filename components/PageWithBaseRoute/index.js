@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Page from '../Page'
-import { baseRoutes } from '../../pages'
+import { baseRoutes, baseRouteKeys } from '../../pages'
 
 const PageWithBaseRoute = ({ id, sections, footer = true }) => (
   <Page
@@ -14,5 +15,16 @@ const PageWithBaseRoute = ({ id, sections, footer = true }) => (
     footer={footer}
   />
 )
+
+PageWithBaseRoute.propTypes = {
+  id: PropTypes.oneOf(baseRouteKeys).isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.node.isRequired,
+    }),
+  ).isRequired,
+  footer: PropTypes.bool,
+}
 
 export default PageWithBaseRoute

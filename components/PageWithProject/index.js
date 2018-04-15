@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Page from '../Page'
-import { projects } from '../../pages/projects'
+import { projects, projectKeys } from '../../pages/projects'
 
 const PageWithProject = ({ id, sections }) => (
   <Page
@@ -12,5 +13,15 @@ const PageWithProject = ({ id, sections }) => (
     sections={sections}
   />
 )
+
+PageWithProject.propTypes = {
+  id: PropTypes.oneOf(projectKeys).isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.node.isRequired,
+    }),
+  ).isRequired,
+}
 
 export default PageWithProject

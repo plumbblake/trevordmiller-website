@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Toggle from '../Toggle'
 
 const Thumbnail = ({ src, teaser }) => (
@@ -18,5 +19,10 @@ const Thumbnail = ({ src, teaser }) => (
     )}
   </Toggle>
 )
+
+Thumbnail.propTypes = {
+  teaser: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+}
 
 export default Thumbnail

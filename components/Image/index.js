@@ -22,6 +22,10 @@ const Image = ({ src, description, quiet = false, style, size }) => (
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  quiet: PropTypes.bool,
+  style: PropTypes.object,
+  size: PropTypes.oneOf(Object.keys(maxWidthsBySize)),
 }
 
 export default Image

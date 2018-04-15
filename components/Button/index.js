@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   uiGroups,
   colorValues,
@@ -49,5 +50,11 @@ const Button = ({ onClick, type = 'primary', children }) => (
     {children}
   </button>
 )
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  type: PropTypes.oneOf(Object.keys(stylesByType)),
+  children: PropTypes.string.isRequired,
+}
 
 export default Button

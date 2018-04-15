@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { spacing, uiGroups, screenSizes } from '../../utils/theme'
 import List from '../List'
 import Anchor from '../Anchor'
@@ -68,5 +69,23 @@ const Teaser = ({ visual, body, links, tags }) => (
     </div>
   </div>
 )
+
+Teaser.propTypes = {
+  visual: PropTypes.string,
+  body: PropTypes.node.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }),
+  ),
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      color: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+  ),
+}
 
 export default Teaser

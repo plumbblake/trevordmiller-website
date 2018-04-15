@@ -211,7 +211,7 @@ export const projects = {
   },
 }
 
-const projectKeys = Object.keys(projects)
+export const projectKeys = Object.keys(projects)
 
 const Projects = () => (
   <PageWithBaseRoute

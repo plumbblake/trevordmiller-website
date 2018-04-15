@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Page from '../Page'
 import Heading from '../Heading'
 import Anchor from '../Anchor'
@@ -7,7 +8,7 @@ import Avatar from '../Avatar'
 import Icon from '../Icon'
 import List from '../List'
 import Video from '../Video'
-import { courses } from '../../pages/courses'
+import { courses, courseKeys } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
 
 const PageWithCourse = ({ id }) => {
@@ -237,6 +238,10 @@ const PageWithCourse = ({ id }) => {
       ]}
     />
   )
+}
+
+PageWithCourse.propTypes = {
+  id: PropTypes.oneOf(courseKeys).isRequired,
 }
 
 export default PageWithCourse

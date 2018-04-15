@@ -24,14 +24,11 @@
   "eslintConfig": {
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "plugins": ["react"],
+    "parser": "babel-eslint",
     "env": {
       "node": true,
       "browser": true,
       "jest": true
-    },
-    "parser": "babel-eslint",
-    "rules": {
-      "react/prop-types": "off"
     }
   },
   "prettier": {
