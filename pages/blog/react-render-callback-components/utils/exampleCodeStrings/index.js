@@ -38,7 +38,7 @@ const App = () => (
     />
     
     <Modal
-      teaser={<button>Tap to toggle Modal details</button>}
+      teaser='Tap to toggle Modal details'
       details={<div>Some details</div>}
     />
 
@@ -84,9 +84,9 @@ const Accordion = ({teaser, details}) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <section>
-        <a onClick={handleToggleClick}>
+        <button onClick={handleToggleClick}>
           {\`\${isOpen ? '-' : '+'} \${teaser}\`}
-        </a>
+        </button>
         {isOpen && details}
       </section>
     )}
@@ -102,7 +102,7 @@ import Toggle from './Toggle'
 const Modal = ({teaser, details}) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
-      <div onClick={handleToggleClick}>
+      <button onClick={handleToggleClick}>
         {teaser}
         {isOpen && (
           <div>
@@ -127,7 +127,7 @@ const Modal = ({teaser, details}) => (
             }} />
           </div>
         )}
-      </div>
+      <button>
     )}
   </Toggle>
 )
@@ -143,14 +143,15 @@ const Thumbnail = ({src, teaser}) => (
     {(isOpen, handleToggleClick) => (
       <div>
         <div>{teaser}</div>
-        <img
-          src={src}
-          alt={teaser}
-          onClick={handleToggleClick}
-          style={{
-            maxWidth: isOpen ? '100%' : 150
-          }}
-        />
+        <button onClick={handleToggleClick}>
+          <img
+            src={src}
+            alt={teaser}
+            style={{
+              maxWidth: isOpen ? '100%' : 150
+            }}
+          />
+        </button>
       </div>
     )}
   </Toggle>

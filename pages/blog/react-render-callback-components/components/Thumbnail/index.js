@@ -7,14 +7,15 @@ const Thumbnail = ({ src, teaser }) => (
     {(isOpen, handleToggleClick) => (
       <div>
         <div>{teaser}</div>
-        <img
-          src={src}
-          alt={teaser}
-          onClick={handleToggleClick}
-          style={{
-            maxWidth: isOpen ? '100%' : 150,
-          }}
-        />
+        <button onClick={handleToggleClick}>
+          <img
+            src={src}
+            alt={teaser}
+            style={{
+              maxWidth: isOpen ? '100%' : 150,
+            }}
+          />
+        </button>
       </div>
     )}
   </Toggle>

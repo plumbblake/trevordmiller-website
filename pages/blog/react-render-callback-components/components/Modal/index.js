@@ -5,7 +5,7 @@ import Toggle from '../Toggle'
 const Modal = ({ teaser, details }) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
-      <div onClick={handleToggleClick}>
+      <button onClick={handleToggleClick}>
         {teaser}
         {isOpen && (
           <div>
@@ -34,13 +34,13 @@ const Modal = ({ teaser, details }) => (
             />
           </div>
         )}
-      </div>
+      </button>
     )}
   </Toggle>
 )
 
 Modal.propTypes = {
-  teaser: PropTypes.node.isRequired,
+  teaser: PropTypes.string.isRequired,
   details: PropTypes.node.isRequired,
 }
 

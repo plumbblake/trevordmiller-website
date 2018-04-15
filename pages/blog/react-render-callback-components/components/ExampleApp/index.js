@@ -11,7 +11,7 @@ const ExampleApp = () => (
     />
 
     <Modal
-      teaser={<button>Tap to toggle Modal details</button>}
+      teaser="Tap to toggle Modal details"
       details={<div>Some details</div>}
     />
 

@@ -6,7 +6,9 @@ const Accordion = ({ teaser, details }) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <section>
-        <a onClick={handleToggleClick}>{`${isOpen ? '-' : '+'} ${teaser}`}</a>
+        <button onClick={handleToggleClick}>{`${
+          isOpen ? '-' : '+'
+        } ${teaser}`}</button>
         {isOpen && details}
       </section>
     )}

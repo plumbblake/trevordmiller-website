@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
@@ -82,7 +83,7 @@ const Navigation = ({ baseRouteKey }) => (
 )
 
 Navigation.propTypes = {
-  baseRouteKey: PropTypes.oneOf(baseRouteKeys).isRequired,
+  baseRouteKey: PropTypes.oneOf(baseRouteKeys),
 }
 
 export default Navigation
