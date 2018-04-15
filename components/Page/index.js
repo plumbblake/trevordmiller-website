@@ -17,31 +17,6 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 
 class Page extends Component {
-  static propTypes = {
-    baseRouteKey: PropTypes.oneOf(baseRouteKeys),
-    mainVisual: PropTypes.string.isRequired,
-    showMainVisual: PropTypes.bool,
-    pathname: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        color: PropTypes.string,
-        icon: PropTypes.string,
-      }),
-    ),
-    info: PropTypes.string,
-    cta: PropTypes.element,
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        component: PropTypes.element.isRequired,
-      }),
-    ).isRequired,
-    footer: PropTypes.bool,
-  }
-
   componentDidMount() {
     window.ga('set', 'page', window.location.pathname)
     window.ga('send', 'pageview')
@@ -168,6 +143,31 @@ class Page extends Component {
       </ErrorBoundary>
     )
   }
+}
+
+Page.propTypes = {
+  baseRouteKey: PropTypes.oneOf(baseRouteKeys),
+  mainVisual: PropTypes.string.isRequired,
+  showMainVisual: PropTypes.bool,
+  pathname: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      color: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+  ),
+  info: PropTypes.string,
+  cta: PropTypes.element,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      component: PropTypes.element.isRequired,
+    }),
+  ).isRequired,
+  footer: PropTypes.bool,
 }
 
 export default Page
