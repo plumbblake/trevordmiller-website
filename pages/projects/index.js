@@ -52,7 +52,7 @@ export const projects = {
   },
 
   'practice-problems': {
-    tags: [tags.typescript, tags.go],
+    tags: [tags.node, tags.go, tags.typescript],
     mainVisual: '/static/code-1.jpg',
     title: `Practice Problems`,
     description: `Coding practice problems.`,
