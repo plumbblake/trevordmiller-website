@@ -1,5 +1,3 @@
-_CSS makes it really easy to add styles that tie you down - so you can't make changes without breaking things. This post shows some examples of how we are fixing these problems in our codebase._
-
 ## What is brittle CSS?
 
 When something is "brittle" it means it is easy to break. Brittle code means code you can't change easily without breaking something. CSS is a language that is prone to a lot of brittleness. There are some things we can do to make working with CSS better though! Let's look at some examples from our codebase.

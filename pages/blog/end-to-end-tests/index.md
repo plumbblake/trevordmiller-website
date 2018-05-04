@@ -1,5 +1,3 @@
-_How we are using headless Chrome to write end-to-end tests that don't drive you crazy_
-
 # What are end-to-end tests?
 
 Tests written to check software functionality can be grouped into a few categories. Some of the most popular categories include:

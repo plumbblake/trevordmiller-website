@@ -1,5 +1,3 @@
-_How we use a GraphQL schema to dramatically simplify syncing between back-end and front-end._
-
 ## A single source of truth for app data
 
 Ropig is built with GraphQL. There are [plenty of goodies GraphQL has to offer](http://graphql.org), but in this post, I want to go over one of our favorites: the schema.

@@ -1,5 +1,3 @@
-_Some examples of how you can test what your code should do instead of how it does it._
-
 ## Suggestion: test behavior, not implementation
 
 Tests are one of the most important parts of a codebase. They can catch many bugs before they are released. They can ensure your programs work as expected.
