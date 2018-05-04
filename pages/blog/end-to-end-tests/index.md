@@ -174,12 +174,12 @@ We are using <a href="https://facebook.github.io/jest/" target="_blank" rel="noo
 <h2>Headless mode</h2>
 Here are what these tests look like when you run them in headless mode:
 
-[caption id="attachment_34" align="alignnone" width="459"]<img class="wp-image-34" src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-headless-275x300.png" alt="A screenshot of running end-to-end tests in headless mode" width="459" height="500" /> Running end-to-end tests in headless mode[/caption]
+<img src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-headless-275x300.png" alt="A screenshot of running end-to-end tests in headless mode" />
 
 <h2>Debug mode</h2>
 Here is a video of what these tests look like when you run them in debug mode. Debug mode opens a real browser and slows down each step so you can see what is happening:
 
-[video width="2560" height="1440" mp4="https://ropig.com/wp-content/uploads/2017/10/puppeteer-debug.mp4"][/video]
+<video src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-debug.mp4" />
 
 <h2>Some of the things I really like about Puppeteer</h2>
 <ul>
