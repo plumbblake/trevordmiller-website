@@ -34,6 +34,7 @@ class Page extends Component {
       info,
       cta,
       sections,
+      children,
       footer = true,
     } = this.props
     return (
@@ -135,7 +136,9 @@ class Page extends Component {
               info={info}
               cta={cta}
               sections={sections}
-            />
+            >
+              {children}
+            </Main>
           </ErrorBoundary>
 
           {footer ? <Footer /> : null}
@@ -166,7 +169,8 @@ Page.propTypes = {
       title: PropTypes.string,
       component: PropTypes.element.isRequired,
     }),
-  ).isRequired,
+  ),
+  children: PropTypes.element,
   footer: PropTypes.bool,
 }
 

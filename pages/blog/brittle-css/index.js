@@ -3,15 +3,9 @@ import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Content from './index.md'
 
 const BrittleCss = () => (
-  <PageWithBlogPost
-    id="brittle-css"
-    sections={[
-      {
-        title: 'TODO break up sections',
-        component: <Content />,
-      },
-    ]}
-  />
+  <PageWithBlogPost id="brittle-css">
+    <Content />
+  </PageWithBlogPost>
 )
 
 export default BrittleCss

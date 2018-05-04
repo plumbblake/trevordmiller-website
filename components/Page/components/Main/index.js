@@ -12,6 +12,7 @@ const Main = ({
   info,
   cta,
   sections,
+  children,
 }) => (
   <main>
     <div
@@ -29,11 +30,14 @@ const Main = ({
         info={info}
         cta={cta}
       />
-      {sections.map((section, index) => (
-        <Section key={index} note={section.note} title={section.title}>
-          {section.component}
-        </Section>
-      ))}
+
+      {children
+        ? children
+        : sections.map((section, index) => (
+            <Section key={index} note={section.note} title={section.title}>
+              {section.component}
+            </Section>
+          ))}
     </div>
   </main>
 )
@@ -57,6 +61,7 @@ Main.propTypes = {
       component: PropTypes.node.isRequired,
     }),
   ),
+  children: PropTypes.element,
 }
 
 export default Main

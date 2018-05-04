@@ -3,15 +3,9 @@ import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Content from './index.md'
 
 const GraphQlSchema = () => (
-  <PageWithBlogPost
-    id="graphql-schema"
-    sections={[
-      {
-        title: 'TODO break up sections',
-        component: <Content />,
-      },
-    ]}
-  />
+  <PageWithBlogPost id="graphql-schema">
+    <Content />
+  </PageWithBlogPost>
 )
 
 export default GraphQlSchema
