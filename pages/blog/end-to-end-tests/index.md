@@ -183,13 +183,13 @@ We are using [Jest](https://facebook.github.io/jest/) as our test runner, but yo
 
 Here are what these tests look like when you run them in headless mode:
 
-![A screenshot of running end-to-end tests in headless mode](https://ropig.com/wp-content/uploads/2017/10/puppeteer-headless-275x300.png)
+![A screenshot of running end-to-end tests in headless mode](/static/puppeteer-headless-tests.png)
 
 ## Debug mode
 
 Here is a video of what these tests look like when you run them in debug mode. Debug mode opens a real browser and slows down each step so you can see what is happening:
 
-<Video src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-debug.mp4" />
+<Video src="/static/puppeteer-debug-tests.mp4" />
 
 ## Some of the things I really like about Puppeteer
 

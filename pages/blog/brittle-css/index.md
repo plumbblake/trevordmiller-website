@@ -6,11 +6,11 @@ When something is "brittle" it means it is easy to break. Brittle code means cod
 
 We have text inputs that let users at-mention social media accounts. They should look like this:
 
-![at-mention component CSS](https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.25.41-PM-e1520888675990.png)
+![at-mention component CSS](/static/edgar-at-mentions.png)
 
 One day, we noticed the alignment had broken and they looked like this:
 
-![@mention broken alignment screenshot](https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.27.57-PM-e1520888707501.png)
+![@mention broken alignment screenshot](/static/edgar-at-mentions-broken.png)
 
 The problem was that the CSS for our @mention tag was brittle. Making an "unrelated" change in the codebase had caused the styles to break here unintentionally.
 
@@ -60,11 +60,11 @@ We replaced the absolute positioning and hard-coded numbers with fluid self-calc
 
 Sidebar layouts are really common in CSS. We had one in our app that looked like this:
 
-![Sidebar layout screenshot](https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-2.28.40-PM.png)
+![Sidebar layout screenshot](/static/edgar-sidebar-layout.png)
 
 This worked well on desktop, but not on smaller screens:
 
-![Sidebar layout mobile broken screenshot](https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-3.00.30-PM-602x1024.png)
+![Sidebar layout mobile broken screenshot](/static/edgar-sidebar-layout-mobile-overflow.png)
 
 ### Before
 
