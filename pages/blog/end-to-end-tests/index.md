@@ -24,7 +24,7 @@ One of the most popular tools for e2e testing is Selenium, which is a tool for a
 
 ## A Puppeteer test looks like this
 
-```language-javascript
+```javascript
 test('can logout', async () => {
   await page.click('[data-testid="userMenuButton"]')
   await page.waitForSelector('[data-testid="userMenuOpen"]')
@@ -37,7 +37,7 @@ In this case, we tap a drop-down menu, wait for it to open, tap a logout link, a
 
 ## A few more real examples pulled from the Ropig test suite
 
-```language-javascript
+```javascript
 import faker from 'faker'
 import puppeteer from 'puppeteer'
 
@@ -77,7 +77,7 @@ beforeAll(async () => {
           headless: false,
           slowMo: 100,
         }
-      : {}
+      : {},
   )
   page = await browser.newPage()
 })
@@ -209,7 +209,7 @@ The purpose of e2e tests is to fail when you break some expected user-facing fun
 
 ### A bad example
 
-```language-javascript
+```javascript
 test('can logout', async () => {
   await page.click('#menu div > a')
   sleep 500
@@ -220,7 +220,7 @@ This is a brittle test because it relies on implementation details (arbitrary ne
 
 ### A good example
 
-```language-javascript
+```javascript
 test('can logout', async () => {
   await page.click('[data-testid="userMenuButton"]')
   await page.waitForSelector('[data-testid="userMenuOpen"]')
@@ -247,7 +247,7 @@ Using async/await is a great way to deal with chains of async events, which is m
 
 Using a fake data generator like [faker](https://www.npmjs.com/package/faker) ensures that your app is flexible. It guarantees your app has the same output each time it is run with the same input. This is in contrast to using a single test account for each test run that has a bunch of state sitting around, making your tests inconsistent. For example, in Ropig we use faker like this to create a random user for each test run:
 
-```language-javascript
+```javascript
 import faker from 'faker'
 
 const user = {

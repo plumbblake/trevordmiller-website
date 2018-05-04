@@ -20,18 +20,18 @@ The problem was that the CSS for our @mention tag was brittle. Making an "unrela
 
 Here are some of the styles we had:
 
-```language-css
+```css
 .mention {
   position: relative;
   padding: 1px 2px 1px 8px;
-  ...
+  ...;
 }
 
 .socialIconContainer {
   position: absolute;
   top: 0.06em;
   left: 0.24em;
-  ...
+  ...;
 }
 ```
 
@@ -39,12 +39,12 @@ Here are some of the styles we had:
 
 Here are the same styles after refactoring:
 
-```language-css
+```css
 .mention {
   display: inline-flex;
   align-items: center;
   padding: 2px;
-  ...
+  ...;
 }
 
 .socialIconContainer {
@@ -72,7 +72,7 @@ This worked well on desktop, but not on smaller screens:
 
 The styles were hard-coded for desktop:
 
-```language-css
+```css
 .root {
   padding: 20px;
   width: 1000px;
@@ -94,7 +94,7 @@ The styles were hard-coded for desktop:
 
 After refactoring the styles look like this:
 
-```language-css
+```css
 .root {
   padding: 10px;
   max-width: 1000px;
