@@ -10,13 +10,6 @@ export const blogPosts = {
     title: `How to avoid tying tests to implementation`,
     description: `Examples of how you can test what your code should do instead of how it does it.`,
     date: 'April 10, 2018',
-    links: [
-      {
-        description: 'Read the blog post',
-        href:
-          'https://ropig.com/blog/how-to-avoid-tying-tests-to-implementation/',
-      },
-    ],
   },
 
   'raspberry-pi-button': {
@@ -33,13 +26,6 @@ export const blogPosts = {
     title: `Using a GraphQL schema to supercharge team collaboration`,
     description: `Examples of using a GraphQL schema to automate data pieces across back-end and front-end.`,
     date: 'December 13, 2017',
-    links: [
-      {
-        description: 'Read the blog post',
-        href:
-          'https://ropig.com/blog/using-graphql-schema-supercharge-team-collaboration/',
-      },
-    ],
   },
 
   'end-to-end-tests': {
@@ -48,12 +34,6 @@ export const blogPosts = {
     title: `End-to-end Tests that Don’t Suck with Puppeteer`,
     description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
     date: 'October 16, 2017',
-    links: [
-      {
-        description: 'Read the blog post',
-        href: 'https://ropig.com/blog/end-end-tests-dont-suck-puppeteer/',
-      },
-    ],
   },
 
   dotfiles: {
@@ -78,12 +58,6 @@ export const blogPosts = {
     title: `How to find and fix brittle CSS`,
     description: `Examples of making CSS easier to maintain with Flexbox, fluid values, additive media queries etc.`,
     date: 'March 12, 2018',
-    links: [
-      {
-        description: 'Read the blog post',
-        href: 'https://ropig.com/blog/find-fix-brittle-css/',
-      },
-    ],
   },
 
   'color-scheme-building': {
@@ -157,14 +131,12 @@ const Blog = () => (
             tags={blogPost.tags}
             visual={blogPost.mainVisual}
             body={blogPost.description}
-            links={
-              blogPost.links || [
-                {
-                  description: 'Read the blog post',
-                  href: `/blog/${blogPostKey}`,
-                },
-              ]
-            }
+            links={[
+              {
+                description: 'Read the blog post',
+                href: `/blog/${blogPostKey}`,
+              },
+            ]}
           />
         ),
       }
