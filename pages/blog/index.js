@@ -31,7 +31,7 @@ export const blogPosts = {
   'end-to-end-tests': {
     tags: [tags.node],
     mainVisual: '/static/end-to-end-tests.png',
-    title: `End-to-end Tests that Don’t Suck with Puppeteer`,
+    title: `Writing end-to-end tests that aren't dreadful`,
     description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
     date: 'October 16, 2017',
   },

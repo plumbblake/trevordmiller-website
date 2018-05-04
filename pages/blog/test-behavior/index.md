@@ -510,7 +510,7 @@ However, I'm not saying all spies are bad. If your behavior you are testing is t
 
 ### Moving tests with many side effects to end-to-end tests
 
-If it is impossible to write a test with simple input => output, end-to-end tests might be a better fit. [I wrote a blog post on how simple end-to-end tests can be written using Puppeteer](https://ropig.com/blog/end-end-tests-dont-suck-puppeteer/) that provide huge coverage for little cost. Puppeteer is from the Chrome team and uses the official headless Chrome so the tests can run in a real environment but without the brittleness and slowness of traditional end-to-end test setups.
+If it is impossible to write a test with simple input => output, end-to-end tests might be a better fit. [I wrote a blog post on how simple end-to-end tests can be written using Puppeteer](/blog/end-to-end-tests) that provide huge coverage for little cost. Puppeteer is from the Chrome team and uses the official headless Chrome so the tests can run in a real environment but without the brittleness and slowness of traditional end-to-end test setups.
 
 Here is one example:
 
