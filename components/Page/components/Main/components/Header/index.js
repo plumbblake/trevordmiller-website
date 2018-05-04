@@ -13,8 +13,6 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
       margin: 'auto',
       paddingTop: spacing.xlarge,
       paddingBottom: spacing.xlarge,
-      paddingLeft: spacing.large,
-      paddingRight: spacing.large,
     }}
   >
     <Heading level={1}>{title}</Heading>

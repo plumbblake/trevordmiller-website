@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { screenSizes } from '../../../../utils/theme'
+import { spacing, screenSizes } from '../../../../utils/theme'
 import Header from './components/Header'
 import Section from './components/Section'
 
@@ -14,31 +14,31 @@ const Main = ({
   sections,
   children,
 }) => (
-  <main>
-    <div
-      style={{
-        maxWidth: screenSizes.large,
-        margin: 'auto',
-        minHeight: '100vh',
-      }}
-    >
-      <Header
-        title={title}
-        mainVisual={mainVisual}
-        description={description}
-        tags={tags}
-        info={info}
-        cta={cta}
-      />
+  <main
+    style={{
+      maxWidth: screenSizes.large,
+      margin: 'auto',
+      minHeight: '100vh',
+      paddingLeft: spacing.large,
+      paddingRight: spacing.large,
+    }}
+  >
+    <Header
+      title={title}
+      mainVisual={mainVisual}
+      description={description}
+      tags={tags}
+      info={info}
+      cta={cta}
+    />
 
-      {children
-        ? children
-        : sections.map((section, index) => (
-            <Section key={index} note={section.note} title={section.title}>
-              {section.component}
-            </Section>
-          ))}
-    </div>
+    {children
+      ? children
+      : sections.map((section, index) => (
+          <Section key={index} note={section.note} title={section.title}>
+            {section.component}
+          </Section>
+        ))}
   </main>
 )
 

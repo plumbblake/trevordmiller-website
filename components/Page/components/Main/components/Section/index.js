@@ -8,8 +8,6 @@ const Section = ({ children, note, title }) => (
     id={title}
     style={{
       paddingBottom: spacing.xlarge,
-      paddingLeft: spacing.large,
-      paddingRight: spacing.large,
     }}
   >
     {note && (
