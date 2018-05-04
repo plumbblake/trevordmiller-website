@@ -31,7 +31,7 @@ export const blogPosts = {
   'end-to-end-tests': {
     tags: [tags.node],
     mainVisual: '/static/end-to-end-tests.png',
-    title: `Writing end-to-end tests that aren't dreadful`,
+    title: `Writing end-to-end tests that are simple and fast`,
     description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
     date: 'October 16, 2017',
   },
@@ -71,7 +71,7 @@ export const blogPosts = {
   'task-list': {
     tags: [tags.general],
     mainVisual: '/static/todoist.jpg',
-    title: `Using my task list as my single source of truth`,
+    title: `Using a task list as a single source of truth`,
     description: `How I use my task list to aggregate everything I want and need to do.`,
     date: 'April 1, 2017',
   },

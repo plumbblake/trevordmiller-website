@@ -20,7 +20,7 @@ e2e tests have historically been awful. They tend to be sluggish and brittle. Th
 
 # Using Puppeteer instead of Selenium
 
-One of the most popular tools for e2e testing is Selenium, which is a tool for automating web browsers. Selenium sounds cool in theory: write one set of tests that run on all browsers and devices, woohoo! Jk. In practice, Selenium tests are slow, brittle, and costly. So, on Ropig we are using [Puppeteer](https://github.com/GoogleChrome/puppeteer) - the official headless Chrome library. A "headless" browser is just a browser that doesn't have a graphical user interface.
+One of the most popular tools for e2e testing is Selenium, which is a tool for automating web browsers. Selenium sounds cool in theory: write one set of tests that run on all browsers and devices, woohoo! Jk. In practice, Selenium tests are slow, brittle, and costly. I recommend using headless chrome instead, with the most popular/stable headless Chrome option being [Puppeteer](https://github.com/GoogleChrome/puppeteer) - the official headless Chrome library. A "headless" browser is just a browser that doesn't have a graphical user interface.
 
 ## A Puppeteer test looks like this
 
@@ -35,7 +35,7 @@ test('can logout', async () => {
 
 In this case, we tap a drop-down menu, wait for it to open, tap a logout link, and wait for the login form to show. If any of these steps don't work, the test will fail.
 
-## A few more real examples pulled from the Ropig test suite
+## A few more real examples pulled from a test suite
 
 ```javascript
 import faker from 'faker'
@@ -199,7 +199,7 @@ Here is a video of what these tests look like when you run them in debug mode. D
 * Puppeteer **can be used for any browser automation, **not just testing.
 * It **doesn't need to know anything about your stack.** We are using Elixir and React, but we could just as well be using any other tools.
 
-Note that Puppeteer only runs tests in Chrome. For many apps like Ropig, this is enough because we only support modern browsers which have minimal inconsistencies. If your app has a lot of device or browser specific code, you may still want Selenium. For everyone else, Puppeteer makes a lot of sense. :)
+Note that Puppeteer only runs tests in Chrome. For many apps, this is enough because we only support modern browsers which have minimal inconsistencies. If your app has a lot of device or browser specific code, you may still want Selenium. For everyone else, Puppeteer makes a lot of sense. :)
 
 # Tips for writing e2e tests
 
@@ -245,7 +245,7 @@ Using async/await is a great way to deal with chains of async events, which is m
 
 ## Tip 4: Use a fake data generator like faker
 
-Using a fake data generator like [faker](https://www.npmjs.com/package/faker) ensures that your app is flexible. It guarantees your app has the same output each time it is run with the same input. This is in contrast to using a single test account for each test run that has a bunch of state sitting around, making your tests inconsistent. For example, in Ropig we use faker like this to create a random user for each test run:
+Using a fake data generator like [faker](https://www.npmjs.com/package/faker) ensures that your app is flexible. It guarantees your app has the same output each time it is run with the same input. This is in contrast to using a single test account for each test run that has a bunch of state sitting around, making your tests inconsistent. For example, you can use faker like this to create a random user for each test run:
 
 ```javascript
 import faker from 'faker'
@@ -262,4 +262,4 @@ const user = {
 
 # Summary
 
-e2e testing has traditionally been difficult. Using headless Chrome has made e2e testing more reliable and simple here on the Ropig team. I recommend you try it out on your projects!
+e2e testing has traditionally been difficult. Using headless Chrome has made e2e testing more reliable and simple. I recommend you try it out on your projects!

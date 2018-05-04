@@ -1,6 +1,6 @@
 ## A single source of truth for app data
 
-Ropig is built with GraphQL. There are [plenty of goodies GraphQL has to offer](http://graphql.org), but in this post, I want to go over one of our favorites: the schema.
+There are [plenty of goodies GraphQL has to offer](http://graphql.org), but in this post, I want to go over one of my favorites: the schema.
 
 A GraphQL schema **describes your data**. Using [GraphQL's fantastic type system](http://graphql.org/learn/schema/), you can clearly define the public API of your entire back-end. It looks like this:
 
@@ -77,7 +77,7 @@ This type of contract on top of a solid type system opens up some sweet possibil
 
 ## Abstracting implementation
 
-With a schema, we know what our public contract is for our API. It doesn't matter if `updateBilling` is [using Stripe](https://ropig.com/blog/caching-stripe-data-complete-control-payment-subscriptions/) or Paypal under the hood for payment processing, or if the back-end language is Elixir or Java, or if user data is being stored in PostgreSQL or MongoDB. We have a clean public API and can change the implementation details on back-end or front-end without breaking the rest of the system.
+With a schema, we know what our public contract is for our API. It doesn't matter if `updateBilling` is using Stripe or Paypal under the hood for payment processing, or if the back-end language is Elixir or Java, or if user data is being stored in PostgreSQL or MongoDB. We have a clean public API and can change the implementation details on back-end or front-end without breaking the rest of the system.
 
 ## Working in tandem
 
@@ -99,7 +99,7 @@ type User {
 }
 ```
 
-And now both the back-end and front-end can proceed with their implementations without holding each other back. Then, when implementations are ready, it should "just work" as long as the schema is respected. We have been doing this on Ropig for a long time and this workflow has truly just worked for us most of the time.
+And now both the back-end and front-end can proceed with their implementations without holding each other back. Then, when implementations are ready, it should "just work" as long as the schema is respected.
 
 ## Generating the schema from the API
 
@@ -120,7 +120,7 @@ Next, just run `graphql get-schema` to update your `schema.graphql` file with t
 
 ## Generating types for other type systems from the schema
 
-Having a schema lets you automate other things from the type system as well. For example, you can generate types for other type systems from it (for TypeScript, Flow, Swift, Scala etc.) using something like [apollo-codegen](https://github.com/apollographql/apollo-codegen). For example, Ropig uses Flow so we can run:
+Having a schema lets you automate other things from the type system as well. For example, you can generate types for other type systems from it (for TypeScript, Flow, Swift, Scala etc.) using something like [apollo-codegen](https://github.com/apollographql/apollo-codegen). For example, with Flow you can run:
 
 `apollo-codegen generate **/*.graphql --target flow --output schema.flow.js`
 
@@ -128,7 +128,7 @@ to generate Flow types automatically from schema types. It can use a `.graphqlco
 
 ## Generating example data from the schema
 
-With a schema, you can automatically generate example data that can be used for building out the front-end before the real back-end is ready or for testing. The usage depends on what tools and languages you are using. For example, on Ropig we are using Apollo with React on the front-end, so we can use [apollo-link-schema](https://www.npmjs.com/package/apollo-link-schema) for this. We just pass it mock functions for certain schema types that look like this (in JavaScript, with [faker](https://www.npmjs.com/package/faker) for example):
+With a schema, you can automatically generate example data that can be used for building out the front-end before the real back-end is ready or for testing. The usage depends on what tools and languages you are using. For example, if you are using Apollo with React on the front-end, you can use [apollo-link-schema](https://www.npmjs.com/package/apollo-link-schema) for this. You pass it mock functions for certain schema types that look like this (in JavaScript, with [faker](https://www.npmjs.com/package/faker) for example):
 
 ```graphql
 import faker from 'faker'
