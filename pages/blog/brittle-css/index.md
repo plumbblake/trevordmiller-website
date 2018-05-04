@@ -8,11 +8,11 @@ When something is "brittle" it means it is easy to break. Brittle code means cod
 
 We have text inputs that let users at-mention social media accounts. They should look like this:
 
-<img class="alignnone wp-image-202 size-full" src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.25.41-PM-e1520888675990.png" alt="at-mention component CSS" width="1294" height="345" />
+<img src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.25.41-PM-e1520888675990.png" alt="at-mention component CSS" />
 
 One day, we noticed the alignment had broken and they looked like this:
 
-<img class="alignnone wp-image-203 size-full" src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.27.57-PM-e1520888707501.png" alt="@mention broken alignment screenshot" width="241" height="59" />
+<img src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-1.27.57-PM-e1520888707501.png" alt="@mention broken alignment screenshot" />
 
 The problem was that the CSS for our @mention tag was brittle. Making an "unrelated" change in the codebase had caused the styles to break here unintentionally.
 
@@ -62,11 +62,11 @@ We replaced the absolute positioning and hard-coded numbers with fluid self-calc
 
 Sidebar layouts are really common in CSS. We had one in our app that looked like this:
 
-<img class="alignnone size-full wp-image-204" src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-2.28.40-PM.png" alt="Sidebar layout screenshot" width="2100" height="1384" />
+<img src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-2.28.40-PM.png" alt="Sidebar layout screenshot" />
 
 This worked well on desktop, but not on smaller screens:
 
-<img class="alignnone wp-image-206 size-large" src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-3.00.30-PM-602x1024.png" alt="Sidebar layout mobile broken screenshot" width="602" height="1024" />
+<img src="https://ropig.com/wp-content/uploads/2018/03/Screen-Shot-2018-03-12-at-3.00.30-PM-602x1024.png" alt="Sidebar layout mobile broken screenshot" />
 
 ### Before
 
