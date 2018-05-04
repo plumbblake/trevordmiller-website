@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Raven from 'raven-js'
+import { screenSizes, spacing } from '../../../../utils/theme'
 import Heading from '../../../Heading'
 import Button from '../../../Button'
 
@@ -32,8 +33,16 @@ class ErrorBoundary extends Component {
     const { error } = this.state
 
     return error ? (
-      <div>
-        <Heading level={2}>Sorry, something&apos;s gone wrong</Heading>
+      <div
+        style={{
+          maxWidth: screenSizes.large,
+          margin: 'auto',
+          minHeight: '100vh',
+          paddingLeft: spacing.large,
+          paddingRight: spacing.large,
+        }}
+      >
+        <Heading level={2}>There was an error</Heading>
 
         <p>
           Trevor has been notified that you ran into an error, but if you could
