@@ -1,3 +1,5 @@
+import Video from '../../../components/Video'
+
 # What are end-to-end tests?
 
 Tests written to check software functionality can be grouped into a few categories. Some of the most popular categories include:
@@ -181,13 +183,13 @@ We are using [Jest](https://facebook.github.io/jest/) as our test runner, but yo
 
 Here are what these tests look like when you run them in headless mode:
 
-<img src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-headless-275x300.png" alt="A screenshot of running end-to-end tests in headless mode" />
+![A screenshot of running end-to-end tests in headless mode](https://ropig.com/wp-content/uploads/2017/10/puppeteer-headless-275x300.png)
 
 ## Debug mode
 
 Here is a video of what these tests look like when you run them in debug mode. Debug mode opens a real browser and slows down each step so you can see what is happening:
 
-<video src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-debug.mp4" />
+<Video src="https://ropig.com/wp-content/uploads/2017/10/puppeteer-debug.mp4" />
 
 ## Some of the things I really like about Puppeteer
 
