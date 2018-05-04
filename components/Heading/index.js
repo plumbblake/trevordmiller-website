@@ -38,7 +38,6 @@ const Heading = ({ children, level }) => (
   <div
     style={{
       fontWeight: fontWeights.light,
-      overflowWrap: 'break-word',
       ...levelSpecificStyles[level],
     }}
   >

@@ -232,7 +232,7 @@ test('renders a <BaseAccountSelect />', () => {
 })
 ```
 
-The assertions in these kinds of tests (ie `expect(props.accounts).toBe(accounts)`) are testing that the following wire-up/syntax in React works:
+The assertions in these kinds of tests are testing that the following wire-up/syntax in React works:
 
 ```javascript
 <BaseAccountSelect accounts={accounts} ... />
