@@ -5,6 +5,7 @@ import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
 import List from '../../../components/List'
+import ListItem from '../../../components/ListItem'
 
 const TaskList = () => (
   <PageWithBlogPost
@@ -95,13 +96,18 @@ const TaskList = () => (
             <Paragraph>
               This opens up three tools I use to stay up to date:
             </Paragraph>
-            <List
-              items={[
-                `Email: for task input. I have all of my other websites and apps send me emails so that I don’t have to check them individually. I also unsubscribe from anything that isn’t valuable, so that each email I get is valuable for me.`,
-                `Calendar: to track time-specific events.`,
-                `Texts: to communicate with family and friends.`,
-              ]}
-            />
+            <List>
+              <ListItem>
+                Email: for task input. I have all of my other websites and apps
+                send me emails so that I don’t have to check them individually.
+                I also unsubscribe from anything that isn’t valuable, so that
+                each email I get is valuable for me.
+              </ListItem>
+              <ListItem>Calendar: to track time-specific events.</ListItem>
+              <ListItem>
+                Texts: to communicate with family and friends.
+              </ListItem>
+            </List>
           </div>
         ),
       },

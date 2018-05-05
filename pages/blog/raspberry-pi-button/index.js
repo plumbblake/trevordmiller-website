@@ -1,12 +1,13 @@
 import React from 'react'
 import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
-import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
 import Image from '../../../components/Image'
 import Video from '../../../components/Video'
 import Code from '../../../components/Code'
 import Button from '../../../components/Button'
+import List from '../../../components/List'
+import ListItem from '../../../components/ListItem'
 
 const RaspberryPiButton = () => (
   <PageWithBlogPost
@@ -47,21 +48,32 @@ const RaspberryPiButton = () => (
         title: `Parts`,
         component: (
           <div>
-            <List
-              items={[
-                <span key="pi3">Raspberry Pi 3</span>,
-                <span key="sd">8+ GB micro SD card pre-loaded with NOOBS</span>,
-                <span key="case">Raspberry Pi 3 case</span>,
-                <span key="power">2.5A 5V micro USB power supply</span>,
+            <List>
+              <ListItem>
+                <span key="pi3">Raspberry Pi 3</span>
+              </ListItem>
+              <ListItem>
+                <span key="sd">8+ GB micro SD card pre-loaded with NOOBS</span>
+              </ListItem>
+              <ListItem>
+                <span key="case">Raspberry Pi 3 case</span>
+              </ListItem>
+              <ListItem>
+                <span key="power">2.5A 5V micro USB power supply</span>
+              </ListItem>
+              <ListItem>
                 <span key="button">
                   Momentary button with built-in resistor and GPIO wires
-                </span>,
+                </span>
+              </ListItem>
+              <ListItem>
                 <span key="peripherals">
                   An HDMI cable, USB keyboard, and USB mouse if you don&apos;t
                   already have them
-                </span>,
-              ]}
-            />
+                </span>
+              </ListItem>
+            </List>
+
             <Paragraph>
               The{' '}
               <Anchor href="https://www.amazon.com/gp/product/B01C6Q2GSY">
@@ -179,28 +191,34 @@ const RaspberryPiButton = () => (
               use and then run the commands below with the version in place of
               X.Y.Z:
             </Paragraph>
-            <List
-              items={[
+            <List>
+              <ListItem>
                 <span key="download">
                   Download the latest with{' '}
                   <Code>
                     wget
                     https://nodejs.org/dist/vX.Y.Z/node-vX.Y.Z-linux-armv7l.tar.gz
                   </Code>
-                </span>,
+                </span>
+              </ListItem>
+              <ListItem>
                 <span key="unpack">
                   Unpack the download with{' '}
                   <Code>tar -xvf node-vX.Y.Z-linux-armv7l.tar.gz</Code>
-                </span>,
+                </span>
+              </ListItem>
+              <ListItem>
                 <span key="cd">
                   Go into the unpacked download with{' '}
                   <Code>cd node-vX.Y.Z-linux-armv7l</Code>
-                </span>,
+                </span>
+              </ListItem>
+              <ListItem>
                 <span key="copy">
                   Copy the binaries with <Code>sudo cp -R * /usr/local/</Code>
-                </span>,
-              ]}
-            />
+                </span>
+              </ListItem>
+            </List>
           </div>
         ),
       },

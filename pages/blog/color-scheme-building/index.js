@@ -4,7 +4,6 @@ import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import Anchor from '../../../components/Anchor'
 import Code from '../../../components/Code'
-import List from '../../../components/List'
 
 const ColorSchemeBuilding = () => (
   <PageWithBlogPost
@@ -74,39 +73,6 @@ const ColorSchemeBuilding = () => (
                 module
               </Anchor>.
             </Paragraph>
-          </div>
-        ),
-      },
-      {
-        title: `Thank you`,
-        component: (
-          <div>
-            <Paragraph>
-              I&apos;d like to thank the following wonderful people for their
-              help with Nova
-            </Paragraph>
-            <List
-              items={[
-                <span key="merrick">
-                  <Anchor href="http://merrickchristensen.com/">
-                    Merrick Christensen
-                  </Anchor>{' '}
-                  for his help building the initial Nova plugins
-                </span>,
-                <span key="adam">
-                  <Anchor href="https://twitter.com/AC_Design">
-                    Adam Christiansen
-                  </Anchor>{' '}
-                  for designing the initial color palette
-                </span>,
-                <span key="alex">
-                  <Anchor href="http://alexlafroscia.com/">
-                    Alex LaFroscia
-                  </Anchor>{' '}
-                  for contributions through pull requests to the project
-                </span>,
-              ]}
-            />
           </div>
         ),
       },

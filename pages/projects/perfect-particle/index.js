@@ -2,8 +2,8 @@ import React from 'react'
 import { spacing } from '../../../utils/theme'
 import PageWithProject from '../../../components/PageWithProject'
 import Image from '../../../components/Image'
-import List from '../../../components/List'
 import Anchor from '../../../components/Anchor'
+import Button from '../../../components/Button'
 import Audio from '../../../components/Audio'
 
 const releases = [
@@ -77,14 +77,20 @@ const PerfectParticle = () => (
             >
               You can get it through most digital music stores.
             </div>
-            <List
-              items={release.stores.map(store => (
-                <Anchor key={store.title} href={store.href}>
-                  {store.title}
+
+            {release.stores.map((store, index) => (
+              <div
+                key={store.title}
+                style={{
+                  marginBottom:
+                    index + 1 < release.stores.length ? spacing.small : 0,
+                }}
+              >
+                <Anchor href={store.href}>
+                  <Button size="small">{store.title}</Button>
                 </Anchor>
-              ))}
-              type="link"
-            />
+              </div>
+            ))}
           </div>
         </div>
       ),

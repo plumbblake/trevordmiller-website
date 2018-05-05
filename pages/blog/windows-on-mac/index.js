@@ -3,6 +3,7 @@ import PageWithBlogPost from '../../../components/PageWithBlogPost'
 import Paragraph from '../../../components/Paragraph'
 import Image from '../../../components/Image'
 import List from '../../../components/List'
+import ListItem from '../../../components/ListItem'
 import Anchor from '../../../components/Anchor'
 
 const WindowsOnMac = () => (
@@ -21,14 +22,15 @@ const WindowsOnMac = () => (
               because:
             </Paragraph>
 
-            <List
-              items={[
-                `it's the officially supported option`,
-                `it's free`,
-                `it's legal`,
-                `it's native rather than an emulator, so it has fast performance as if you were running a standalone Windows machine`,
-              ]}
-            />
+            <List>
+              <ListItem>{`it's the officially supported option`}</ListItem>
+              <ListItem>{`it's free`}</ListItem>
+              <ListItem>{`it's legal`}</ListItem>
+              <ListItem>
+                {`it's native rather than an emulator, so it has fast performance
+                as if you were running a standalone Windows machine`}
+              </ListItem>
+            </List>
           </div>
         ),
       },
