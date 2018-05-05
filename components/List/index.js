@@ -1,49 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { colorValues, spacing, fontSizes } from '../../utils/theme'
-import Icon from '../Icon'
+import { spacing } from '../../utils/theme'
 
-const List = ({ items, type = 'bullet' }) => {
-  const symbolColor =
-    type === 'link' ? colorValues.colors.blue : colorValues.colors.green
+const listStyle = {
+  marginTop: spacing.medium,
+  marginBottom: spacing.medium,
+  paddingLeft: spacing.xlarge,
+}
 
-  return (
-    <div>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          style={{
-            marginBottom: index + 1 < items.length ? spacing.xsmall : 0,
-            display: 'flex',
-            alignItems: 'baseline',
-          }}
-        >
-          <span
-            style={{
-              color: symbolColor,
-              marginRight: spacing.xsmall,
-            }}
-          >
-            {type === 'number' ? (
-              `${index + 1})`
-            ) : (
-              <Icon
-                type={type}
-                fill={symbolColor}
-                size={type === 'bullet' ? fontSizes.small : fontSizes.medium}
-              />
-            )}
-          </span>
-          {item}
-        </div>
-      ))}
-    </div>
-  )
+const List = ({ children, kind = 'bullet' }) => {
+  if (kind === 'bullet') {
+    return <ul style={listStyle}>{children}</ul>
+  }
+
+  if (kind === 'number') {
+    return <ol style={listStyle}>{children}</ol>
+  }
 }
 
 List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.node).isRequired,
-  type: PropTypes.oneOf(['bullet', 'link', 'number']),
+  children: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default List

@@ -4,6 +4,8 @@ import Heading from '../../components/Heading'
 import Paragraph from '../../components/Paragraph'
 import Image from '../../components/Image'
 import Anchor from '../../components/Anchor'
+import List from '../../components/List'
+import ListItem from '../../components/ListItem'
 
 const markdownMap = {
   h1: ({ children }) => <Heading level={1}>{children}</Heading>,
@@ -13,6 +15,9 @@ const markdownMap = {
   p: ({ children }) => <Paragraph>{children}</Paragraph>,
   img: ({ src, alt }) => <Image src={src} description={alt} />,
   a: ({ href, children }) => <Anchor href={href}>{children}</Anchor>,
+  ul: ({ children }) => <List>{children}</List>,
+  ol: ({ children }) => <List kind="number">{children}</List>,
+  li: ({ children }) => <ListItem>{children}</ListItem>,
 }
 
 export default markdownMap
