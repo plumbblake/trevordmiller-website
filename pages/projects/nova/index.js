@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import {
   spacing,
@@ -16,7 +16,6 @@ import List from '../../../components/List'
 import ListItem from '../../../components/ListItem'
 import Button from '../../../components/Button'
 import Image from '../../../components/Image'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 const colorMeanings = [
   [
@@ -369,190 +368,119 @@ const faq = [
   },
 ]
 
-const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
+const PluginsList = ({ plugins }) =>
+  plugins.map(plugin => (
+    <details key={plugin.title}>
+      <summary
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          color: syntaxGroups.type,
+          marginTop: spacing.medium,
+          marginBottom: spacing.medium,
+        }}
+      >
+        <Icon
+          type={plugin.icon}
+          size={fontSizes.xlarge}
+          fill={syntaxGroups.type}
+        />
 
-class PluginsList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activeTab: 0,
-    }
-  }
-
-  handleTabClick(clickedTabIndex) {
-    this.setState({
-      activeTab: clickedTabIndex,
-    })
-  }
-
-  render() {
-    const { plugins } = this.props
-
-    return (
-      <Tabs>
-        <TabList
+        <div
           style={{
-            margin: 0,
-            listStyle: 'none',
-            padding: 0,
-            display: 'flex',
-            flexDirection: 'row',
-            overflowX: 'auto',
-            borderTop: tabBorder,
-            borderRight: tabBorder,
-            borderLeft: tabBorder,
-            borderTopRightRadius: borderRadii.medium,
-            borderTopLeftRadius: borderRadii.medium,
+            marginLeft: spacing.small,
           }}
         >
-          {plugins.map((plugin, index) => (
-            <Tab
-              key={index}
-              onClick={this.handleTabClick.bind(this, index)}
+          {plugin.title}
+        </div>
+      </summary>
+
+      <div
+        style={{
+          border: `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`,
+          borderRadius: borderRadii.medium,
+          marginTop: spacing.medium,
+          marginBottom: spacing.medium,
+          padding: spacing.large,
+        }}
+      >
+        {plugin.screenshot ? (
+          <div
+            style={{
+              marginBottom: spacing.medium,
+            }}
+          >
+            <Image
+              src={plugin.screenshot}
+              description={`Screenshot of Nova plugin for ${plugin.title}`}
+              quiet={true}
+            />
+          </div>
+        ) : null}
+
+        {plugin.steps ? (
+          <div
+            style={{
+              marginBottom: plugin.notes || plugin.links ? spacing.medium : 0,
+            }}
+          >
+            <Heading level={4}>Instructions</Heading>
+            <div
               style={{
-                flex: '1',
-                background:
-                  index === this.state.activeTab
-                    ? uiGroups.background
-                    : uiGroups.backgroundShade,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                padding: spacing.small,
-                lineHeight: 1,
-                cursor: 'pointer',
+                paddingBottom: spacing.medium,
               }}
             >
-              <div>
-                <Icon
-                  type={plugin.icon}
-                  size={fontSizes.xlarge}
-                  fill={
-                    index === this.state.activeTab
-                      ? uiGroups.userCurrentState
-                      : uiGroups.gray3
-                  }
-                />
-              </div>
+              <List kind="number">
+                {plugin.steps.map(step => (
+                  <ListItem key={step}>{step}</ListItem>
+                ))}
+              </List>
+            </div>
+          </div>
+        ) : null}
 
+        {plugin.notes ? (
+          <div
+            style={{
+              marginBottom: plugin.links ? spacing.medium : 0,
+            }}
+          >
+            <Heading level={4}>Notes</Heading>
+            <div
+              style={{
+                paddingBottom: spacing.medium,
+              }}
+            >
+              <List>
+                {plugin.notes.map(note => (
+                  <ListItem key={note}>{note}</ListItem>
+                ))}
+              </List>
+            </div>
+          </div>
+        ) : null}
+
+        {plugin.links ? (
+          <div>
+            <Heading level={4}>Links</Heading>
+            {plugin.links.map((link, index) => (
               <div
+                key={link.title}
                 style={{
-                  fontSize: fontSizes.small,
-                  marginTop: spacing.xxsmall,
-                  textAlign: 'center',
-                  color:
-                    index === this.state.activeTab
-                      ? uiGroups.userCurrentState
-                      : uiGroups.gray3,
+                  marginBottom:
+                    index + 1 < plugin.links.length ? spacing.small : 0,
                 }}
               >
-                {plugin.title}
+                <Anchor href={link.url}>
+                  <Button size="small">{link.title}</Button>
+                </Anchor>
               </div>
-            </Tab>
-          ))}
-        </TabList>
-        {plugins.map((plugin, index) => (
-          <TabPanel
-            key={index}
-            style={
-              index === this.state.activeTab
-                ? {
-                    borderRight: tabBorder,
-                    borderBottom: tabBorder,
-                    borderLeft: tabBorder,
-                    borderBottomRightRadius: borderRadii.medium,
-                    borderBottomLeftRadius: borderRadii.medium,
-                    paddingTop: spacing.large,
-                    paddingBottom: spacing.large,
-                    paddingRight: spacing.medium,
-                    paddingLeft: spacing.medium,
-                  }
-                : {}
-            }
-          >
-            <div>
-              {plugin.screenshot ? (
-                <div
-                  style={{
-                    marginBottom: spacing.medium,
-                  }}
-                >
-                  <Image
-                    src={plugin.screenshot}
-                    description={`Screenshot of Nova plugin for ${
-                      plugin.title
-                    }`}
-                    quiet={true}
-                  />
-                </div>
-              ) : null}
-              {plugin.steps ? (
-                <div
-                  style={{
-                    marginBottom:
-                      plugin.notes || plugin.links ? spacing.medium : 0,
-                  }}
-                >
-                  <Heading level={4}>Instructions</Heading>
-                  <div
-                    style={{
-                      paddingBottom: spacing.medium,
-                    }}
-                  >
-                    <List kind="number">
-                      {plugin.steps.map(step => (
-                        <ListItem key={step}>{step}</ListItem>
-                      ))}
-                    </List>
-                  </div>
-                </div>
-              ) : null}
-              {plugin.notes ? (
-                <div
-                  style={{
-                    marginBottom: plugin.links ? spacing.medium : 0,
-                  }}
-                >
-                  <Heading level={4}>Notes</Heading>
-                  <div
-                    style={{
-                      paddingBottom: spacing.medium,
-                    }}
-                  >
-                    <List>
-                      {plugin.notes.map(note => (
-                        <ListItem key={note}>{note}</ListItem>
-                      ))}
-                    </List>
-                  </div>
-                </div>
-              ) : null}
-              {plugin.links ? (
-                <div>
-                  <Heading level={4}>Links</Heading>
-                  {plugin.links.map(link => (
-                    <div
-                      key={link.title}
-                      style={{
-                        marginBottom:
-                          index + 1 < plugin.links.length ? spacing.small : 0,
-                      }}
-                    >
-                      <Anchor href={link.url}>
-                        <Button size="small">{link.title}</Button>
-                      </Anchor>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          </TabPanel>
-        ))}
-      </Tabs>
-    )
-  }
-}
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </details>
+  ))
 
 PluginsList.propTypes = {
   plugins: PropTypes.arrayOf(
