@@ -44,10 +44,6 @@ export default `
     cursor: pointer;
   }
 
-  pre {
-    overflow: auto;
-  }
-
   @media print {
     @page {
       margin: 0;

@@ -80,7 +80,6 @@
     "raven-js": "^3.24.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-syntax-highlighter": "^7.0.4",
     "react-tabs": "^2.2.2",
     "rss": "^1.2.2"
   }
