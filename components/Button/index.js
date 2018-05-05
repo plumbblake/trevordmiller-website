@@ -5,34 +5,35 @@ import {
   colorValues,
   spacing,
   borderRadii,
+  borderSizes,
   fontSizes,
 } from '../../utils/theme'
 
 const stylesByType = {
   primary: {
-    paddingTop: spacing.medium,
-    paddingBottom: spacing.medium,
-    paddingLeft: spacing.large,
-    paddingRight: spacing.large,
-    background: colorValues.colors.blue,
-    color: uiGroups.background,
+    color: colorValues.colors.blue,
+    border: `${borderSizes.small}px solid ${colorValues.colors.blue}`,
   },
   secondary: {
-    paddingTop: spacing.medium,
-    paddingBottom: spacing.medium,
-    paddingLeft: spacing.large,
-    paddingRight: spacing.large,
-    background: uiGroups.gray2,
-    color: uiGroups.background,
-  },
-  inline: {
-    background: 'transparent',
     color: colorValues.colors.blue,
-    textDecoration: 'underline',
+    border: `${borderSizes.small}px solid ${uiGroups.gray2}`,
+  },
+  dull: {
+    color: uiGroups.gray4,
+    border: `${borderSizes.small}px solid ${uiGroups.gray2}`,
   },
 }
 
-const Button = ({ onClick, type = 'primary', children }) => (
+const stylesBySize = {
+  medium: {
+    padding: spacing.medium,
+  },
+  small: {
+    padding: spacing.xsmall,
+  },
+}
+
+const Button = ({ children, onClick, type = 'primary', size = 'medium' }) => (
   <button
     onClick={onClick}
     style={{
@@ -41,10 +42,12 @@ const Button = ({ onClick, type = 'primary', children }) => (
       display: 'inline-block',
       textAlign: 'center',
       border: 'none',
-      fontSize: fontSizes.medium,
       outline: 'none',
       borderRadius: borderRadii.medium,
+      background: 'transparent',
+      fontSize: fontSizes.medium,
       ...stylesByType[type],
+      ...stylesBySize[size],
     }}
   >
     {children}
@@ -52,9 +55,10 @@ const Button = ({ onClick, type = 'primary', children }) => (
 )
 
 Button.propTypes = {
+  children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(stylesByType)),
-  children: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(Object.keys(stylesBySize)),
 }
 
 export default Button

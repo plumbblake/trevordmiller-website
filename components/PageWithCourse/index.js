@@ -7,6 +7,7 @@ import Button from '../Button'
 import Avatar from '../Avatar'
 import Icon from '../Icon'
 import List from '../List'
+import ListItem from '../ListItem'
 import Video from '../Video'
 import { courses, courseKeys } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
@@ -76,16 +77,18 @@ const PageWithCourse = ({ id }) => {
             course.cost === 0 ? 'free' : `$${course.cost}`
           }`,
           component: (
-            <List
-              items={[
-                `${videoCount} videos`,
-                `${course.time} to watch`,
-                `Example code to download and practice with`,
-                `Quizzes after each section to make sure you understand`,
-                `Comments on each video to get help from your instructor and discuss with fellow students`,
-                `All videos can be downloaded so you aren't locked into where you can view them`,
-              ]}
-            />
+            <List>
+              <ListItem>{`${videoCount} videos`}</ListItem>
+              <ListItem>{`${course.time} to watch`}</ListItem>
+              <ListItem
+              >{`Example code to download and practice with`}</ListItem>
+              <ListItem
+              >{`Quizzes after each section to make sure you understand`}</ListItem>
+              <ListItem
+              >{`Comments on each video to get help from your instructor and discuss with fellow students`}</ListItem>
+              <ListItem
+              >{`All videos can be downloaded so you aren't locked into where you can view them`}</ListItem>
+            </List>
           ),
         },
 
