@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing, fontSizes, borderRadii, borderSizes } from '../../utils/theme'
+import { spacing, uiGroups, fontSizes } from '../../utils/theme'
 import Icon from '../Icon'
 
 const Tags = ({ tags }) => (
@@ -15,9 +15,8 @@ const Tags = ({ tags }) => (
       <div
         key={tag.label}
         style={{
-          border: `${borderSizes.xsmall}px solid ${tag.color}`,
-          borderRadius: borderRadii.medium,
-          color: tag.color,
+          background: tag.color,
+          color: uiGroups.background,
           fontSize: fontSizes.small,
           paddingTop: spacing.xxsmall,
           paddingBottom: spacing.xxsmall,
@@ -33,7 +32,11 @@ const Tags = ({ tags }) => (
             alignItems: 'center',
           }}
         >
-          <Icon type={tag.icon} fill={tag.color} size={fontSizes.medium} />
+          <Icon
+            type={tag.icon}
+            fill={uiGroups.background}
+            size={fontSizes.medium}
+          />
 
           <div
             style={{
