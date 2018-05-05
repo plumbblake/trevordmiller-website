@@ -4,32 +4,58 @@ import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 
 export const projects = {
-  'dog-bathroom-button': {
-    tags: [tags.terminal, tags.node, tags.hardware],
-    mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Dog Bathroom Button`,
-    description: `A Node server for a Raspberry Pi which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
+  'trevordmiller-website': {
+    tags: [tags.inProgress, tags.node, tags.react],
+    mainVisual: '/static/trevordmiller-website.png',
+    title: `trevordmiller.com`,
+    description: `A website (this website) to aggregate all my stuff.`,
     links: [
       {
-        description: 'Read the blog post on how it was built',
-        href: '/blog/raspberry-pi-button',
+        description: 'Read the blog post on how I built it',
+        href: '/blog/rebuilding-my-website',
       },
       {
-        description: 'See the code',
-        href: 'https://github.com/trevordmiller/dog-bathroom-button',
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/trevordmiller-website',
       },
     ],
   },
 
-  'shell-scripts': {
-    tags: [tags.terminal, tags.vim, tags.git],
-    mainVisual: '/static/shell-scripts.jpg',
-    title: `Shell Scripts`,
-    description: `Shell scripts to automate repetitive tasks on my computer.`,
+  nova: {
+    tags: [tags.inProgress, tags.terminal, tags.vim, tags.git, tags.node],
+    mainVisual: '/static/nova-colors.png',
+    title: `Nova`,
+    description:
+      'A coding color scheme where each color has a dedicated purpose.',
+    links: [
+      {
+        description: `View the project's website`,
+        href: '/projects/nova',
+      },
+      {
+        description: 'Read the blog post on how Nova was built',
+        href: '/blog/color-scheme-building',
+      },
+      {
+        description: 'See the code for the color library',
+        href: 'https://github.com/trevordmiller/nova-colors',
+      },
+      {
+        description: 'See the code for the plugins',
+        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
+      },
+    ],
+  },
+
+  'practice-problems': {
+    tags: [tags.inProgress, tags.node, tags.go, tags.typescript],
+    mainVisual: '/static/code-1.jpg',
+    title: `Practice Problems`,
+    description: `Coding practice problems.`,
     links: [
       {
         description: `See the code`,
-        href: 'https://github.com/trevordmiller/shell-scripts',
+        href: 'https://github.com/trevordmiller/practice-problems',
       },
     ],
   },
@@ -51,15 +77,32 @@ export const projects = {
     ],
   },
 
-  'practice-problems': {
-    tags: [tags.node, tags.go, tags.typescript],
-    mainVisual: '/static/code-1.jpg',
-    title: `Practice Problems`,
-    description: `Coding practice problems.`,
+  'shell-scripts': {
+    tags: [tags.terminal, tags.vim, tags.git],
+    mainVisual: '/static/shell-scripts.jpg',
+    title: `Shell Scripts`,
+    description: `Shell scripts to automate repetitive tasks on my computer.`,
     links: [
       {
         description: `See the code`,
-        href: 'https://github.com/trevordmiller/practice-problems',
+        href: 'https://github.com/trevordmiller/shell-scripts',
+      },
+    ],
+  },
+
+  'dog-bathroom-button': {
+    tags: [tags.terminal, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Dog Bathroom Button`,
+    description: `A Node server for a Raspberry Pi which sends me a text message saying "I need to go to the bathroom!" from my dog.`,
+    links: [
+      {
+        description: 'Read the blog post on how it was built',
+        href: '/blog/raspberry-pi-button',
+      },
+      {
+        description: 'See the code',
+        href: 'https://github.com/trevordmiller/dog-bathroom-button',
       },
     ],
   },
@@ -111,49 +154,6 @@ export const projects = {
       {
         description: 'See the code for the clients',
         href: 'https://github.com/trevordmiller/cortex-clients',
-      },
-    ],
-  },
-
-  'trevordmiller-website': {
-    tags: [tags.inProgress, tags.node, tags.react],
-    mainVisual: '/static/trevordmiller-website.png',
-    title: `trevordmiller.com`,
-    description: `A website (this website) to aggregate all my stuff.`,
-    links: [
-      {
-        description: 'Read the blog post on how I built it',
-        href: '/blog/rebuilding-my-website',
-      },
-      {
-        description: `See the code`,
-        href: 'https://github.com/trevordmiller/trevordmiller-website',
-      },
-    ],
-  },
-
-  nova: {
-    tags: [tags.inProgress, tags.terminal, tags.vim, tags.git, tags.node],
-    mainVisual: '/static/nova-colors.png',
-    title: `Nova`,
-    description:
-      'A coding color scheme where each color has a dedicated purpose.',
-    links: [
-      {
-        description: `View the project's website`,
-        href: '/projects/nova',
-      },
-      {
-        description: 'Read the blog post on how Nova was built',
-        href: '/blog/color-scheme-building',
-      },
-      {
-        description: 'See the code for the color library',
-        href: 'https://github.com/trevordmiller/nova-colors',
-      },
-      {
-        description: 'See the code for the plugins',
-        href: 'https://github.com/trevordmiller?tab=repositories&q=nova',
       },
     ],
   },

@@ -12,12 +12,12 @@ export const blogPosts = {
     date: 'April 10, 2018',
   },
 
-  'raspberry-pi-button': {
-    tags: [tags.terminal, tags.node, tags.hardware],
-    mainVisual: '/static/dog-bathroom-button.jpg',
-    title: `Running a server on a Raspberry Pi with a physical button`,
-    description: `How to set up a Raspberry Pi to send a text message when a button is pressed.`,
-    date: 'June 1, 2017',
+  'end-to-end-tests': {
+    tags: [tags.node],
+    mainVisual: '/static/end-to-end-tests.png',
+    title: `Writing end-to-end tests that are simple and fast`,
+    description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
+    date: 'October 16, 2017',
   },
 
   'graphql-schema': {
@@ -28,20 +28,20 @@ export const blogPosts = {
     date: 'December 13, 2017',
   },
 
-  'end-to-end-tests': {
-    tags: [tags.node],
-    mainVisual: '/static/end-to-end-tests.png',
-    title: `Writing end-to-end tests that are simple and fast`,
-    description: `How you can write simple, lightweight end-to-end tests that aren't slow and brittle.`,
-    date: 'October 16, 2017',
-  },
-
   dotfiles: {
     tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',
     title: `Organizing tooling settings using dotfiles`,
     description: `Examples of using dotfiles to manage and back-up the config for git, shells, editors, etc.`,
     date: 'July 23, 2017',
+  },
+
+  'raspberry-pi-button': {
+    tags: [tags.terminal, tags.node, tags.hardware],
+    mainVisual: '/static/dog-bathroom-button.jpg',
+    title: `Running a server on a Raspberry Pi with a physical button`,
+    description: `How to set up a Raspberry Pi to send a text message when a button is pressed.`,
+    date: 'June 1, 2017',
   },
 
   'react-render-callback-components': {
@@ -76,20 +76,20 @@ export const blogPosts = {
     date: 'April 1, 2017',
   },
 
-  'minimal-office': {
-    tags: [tags.general],
-    mainVisual: '/static/minimal-office-first-person.jpg',
-    title: `My minimal office set up`,
-    description: `How I set up my office for focus and productivity.`,
-    date: 'March 1, 2017',
-  },
-
   'spaced-repetition-software': {
     tags: [tags.general],
     mainVisual: '/static/anki-card-question.jpg',
     title: `Retaining what I learn through Spaced Repetition Software`,
     description: `How I record and review what I learn to engrain it in long-term memory.`,
     date: 'February 1, 2017',
+  },
+
+  'minimal-office': {
+    tags: [tags.general],
+    mainVisual: '/static/minimal-office-first-person.jpg',
+    title: `My minimal office set up`,
+    description: `How I set up my office for focus and productivity.`,
+    date: 'March 1, 2017',
   },
 
   'windows-on-mac': {
