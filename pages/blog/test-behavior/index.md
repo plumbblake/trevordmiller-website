@@ -1,4 +1,4 @@
-## Suggestion: test behavior, not implementation
+### Suggestion: test behavior, not implementation
 
 Tests are one of the most important parts of a codebase. They can catch many bugs before they are released. They can ensure your programs work as expected.
 
@@ -6,7 +6,7 @@ But, tests tied to implementation details can bind you to how code was written i
 
 Testing behavior means testing **what code does**. Testing implementation means testing **how code works**.
 
-### Testing behavior
+#### Testing behavior
 
 When you write tests for behavior (the "what"), you can refactor your code (the implementation) in confidence without breaking the tests; the tests only break when behavior has changed (unintentionally - which means you've introduced a bug - or intentionally - which means tests need to be updated to the new behavior).
 
@@ -14,7 +14,7 @@ These types of tests are extremely valuable because a broken test means your cod
 
 Testing behavior guarantees your code works as expected (for the behaviors you have tested).
 
-### Testing implementation
+#### Testing implementation
 
 When you write tests for implementation (the "how"), tests break when you change code, even if the behavior didn't change.
 
@@ -22,15 +22,15 @@ These types of tests aren't very valuable because a broken test doesn't mean you
 
 Testing implementation only guarantees your code was written as it was tested.
 
-## Examples
+### Examples
 
 Let's look at some real examples to better understand the difference between the two.
 
 _Although the examples are in JavaScript/React with Jest, the principles apply to any programming language, test framework etc. Also, the examples are not hard rules to be taken as law but general guidelines._
 
-### Contrived example
+#### Contrived example
 
-#### Before
+Before:
 
 ```javascript
 import lodash from 'lodash'
@@ -55,7 +55,7 @@ test('takes two numbers and adds them together with lodash add', () => {
 
 This test is tied to implementation because it relies on the `add` function using `lodash` underneath the hood. It also has hidden side effects.
 
-#### After
+After:
 
 ```javascript
 import add from './add'
@@ -71,9 +71,9 @@ Now this test only checks behavior. The implementation of `add` can be changed i
 
 Ok, now that we got that contrived example out of the way...here are some more realistic examples.
 
-### Replacing implementation with behavior in test labels
+#### Replacing implementation with behavior in test labels
 
-#### Before
+Before:
 
 ```javascript
 test('renders <UtilityNav /> with props'...
@@ -81,7 +81,7 @@ test('renders <UtilityNav /> with props'...
 
 This test label relies on implementation with the name of "UtilityNav" and React "props".
 
-#### After
+After:
 
 ```javascript
 test('can dismiss the onboarding guide'...
@@ -89,9 +89,9 @@ test('can dismiss the onboarding guide'...
 
 Now this test label focuses on the behavior we are checking not specific to file structure/libraries etc.
 
-### Replacing setup/teardown with explicit self contained tests
+#### Replacing setup/teardown with explicit self contained tests
 
-#### Before
+Before:
 
 ```javascript
 import React from 'react'
@@ -138,7 +138,7 @@ describe('when displayDiscount is true', () => {
 
 The difficulty with this approach is that when looking at a test like `renders a PromoCode`, to debug and make changes you have to look at multiple levels of inheritance and mutations.
 
-#### After
+After:
 
 ```javascript
 import React from 'react'
@@ -185,9 +185,9 @@ If the repetition is cumbersome to you, you could put the repeating pieces in fa
 
 I also think having some before/after blocks is totally fine as long as you keep it simple (maybe one level deep?). It's when there are multiple levels of inheritance that it becomes difficult to understand and make changes.
 
-### Replacing type checking tests with a type checker
+#### Replacing type checking tests with a type checker
 
-#### Before
+Before:
 
 ```javascript
 expect(typeof startDateInput.prop('onChange')).toBe('function')
@@ -195,7 +195,7 @@ expect(typeof startDateInput.prop('onChange')).toBe('function')
 
 These kinds of assertions in tests are easier and have better deep checking with static analysis tools like type checkers.
 
-#### After
+After:
 
 I'd suggest deleting these sorts of type checking tests and instead rely on a type checker (for example, TypeScript or Flow in JavaScript). For example:
 
@@ -208,9 +208,9 @@ type Props = {
 const DateInput = (props: Props) => ...
 ```
 
-### Removing wire-up/syntax testing
+#### Removing wire-up/syntax testing
 
-#### Before
+Before:
 
 ```javascript
 import React from 'react'
@@ -248,7 +248,7 @@ test('styles the component as unqueueable', () => {
 })
 ```
 
-#### After
+After:
 
 I'd suggest removing these types of tests because they have a high cost (can't make changes to implementation without breaking them) and low value.
 
@@ -283,9 +283,9 @@ test('shows amount of selected accounts out of the total accounts available to s
 })
 ```
 
-### Breaking out tests unrelated to UI into utility modules
+#### Breaking out tests unrelated to UI into utility modules
 
-#### Before
+Before:
 
 When we have UI code that has utility logic in it like this with related UI tests:
 
@@ -304,7 +304,7 @@ const hasMultipleTwitterAccounts = accounts
 
 The logic with `hasMultipleTwitterAccounts` doesn't have anything specific to UI in it, but it's tied to React and Enzyme because it is in the component code.
 
-#### After
+After:
 
 We can pull the tests out of the UI and into their own utility module like this:
 
@@ -391,9 +391,9 @@ import hasMultipleTwitterAccounts from './hasMultipleTwitterAccounts'
 
 Now the tests and logic aren't tied to any UI / libraries.
 
-### Replacing tests tied to DOM structure with output of behaviors
+#### Replacing tests tied to DOM structure with output of behaviors
 
-#### Before
+Before:
 
 ```javascript
 import React from 'react'
@@ -415,7 +415,7 @@ test('has warning badge when there is an error', () => {
 
 For example, with React and Enzyme, using `shallow` rendering means you need to traverse through specific DOM structure with `.children`, `.dive`, `.find(a)` etc. This ties you to that DOM structure so if you want to add another wrapper or change the `a` tag to a `button` etc. your tests will break.
 
-#### After
+After:
 
 ```javascript
 import React from 'react'
@@ -434,9 +434,9 @@ Now this test isn't tied to DOM structure or specific components etc.
 
 To get around DOM structure testing with React and Enzyme you can use `mount` and methods like `.text()`, `.html()`, `.find('[data-testid="promoCode"]')`, `.find({ someProp: someValue})` etc. In theory, shallow rendering sounds cool but in practice it ties you to implementation.
 
-### Replacing most spies/mocks with output of behaviors
+#### Replacing most spies/mocks with output of behaviors
 
-#### Before
+Before:
 
 ```javascript
 import React from 'react'
@@ -479,7 +479,7 @@ describe('when the input value changes', () => {
 })
 ```
 
-#### After
+After:
 
 ```javascript
 import React from 'react'
@@ -508,7 +508,7 @@ Now the test checks behavior (waiting on async React state changing) instead of 
 
 However, I'm not saying all spies are bad. If your behavior you are testing is that a function is called, a spy can be useful.
 
-### Moving tests with many side effects to end-to-end tests
+#### Moving tests with many side effects to end-to-end tests
 
 If it is impossible to write a test with simple input => output, end-to-end tests might be a better fit. [I wrote a blog post on how simple end-to-end tests can be written using Puppeteer](/blog/end-to-end-tests) that provide huge coverage for little cost. Puppeteer is from the Chrome team and uses the official headless Chrome so the tests can run in a real environment but without the brittleness and slowness of traditional end-to-end test setups.
 
@@ -528,18 +528,17 @@ describe('logout', () => {
 
 These types of tests can remove the need for many heavily mocked and brittle unit tests trying to accomplish the same thing. They also ensure these integrated pieces work together in a real environment which is very valuable (because you will be notified if any of the pieces stop working - ie your database or API is down or a button no longer works etc.).
 
-## Indicators
+### Indicators
 
 Here are some good indicators that you are testing behavior instead of implementation:
 
 * You can write tests for your code without looking at how the code is written
 * You can change how your code is written (unrelated to behavior) without breaking your tests
 
-## Bottom line
+### Bottom line
 
 The moral of the story is: each test should focus on a single behavior you don't want to break :)
 
-## Some further reading about this stuff
+### More info
 
-* [Tautology Tests](https://medium.com/@rowillia/tautology-tests-7dabd81ade30)
-* [Mocking is a Code Smell](https://medium.com/javascript-scene/mocking-is-a-code-smell-944a70c90a6a)
+[Tautology Tests](https://medium.com/@rowillia/tautology-tests-7dabd81ade30) is a great article about testing behavior vs testing implementation.
