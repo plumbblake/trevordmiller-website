@@ -7,6 +7,7 @@ import Anchor from '../../components/Anchor'
 import List from '../../components/List'
 import ListItem from '../../components/ListItem'
 import PreformattedText from '../../components/PreformattedText'
+import InlineCode from '../../components/InlineCode'
 
 const markdownMap = {
   h1: ({ children }) => <Heading level={1}>{children}</Heading>,
@@ -20,6 +21,7 @@ const markdownMap = {
   ol: ({ children }) => <List kind="number">{children}</List>,
   li: ({ children }) => <ListItem>{children}</ListItem>,
   pre: ({ children }) => <PreformattedText>{children}</PreformattedText>,
+  inlineCode: ({ children }) => <InlineCode>{children}</InlineCode>,
 }
 
 export default markdownMap
