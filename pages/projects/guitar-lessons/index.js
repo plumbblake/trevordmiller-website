@@ -258,7 +258,9 @@ class GuitarPatternsSelector extends Component {
           {degreeOptions.map(degree => (
             <SelectorItem key={degree}>
               <Link href={createUrl(degree, selectedType)} scroll={false}>
-                <Button type={selectedDegree === degree ? 'primary' : 'dull'}>
+                <Button
+                  type={selectedDegree === degree ? 'primary' : 'secondary'}
+                >
                   {degree}
                 </Button>
               </Link>
@@ -270,7 +272,7 @@ class GuitarPatternsSelector extends Component {
           {typeOptions.map(type => (
             <SelectorItem key={type}>
               <Link href={createUrl(selectedDegree, type)} scroll={false}>
-                <Button type={selectedType === type ? 'primary' : 'dull'}>
+                <Button type={selectedType === type ? 'primary' : 'secondary'}>
                   {`${type.charAt(0).toUpperCase()}${type
                     .replace(/([A-Z])/g, ' $1')
                     .slice(1)}`}

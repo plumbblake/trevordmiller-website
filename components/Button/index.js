@@ -15,10 +15,6 @@ const stylesByType = {
     border: `${borderSizes.small}px solid ${colorValues.colors.blue}`,
   },
   secondary: {
-    color: colorValues.colors.blue,
-    border: `${borderSizes.small}px solid ${uiGroups.gray2}`,
-  },
-  dull: {
     color: uiGroups.gray4,
     border: `${borderSizes.small}px solid ${uiGroups.gray2}`,
   },

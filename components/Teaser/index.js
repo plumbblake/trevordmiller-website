@@ -63,9 +63,7 @@ const Teaser = ({ visual, body, links, tags }) => (
                 }}
               >
                 <Anchor href={link.href}>
-                  <Button type="secondary" size="small">
-                    {link.description}
-                  </Button>
+                  <Button size="small">{link.description}</Button>
                 </Anchor>
               </div>
             ))}
