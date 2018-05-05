@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   spacing,
@@ -369,7 +369,7 @@ const faq = [
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
 
-class PluginsList extends React.Component {
+class PluginsList extends Component {
   constructor(props) {
     super(props)
     this.state = {
