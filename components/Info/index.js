@@ -6,7 +6,6 @@ const Info = ({ children }) => (
   <div
     style={{
       padding: spacing.large,
-      marginBottom: spacing.large,
       borderRadius: borderRadii.medium,
       background: 'rgba(0, 0, 0, 0.25)',
     }}

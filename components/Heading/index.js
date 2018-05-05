@@ -25,11 +25,13 @@ export const levelSpecificStyles = {
     color: uiGroups.userCurrentState,
     fontSize: fontSizes.xlarge,
     lineHeight: 1,
+    marginTop: spacing.xlarge,
     marginBottom: spacing.medium,
   },
   4: {
     color: uiGroups.userCurrentState,
     fontSize: fontSizes.large,
+    marginTop: spacing.large,
     marginBottom: spacing.small,
   },
 }

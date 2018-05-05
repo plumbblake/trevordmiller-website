@@ -18,7 +18,6 @@ const Main = ({
     style={{
       maxWidth: screenSizes.large,
       margin: 'auto',
-      minHeight: '100vh',
       paddingLeft: spacing.large,
       paddingRight: spacing.large,
     }}

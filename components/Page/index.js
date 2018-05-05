@@ -35,7 +35,6 @@ class Page extends Component {
       cta,
       sections,
       children,
-      footer = true,
     } = this.props
     return (
       <ErrorBoundary>
@@ -141,7 +140,7 @@ class Page extends Component {
             </Main>
           </ErrorBoundary>
 
-          {footer ? <Footer /> : null}
+          <Footer />
         </div>
       </ErrorBoundary>
     )

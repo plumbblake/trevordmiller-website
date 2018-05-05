@@ -9,6 +9,7 @@ const Follow = () => (
     style={{
       maxWidth: screenSizes.large - screenSizes.large / 2.5,
       margin: 'auto',
+      textAlign: 'center',
     }}
   >
     <Info>

@@ -4,23 +4,19 @@ import { spacing, uiGroups } from '../../../../../../utils/theme'
 import Heading from '../../../../../Heading'
 
 const Section = ({ children, note, title }) => (
-  <section
-    id={title}
-    style={{
-      paddingBottom: spacing.xlarge,
-    }}
-  >
+  <section id={title}>
+    {title && <Heading level={3}>{title}</Heading>}
+
     {note && (
       <div
         style={{
           color: uiGroups.gray3,
+          marginBottom: spacing.small,
         }}
       >
         {note}
       </div>
     )}
-
-    {title && <Heading level={3}>{title}</Heading>}
 
     {children}
   </section>

@@ -11,8 +11,7 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
     style={{
       maxWidth: screenSizes.large,
       margin: 'auto',
-      paddingTop: spacing.xlarge,
-      paddingBottom: spacing.xlarge,
+      marginTop: spacing.xlarge,
     }}
   >
     <Heading level={1}>{title}</Heading>
@@ -63,6 +62,7 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
       <div
         style={{
           marginTop: spacing.small,
+          marginBottom: spacing.large,
         }}
       >
         <Info>{info}</Info>

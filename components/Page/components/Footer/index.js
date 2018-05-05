@@ -10,7 +10,7 @@ const Footer = () => (
       paddingBottom: 200,
       maxWidth: screenSizes.large,
       margin: 'auto',
-      marginTop: spacing.large,
+      marginTop: spacing.xlarge,
     }}
   >
     <Follow />

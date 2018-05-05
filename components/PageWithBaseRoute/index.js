@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Page from '../Page'
 import { baseRoutes, baseRouteKeys } from '../../pages'
 
-const PageWithBaseRoute = ({ id, sections, footer = true }) => (
+const PageWithBaseRoute = ({ id, sections }) => (
   <Page
     baseRouteKey={id}
     mainVisual="/static/trevordmiller-website.png"
@@ -12,7 +12,6 @@ const PageWithBaseRoute = ({ id, sections, footer = true }) => (
     description={baseRoutes[id].description}
     info={baseRoutes[id].info}
     sections={sections}
-    footer={footer}
   />
 )
 
@@ -24,7 +23,6 @@ PageWithBaseRoute.propTypes = {
       component: PropTypes.node.isRequired,
     }),
   ).isRequired,
-  footer: PropTypes.bool,
 }
 
 export default PageWithBaseRoute
