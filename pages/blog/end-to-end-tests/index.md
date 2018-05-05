@@ -16,7 +16,9 @@ The most important thing for any app is that it works for your users. Good e2e t
 
 ### But e2e tests are horrible, disgusting, dreadful pieces of garbage
 
-e2e tests have historically been awful. They tend to be sluggish and brittle. They tend to break easily and eat away at valuable developer time. Most teams either don't write them or write them with distaste, like forcefully taking a pill you think will be good for you. But there is a better way! _cue infomercial music_.
+e2e tests have historically been awful. They tend to be sluggish and brittle. They tend to break easily and eat away at valuable developer time. Most teams either don't write them or write them with distaste, like forcefully taking a pill you think will be good for you. But there is a better way!
+
+_cue infomercial music_
 
 ### Using Puppeteer instead of Selenium
 
@@ -199,13 +201,13 @@ Here is a video of what these tests look like when you run them in debug mode. D
 * Puppeteer **can be used for any browser automation, **not just testing.
 * It **doesn't need to know anything about your stack.** We are using Elixir and React, but we could just as well be using any other tools.
 
-Note that Puppeteer only runs tests in Chrome. For many apps, this is enough because we only support modern browsers which have minimal inconsistencies. If your app has a lot of device or browser specific code, you may still want Selenium. For everyone else, Puppeteer makes a lot of sense. :)
+Note that Puppeteer only runs tests in Chrome. For many apps, this is enough because we only support modern browsers which have minimal inconsistencies. If your app has a lot of device or browser specific code, you may still want Selenium. For everyone else, Puppeteer makes a lot of sense.
 
 ### Tips for writing e2e tests
 
 #### Tip 1: Test features, not implementation
 
-The purpose of e2e tests is to fail when you break some expected user-facing functionality. When you have a failing test it means you either broke something that should be fixed, or the feature has changed (so the test needs to be updated). If you find yourself dealing with failing tests outside these two situations it means you have brittle tests. Brittle tests check the implementation of a feature, which ties you to the implementation. Instead, I highly recommend only testing the end result of the feature (what the user expects - **the _behavior_**).
+The purpose of e2e tests is to fail when you break some expected user-facing functionality. When you have a failing test it means you either broke something that should be fixed, or the feature has changed (so the test needs to be updated). If you find yourself dealing with failing tests outside these two situations it means you have brittle tests. Brittle tests check the implementation of a feature, which ties you to the implementation. Instead, I highly recommend only testing the end result of the feature (what the user expects - **the behavior**).
 
 A bad example:
 
@@ -231,7 +233,7 @@ test('can logout', async () => {
 
 This test is less brittle because it uses test IDs and waits for events before proceeding.
 
-We use test IDs like this to provide interaction as a user would with key elements. We use these as a contract between implementation and user interaction. The benefit of test IDs is that we could change the underlying implementation without breaking the test. For example, we could move the _logoutLink_ test ID to a *button* tag instead of an *a* tag. Or we could switch our view rendering from Angular to React. The test would still pass because the log out feature still works.
+We use test IDs like this to provide interaction as a user would with key elements. We use these as a contract between implementation and user interaction. The benefit of test IDs is that we could change the underlying implementation without breaking the test. For example, we could move the `logoutLink` test ID to a `button` tag instead of an `a` tag. Or we could switch our view rendering from Angular to React. The test would still pass because the log out feature still works.
 
 #### Tip 2: Stick to the happy path features
 
@@ -239,7 +241,7 @@ Even with Puppeteer, e2e tests are still slower and more brittle than unit tests
 
 #### Tip 3: Use async/await for asynchronous things
 
-Using async/await is a great way to deal with chains of async events, which is most of what e2e testing is. async/await is cleaner than callback chains. And please, whatever you do, DON'T use arbitrary wait times. These tests will fail from race conditions with different network and computer speeds.
+Using async/await is a great way to deal with chains of async events, which is most of what e2e testing is. async/await is cleaner than callback chains. And please, whatever you do, don't use arbitrary wait times. These tests will fail from race conditions with different network and computer speeds.
 
 #### Tip 4: Use a fake data generator like faker
 

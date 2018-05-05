@@ -1,129 +1,33 @@
-[
-{
-title: `The code`,
-component: (
-<div>
-<Paragraph>
-The code is{' '}
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website">
-available on GitHub
-</Anchor>.
-</Paragraph>
-<Image
-src="/static/trevordmiller-website.png"
-description="The home page of trevordmiller.com"
-/>
-</div>
-),
-},
-{
-title: `Scripts`,
-component: (
-<div>
-<Paragraph>
-The project has a{' '}
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/package.json">
-minimal package.json
-</Anchor>. This file declares dependencies, scripts, and some
-config for compilation and linting. The only steps needed to work
-in the app are to clone it, run <Code>npm install</Code> to
-install dependencies, then run <Code>npm run dev</Code> to
-develop. <Code>npm run verify</Code> can additionally be run to
-check builds, linting, and tests. Once a pull request is merged
-into master, <Code>npm run stage</Code> is run to deploy the
-latest code to a test release URL; if everything looks good,{' '}
-<Code>npm run release</Code> is run to tie the latest deployment
-to the <Code>trevordmiller.com</Code> URL.
-</Paragraph>
-<Image
-src="/static/trevordmiller-website-workflow.jpg"
-description="Screenshot of working on the website in vim"
-/>
-</div>
-),
-},
-{
-title: `Directories`,
-component: (
-<div>
-<Paragraph>
-The project has three directories. <Code>static</Code>,{' '}
-<Code>components</Code>, and <Code>pages</Code>.
-</Paragraph>
-<Paragraph>
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website/tree/master/static">
-The static directory
-</Anchor>{' '}
-holds static files (like favicons and raster images). When the app
-is deployed, these can be accessed at <Code>/static/*</Code>. This
-functionality works by default with Next.js.
-</Paragraph>
-<Paragraph>
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website/tree/master/components">
-The components directory
-</Anchor>{' '}
-holds generic components used across app pages. These are ES2015
-modules that export React components, things like Icons, Buttons,
-Headings etc.
-</Paragraph>
-<Paragraph>
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website/tree/master/pages">
-The pages directory
-</Anchor>{' '}
-holds app pages. A page is just a component, but it is special
-because Next.js wires up the file path to the matching route (ie{' '}
-<Code>pages/index.js</Code> becomes{' '}
-<Code>https://trevordmiller.com</Code> and{' '}
-<Code>pages/projects/guitar-lessons</Code> becomes{' '}
-<Code>https://trevordmiller.com/projects/guitar-lessons</Code>).
-This functionality works by default with Next.js. The page
-components generally just compose the generic components in the{' '}
-<Code>components</Code> folder to create a page.
-</Paragraph>
-<Paragraph>
-Files are organized in <Code>SomeFile</Code> named directories
-with an <Code>index.js</Code> for the entry point. This allows
-them to have sub-components or utilities that are referenced with
-a relative path for easy extraction into an npm published package.
-</Paragraph>
-</div>
-),
-},
-{
-title: `Style guide`,
-component: (
-<div>
-<Paragraph>
-The project uses{' '}
-<Anchor href="https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/theme/index.js">
-a module for a style guide
-</Anchor>. This is the source for shared styles like colors,
-spacing (padding/margin), font sizes, etc. The color scheme is{' '}
-<Anchor href="/projects/nova">Nova</Anchor>, which I use across my
-projects and tools - so the style guide module simply maps colors
-to the <Code>nova-colors</Code> npm package values.
-</Paragraph>
-<Image
-src="/static/nova-colors.jpg"
-description="Screenshot of nova color tiles"
-/>
-<Image
-src="/static/guitar-lessons.jpg"
-description="Screenshot of the guitar lessons fretboard pattern picker"
-/>
-</div>
-),
-},
-{
-title: `Conclusion`,
-component: (
-<div>
-<Paragraph>
-I&apos;m happy with how this has turned out. It seems to be easy
-to maintain and add-to. Let&apos;s see how it does going forward
-:)
-</Paragraph>
-</div>
-),
-},
-]
+### The code
+
+The code is [available on GitHub](https://github.com/trevordmiller/trevordmiller-website).
+
+![The home page of trevordmiller.com](/static/trevordmiller-website.png)
+
+### Scripts
+
+The project has a [minimal package.json](https://github.com/trevordmiller/trevordmiller-website/blob/master/package.json). This file declares dependencies, scripts, and some config for compilation and linting. The only steps needed to work in the app are to clone it, run `npm install` to install dependencies, then run `npm run dev` to develop. `npm run verify` can additionally be run to check builds, linting, and tests. Once a pull request is merged into master, `npm run stage` is run to deploy the latest code to a test release URL; if everything looks good, `npm run release` is run to tie the latest deployment to the `trevordmiller.com` URL.
+
+![Screenshot of working on the website in vim](/static/trevordmiller-website-workflow.jpg)
+
+### Directories
+
+The project has three directories: `static`, `components`, and `pages`.
+
+[The static directory](https://github.com/trevordmiller/trevordmiller-website/tree/master/static) holds static files (like favicons and raster images). When the app is deployed, these can be accessed at `/static/*`. This functionality works by default with Next.js.
+
+[The components directory](https://github.com/trevordmiller/trevordmiller-website/tree/master/components) holds generic components used across app pages. These are ES2015 modules that export React components, things like Icons, Buttons, Headings etc.
+
+[The pages directory](https://github.com/trevordmiller/trevordmiller-website/tree/master/pages) holds app pages. A page is just a component, but it is special because Next.js wires up the file path to the matching route (ie `pages/index.js` becomes `https://trevordmiller.com` and `pages/projects/guitar-lessons` becomes `https://trevordmiller.com/projects/guitar-lessons`). This functionality works by default with Next.js. The page components generally just compose the generic components in the `components` folder to create a page.
+
+Files are organized in `SomeFile` named directories with an `index.js` for the entry point. This allows them to have sub-components or utilities that are referenced with a relative path for easy extraction into an npm published package.
+
+### Style guide
+
+The project uses [a module for a style guide](https://github.com/trevordmiller/trevordmiller-website/blob/master/utils/theme/index.js). This is the source for shared styles like colors, spacing (padding/margin), font sizes, etc. The color scheme is [Nova](/projects/nova), which I use across my projects and tools - so the style guide module simply maps colors to the `nova-colors` npm package values.
+
+![Screenshot of nova color tiles](/static/nova-colors.jpg)![Screenshot of the guitar lessons fretboard pattern picker](/static/guitar-lessons.jpg)
+
+### Conclusion
+
+I'm happy with how this has turned out. It seems to be easy to maintain and add-to. Let's see how it does going forward :)

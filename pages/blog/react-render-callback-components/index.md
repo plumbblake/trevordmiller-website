@@ -1,126 +1,210 @@
-[
-{
-title: 'What about Higher Order Components?',
-component: (
-<div>
-<Paragraph>
-A common way to share stateful logic across React components is
-using the Higher Order Components (HOC) pattern. This post will
-show an alternative that I feel is simpler and more flexible
-called Render Callback components (AKA Function as Child
-components).
-</Paragraph>
-</div>
-),
-},
+### What about Higher Order Components?
 
-      {
-        title: `What is a Render Callback?`,
-        component: (
+A common way to share stateful logic across React components is using the Higher Order Components (HOC) pattern. This post will show an alternative that I feel is simpler and more flexible called Render Callback components (AKA Function as Child components).
+
+### What is a Render Callback?
+
+A Render Callback is a component where the children prop is a function; then shared logic is accessed through the function's arguments. Render Callbacks are just functions - just JavaScript!
+
+### Render Callback syntax
+
+#### Define
+
+To define a Render Callback you return this.props.children (a function) with the arguments you want to share.
+
+```javascript
+import { Component } from 'react'
+
+class SharedThing extends Component {
+
+  ...
+
+  render() {
+    return this.props.children(thing1, thing2)
+  }
+}
+
+export default SharedThing
+```
+
+#### Use
+
+To use a Render Callback you write an inline function with the arguments you've shared.
+
+```javascript
+import React from 'react'
+
+const AnotherComponent = () => (
+  <SharedThing>
+    {(thing1, thing2) => (
+      // use thing1 and thing2
+    )}
+  </SharedThing>
+)
+
+export default AnotherComponent
+```
+
+### Practical Example
+
+We have three components: an Accordion, Modal, and Thumbnail. Here is an example App using all three.
+
+#### App.js
+
+```javascript
+import React from 'react'
+import Accordion from './Accordion'
+import Modal from './Modal'
+import Thumbnail from './Thumbnail'
+
+const App = () => (
+  <main>
+    <Accordion
+      teaser="Tap to toggle Accordion details"
+      details={<div>Some details</div>}
+    />
+
+    <Modal
+      teaser="Tap to toggle Modal details"
+      details={<div>Some details</div>}
+    />
+
+    <Thumbnail
+      teaser="Tap image to toggle Thumbnail zoom"
+      src="https://unsplash.it/1000"
+    />
+  </main>
+)
+
+export default App
+```
+
+What is common between them? They all can be toggled open/closed. We could write each of them as a stateful class component with the same wrapping code, but since they have the same state setup - let's share it! Let's abstract the state into a `Toggle` component (a Render Callback).
+
+#### Toggle.js
+
+```javascript
+import { Component } from 'react'
+
+class Toggle extends Component {
+  state = {
+    isOpen: false,
+  }
+
+  handleToggleClick = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    })
+  }
+
+  render() {
+    return this.props.children(this.state.isOpen, this.handleToggleClick)
+  }
+}
+
+export default Toggle
+```
+
+Now components that use `Toggle` will have access to their own `isOpen` and `handleToggleClick` arguments without having to wire up the state code. The instances of `Toggle` (Accordion, Modal, and Thumbnail) can just be stateless function components.
+
+#### Accordion.js
+
+```javascript
+import React from 'react'
+import Toggle from './Toggle'
+
+const Accordion = ({ teaser, details }) => (
+  <Toggle>
+    {(isOpen, handleToggleClick) => (
+      <section>
+        <button onClick={handleToggleClick}>
+          {`${isOpen ? '-' : '+'} ${teaser}`}
+        </button>
+        {isOpen && details}
+      </section>
+    )}
+  </Toggle>
+)
+
+export default Accordion
+```
+
+#### Modal.js
+
+```javascript
+import React from 'react'
+import Toggle from './Toggle'
+
+const Modal = ({teaser, details}) => (
+  <Toggle>
+    {(isOpen, handleToggleClick) => (
+      <button onClick={handleToggleClick}>
+        {teaser}
+        {isOpen && (
           <div>
-            <Paragraph>
-              A Render Callback is a component where the <Code>children</Code>{' '}
-              prop is a function; then shared logic is accessed through the
-              function&apos;s arguments. Render Callbacks are just functions -
-              just JavaScript!
-            </Paragraph>
+            <div style={{
+              color: '#fff',
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 3,
+            }}>
+              {details}
+            </div>
+            <div style={{
+              background: 'rgba(0, 0, 0, 0.9)',
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 2,
+            }} />
           </div>
-        ),
-      },
+        )}
+      <button>
+    )}
+  </Toggle>
+)
 
-      {
-        title: `Render Callback syntax`,
-        component: (
-          <div>
-            <Heading level={4}>Define</Heading>
-            <Paragraph>
-              To define a Render Callback you return{' '}
-              <Code>this.props.children</Code> (a function) with the arguments
-              you want to share.
-            </Paragraph>
-            <CodeBlock file="SharedThing.js">{exampleDefine}</CodeBlock>
+export default Modal
+```
 
-            <Heading level={4}>Use</Heading>
-            <Paragraph>
-              To use a Render Callback you write an inline function with the
-              arguments you&apos;ve shared.
-            </Paragraph>
-            <CodeBlock file="AnotherComponent.js">{exampleUse}</CodeBlock>
-          </div>
-        ),
-      },
+#### Thumbnail.js
 
-      {
-        title: `Practical Example`,
-        component: (
-          <div>
-            <Paragraph>
-              We have three components: an <Code>Accordion</Code>,{' '}
-              <Code>Modal</Code>, and <Code>Thumbnail</Code>. Here is an example{' '}
-              <Code>App</Code> using all three and showing their output; tap the
-              output to interact with each component and compare how they are
-              similiar.
-            </Paragraph>
+```javascript
+import React from 'react'
+import Toggle from './Toggle'
 
-            <CodeBlock fileName="App.js" output={<ExampleApp />}>
-              {exampleApp}
-            </CodeBlock>
+const Thumbnail = ({ src, teaser }) => (
+  <Toggle>
+    {(isOpen, handleToggleClick) => (
+      <div>
+        <div>{teaser}</div>
+        <button onClick={handleToggleClick}>
+          <img
+            src={src}
+            alt={teaser}
+            style={{
+              maxWidth: isOpen ? '100%' : 150,
+            }}
+          />
+        </button>
+      </div>
+    )}
+  </Toggle>
+)
 
-            <Paragraph>
-              What is common between them? They all can be toggled open/closed.
-              We could write each of them as a stateful class component with the
-              same wrapping code, but since they have the same state setup -
-              let&apos;s share it! Let&apos;s abstract the state into a{' '}
-              <Code>Toggle</Code> component (a Render Callback).
-            </Paragraph>
+export default Thumbnail
+```
 
-            <CodeBlock fileName="Toggle.js">{exampleToggle}</CodeBlock>
+#### Example repo
 
-            <Paragraph>
-              Now components that use <Code>Toggle</Code> will have access to
-              their own <Code>isOpen</Code> and <Code>handleToggleClick</Code>{' '}
-              arguments without having to wire up the state code. The instances
-              of <Code>Toggle</Code> (<Code>Accordion</Code>, <Code>Modal</Code>,
-              and <Code>Thumbnail</Code>) can just be stateless function
-              components.
-            </Paragraph>
+These examples are available in a working app in a GitHub repo if you want to fork or clone it to try it out.
 
-            <CodeBlock fileName="Accordion.js">{exampleAccordion}</CodeBlock>
+[View example repo](https://github.com/trevordmiller/example-render-callback)
 
-            <CodeBlock fileName="Modal.js">{exampleModal}</CodeBlock>
+### Conclusion
 
-            <CodeBlock fileName="Thumbnail.js">{exampleThumbnail}</CodeBlock>
-          </div>
-        ),
-      },
-
-      {
-        title: `Example repo`,
-        component: (
-          <div>
-            <Paragraph>
-              These examples are available in a working app in a GitHub repo if
-              you want to fork or clone it to try it out.
-            </Paragraph>
-            <Anchor href="https://github.com/trevordmiller/example-render-callback">
-              <Button>View example repo</Button>
-            </Anchor>
-          </div>
-        ),
-      },
-
-      {
-        title: 'Conclusion',
-        component: (
-          <div>
-            <Paragraph>
-              Although there are a few ways to share stateful logic across
-              components in React, I feel that the Render Callback pattern is
-              the most flexible and simple. All you need to remember is to pass
-              a function as the <Code>children</Code> and then use the
-              arguments!
-            </Paragraph>
-          </div>
-        ),
-      },
-    ]
+Although there are a few ways to share stateful logic across components in React, I feel that the Render Callback pattern is the most flexible and simple. All you need to remember is to pass a function as the children and then use the arguments!

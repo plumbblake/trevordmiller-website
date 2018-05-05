@@ -297,8 +297,7 @@ const hasMultipleTwitterAccounts = accounts
 
 ...
 
-<OneTwitterAccountPerContentAlert
-  hasMultipleTwitterAccounts={hasMultipleTwitterAccounts}
+<OneTwitterAccountPerContentAlert hasMultipleTwitterAccounts={hasMultipleTwitterAccounts}
 />
 ```
 
