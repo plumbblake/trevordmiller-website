@@ -99,15 +99,19 @@ class JoinEmailList extends Component {
                   id="mc-embedded-subscribe"
                   style={{
                     ...inputResetStyles,
-                    paddingTop: spacing.medium,
-                    paddingBottom: spacing.medium,
-                    paddingLeft: spacing.large,
-                    paddingRight: spacing.large,
                     minWidth: 175,
-                    background: colorValues.colors.blue,
-                    color: uiGroups.backgroundShade,
-                    borderRadius: borderRadii.medium,
                     cursor: 'pointer',
+                    display: 'inline-block',
+                    textAlign: 'center',
+                    outline: 'none',
+                    borderRadius: borderRadii.medium,
+                    background: 'transparent',
+                    fontSize: fontSizes.medium,
+                    color: colorValues.colors.blue,
+                    border: `${borderSizes.small}px solid ${
+                      colorValues.colors.blue
+                    }`,
+                    padding: spacing.medium,
                   }}
                 />
               </div>

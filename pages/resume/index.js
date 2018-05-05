@@ -4,6 +4,7 @@ import { spacing, fontSizes, uiGroups } from '../../utils/theme'
 import PageWithBaseRoute from '../../components/PageWithBaseRoute'
 import Teaser from '../../components/Teaser'
 import List from '../../components/List'
+import ListItem from '../../components/ListItem'
 import Avatar from '../../components/Avatar'
 import Icon from '../../components/Icon'
 
@@ -213,7 +214,13 @@ const Resume = () => (
           component: (
             <Teaser
               tags={company.tags}
-              body={<List items={company.responsibilities} />}
+              body={
+                <List>
+                  {company.responsibilities.map(responsibility => (
+                    <ListItem key={responsibility}>{responsibility}</ListItem>
+                  ))}
+                </List>
+              }
             />
           ),
         }

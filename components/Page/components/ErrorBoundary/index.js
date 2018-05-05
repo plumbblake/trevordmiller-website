@@ -38,11 +38,12 @@ class ErrorBoundary extends Component {
           maxWidth: screenSizes.large,
           margin: 'auto',
           minHeight: '100vh',
+          paddingTop: spacing.xlarge,
           paddingLeft: spacing.large,
           paddingRight: spacing.large,
         }}
       >
-        <Heading level={2}>There was an error</Heading>
+        <Heading level={1}>There was an error</Heading>
 
         <p>
           Trevor has been notified that you ran into an error, but if you could

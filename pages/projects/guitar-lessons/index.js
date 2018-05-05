@@ -291,7 +291,7 @@ GuitarPatternsSelector.propTypes = {
   selectedType: PropTypes.oneOf(typeOptions).isRequired,
 }
 
-class GuitarLessons extends React.Component {
+class GuitarLessons extends Component {
   static async getInitialProps({ query: { degree, type } }) {
     return {
       selectedDegree: degree,

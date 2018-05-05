@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   spacing,
@@ -13,6 +13,8 @@ import Icon from '../../../components/Icon'
 import Anchor from '../../../components/Anchor'
 import Heading from '../../../components/Heading'
 import List from '../../../components/List'
+import ListItem from '../../../components/ListItem'
+import Button from '../../../components/Button'
 import Image from '../../../components/Image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
@@ -369,7 +371,7 @@ const faq = [
 
 const tabBorder = `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`
 
-class PluginsList extends React.Component {
+class PluginsList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -498,7 +500,11 @@ class PluginsList extends React.Component {
                       paddingBottom: spacing.medium,
                     }}
                   >
-                    <List items={plugin.steps} type="number" />
+                    <List kind="number">
+                      {plugin.steps.map(step => (
+                        <ListItem key={step}>{step}</ListItem>
+                      ))}
+                    </List>
                   </div>
                 </div>
               ) : null}
@@ -514,21 +520,30 @@ class PluginsList extends React.Component {
                       paddingBottom: spacing.medium,
                     }}
                   >
-                    <List items={plugin.notes} />
+                    <List>
+                      {plugin.notes.map(note => (
+                        <ListItem key={note}>{note}</ListItem>
+                      ))}
+                    </List>
                   </div>
                 </div>
               ) : null}
               {plugin.links ? (
                 <div>
                   <Heading level={4}>Links</Heading>
-                  <List
-                    items={plugin.links.map(link => (
-                      <Anchor key={link.title} href={link.url}>
-                        {link.title}
+                  {plugin.links.map(link => (
+                    <div
+                      key={link.title}
+                      style={{
+                        marginBottom:
+                          index + 1 < plugin.links.length ? spacing.small : 0,
+                      }}
+                    >
+                      <Anchor href={link.url}>
+                        <Button size="small">{link.title}</Button>
                       </Anchor>
-                    ))}
-                    type="link"
-                  />
+                    </div>
+                  ))}
                 </div>
               ) : null}
             </div>

@@ -7,6 +7,7 @@ import Button from '../Button'
 import Avatar from '../Avatar'
 import Icon from '../Icon'
 import List from '../List'
+import ListItem from '../ListItem'
 import Video from '../Video'
 import { courses, courseKeys } from '../../pages/courses'
 import { spacing, fontSizes, uiGroups, syntaxGroups } from '../../utils/theme'
@@ -36,13 +37,14 @@ const PageWithCourse = ({ id }) => {
       question: `How long do I have access to the course?`,
       answer: `How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. No need to continue paying one of those pesky subscription payments to keep access to courses you've bought.`,
     },
-    ...(course.cost === 0
+    course.cost === 0
       ? {}
       : {
           question: `What if I am unhappy with the course?`,
           answer: `If you are unsatisfied with your purchase, you can get a full refund for 30 days.`,
-        }),
+        },
   ]
+
   return (
     <Page
       baseRouteKey="courses"
@@ -75,16 +77,18 @@ const PageWithCourse = ({ id }) => {
             course.cost === 0 ? 'free' : `$${course.cost}`
           }`,
           component: (
-            <List
-              items={[
-                `${videoCount} videos`,
-                `${course.time} to watch`,
-                `Example code to download and practice with`,
-                `Quizzes after each section to make sure you understand`,
-                `Comments on each video to get help from your instructor and discuss with fellow students`,
-                `All videos can be downloaded so you aren't locked into where you can view them`,
-              ]}
-            />
+            <List>
+              <ListItem>{`${videoCount} videos`}</ListItem>
+              <ListItem>{`${course.time} to watch`}</ListItem>
+              <ListItem
+              >{`Example code to download and practice with`}</ListItem>
+              <ListItem
+              >{`Quizzes after each section to make sure you understand`}</ListItem>
+              <ListItem
+              >{`Comments on each video to get help from your instructor and discuss with fellow students`}</ListItem>
+              <ListItem
+              >{`All videos can be downloaded so you aren't locked into where you can view them`}</ListItem>
+            </List>
           ),
         },
 

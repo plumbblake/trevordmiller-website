@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Page from '../Page'
 import { blogPosts, blogPostKeys } from '../../pages/blog'
 
-const PageWithBlogPost = ({ id, sections }) => (
+const PageWithBlogPost = ({ id, sections, children }) => (
   <Page
     baseRouteKey="blog"
     mainVisual={blogPosts[id].mainVisual}
@@ -12,7 +12,9 @@ const PageWithBlogPost = ({ id, sections }) => (
     description={blogPosts[id].description}
     tags={blogPosts[id].tags}
     sections={sections}
-  />
+  >
+    {children}
+  </Page>
 )
 
 PageWithBlogPost.propTypes = {
@@ -22,7 +24,8 @@ PageWithBlogPost.propTypes = {
       title: PropTypes.string,
       component: PropTypes.node.isRequired,
     }),
-  ).isRequired,
+  ),
+  children: PropTypes.element,
 }
 
 export default PageWithBlogPost

@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { spacing, uiGroups, screenSizes } from '../../utils/theme'
-import List from '../List'
 import Anchor from '../Anchor'
+import Button from '../Button'
 import Image from '../Image'
 import Icon from '../Icon'
 import Tags from '../Tags'
@@ -55,14 +55,18 @@ const Teaser = ({ visual, body, links, tags }) => (
               marginTop: spacing.small,
             }}
           >
-            <List
-              items={links.map(link => (
-                <span key={link.href}>
-                  <Anchor href={link.href}>{link.description}</Anchor>
-                </span>
-              ))}
-              type="link"
-            />
+            {links.map((link, index) => (
+              <div
+                key={link.href}
+                style={{
+                  marginBottom: index + 1 < links.length ? spacing.small : 0,
+                }}
+              >
+                <Anchor href={link.href}>
+                  <Button size="small">{link.description}</Button>
+                </Anchor>
+              </div>
+            ))}
           </div>
         ) : null}
       </div>

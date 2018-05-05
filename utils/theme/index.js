@@ -17,7 +17,7 @@ export const screenSizes = {
 
 export const fontFamilies = {
   sansSerif: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
-  monoSpace: '"Lucida Console", Monaco, monospace',
+  monoSpace: 'monospace',
 }
 
 export const fontSizes = {
