@@ -22,6 +22,13 @@
     ]
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "browser": true,
+      "jest": true
+    },
+    "plugins": ["import", "react", "jsx-a11y", "jest"],
     "extends": [
       "eslint:recommended",
       "plugin:import/errors",
@@ -30,18 +37,31 @@
       "plugin:jsx-a11y/recommended",
       "plugin:jest/recommended"
     ],
-    "plugins": ["import", "react", "jsx-a11y", "jest"],
-    "parser": "babel-eslint",
-    "env": {
-      "node": true,
-      "browser": true,
-      "jest": true
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
     }
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "babel": {
+    "presets": ["next/babel"],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./"],
+          "alias": {
+            "utils": "./utils",
+            "components": "./components"
+          }
+        }
+      ]
+    ]
   },
   "browser": {
     "rss": false
@@ -62,7 +82,9 @@
     "@mdx-js/loader": "^0.8.1",
     "@mdx-js/mdx": "^0.8.1",
     "babel-eslint": "^8.2.3",
+    "babel-plugin-module-resolver": "^3.1.1",
     "eslint": "^4.19.1",
+    "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
