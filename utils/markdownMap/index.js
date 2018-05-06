@@ -1,13 +1,13 @@
 /* eslint-disable react/display-name, react/prop-types */
 import React from 'react'
-import Heading from '../../components/Heading'
-import Paragraph from '../../components/Paragraph'
-import Image from '../../components/Image'
-import Anchor from '../../components/Anchor'
-import List from '../../components/List'
-import ListItem from '../../components/ListItem'
-import PreformattedText from '../../components/PreformattedText'
-import InlineCode from '../../components/InlineCode'
+import Heading from 'components/Heading'
+import Paragraph from 'components/Paragraph'
+import Image from 'components/Image'
+import Anchor from 'components/Anchor'
+import List from 'components/List'
+import ListItem from 'components/ListItem'
+import PreformattedText from 'components/PreformattedText'
+import InlineCode from 'components/InlineCode'
 
 const markdownMap = {
   h1: ({ children }) => <Heading level={1}>{children}</Heading>,

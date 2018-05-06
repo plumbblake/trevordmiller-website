@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Page from '../Page'
-import { blogPosts, blogPostKeys } from '../../pages/blog'
+import Page from 'components/Page'
+import { blogPosts, blogPostKeys } from 'pages/blog'
 
 const PageWithBlogPost = ({ id, sections, children }) => (
   <Page

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing, screenSizes } from '../../../../utils/theme'
+import { spacing, screenSizes } from 'utils/theme'
 import Header from './components/Header'
 import Section from './components/Section'
 

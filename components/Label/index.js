@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { uiGroups, fontSizes } from '../../utils/theme'
+import { uiGroups, fontSizes } from 'utils/theme'
 
 const Label = ({ children }) => (
   <p

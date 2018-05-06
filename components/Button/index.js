@@ -7,7 +7,7 @@ import {
   borderRadii,
   borderSizes,
   fontSizes,
-} from '../../utils/theme'
+} from 'utils/theme'
 
 const stylesByType = {
   primary: {

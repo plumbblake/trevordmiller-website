@@ -7,8 +7,8 @@ import {
   lineHeights,
   fontSizes,
   fontWeights,
-} from '../../utils/theme'
-import { baseRouteKeys } from '../../pages'
+} from 'utils/theme'
+import { baseRouteKeys } from 'pages'
 import styleReset from './utils/styleReset'
 import analytics from './utils/analytics'
 import ErrorBoundary from './components/ErrorBoundary'

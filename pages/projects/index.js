@@ -1,7 +1,7 @@
 import React from 'react'
-import tags from '../../utils/tags'
-import PageWithBaseRoute from '../../components/PageWithBaseRoute'
-import Teaser from '../../components/Teaser'
+import tags from 'utils/tags'
+import PageWithBaseRoute from 'components/PageWithBaseRoute'
+import Teaser from 'components/Teaser'
 
 export const projects = {
   'trevordmiller-website': {

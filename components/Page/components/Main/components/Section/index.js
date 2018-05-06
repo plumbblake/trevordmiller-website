@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing, uiGroups } from '../../../../../../utils/theme'
-import Heading from '../../../../../Heading'
+import { spacing, uiGroups } from 'utils/theme'
+import Heading from 'components/Heading'
 
 const Section = ({ children, note, title }) => (
   <section id={title}>

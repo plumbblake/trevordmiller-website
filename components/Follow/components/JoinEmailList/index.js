@@ -6,9 +6,9 @@ import {
   fontSizes,
   uiGroups,
   colorValues,
-} from '../../../../utils/theme'
-import Button from '../../../Button'
-import Anchor from '../../../Anchor'
+} from 'utils/theme'
+import Button from 'components/Button'
+import Anchor from 'components/Anchor'
 
 const inputResetStyles = {
   fontSize: fontSizes.medium,

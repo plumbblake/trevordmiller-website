@@ -1,4 +1,4 @@
-import { uiGroups } from '../../../utils/theme'
+import { uiGroups } from 'utils/theme'
 
 export default `
   body {

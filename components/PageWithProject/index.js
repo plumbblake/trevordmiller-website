@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Page from '../Page'
-import { projects, projectKeys } from '../../pages/projects'
+import Page from 'components/Page'
+import { projects, projectKeys } from 'pages/projects'
 
 const PageWithProject = ({ id, sections }) => (
   <Page

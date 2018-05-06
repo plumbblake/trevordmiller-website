@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing, screenSizes } from '../../../../../../utils/theme'
-import Heading from '../../../../../Heading'
-import Image from '../../../../../Image'
-import Info from '../../../../../Info'
-import Tags from '../../../../../Tags'
+import { spacing, screenSizes } from 'utils/theme'
+import Heading from 'components/Heading'
+import Image from 'components/Image'
+import Info from 'components/Info'
+import Tags from 'components/Tags'
 
 const Header = ({ title, mainVisual, description, tags, info, cta }) => (
   <header

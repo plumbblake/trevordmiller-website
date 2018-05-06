@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { uiGroups, borderRadii, borderSizes } from '../../utils/theme'
+import { uiGroups, borderRadii, borderSizes } from 'utils/theme'
 
 const maxWidthsBySize = {
   medium: 400,

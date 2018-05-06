@@ -1,6 +1,6 @@
 import React from 'react'
-import { spacing, screenSizes } from '../../utils/theme'
-import Info from '../Info'
+import { spacing, screenSizes } from 'utils/theme'
+import Info from 'components/Info'
 import JoinEmailList from './components/JoinEmailList'
 import Accounts from './components/Accounts'
 

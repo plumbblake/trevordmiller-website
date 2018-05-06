@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { spacing } from '../../utils/theme'
+import { spacing } from 'utils/theme'
 
 const listStyle = {
   marginTop: spacing.medium,

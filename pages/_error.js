@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Page from '../components/Page'
-import Anchor from '../components/Anchor'
-import Button from '../components/Button'
+import Page from 'components/Page'
+import Anchor from 'components/Anchor'
+import Button from 'components/Button'
 
 class Error extends Component {
   static getInitialProps({ res, err }) {

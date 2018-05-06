@@ -6,7 +6,7 @@ import {
   uiGroups,
   borderRadii,
   borderSizes,
-} from '../../utils/theme'
+} from 'utils/theme'
 
 const PreformattedText = ({ children }) => (
   <pre

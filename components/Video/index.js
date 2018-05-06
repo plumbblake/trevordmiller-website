@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { uiGroups } from '../../utils/theme'
+import { uiGroups } from 'utils/theme'
 
 const Video = ({
   src,

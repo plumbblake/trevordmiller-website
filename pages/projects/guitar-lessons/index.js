@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { uiGroups, spacing, borderSizes } from '../../../utils/theme'
-import PageWithProject from '../../../components/PageWithProject'
-import Heading from '../../../components/Heading'
-import Button from '../../../components/Button'
+import { uiGroups, spacing, borderSizes } from 'utils/theme'
+import PageWithProject from 'components/PageWithProject'
+import Heading from 'components/Heading'
+import Button from 'components/Button'
 
 const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
 const doubleOctave = octave.concat(octave)

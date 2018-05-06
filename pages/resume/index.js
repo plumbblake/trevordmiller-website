@@ -1,12 +1,12 @@
 import React from 'react'
-import tags from '../../utils/tags'
-import { spacing, fontSizes, uiGroups } from '../../utils/theme'
-import PageWithBaseRoute from '../../components/PageWithBaseRoute'
-import Teaser from '../../components/Teaser'
-import List from '../../components/List'
-import ListItem from '../../components/ListItem'
-import Avatar from '../../components/Avatar'
-import Icon from '../../components/Icon'
+import tags from 'utils/tags'
+import { spacing, fontSizes, uiGroups } from 'utils/theme'
+import PageWithBaseRoute from 'components/PageWithBaseRoute'
+import Teaser from 'components/Teaser'
+import List from 'components/List'
+import ListItem from 'components/ListItem'
+import Avatar from 'components/Avatar'
+import Icon from 'components/Icon'
 
 export const companies = {
   trevordmiller: {

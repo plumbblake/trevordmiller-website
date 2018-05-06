@@ -1,7 +1,7 @@
 import React from 'react'
-import { colorValues, fontSizes, spacing } from '../../../../utils/theme'
-import Anchor from '../../../Anchor'
-import Icon from '../../../Icon'
+import { colorValues, fontSizes, spacing } from 'utils/theme'
+import Anchor from 'components/Anchor'
+import Icon from 'components/Icon'
 
 const accounts = [
   {

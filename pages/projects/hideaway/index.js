@@ -1,10 +1,10 @@
 import React from 'react'
-import PageWithProject from '../../../components/PageWithProject'
-import Video from '../../../components/Video'
-import Paragraph from '../../../components/Paragraph'
-import Anchor from '../../../components/Anchor'
-import Button from '../../../components/Button'
-import Label from '../../../components/Label'
+import PageWithProject from 'components/PageWithProject'
+import Video from 'components/Video'
+import Paragraph from 'components/Paragraph'
+import Anchor from 'components/Anchor'
+import Button from 'components/Button'
+import Label from 'components/Label'
 
 const Hideaway = () => (
   <PageWithProject

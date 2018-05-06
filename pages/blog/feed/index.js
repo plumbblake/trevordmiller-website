@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import RSS from 'rss'
-import { baseRoutes } from '../../'
-import { blogPosts } from '../'
+import { baseRoutes } from 'pages'
+import { blogPosts } from 'pages/blog'
 
 const feed = new RSS({
   title: 'Trevor D. Miller blog',
