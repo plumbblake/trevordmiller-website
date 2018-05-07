@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
@@ -11,8 +10,10 @@ const Anchor = ({ href, children }) => {
   }
 
   return href.startsWith('/') ? (
-    <Link prefetch href={href}>
-      <a style={linkStyle}>{children}</a>
+    <Link href={href} prefetch>
+      <a href={href} style={linkStyle}>
+        {children}
+      </a>
     </Link>
   ) : (
     <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle}>

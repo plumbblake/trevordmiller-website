@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
@@ -16,8 +15,9 @@ const Navigation = ({ baseRouteKey }) => (
         flexWrap: 'wrap',
       }}
     >
-      <Link prefetch href="/">
+      <Link href="/" prefetch>
         <a
+          href="/"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -35,8 +35,9 @@ const Navigation = ({ baseRouteKey }) => (
         const baseRoute = baseRoutes[innerBaseRouteKey]
 
         return (
-          <Link prefetch key={index} href={baseRoute.path}>
+          <Link href={baseRoute.path} prefetch key={index}>
             <a
+              href={baseRoute.path}
               style={{
                 textDecoration: 'none',
                 paddingTop: spacing.medium,
