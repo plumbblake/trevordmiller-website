@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default {
+const icons = {
   trevordmiller: {
     viewBox: 640,
     elements: (
@@ -1129,3 +1129,5 @@ export default {
     ),
   },
 }
+
+export default icons

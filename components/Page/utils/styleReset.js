@@ -1,6 +1,6 @@
 import { uiGroups } from 'utils/theme'
 
-export default `
+const styleReset = `
   body {
     margin: 0;
     background-color: ${uiGroups.background};
@@ -54,3 +54,5 @@ export default `
     }
   }
 `
+
+export default styleReset
