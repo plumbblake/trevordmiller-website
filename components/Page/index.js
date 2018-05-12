@@ -10,6 +10,7 @@ import {
 } from 'utils/theme'
 import { baseRouteKeys } from 'pages'
 import styleReset from './utils/styleReset'
+import novaCodeHighlighting from './utils/novaCodeHighlighting'
 import analytics from './utils/analytics'
 import ErrorBoundary from './components/ErrorBoundary'
 import Navigation from './components/Navigation'
@@ -74,7 +75,10 @@ class Page extends Component {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <style>{styleReset}</style>
+          <style>
+            {styleReset}
+            {novaCodeHighlighting}
+          </style>
 
           <link rel="manifest" href="/static/manifest.json" />
           <link

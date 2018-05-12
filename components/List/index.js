@@ -19,7 +19,7 @@ const List = ({ children, kind = 'bullet' }) => {
 }
 
 List.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 }
 
 export default List

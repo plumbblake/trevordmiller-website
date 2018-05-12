@@ -1,13 +1,16 @@
 import novaColorValues, {
   uiGroups as novaUiGroups,
   syntaxGroups as novaSyntaxGroups,
+  versionControlGroups as novaVersionControlGroups,
 } from 'nova-colors'
+
+export const colorValues = novaColorValues
 
 export const uiGroups = novaUiGroups
 
 export const syntaxGroups = novaSyntaxGroups
 
-export const colorValues = novaColorValues
+export const versionControlGroups = novaVersionControlGroups
 
 export const screenSizes = {
   large: 740,

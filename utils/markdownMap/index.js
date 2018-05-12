@@ -58,14 +58,14 @@ AnchorMarkdownMap.propTypes = {
 
 const UnorderedListMarkdownMap = ({ children }) => <List>{children}</List>
 UnorderedListMarkdownMap.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 }
 
 const OrderedListMarkdownMap = ({ children }) => (
   <List kind="number">{children}</List>
 )
 OrderedListMarkdownMap.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
 }
 
 const ListItemMarkdownMap = ({ children }) => <ListItem>{children}</ListItem>
