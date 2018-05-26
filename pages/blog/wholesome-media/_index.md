@@ -56,6 +56,12 @@ It can be helpful to research media before consuming it. There are many tools av
 
 ![Common sense media research](/static/common-sense-media.png)
 
+### More info
+
+[Connect Your Kids](https://connectyourkids.org) is a fantastic free tool for protecting your family. It includes a database of internet safety resources, services, devices, and networks. I recommend going through each of the items your family uses.
+
+![Connect Your Kids database screenshot](/static/connect-your-kids.png)
+
 ### Conclusion
 
 I believe that the type of media we use has a large influence on our thoughts and feelings. By avoiding unwholesome media I feel it gives me greater positivity and light in my life. Although using tools like filters and device settings can be helpful to avoid unwholesome media, the most important thing is an internal desire to avoid it.
