@@ -44,10 +44,6 @@ const styleReset = `
     cursor: pointer;
   }
 
-  a:active, button:active, input[type='submit']:active {
-    opacity: 1.0;
-  }
-
   pre {
     margin: 0;
   }
