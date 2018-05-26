@@ -87,13 +87,13 @@
     "eslint": "^4.19.1",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "husky": "^0.14.3",
-    "jest": "^22.4.4",
-    "lint-staged": "^7.1.1",
-    "now": "^11.1.12",
+    "jest": "^23.0.0",
+    "lint-staged": "^7.1.2",
+    "now": "^11.1.14",
     "prettier": "^1.12.1",
     "remark-highlight.js": "^5.0.0"
   },
@@ -102,8 +102,8 @@
     "nova-colors": "^2.1.5",
     "prop-types": "^15.6.1",
     "raven-js": "^3.25.2",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "rss": "^1.2.2"
   }
 }
