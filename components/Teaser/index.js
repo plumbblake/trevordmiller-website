@@ -34,7 +34,7 @@ const Teaser = ({ visual, body, links, tags }) => (
           }}
         >
           {visual && visual.startsWith('/') ? (
-            <Image src={visual} description="Decorative image" quiet />
+            <Image src={visual} description="Decorative image" />
           ) : (
             <Icon type={visual} fill={uiGroups.gray2} size={70} />
           )}

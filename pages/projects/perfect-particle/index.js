@@ -59,7 +59,6 @@ const PerfectParticle = () => (
               <Image
                 src={release.artworkPath}
                 description={`Album artwork for ${release.title}`}
-                quiet
               />
             </div>
             <Audio src={release.sampleAudioPath} />

@@ -43,7 +43,7 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
           marginTop: spacing.small,
         }}
       >
-        <Image src={mainVisual} description="Decorative overview image" quiet />
+        <Image src={mainVisual} description="Decorative overview image" />
       </div>
     )}
 

@@ -1,14 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  spacing,
-  fontSizes,
-  borderRadii,
-  borderSizes,
-  syntaxGroups,
-  uiGroups,
-} from 'utils/theme'
+import { spacing, fontSizes, borderRadii, syntaxGroups } from 'utils/theme'
 import PageWithProject from 'components/PageWithProject'
+import Info from 'components/Info'
 import Icon from 'components/Icon'
 import Anchor from 'components/Anchor'
 import Heading from 'components/Heading'
@@ -397,87 +391,85 @@ const PluginsList = ({ plugins }) =>
 
       <div
         style={{
-          border: `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`,
-          borderRadius: borderRadii.medium,
           marginTop: spacing.medium,
           marginBottom: spacing.medium,
-          padding: spacing.large,
         }}
       >
-        {plugin.screenshot ? (
-          <div
-            style={{
-              marginBottom: spacing.medium,
-            }}
-          >
-            <Image
-              src={plugin.screenshot}
-              description={`Screenshot of Nova plugin for ${plugin.title}`}
-              quiet={true}
-            />
-          </div>
-        ) : null}
-
-        {plugin.steps ? (
-          <div
-            style={{
-              marginBottom: plugin.notes || plugin.links ? spacing.medium : 0,
-            }}
-          >
-            <Heading level={4}>Instructions</Heading>
+        <Info>
+          {plugin.screenshot ? (
             <div
               style={{
-                paddingBottom: spacing.medium,
+                marginBottom: spacing.medium,
               }}
             >
-              <List kind="number">
-                {plugin.steps.map(step => (
-                  <ListItem key={step}>{step}</ListItem>
-                ))}
-              </List>
+              <Image
+                src={plugin.screenshot}
+                description={`Screenshot of Nova plugin for ${plugin.title}`}
+              />
             </div>
-          </div>
-        ) : null}
+          ) : null}
 
-        {plugin.notes ? (
-          <div
-            style={{
-              marginBottom: plugin.links ? spacing.medium : 0,
-            }}
-          >
-            <Heading level={4}>Notes</Heading>
+          {plugin.steps ? (
             <div
               style={{
-                paddingBottom: spacing.medium,
+                marginBottom: plugin.notes || plugin.links ? spacing.medium : 0,
               }}
             >
-              <List>
-                {plugin.notes.map(note => (
-                  <ListItem key={note}>{note}</ListItem>
-                ))}
-              </List>
-            </div>
-          </div>
-        ) : null}
-
-        {plugin.links ? (
-          <div>
-            <Heading level={4}>Links</Heading>
-            {plugin.links.map((link, index) => (
+              <Heading level={4}>Instructions</Heading>
               <div
-                key={link.title}
                 style={{
-                  marginBottom:
-                    index + 1 < plugin.links.length ? spacing.small : 0,
+                  paddingBottom: spacing.medium,
                 }}
               >
-                <Anchor href={link.url}>
-                  <Button size="small">{link.title}</Button>
-                </Anchor>
+                <List kind="number">
+                  {plugin.steps.map(step => (
+                    <ListItem key={step}>{step}</ListItem>
+                  ))}
+                </List>
               </div>
-            ))}
-          </div>
-        ) : null}
+            </div>
+          ) : null}
+
+          {plugin.notes ? (
+            <div
+              style={{
+                marginBottom: plugin.links ? spacing.medium : 0,
+              }}
+            >
+              <Heading level={4}>Notes</Heading>
+              <div
+                style={{
+                  paddingBottom: spacing.medium,
+                }}
+              >
+                <List>
+                  {plugin.notes.map(note => (
+                    <ListItem key={note}>{note}</ListItem>
+                  ))}
+                </List>
+              </div>
+            </div>
+          ) : null}
+
+          {plugin.links ? (
+            <div>
+              <Heading level={4}>Links</Heading>
+              {plugin.links.map((link, index) => (
+                <div
+                  key={link.title}
+                  style={{
+                    marginBottom:
+                      index + 1 < plugin.links.length ? spacing.small : 0,
+                  }}
+                >
+                  <Anchor href={link.url}>
+                    <Button size="small">{link.title}</Button>
+                  </Anchor>
+                </div>
+              ))}
+            </div>
+          ) : null}
+        </Info>
       </div>
     </details>
   ))
@@ -555,7 +547,6 @@ const Nova = () => (
           <Image
             src="/static/nova-example-code-screenshot.png"
             description={`Nova example code screenshot`}
-            quiet
           />
         ),
       },
