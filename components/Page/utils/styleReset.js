@@ -44,6 +44,10 @@ const styleReset = `
     cursor: pointer;
   }
 
+  pre {
+    margin: 0;
+  }
+
   @media print {
     @page {
       margin: 0;

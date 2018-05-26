@@ -1,27 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  fontFamilies,
-  spacing,
-  uiGroups,
-  borderRadii,
-  borderSizes,
-} from 'utils/theme'
+import { fontFamilies, spacing, fontSizes } from 'utils/theme'
+import Info from 'components/Info'
 
 const PreformattedText = ({ children }) => (
-  <pre
+  <div
     style={{
-      fontFamily: fontFamilies.monoSpace,
-      border: `${borderSizes.medium}px solid ${uiGroups.backgroundShade}`,
-      borderRadius: borderRadii.medium,
       marginTop: spacing.medium,
       marginBottom: spacing.medium,
-      padding: spacing.large,
-      overflow: 'auto',
     }}
   >
-    {children}
-  </pre>
+    <Info>
+      <pre
+        style={{
+          fontFamily: fontFamilies.monoSpace,
+          fontSize: fontSizes.small,
+          overflow: 'auto',
+        }}
+      >
+        {children}
+      </pre>
+    </Info>
+  </div>
 )
 
 PreformattedText.propTypes = {
