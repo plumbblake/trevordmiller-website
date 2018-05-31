@@ -47,19 +47,6 @@ export const projects = {
     ],
   },
 
-  'practice-problems': {
-    tags: [tags.inProgress, tags.node, tags.go, tags.typescript],
-    mainVisual: '/static/code-1.jpg',
-    title: `Practice Problems`,
-    description: `Coding practice problems.`,
-    links: [
-      {
-        description: `See the code`,
-        href: 'https://github.com/trevordmiller/practice-problems',
-      },
-    ],
-  },
-
   dotfiles: {
     tags: [tags.terminal, tags.vim, tags.git],
     mainVisual: '/static/dotfiles.png',
@@ -172,6 +159,19 @@ export const projects = {
       {
         description: 'See the code',
         href: 'https://github.com/trevordmiller/hideaway',
+      },
+    ],
+  },
+
+  'practice-problems': {
+    tags: [tags.inProgress, tags.node, tags.go, tags.typescript],
+    mainVisual: '/static/code-1.jpg',
+    title: `Practice Problems`,
+    description: `Coding practice problems.`,
+    links: [
+      {
+        description: `See the code`,
+        href: 'https://github.com/trevordmiller/practice-problems',
       },
     ],
   },
