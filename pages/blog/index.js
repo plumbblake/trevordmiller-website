@@ -4,6 +4,14 @@ import PageWithBaseRoute from 'components/PageWithBaseRoute'
 import Teaser from 'components/Teaser'
 
 export const blogPosts = {
+  'learning-routine': {
+    tags: [tags.general],
+    mainVisual: '/static/books.jpg',
+    title: `Staying up-to-date as a software developer with a daily learning routine`,
+    description: `How I study and practice to keep my skills current in the fast moving field of software development.`,
+    date: 'June 9, 2018',
+  },
+
   'test-behavior': {
     tags: [tags.general, tags.react],
     mainVisual: '/static/test-tubes.jpg',
