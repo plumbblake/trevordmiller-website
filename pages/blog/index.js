@@ -8,7 +8,7 @@ export const blogPosts = {
     tags: [tags.general],
     mainVisual: '/static/books.jpg',
     title: `Staying up-to-date as a software developer with a daily learning routine`,
-    description: `How I study and practice to keep my skills current in the fast moving field of software development.`,
+    description: `How I study and practice to keep my skills current in the fast-moving field of software development.`,
     date: 'June 9, 2018',
   },
 
