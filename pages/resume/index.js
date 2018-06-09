@@ -9,30 +9,20 @@ import Avatar from 'components/Avatar'
 import Icon from 'components/Icon'
 
 export const companies = {
-  trevordmiller: {
-    tags: [
-      tags.inProgress,
-      tags.graphQl,
-      tags.node,
-      tags.go,
-      tags.react,
-      tags.reactNative,
-      tags.electron,
-      tags.typescript,
-    ],
-    title: `Owner at trevordmiller`,
-    dateRange: `January 2009 - Present`,
+  icsAgain: {
+    tags: [tags.inProgress, tags.node, tags.react, tags.redux],
+    title:
+      'Senior Software Developer at The Church of Jesus Christ of Latter-day Saints',
+    dateRange: `May 2018 - Present`,
     responsibilities: [
-      `Teaching thousands of developers through video courses, blog posts, conferences, and local boot camps`,
-      `Maintaining open source libraries and apps`,
-      `Building freelance apps and services`,
-      `Managing online developer communities`,
+      `Writing core code shared across teams and projects`,
+      `Mentoring developers throughout the organization`,
+      `Training teams on the latest updates in the industry`,
     ],
   },
 
   meetedgar: {
     tags: [
-      tags.inProgress,
       tags.graphQl,
       tags.node,
       tags.react,
@@ -42,11 +32,11 @@ export const companies = {
       tags.postgresql,
     ],
     title: 'Senior Software Developer at MeetEdgar',
-    dateRange: `May 2017 - Present`,
+    dateRange: `May 2017 - May 2018`,
     responsibilities: [
-      `Contributing to full-stack development of the Edgar web app`,
-      `Converting desktop only styles to cross-platform responsive styles`,
-      `Managing tests, builds, and deployments in Continuous Integration`,
+      `Contributed to full-stack development of the Edgar web app`,
+      `Converted desktop only styles to cross-platform responsive styles`,
+      `Managed tests, builds, and deployments in Continuous Integration`,
       `Refactored thousands of old tests`,
       `Led front-end development of the Ropig web app`,
       `Automated API layer between back-end and front-end`,
@@ -109,6 +99,27 @@ export const companies = {
     responsibilities: [
       `Maintained websites for 12 BYU programs`,
       `Updated team templates to be responsive`,
+    ],
+  },
+
+  trevordmiller: {
+    tags: [
+      tags.inProgress,
+      tags.graphQl,
+      tags.node,
+      tags.go,
+      tags.react,
+      tags.reactNative,
+      tags.electron,
+      tags.typescript,
+    ],
+    title: `Owner at trevordmiller`,
+    dateRange: `January 2009 - Present`,
+    responsibilities: [
+      `Teaching thousands of developers through video courses, blog posts, conferences, and local boot camps`,
+      `Maintaining open source libraries and apps`,
+      `Building freelance apps and services`,
+      `Managing online developer communities`,
     ],
   },
 }
