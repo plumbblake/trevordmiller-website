@@ -49,6 +49,7 @@ For example, here are some of the feeds I have in my feed reader for my interest
 * [JavaScript Weekly](https://javascriptweekly.com)
 * [React.js blog](https://reactjs.org)
 * [Storybook release notes](https://github.com/storybooks/storybook/releases)
+* [My own blog (from this website)](https://trevordmiller.com/blog/feed)
 * [Mormon Newsroom](https://www.mormonnewsroom.org)
 * etc.
 
