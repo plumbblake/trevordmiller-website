@@ -5,9 +5,9 @@ import Icon from 'components/Icon'
 
 const accounts = [
   {
-    iconType: 'github',
-    label: 'GitHub',
-    href: 'https://github.com/trevordmiller',
+    iconType: 'rss',
+    label: 'RSS',
+    href: 'https://trevordmiller.com/blog/feed',
   },
 
   {
@@ -20,6 +20,30 @@ const accounts = [
     iconType: 'linkedin',
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/trevordmiller',
+  },
+
+  {
+    iconType: 'facebook',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/trevordmillercom/',
+  },
+
+  {
+    iconType: 'reddit',
+    label: 'Reddit',
+    href: 'https://www.reddit.com/user/trevordmiller/',
+  },
+
+  {
+    iconType: 'hackerNews',
+    label: 'Hacker News',
+    href: 'https://news.ycombinator.com/user?id=trevordmiller',
+  },
+
+  {
+    iconType: 'github',
+    label: 'GitHub',
+    href: 'https://github.com/trevordmiller',
   },
 ]
 

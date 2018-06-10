@@ -7,7 +7,7 @@ const Footer = () => (
     style={{
       paddingLeft: spacing.large,
       paddingRight: spacing.large,
-      paddingBottom: 200,
+      paddingBottom: 300,
       maxWidth: screenSizes.large,
       margin: 'auto',
       marginTop: spacing.xlarge,

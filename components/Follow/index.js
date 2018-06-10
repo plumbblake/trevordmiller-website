@@ -1,5 +1,5 @@
 import React from 'react'
-import { spacing, screenSizes } from 'utils/theme'
+import { spacing } from 'utils/theme'
 import Info from 'components/Info'
 import JoinEmailList from './components/JoinEmailList'
 import Accounts from './components/Accounts'
@@ -7,8 +7,6 @@ import Accounts from './components/Accounts'
 const Follow = () => (
   <section
     style={{
-      maxWidth: screenSizes.large - screenSizes.large / 2.5,
-      margin: 'auto',
       textAlign: 'center',
     }}
   >
