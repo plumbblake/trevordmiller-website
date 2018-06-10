@@ -32,4 +32,4 @@ With software like Anki, you get nice stats over time:
 
 ### Conclusion
 
-No matter what your career or types of things you learn, I think using SRS can benefit your brain. SRS ingrains knowledge in calculated, ever-increasing intervals, just before I am about to retain knowledge. I've been doing this for a few years and my skills, knowledge, and memory have dramatically improved. I recommend giving it a try!
+No matter what your career or types of things you learn, I think using SRS can benefit your brain. SRS ingrains knowledge in calculated, ever-increasing intervals, just before you are about to forget things. I've been doing this for a few years and my skills, knowledge, and memory have dramatically improved. I recommend giving it a try!

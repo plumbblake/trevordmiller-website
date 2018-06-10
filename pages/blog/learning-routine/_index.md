@@ -88,4 +88,4 @@ I wrote more about this in the [Retaining what I learn through Spaced Repetition
 
 ### Conclusion
 
-These are some of the things I do to learn. They work well for me. They may work for you or you may learn differently! But I would encourage all of us to do something to always be learning. Lifelong learning ftw!
+These are some of the things I do to learn. They work well for me. They may work for you or you may learn differently! But no matter what process you use for learning, I would encourage all of us to do something to always be learning. Becoming a lifelong learner is a skill that is worth mastering.
