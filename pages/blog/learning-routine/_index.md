@@ -10,9 +10,9 @@ There are some practical things you can do to make the time you spend learning m
 
 I have [a daily recurring task](/blog/task-list) for learning that includes three things:
 
-1.  Learn new things with a feed reader
-2.  Solidify knowledge with dedicated practice
-3.  Remember with spaced repetition
+1.  Learning new things with a feed reader
+2.  Solidifying what I learn with dedicated practice
+3.  Remembering what I learn with spaced repetition
 
 Let's go through each of these.
 
@@ -71,15 +71,15 @@ To be clear, I still use some Twitter accounts and subreddits etc. under the hoo
 
 The system behind feed readers (RSS) is an old technology that is available almost everywhere. And even if something you want to get in your feeds doesn't have an RSS feed (rare), you can generate one with tools like [FetchRSS](https://fetchrss.com/), [TwitRSS.me](https://twitrss.me/), [hnrss](http://edavis.github.io/hnrss/) etc.
 
-### Solidifying knowledge with dedicated practice
+### Solidifying what I learn with dedicated practice
 
 Once you hear about something, you have to actually use it for it to stick and be helpful for you.
 
-The way you go about this will vary depending on your field. So for me, as a software developer, as I read through my feed reader I open up my code editor and try out some of what I'm reading. I'll tinker with new libraries, syntax, and algorithms until I get it and it sticks.
+The way you go about this will vary depending on your field. So for me, as a software developer, as I read through my feed reader I often have things I want to try out. So I open up my code editor and try out some of what I'm reading. I'll tinker with new libraries, syntax, and algorithms until I get it and it sticks.
 
 ![Practicing some code from Feedly](/static/feed-reader-practice.png)
 
-### Remembering with spaced repetition
+### Remembering what I learn with spaced repetition
 
 Once I've read through my feed reader and practiced what I'm learning, I'll write down what I learned in Spaced Repetition Software and review items that were previously written down. This ensures I retain new knowledge in long-term memory.
 
@@ -89,4 +89,4 @@ I wrote more about this in the [Retaining what I learn through Spaced Repetition
 
 ### Conclusion
 
-These are some of the things I do to learn. They work well for me. They may work for you or you may learn differently! But no matter what process you use for learning, I would encourage all of us to do something to always be learning. Becoming a lifelong learner is a skill that is worth mastering.
+These are some of the things I do to learn. They work well for me. They may work for you or you may learn differently! No matter what process you use for learning, I would encourage all of us to do something to always be learning. Becoming a lifelong learner is a skill that is worth mastering.
