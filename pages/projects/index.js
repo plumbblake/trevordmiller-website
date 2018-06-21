@@ -125,7 +125,7 @@ export const projects = {
   },
 
   cortex: {
-    tags: [tags.graphQl, tags.node, tags.react, tags.electron],
+    tags: [tags.node, tags.react, tags.electron, tags.graphQl],
     mainVisual: '/static/cortex.png',
     title: `Cortex`,
     description: `A proof of concept for rendering the same set of GraphQL connected React components across targets (web, native mobile, and native desktop).`,

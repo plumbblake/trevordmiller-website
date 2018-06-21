@@ -10,7 +10,7 @@ import Icon from 'components/Icon'
 
 export const companies = {
   icsAgain: {
-    tags: [tags.inProgress, tags.node, tags.react, tags.redux],
+    tags: [tags.inProgress, tags.node, tags.react, tags.redux, tags.graphQl],
     title:
       'Senior Software Developer at The Church of Jesus Christ of Latter-day Saints',
     dateRange: `May 2018 - Present`,
@@ -23,11 +23,11 @@ export const companies = {
 
   meetedgar: {
     tags: [
-      tags.graphQl,
       tags.node,
       tags.react,
       tags.redux,
       tags.flow,
+      tags.graphQl,
       tags.ruby,
       tags.postgresql,
     ],
@@ -105,11 +105,11 @@ export const companies = {
   trevordmiller: {
     tags: [
       tags.inProgress,
-      tags.graphQl,
       tags.node,
       tags.go,
       tags.react,
       tags.reactNative,
+      tags.graphQl,
       tags.electron,
       tags.typescript,
     ],
