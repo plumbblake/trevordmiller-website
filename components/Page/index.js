@@ -1,26 +1,26 @@
-import React, { Component, StrictMode } from 'react'
-import PropTypes from 'prop-types'
-import Head from 'next/head'
+import React, { Component, StrictMode } from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
 import {
   uiGroups,
   fontFamilies,
   lineHeights,
   fontSizes,
-  fontWeights,
-} from 'utils/theme'
-import { baseRouteKeys } from 'pages'
-import styleReset from './utils/styleReset'
-import novaCodeHighlighting from './utils/novaCodeHighlighting'
-import analytics from './utils/analytics'
-import ErrorBoundary from './components/ErrorBoundary'
-import Navigation from './components/Navigation'
-import Main from './components/Main'
-import Footer from './components/Footer'
+  fontWeights
+} from "utils/theme";
+import { baseRouteKeys } from "pages";
+import styleReset from "./utils/styleReset";
+import novaCodeHighlighting from "./utils/novaCodeHighlighting";
+import analytics from "./utils/analytics";
+import ErrorBoundary from "./components/ErrorBoundary";
+import Navigation from "./components/Navigation";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 class Page extends Component {
   componentDidMount() {
-    window.ga('set', 'page', window.location.pathname)
-    window.ga('send', 'pageview')
+    window.ga("set", "page", window.location.pathname);
+    window.ga("send", "pageview");
   }
 
   render() {
@@ -35,8 +35,8 @@ class Page extends Component {
       info,
       cta,
       sections,
-      children,
-    } = this.props
+      children
+    } = this.props;
     return (
       <StrictMode>
         <ErrorBoundary>
@@ -127,9 +127,9 @@ class Page extends Component {
               background: uiGroups.background,
               backgroundImage:
                 'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
-              backgroundSize: '1000px, 1000px',
-              backgroundPosition: 'center top, center bottom',
-              backgroundRepeat: 'no-repeat, no-repeat',
+              backgroundSize: "1000px, 1000px",
+              backgroundPosition: "center top, center bottom",
+              backgroundRepeat: "no-repeat, no-repeat"
             }}
           >
             <Navigation baseRouteKey={baseRouteKey} />
@@ -152,7 +152,7 @@ class Page extends Component {
           </div>
         </ErrorBoundary>
       </StrictMode>
-    )
+    );
   }
 }
 
@@ -167,19 +167,19 @@ Page.propTypes = {
     PropTypes.shape({
       label: PropTypes.string,
       color: PropTypes.string,
-      icon: PropTypes.string,
-    }),
+      icon: PropTypes.string
+    })
   ),
   info: PropTypes.string,
   cta: PropTypes.element,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      component: PropTypes.element.isRequired,
-    }),
+      component: PropTypes.element.isRequired
+    })
   ),
   children: PropTypes.element,
-  footer: PropTypes.bool,
-}
+  footer: PropTypes.bool
+};
 
-export default Page
+export default Page;

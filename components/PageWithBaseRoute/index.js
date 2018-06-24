@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Page from 'components/Page'
-import { baseRoutes, baseRouteKeys } from 'pages'
+import React from "react";
+import PropTypes from "prop-types";
+import Page from "components/Page";
+import { baseRoutes, baseRouteKeys } from "pages";
 
 const PageWithBaseRoute = ({ id, sections }) => (
   <Page
@@ -13,16 +13,16 @@ const PageWithBaseRoute = ({ id, sections }) => (
     info={baseRoutes[id].info}
     sections={sections}
   />
-)
+);
 
 PageWithBaseRoute.propTypes = {
   id: PropTypes.oneOf(baseRouteKeys).isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      component: PropTypes.node.isRequired,
-    }),
-  ).isRequired,
-}
+      component: PropTypes.node.isRequired
+    })
+  ).isRequired
+};
 
-export default PageWithBaseRoute
+export default PageWithBaseRoute;

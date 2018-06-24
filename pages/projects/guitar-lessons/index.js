@@ -1,31 +1,31 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
-import { uiGroups, spacing, borderSizes } from 'utils/theme'
-import PageWithProject from 'components/PageWithProject'
-import Heading from 'components/Heading'
-import Button from 'components/Button'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Link from "next/link";
+import { uiGroups, spacing, borderSizes } from "utils/theme";
+import PageWithProject from "components/PageWithProject";
+import Heading from "components/Heading";
+import Button from "components/Button";
 
-const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7]
-const doubleOctave = octave.concat(octave)
+const octave = [1, 0, 2, 0, 3, 4, 0, 5, 0, 6, 0, 7];
+const doubleOctave = octave.concat(octave);
 const createUrl = (degree, type) =>
-  `/projects/guitar-lessons?degree=${degree}&type=${type}`
-const degreeOptions = ['None', 1, 2, 3, 4, 5, 6, 7]
+  `/projects/guitar-lessons?degree=${degree}&type=${type}`;
+const degreeOptions = ["None", 1, 2, 3, 4, 5, 6, 7];
 const typeOptions = [
-  'singleNotes',
-  'powerChords',
-  'basicChords',
-  'seventhChords',
-  'ninthChords',
-  'eleventhChords',
-  'quartalChords',
-]
+  "singleNotes",
+  "powerChords",
+  "basicChords",
+  "seventhChords",
+  "ninthChords",
+  "eleventhChords",
+  "quartalChords"
+];
 
 const getHighlightedDegreesByString = (selectedDegree, selectedType) => {
   const intervalToDegree = interval => {
-    const remainder = (selectedDegree + (interval - 1)) % 7
-    return remainder === 0 ? 7 : remainder
-  }
+    const remainder = (selectedDegree + (interval - 1)) % 7;
+    return remainder === 0 ? 7 : remainder;
+  };
 
   return {
     singleNotes: {
@@ -34,75 +34,75 @@ const getHighlightedDegreesByString = (selectedDegree, selectedType) => {
       3: [selectedDegree],
       4: [selectedDegree],
       5: [selectedDegree],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     powerChords: {
       3: [selectedDegree],
       4: [selectedDegree, intervalToDegree(5)],
       5: [selectedDegree, intervalToDegree(5)],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     basicChords: {
       2: [intervalToDegree(3)],
       3: [intervalToDegree(3), selectedDegree],
       4: [selectedDegree, intervalToDegree(5)],
       5: [intervalToDegree(5), selectedDegree],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     seventhChords: {
       2: [intervalToDegree(3)],
       3: [intervalToDegree(3), intervalToDegree(7)],
       4: [intervalToDegree(7), intervalToDegree(3)],
       5: [intervalToDegree(3), selectedDegree],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     ninthChords: {
       2: [intervalToDegree(2)],
       3: [intervalToDegree(2), intervalToDegree(7)],
       4: [intervalToDegree(7), intervalToDegree(3)],
       5: [intervalToDegree(3), selectedDegree],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     eleventhChords: {
       2: [intervalToDegree(4)],
       3: [intervalToDegree(4), intervalToDegree(7)],
       4: [intervalToDegree(7), intervalToDegree(3)],
       5: [intervalToDegree(3), selectedDegree],
-      6: [selectedDegree],
+      6: [selectedDegree]
     },
     quartalChords: {
       2: [intervalToDegree(3)],
       3: [intervalToDegree(3), intervalToDegree(7)],
       4: [intervalToDegree(7), intervalToDegree(4)],
       5: [intervalToDegree(4), selectedDegree],
-      6: [selectedDegree],
-    },
-  }[selectedType]
-}
+      6: [selectedDegree]
+    }
+  }[selectedType];
+};
 
 const GuitarPattern = ({
   strings,
   highlightedDegreesByString,
   noteSize = 20,
-  fretSize = 60,
+  fretSize = 60
 }) => (
   <div
     style={{
       marginTop: spacing.medium,
-      overflowX: 'scroll',
+      overflowX: "scroll"
     }}
   >
     <div
       style={{
         background: uiGroups.backgroundShade,
-        display: 'inline-block',
+        display: "inline-block"
       }}
     >
       {strings.map((string, stringIndex) => (
         <div
           key={stringIndex}
           style={{
-            display: 'flex',
+            display: "flex"
           }}
         >
           {string.map((degree, noteIndex) => (
@@ -110,10 +110,10 @@ const GuitarPattern = ({
               key={noteIndex}
               style={{
                 width: fretSize,
-                display: 'flex',
-                position: 'relative',
-                justifyContent: 'center',
-                alignItems: 'center',
+                display: "flex",
+                position: "relative",
+                justifyContent: "center",
+                alignItems: "center",
                 paddingTop: spacing.xxsmall + noteSize / 3,
                 paddingBottom: spacing.xxsmall + noteSize / 3,
                 borderLeft: `${borderSizes.small}px solid ${
@@ -122,7 +122,7 @@ const GuitarPattern = ({
                 borderRight:
                   noteIndex === string.length - 1
                     ? `${borderSizes.small}px solid ${uiGroups.background}`
-                    : '0',
+                    : "0"
               }}
             >
               <div
@@ -130,23 +130,23 @@ const GuitarPattern = ({
                   height: stringIndex + 1,
                   width: fretSize,
                   background: uiGroups.background,
-                  position: 'absolute',
+                  position: "absolute"
                 }}
               />
               <div
                 style={{
-                  borderRadius: '100%',
+                  borderRadius: "100%",
                   background: degree
                     ? highlightedDegreesByString[stringIndex + 1] &&
                       highlightedDegreesByString[stringIndex + 1].includes(
-                        degree,
+                        degree
                       )
                       ? uiGroups.userCurrentState
                       : uiGroups.background
-                    : 'transparent',
+                    : "transparent",
                   width: noteSize,
                   height: noteSize,
-                  zIndex: '1',
+                  zIndex: "1"
                 }}
               />
             </div>
@@ -155,29 +155,29 @@ const GuitarPattern = ({
       ))}
     </div>
   </div>
-)
+);
 
 GuitarPattern.propTypes = {
   strings: PropTypes.array,
   highlightedDegreesByString: PropTypes.object,
   noteSize: PropTypes.number,
-  fretSize: PropTypes.number,
-}
+  fretSize: PropTypes.number
+};
 
 const SelectorItem = ({ children }) => (
   <div
     style={{
       marginRight: spacing.small,
-      marginTop: spacing.small,
+      marginTop: spacing.small
     }}
   >
     {children}
   </div>
-)
+);
 
 SelectorItem.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
 const Selector = ({ title, children }) => (
   <div>
@@ -185,34 +185,34 @@ const Selector = ({ title, children }) => (
 
     <div
       style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        marginBottom: spacing.large,
+        display: "flex",
+        flexWrap: "wrap",
+        marginBottom: spacing.large
       }}
     >
       {children}
     </div>
   </div>
-)
+);
 
 Selector.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
 class GuitarPatternsSelector extends Component {
   static defaultProps = {
     selectedDegree: degreeOptions[0],
-    selectedType: typeOptions[0],
-  }
+    selectedType: typeOptions[0]
+  };
 
   render() {
-    const { selectedDegree, selectedType } = this.props
+    const { selectedDegree, selectedType } = this.props;
 
     const highlightedDegreesByString = getHighlightedDegreesByString(
       selectedDegree,
-      selectedType,
-    )
+      selectedType
+    );
 
     const strings = [
       doubleOctave.slice(0, 13),
@@ -220,14 +220,14 @@ class GuitarPatternsSelector extends Component {
       doubleOctave.slice(3, 16),
       doubleOctave.slice(10, 23),
       doubleOctave.slice(5, 18),
-      doubleOctave.slice(0, 13),
-    ]
+      doubleOctave.slice(0, 13)
+    ];
 
     return (
       <div>
         <div
           style={{
-            marginBottom: spacing.medium,
+            marginBottom: spacing.medium
           }}
         >
           We can apply the in-key pattern to the guitar. Each dot on the
@@ -245,7 +245,7 @@ class GuitarPatternsSelector extends Component {
 
         <div
           style={{
-            marginBottom: spacing.medium,
+            marginBottom: spacing.medium
           }}
         >
           <GuitarPattern
@@ -259,7 +259,7 @@ class GuitarPatternsSelector extends Component {
             <SelectorItem key={degree}>
               <Link href={createUrl(degree, selectedType)} scroll={false}>
                 <Button
-                  type={selectedDegree === degree ? 'primary' : 'secondary'}
+                  type={selectedDegree === degree ? "primary" : "secondary"}
                 >
                   {degree}
                 </Button>
@@ -272,9 +272,9 @@ class GuitarPatternsSelector extends Component {
           {typeOptions.map(type => (
             <SelectorItem key={type}>
               <Link href={createUrl(selectedDegree, type)} scroll={false}>
-                <Button type={selectedType === type ? 'primary' : 'secondary'}>
+                <Button type={selectedType === type ? "primary" : "secondary"}>
                   {`${type.charAt(0).toUpperCase()}${type
-                    .replace(/([A-Z])/g, ' $1')
+                    .replace(/([A-Z])/g, " $1")
                     .slice(1)}`}
                 </Button>
               </Link>
@@ -282,37 +282,37 @@ class GuitarPatternsSelector extends Component {
           ))}
         </Selector>
       </div>
-    )
+    );
   }
 }
 
 GuitarPatternsSelector.propTypes = {
   selectedDegree: PropTypes.oneOf(degreeOptions).isRequired,
-  selectedType: PropTypes.oneOf(typeOptions).isRequired,
-}
+  selectedType: PropTypes.oneOf(typeOptions).isRequired
+};
 
 class GuitarLessons extends Component {
   static async getInitialProps({ query: { degree, type } }) {
     return {
       selectedDegree: degree,
-      selectedType: type,
-    }
+      selectedType: type
+    };
   }
 
   render() {
-    const { selectedDegree, selectedType } = this.props
+    const { selectedDegree, selectedType } = this.props;
 
     return (
       <PageWithProject
         id="guitar-lessons"
         sections={[
           {
-            title: 'The in-key pattern',
+            title: "The in-key pattern",
             component: (
               <div>
                 <div
                   style={{
-                    marginBottom: spacing.medium,
+                    marginBottom: spacing.medium
                   }}
                 >
                   In common music, most notes used are in-key. Then, chords
@@ -327,14 +327,14 @@ class GuitarLessons extends Component {
                 <GuitarPattern
                   strings={[doubleOctave.slice(0, 13)]}
                   highlightedDegreesByString={{
-                    1: [degreeOptions[0]],
+                    1: [degreeOptions[0]]
                   }}
                 />
               </div>
-            ),
+            )
           },
           {
-            title: 'The in-key guitar pattern',
+            title: "The in-key guitar pattern",
             component: (
               <GuitarPatternsSelector
                 selectedDegree={
@@ -344,17 +344,17 @@ class GuitarLessons extends Component {
                 }
                 selectedType={selectedType}
               />
-            ),
-          },
+            )
+          }
         ]}
       />
-    )
+    );
   }
 }
 
 GuitarLessons.propTypes = {
   selectedDegree: PropTypes.number.isRequired,
-  selectedType: PropTypes.oneOf(Object.keys(typeOptions)).isRequired,
-}
+  selectedType: PropTypes.oneOf(Object.keys(typeOptions)).isRequired
+};
 
-export default GuitarLessons
+export default GuitarLessons;

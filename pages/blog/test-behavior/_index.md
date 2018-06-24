@@ -33,24 +33,24 @@ _Although the examples are in JavaScript/React with Jest, the principles apply t
 Before:
 
 ```javascript
-import lodash from 'lodash'
-import add from './add'
+import lodash from "lodash";
+import add from "./add";
 
-let addSpy
+let addSpy;
 
 beforeEach(() => {
-  addSpy = jest.spyOn(lodash, 'add')
-})
+  addSpy = jest.spyOn(lodash, "add");
+});
 
 afterEach(() => {
-  addSpy.mockReset()
-  addSpy.mockRestore()
-})
+  addSpy.mockReset();
+  addSpy.mockRestore();
+});
 
-test('takes two numbers and adds them together with lodash add', () => {
-  const sum = add(5, 10)
-  expect(addSpy).toHaveBeenCalledWith(5, 10)
-})
+test("takes two numbers and adds them together with lodash add", () => {
+  const sum = add(5, 10);
+  expect(addSpy).toHaveBeenCalledWith(5, 10);
+});
 ```
 
 This test is tied to implementation because it relies on the `add` function using `lodash` underneath the hood. It also has hidden side effects.
@@ -58,13 +58,13 @@ This test is tied to implementation because it relies on the `add` function usin
 After:
 
 ```javascript
-import add from './add'
+import add from "./add";
 
-test('can add', () => {
-  const input = add(5, 10)
-  const output = 15
-  expect(input).toBe(output)
-})
+test("can add", () => {
+  const input = add(5, 10);
+  const output = 15;
+  expect(input).toBe(output);
+});
 ```
 
 Now this test only checks behavior. The implementation of `add` can be changed in confidence without breaking the test. The test is also now self-contained so changes can be made to it without breaking other tests.
@@ -94,46 +94,46 @@ Now this test label focuses on the behavior we are checking not specific to file
 Before:
 
 ```javascript
-import React from 'react'
-import { shallow } from 'enzyme'
-import { mockStripeKey, unmockStripeKey } from 'fixtures/stripeKey'
-import PromoCode from './PromoCode'
-import Testimonials from './Testimonials'
-import { Signup } from '.'
+import React from "react";
+import { shallow } from "enzyme";
+import { mockStripeKey, unmockStripeKey } from "fixtures/stripeKey";
+import PromoCode from "./PromoCode";
+import Testimonials from "./Testimonials";
+import { Signup } from ".";
 
-let component
-let stripeMetaTag
+let component;
+let stripeMetaTag;
 const props = {
-  cardHolderName: 'Jane Doe',
-  cardNumber: '4242424242424242',
-}
+  cardHolderName: "Jane Doe",
+  cardNumber: "4242424242424242"
+};
 
 beforeEach(() => {
-  component = shallow(<Signup {...props} />)
-  stripeMetaTag = mockStripeKey('stripe-key')
-})
+  component = shallow(<Signup {...props} />);
+  stripeMetaTag = mockStripeKey("stripe-key");
+});
 
 afterEach(() => {
-  unmockStripeKey(stripeMetaTag)
-})
+  unmockStripeKey(stripeMetaTag);
+});
 
-test('renders a Testimonials component', () => {
-  expect(component.find(Testimonials).exists()).toBe(true)
-})
+test("renders a Testimonials component", () => {
+  expect(component.find(Testimonials).exists()).toBe(true);
+});
 
-describe('when displayDiscount is true', () => {
+describe("when displayDiscount is true", () => {
   beforeEach(() => {
     const discountProps = {
       ...props,
-      displayDiscount: true,
-    }
-    component = shallow(<Signup {...discountProps} />)
-  })
+      displayDiscount: true
+    };
+    component = shallow(<Signup {...discountProps} />);
+  });
 
-  test('renders a PromoCode', () => {
-    expect(component.find(PromoCode).exists()).toBe(true)
-  })
-})
+  test("renders a PromoCode", () => {
+    expect(component.find(PromoCode).exists()).toBe(true);
+  });
+});
 ```
 
 The difficulty with this approach is that when looking at a test like `renders a PromoCode`, to debug and make changes you have to look at multiple levels of inheritance and mutations.
@@ -141,42 +141,42 @@ The difficulty with this approach is that when looking at a test like `renders a
 After:
 
 ```javascript
-import React from 'react'
-import { mount } from 'enzyme'
-import { mockStripeKey, unmockStripeKey } from 'fixtures/stripeKey'
-import { Signup } from '.'
+import React from "react";
+import { mount } from "enzyme";
+import { mockStripeKey, unmockStripeKey } from "fixtures/stripeKey";
+import { Signup } from ".";
 
-test('has testimonials', () => {
-  const stripeMetaTag = mockStripeKey('stripe-key')
+test("has testimonials", () => {
+  const stripeMetaTag = mockStripeKey("stripe-key");
 
   const signup = mount(
-    <Signup cardHolderName="Jane Doe" cardNumber="4242424242424242" />,
-  )
+    <Signup cardHolderName="Jane Doe" cardNumber="4242424242424242" />
+  );
 
-  const input = signup.text()
-  const output = 'This is one of my favorite apps'
-  expect(input).toContain(output)
+  const input = signup.text();
+  const output = "This is one of my favorite apps";
+  expect(input).toContain(output);
 
-  unmockStripeKey(stripeMetaTag)
-})
+  unmockStripeKey(stripeMetaTag);
+});
 
-test('can use a promo code when enabled', () => {
-  const stripeMetaTag = mockStripeKey('stripe-key')
+test("can use a promo code when enabled", () => {
+  const stripeMetaTag = mockStripeKey("stripe-key");
 
   const signup = mount(
     <Signup
       cardHolderName="Jane Doe"
       cardNumber="4242424242424242"
       displayDiscount
-    />,
-  )
+    />
+  );
 
-  const input = signup.find('[data-testid="promoCode"]').exists()
-  const output = true
-  expect(input).toBe(output)
+  const input = signup.find('[data-testid="promoCode"]').exists();
+  const output = true;
+  expect(input).toBe(output);
 
-  unmockStripeKey(stripeMetaTag)
-})
+  unmockStripeKey(stripeMetaTag);
+});
 ```
 
 This isn't as "DRY". But I've found having explicit tests makes it much easier to update tests without breaking things because tests are self-contained. Having explicit tests like this means tests aren't tied together with hidden state at multiple inheritance levels. Also, the tests now test behavior instead of implementation (other than the minimal required implementation detail of the `data-testid`).
@@ -190,7 +190,7 @@ I also think having some before/after blocks is totally fine as long as you keep
 Before:
 
 ```javascript
-expect(typeof startDateInput.prop('onChange')).toBe('function')
+expect(typeof startDateInput.prop("onChange")).toBe("function");
 ```
 
 These kinds of assertions in tests are easier and have better deep checking with static analysis tools like type checkers.
@@ -213,23 +213,23 @@ const DateInput = (props: Props) => ...
 Before:
 
 ```javascript
-import React from 'react'
-import { shallow } from 'enzyme'
+import React from "react";
+import { shallow } from "enzyme";
 
-let accountSelect
-let accounts = getPopulatedAppState().accounts.data
+let accountSelect;
+let accounts = getPopulatedAppState().accounts.data;
 
-test('renders a <BaseAccountSelect />', () => {
+test("renders a <BaseAccountSelect />", () => {
   accountSelect = shallow(
-    <AccountSelect accounts={accounts} selectedAccountIds={['1', '2']} />,
-  )
+    <AccountSelect accounts={accounts} selectedAccountIds={["1", "2"]} />
+  );
 
-  expect(accountSelect.find(BaseAccountSelect).length).toBe(1)
-  const props = accountSelect.find(BaseAccountSelect).props()
-  expect(props.accounts).toBe(accounts)
-  expect(props.selected).toEqual(['1', '2'])
-  expect(props.stackOptions).toBe(true)
-})
+  expect(accountSelect.find(BaseAccountSelect).length).toBe(1);
+  const props = accountSelect.find(BaseAccountSelect).props();
+  expect(props.accounts).toBe(accounts);
+  expect(props.selected).toEqual(["1", "2"]);
+  expect(props.stackOptions).toBe(true);
+});
 ```
 
 The assertions in these kinds of tests are testing that the following wire-up/syntax in React works:
@@ -243,9 +243,9 @@ Which is covered by type checking.
 Also, style wire up tests like this:
 
 ```javascript
-test('styles the component as unqueueable', () => {
-  expect(body.props('className')).toContain(styles.unqueueable)
-})
+test("styles the component as unqueueable", () => {
+  expect(body.props("className")).toContain(styles.unqueueable);
+});
 ```
 
 After:
@@ -255,32 +255,32 @@ I'd suggest removing these types of tests because they have a high cost (can't m
 I think it would be more valuable to instead test specific behaviors. For example:
 
 ```javascript
-import React from 'react'
-import { mount } from 'enzyme'
+import React from "react";
+import { mount } from "enzyme";
 
-test('shows amount of selected accounts out of the total accounts available to select', () => {
+test("shows amount of selected accounts out of the total accounts available to select", () => {
   const accountSelect = mount(
     <AccountSelect
       accounts={{
         data: [
           {
-            type: 'account',
-            id: '1',
+            type: "account",
+            id: "1"
           },
           {
-            type: 'account',
-            id: '2',
-          },
-        ],
+            type: "account",
+            id: "2"
+          }
+        ]
       }}
-      selectedAccountIds={['2']}
-    />,
-  )
+      selectedAccountIds={["2"]}
+    />
+  );
 
-  const input = accountSelect.text()
-  const output = '1/4'
-  expect(input).toContain(output)
-})
+  const input = accountSelect.text();
+  const output = "1/4";
+  expect(input).toContain(output);
+});
 ```
 
 #### Breaking out tests unrelated to UI into utility modules
@@ -308,72 +308,72 @@ After:
 We can pull the tests out of the UI and into their own utility module like this:
 
 ```javascript
-import hasMultipleTwitterAccounts from '.'
+import hasMultipleTwitterAccounts from ".";
 
 test("returns false when there aren't any accounts", () => {
-  const input = hasMultipleTwitterAccounts([])
-  const output = false
-  expect(input).toBe(output)
-})
+  const input = hasMultipleTwitterAccounts([]);
+  const output = false;
+  expect(input).toBe(output);
+});
 
 test("returns false when there aren't any twitter accounts", () => {
   const input = hasMultipleTwitterAccounts([
     {
-      platform: 'facebook',
-    },
-  ])
-  const output = false
-  expect(input).toBe(output)
-})
+      platform: "facebook"
+    }
+  ]);
+  const output = false;
+  expect(input).toBe(output);
+});
 
-test('returns false when there is one twitter account', () => {
+test("returns false when there is one twitter account", () => {
   const input = hasMultipleTwitterAccounts([
     {
-      platform: 'twitter',
+      platform: "twitter"
     },
     {
-      platform: 'facebook',
-    },
-  ])
-  const output = false
-  expect(input).toBe(output)
-})
+      platform: "facebook"
+    }
+  ]);
+  const output = false;
+  expect(input).toBe(output);
+});
 
-test('returns true when there are multiple twitter accounts', () => {
+test("returns true when there are multiple twitter accounts", () => {
   const input = hasMultipleTwitterAccounts([
     {
-      platform: 'twitter',
+      platform: "twitter"
     },
     {
-      platform: 'facebook',
+      platform: "facebook"
     },
     {
-      platform: 'twitter',
-    },
-  ])
-  const output = true
-  expect(input).toBe(output)
-})
+      platform: "twitter"
+    }
+  ]);
+  const output = true;
+  expect(input).toBe(output);
+});
 ```
 
 Then implement the utility module:
 
 ```javascript
-import type { Account } from 'types'
+import type { Account } from "types";
 
 const hasMultipleTwitterAccounts = (accounts: Account[]) => {
   if (!accounts) {
-    return false
+    return false;
   }
 
   const twitterAccounts = accounts.filter(
-    account => account.platform === 'twitter',
-  )
+    account => account.platform === "twitter"
+  );
 
-  return twitterAccounts.length > 1
-}
+  return twitterAccounts.length > 1;
+};
 
-export default hasMultipleTwitterAccounts
+export default hasMultipleTwitterAccounts;
 ```
 
 Then replace the logic in the UI with the utility module:
@@ -395,21 +395,21 @@ Now the tests and logic aren't tied to any UI / libraries.
 Before:
 
 ```javascript
-import React from 'react'
-import { shallow } from 'enzyme'
-import Badge from 'typography/Badge'
-import Header from '.'
+import React from "react";
+import { shallow } from "enzyme";
+import Badge from "typography/Badge";
+import Header from ".";
 
-test('has warning badge when there is an error', () => {
-  const header = shallow(<Header errorCount={2} />)
-  const badge = result.find(Badge)
+test("has warning badge when there is an error", () => {
+  const header = shallow(<Header errorCount={2} />);
+  const badge = result.find(Badge);
   expect(
     badge
       .children()
       .first()
-      .children(),
-  ).toBe('2')
-})
+      .children()
+  ).toBe("2");
+});
 ```
 
 For example, with React and Enzyme, using `shallow` rendering means you need to traverse through specific DOM structure with `.children`, `.dive`, `.find(a)` etc. This ties you to that DOM structure so if you want to add another wrapper or change the `a` tag to a `button` etc. your tests will break.
@@ -417,16 +417,16 @@ For example, with React and Enzyme, using `shallow` rendering means you need to 
 After:
 
 ```javascript
-import React from 'react'
-import { mount } from 'enzyme'
-import Header from '.'
+import React from "react";
+import { mount } from "enzyme";
+import Header from ".";
 
-test('has warning badge when there is an error', () => {
-  const header = mount(<Header errorCount={42} />)
-  const input = header.text()
-  const output = '42'
-  expect(input).toContain(output)
-})
+test("has warning badge when there is an error", () => {
+  const header = mount(<Header errorCount={42} />);
+  const input = header.text();
+  const output = "42";
+  expect(input).toContain(output);
+});
 ```
 
 Now this test isn't tied to DOM structure or specific components etc.
@@ -438,44 +438,44 @@ To get around DOM structure testing with React and Enzyme you can use `mount` an
 Before:
 
 ```javascript
-import React from 'react'
-import { shallow } from 'enzyme'
-import moment from 'moment'
-import { DateCreated } from '.'
+import React from "react";
+import { shallow } from "enzyme";
+import moment from "moment";
+import { DateCreated } from ".";
 
-let dateCreated
-let filter
-let props
+let dateCreated;
+let filter;
+let props;
 
 beforeEach(() => {
-  filter = {}
-  props = { filter, onFilterPatch: jest.fn() }
+  filter = {};
+  props = { filter, onFilterPatch: jest.fn() };
 
-  dateCreated = shallow(<DateCreated {...props} />)
-})
+  dateCreated = shallow(<DateCreated {...props} />);
+});
 
-describe('when the input value changes', () => {
-  describe('for the start date', () => {
-    let startDateInput
+describe("when the input value changes", () => {
+  describe("for the start date", () => {
+    let startDateInput;
 
-    describe('by default', () => {
-      let newStartDate
+    describe("by default", () => {
+      let newStartDate;
 
       beforeEach(() => {
-        startDateInput = dateCreated.find({ placeholder: 'Pick start date' })
-        newStartDate = moment('2017-09-24')
-        startDateInput.simulate('change', newStartDate)
-      })
+        startDateInput = dateCreated.find({ placeholder: "Pick start date" });
+        newStartDate = moment("2017-09-24");
+        startDateInput.simulate("change", newStartDate);
+      });
 
-      test('invokes onChange with a formatted startDate', () => {
-        const formattedStartDate = newStartDate.format('YYYY-MM-DD')
+      test("invokes onChange with a formatted startDate", () => {
+        const formattedStartDate = newStartDate.format("YYYY-MM-DD");
         expect(props.onFilterPatch).toHaveBeenCalledWith({
-          startDate: formattedStartDate,
-        })
-      })
-    })
-  })
-})
+          startDate: formattedStartDate
+        });
+      });
+    });
+  });
+});
 ```
 
 After:
@@ -514,15 +514,15 @@ If it is impossible to write a test with simple input => output, end-to-end test
 Here is one example:
 
 ```javascript
-describe('logout', () => {
-  test('can logout', async () => {
-    await page.waitForSelector('[data-testid="userMenuButton"]')
-    await page.click('[data-testid="userMenuButton"]')
-    await page.waitForSelector('[data-testid="userMenuOpen"]')
-    await page.click('[data-testid="logoutLink"]')
-    await page.waitForSelector('[data-testid="userLoginForm"]')
-  })
-})
+describe("logout", () => {
+  test("can logout", async () => {
+    await page.waitForSelector('[data-testid="userMenuButton"]');
+    await page.click('[data-testid="userMenuButton"]');
+    await page.waitForSelector('[data-testid="userMenuOpen"]');
+    await page.click('[data-testid="logoutLink"]');
+    await page.waitForSelector('[data-testid="userLoginForm"]');
+  });
+});
 ```
 
 These types of tests can remove the need for many heavily mocked and brittle unit tests trying to accomplish the same thing. They also ensure these integrated pieces work together in a real environment which is very valuable (because you will be notified if any of the pieces stop working - ie your database or API is down or a button no longer works etc.).

@@ -1,125 +1,125 @@
-import { uiGroups, syntaxGroups } from '../theme'
+import { uiGroups, syntaxGroups } from "../theme";
 
 const tags = {
   inProgress: {
-    label: 'In Progress',
+    label: "In Progress",
     color: uiGroups.userCurrentState,
-    icon: 'timer',
+    icon: "timer"
   },
 
   general: {
-    label: 'General',
+    label: "General",
     color: syntaxGroups.type,
-    icon: 'tag',
+    icon: "tag"
   },
 
   hardware: {
-    label: 'Hardware',
+    label: "Hardware",
     color: syntaxGroups.type,
-    icon: 'plug',
+    icon: "plug"
   },
 
   terminal: {
-    label: 'Terminal',
+    label: "Terminal",
     color: syntaxGroups.type,
-    icon: 'terminal',
+    icon: "terminal"
   },
 
   git: {
-    label: 'Git',
+    label: "Git",
     color: syntaxGroups.type,
-    icon: 'git',
+    icon: "git"
   },
 
   vim: {
-    label: 'Vim',
+    label: "Vim",
     color: syntaxGroups.type,
-    icon: 'vim',
+    icon: "vim"
   },
 
   typescript: {
-    label: 'TypeScript',
+    label: "TypeScript",
     color: syntaxGroups.type,
-    icon: 'typescript',
+    icon: "typescript"
   },
 
   flow: {
-    label: 'Flow',
+    label: "Flow",
     color: syntaxGroups.type,
-    icon: 'flow',
+    icon: "flow"
   },
 
   graphQl: {
-    label: 'GraphQL',
+    label: "GraphQL",
     color: syntaxGroups.type,
-    icon: 'graphql',
+    icon: "graphql"
   },
 
   node: {
-    label: 'Node',
+    label: "Node",
     color: syntaxGroups.type,
-    icon: 'node',
+    icon: "node"
   },
 
   react: {
-    label: 'React',
+    label: "React",
     color: syntaxGroups.type,
-    icon: 'react',
+    icon: "react"
   },
 
   reactNative: {
-    label: 'React Native',
+    label: "React Native",
     color: syntaxGroups.type,
-    icon: 'react',
+    icon: "react"
   },
 
   electron: {
-    label: 'Electron',
+    label: "Electron",
     color: syntaxGroups.type,
-    icon: 'electron',
+    icon: "electron"
   },
 
   redux: {
-    label: 'Redux',
+    label: "Redux",
     color: syntaxGroups.type,
-    icon: 'redux',
+    icon: "redux"
   },
 
   javascript: {
-    label: 'JavaScript',
+    label: "JavaScript",
     color: syntaxGroups.type,
-    icon: 'javascript',
+    icon: "javascript"
   },
 
   css: {
-    label: 'CSS',
+    label: "CSS",
     color: syntaxGroups.type,
-    icon: 'css',
+    icon: "css"
   },
 
   go: {
-    label: 'Go',
+    label: "Go",
     color: syntaxGroups.type,
-    icon: 'go',
+    icon: "go"
   },
 
   php: {
-    label: 'PHP',
+    label: "PHP",
     color: syntaxGroups.type,
-    icon: 'php',
+    icon: "php"
   },
 
   ruby: {
-    label: 'Ruby',
+    label: "Ruby",
     color: syntaxGroups.type,
-    icon: 'ruby',
+    icon: "ruby"
   },
 
   postgresql: {
-    label: 'PostgreSQL',
+    label: "PostgreSQL",
     color: syntaxGroups.type,
-    icon: 'postgresql',
-  },
-}
+    icon: "postgresql"
+  }
+};
 
-export default tags
+export default tags;

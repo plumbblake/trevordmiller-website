@@ -1,4 +1,4 @@
-import { uiGroups } from 'utils/theme'
+import { uiGroups } from "utils/theme";
 
 const styleReset = `
   body {
@@ -57,6 +57,6 @@ const styleReset = `
       page-break-inside: avoid;
     }
   }
-`
+`;
 
-export default styleReset
+export default styleReset;

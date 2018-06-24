@@ -1,4 +1,4 @@
-import { uiGroups, syntaxGroups, versionControlGroups } from 'utils/theme'
+import { uiGroups, syntaxGroups, versionControlGroups } from "utils/theme";
 
 const novaCodeHighlighting = `
   .hljs-tag {
@@ -77,6 +77,6 @@ const novaCodeHighlighting = `
   .hljs-strong {
     font-weight: bold;
   }
-`
+`;
 
-export default novaCodeHighlighting
+export default novaCodeHighlighting;

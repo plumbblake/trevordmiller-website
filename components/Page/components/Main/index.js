@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing, screenSizes } from 'utils/theme'
-import Header from './components/Header'
-import Section from './components/Section'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing, screenSizes } from "utils/theme";
+import Header from "./components/Header";
+import Section from "./components/Section";
 
 const Main = ({
   title,
@@ -12,14 +12,14 @@ const Main = ({
   info,
   cta,
   sections,
-  children,
+  children
 }) => (
   <main
     style={{
       maxWidth: screenSizes.large,
-      margin: 'auto',
+      margin: "auto",
       paddingLeft: spacing.large,
-      paddingRight: spacing.large,
+      paddingRight: spacing.large
     }}
   >
     <Header
@@ -39,7 +39,7 @@ const Main = ({
           </Section>
         ))}
   </main>
-)
+);
 
 Main.propTypes = {
   title: PropTypes.string.isRequired,
@@ -49,18 +49,18 @@ Main.propTypes = {
     PropTypes.shape({
       label: PropTypes.string,
       color: PropTypes.string,
-      icon: PropTypes.string,
-    }),
+      icon: PropTypes.string
+    })
   ),
   info: PropTypes.node,
   cta: PropTypes.node,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      component: PropTypes.node.isRequired,
-    }),
+      component: PropTypes.node.isRequired
+    })
   ),
-  children: PropTypes.element,
-}
+  children: PropTypes.element
+};
 
-export default Main
+export default Main;

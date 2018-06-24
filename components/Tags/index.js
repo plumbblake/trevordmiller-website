@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing, fontSizes, borderRadii, borderSizes } from 'utils/theme'
-import Icon from 'components/Icon'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing, fontSizes, borderRadii, borderSizes } from "utils/theme";
+import Icon from "components/Icon";
 
 const Tags = ({ tags }) => (
   <div
     style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'center',
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: "center"
     }}
   >
     {tags.map(tag => (
@@ -24,20 +24,20 @@ const Tags = ({ tags }) => (
           paddingRight: spacing.xsmall,
           paddingLeft: spacing.xsmall,
           marginRight: spacing.xsmall,
-          marginBottom: spacing.xsmall,
+          marginBottom: spacing.xsmall
         }}
       >
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
+            display: "flex",
+            alignItems: "center"
           }}
         >
           <Icon type={tag.icon} fill={tag.color} size={fontSizes.medium} />
 
           <div
             style={{
-              marginLeft: spacing.xsmall,
+              marginLeft: spacing.xsmall
             }}
           >
             {tag.label}
@@ -46,16 +46,16 @@ const Tags = ({ tags }) => (
       </div>
     ))}
   </div>
-)
+);
 
 Tags.propTypes = {
   tags: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       color: PropTypes.string,
-      icon: PropTypes.string,
-    }),
-  ).isRequired,
-}
+      icon: PropTypes.string
+    })
+  ).isRequired
+};
 
-export default Tags
+export default Tags;

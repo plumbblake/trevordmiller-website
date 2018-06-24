@@ -1,6 +1,6 @@
-import React from 'react'
-import PageWithCourse from 'components/PageWithCourse'
+import React from "react";
+import PageWithCourse from "components/PageWithCourse";
 
-const RealWorldGit = () => <PageWithCourse id="real-world-git" />
+const RealWorldGit = () => <PageWithCourse id="real-world-git" />;
 
-export default RealWorldGit
+export default RealWorldGit;

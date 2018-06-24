@@ -52,10 +52,10 @@ We have three components: an Accordion, Modal, and Thumbnail. Here is an example
 #### App.js
 
 ```javascript
-import React from 'react'
-import Accordion from './Accordion'
-import Modal from './Modal'
-import Thumbnail from './Thumbnail'
+import React from "react";
+import Accordion from "./Accordion";
+import Modal from "./Modal";
+import Thumbnail from "./Thumbnail";
 
 const App = () => (
   <main>
@@ -74,9 +74,9 @@ const App = () => (
       src="https://unsplash.it/1000"
     />
   </main>
-)
+);
 
-export default App
+export default App;
 ```
 
 What is common between them? They all can be toggled open/closed. We could write each of them as a stateful class component with the same wrapping code, but since they have the same state setup - let's share it! Let's abstract the state into a `Toggle` component (a Render Callback).
@@ -84,25 +84,25 @@ What is common between them? They all can be toggled open/closed. We could write
 #### Toggle.js
 
 ```javascript
-import { Component } from 'react'
+import { Component } from "react";
 
 class Toggle extends Component {
   state = {
-    isOpen: false,
-  }
+    isOpen: false
+  };
 
   handleToggleClick = () => {
     this.setState({
-      isOpen: !this.state.isOpen,
-    })
-  }
+      isOpen: !this.state.isOpen
+    });
+  };
 
   render() {
-    return this.props.children(this.state.isOpen, this.handleToggleClick)
+    return this.props.children(this.state.isOpen, this.handleToggleClick);
   }
 }
 
-export default Toggle
+export default Toggle;
 ```
 
 Now components that use `Toggle` will have access to their own `isOpen` and `handleToggleClick` arguments without having to wire up the state code. The instances of `Toggle` (Accordion, Modal, and Thumbnail) can just be stateless function components.
@@ -110,23 +110,23 @@ Now components that use `Toggle` will have access to their own `isOpen` and `han
 #### Accordion.js
 
 ```javascript
-import React from 'react'
-import Toggle from './Toggle'
+import React from "react";
+import Toggle from "./Toggle";
 
 const Accordion = ({ teaser, details }) => (
   <Toggle>
     {(isOpen, handleToggleClick) => (
       <section>
         <button onClick={handleToggleClick}>
-          {`${isOpen ? '-' : '+'} ${teaser}`}
+          {`${isOpen ? "-" : "+"} ${teaser}`}
         </button>
         {isOpen && details}
       </section>
     )}
   </Toggle>
-)
+);
 
-export default Accordion
+export default Accordion;
 ```
 
 #### Modal.js
@@ -174,8 +174,8 @@ export default Modal
 #### Thumbnail.js
 
 ```javascript
-import React from 'react'
-import Toggle from './Toggle'
+import React from "react";
+import Toggle from "./Toggle";
 
 const Thumbnail = ({ src, teaser }) => (
   <Toggle>
@@ -187,16 +187,16 @@ const Thumbnail = ({ src, teaser }) => (
             src={src}
             alt={teaser}
             style={{
-              maxWidth: isOpen ? '100%' : 150,
+              maxWidth: isOpen ? "100%" : 150
             }}
           />
         </button>
       </div>
     )}
   </Toggle>
-)
+);
 
-export default Thumbnail
+export default Thumbnail;
 ```
 
 #### Example repo

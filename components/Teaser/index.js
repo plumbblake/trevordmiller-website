@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing, uiGroups, screenSizes } from 'utils/theme'
-import Anchor from 'components/Anchor'
-import Button from 'components/Button'
-import Image from 'components/Image'
-import Icon from 'components/Icon'
-import Tags from 'components/Tags'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing, uiGroups, screenSizes } from "utils/theme";
+import Anchor from "components/Anchor";
+import Button from "components/Button";
+import Image from "components/Image";
+import Icon from "components/Icon";
+import Tags from "components/Tags";
 
 const Teaser = ({ visual, body, links, tags }) => (
   <div>
     {tags ? (
       <div
         style={{
-          marginBottom: spacing.medium - spacing.xsmall,
+          marginBottom: spacing.medium - spacing.xsmall
         }}
       >
         <Tags tags={tags} />
@@ -21,8 +21,8 @@ const Teaser = ({ visual, body, links, tags }) => (
 
     <div
       style={{
-        display: 'flex',
-        flexWrap: 'wrap',
+        display: "flex",
+        flexWrap: "wrap"
       }}
     >
       {visual ? (
@@ -30,10 +30,10 @@ const Teaser = ({ visual, body, links, tags }) => (
           style={{
             marginBottom: spacing.xsmall,
             marginRight: spacing.large,
-            maxWidth: 200,
+            maxWidth: 200
           }}
         >
-          {visual && visual.startsWith('/') ? (
+          {visual && visual.startsWith("/") ? (
             <Image src={visual} description="Decorative image" />
           ) : (
             <Icon type={visual} fill={uiGroups.gray2} size={70} />
@@ -45,21 +45,21 @@ const Teaser = ({ visual, body, links, tags }) => (
         style={{
           flexGrow: 1,
           flexShrink: 0,
-          flexBasis: screenSizes.small,
+          flexBasis: screenSizes.small
         }}
       >
         <div>{body}</div>
         {links ? (
           <div
             style={{
-              marginTop: spacing.small,
+              marginTop: spacing.small
             }}
           >
             {links.map((link, index) => (
               <div
                 key={link.href}
                 style={{
-                  marginBottom: index + 1 < links.length ? spacing.small : 0,
+                  marginBottom: index + 1 < links.length ? spacing.small : 0
                 }}
               >
                 <Anchor href={link.href}>
@@ -72,7 +72,7 @@ const Teaser = ({ visual, body, links, tags }) => (
       </div>
     </div>
   </div>
-)
+);
 
 Teaser.propTypes = {
   visual: PropTypes.string,
@@ -80,16 +80,16 @@ Teaser.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }),
+      description: PropTypes.string.isRequired
+    })
   ),
   tags: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       color: PropTypes.string,
-      icon: PropTypes.string,
-    }),
-  ),
-}
+      icon: PropTypes.string
+    })
+  )
+};
 
-export default Teaser
+export default Teaser;

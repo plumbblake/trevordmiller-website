@@ -1,35 +1,35 @@
-import React from 'react'
-import { spacing } from 'utils/theme'
-import PageWithProject from 'components/PageWithProject'
-import Image from 'components/Image'
-import Anchor from 'components/Anchor'
-import Button from 'components/Button'
-import Audio from 'components/Audio'
+import React from "react";
+import { spacing } from "utils/theme";
+import PageWithProject from "components/PageWithProject";
+import Image from "components/Image";
+import Anchor from "components/Anchor";
+import Button from "components/Button";
+import Audio from "components/Audio";
 
 const releases = [
   {
-    title: 'Spectrum',
-    artworkPath: '/static/spectrum-artwork.jpg',
-    sampleAudioPath: '/static/spectrum-sample.mp3',
+    title: "Spectrum",
+    artworkPath: "/static/spectrum-artwork.jpg",
+    sampleAudioPath: "/static/spectrum-sample.mp3",
     stores: [
       {
-        title: 'iTunes',
-        href: 'https://itunes.apple.com/us/album/spectrum/id380387007',
+        title: "iTunes",
+        href: "https://itunes.apple.com/us/album/spectrum/id380387007"
       },
       {
-        title: 'Google Play',
+        title: "Google Play",
         href:
-          'https://play.google.com/store/music/album/Perfect_Particle_Spectrum?id=Bwg3wyliewntt747irfkl2zti4a',
+          "https://play.google.com/store/music/album/Perfect_Particle_Spectrum?id=Bwg3wyliewntt747irfkl2zti4a"
       },
       {
-        title: 'Amazon MP3',
-        href: 'http://www.amazon.com/Spectrum/dp/B003UJHBV4',
-      },
-    ],
-  },
-]
+        title: "Amazon MP3",
+        href: "http://www.amazon.com/Spectrum/dp/B003UJHBV4"
+      }
+    ]
+  }
+];
 
-const maxPlayerSize = 250
+const maxPlayerSize = 250;
 
 const PerfectParticle = () => (
   <PageWithProject
@@ -39,21 +39,21 @@ const PerfectParticle = () => (
       component: (
         <div
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
+            display: "flex",
+            flexWrap: "wrap"
           }}
         >
           <div
             style={{
               marginRight: spacing.medium,
               marginBottom: spacing.small,
-              maxWidth: maxPlayerSize,
+              maxWidth: maxPlayerSize
             }}
           >
             <div
               style={{
                 marginBottom: spacing.small,
-                maxWidth: maxPlayerSize,
+                maxWidth: maxPlayerSize
               }}
             >
               <Image
@@ -66,12 +66,12 @@ const PerfectParticle = () => (
 
           <div
             style={{
-              maxWidth: maxPlayerSize,
+              maxWidth: maxPlayerSize
             }}
           >
             <div
               style={{
-                marginBottom: spacing.small,
+                marginBottom: spacing.small
               }}
             >
               You can get it through most digital music stores.
@@ -82,7 +82,7 @@ const PerfectParticle = () => (
                 key={store.title}
                 style={{
                   marginBottom:
-                    index + 1 < release.stores.length ? spacing.small : 0,
+                    index + 1 < release.stores.length ? spacing.small : 0
                 }}
               >
                 <Anchor href={store.href}>
@@ -92,9 +92,9 @@ const PerfectParticle = () => (
             ))}
           </div>
         </div>
-      ),
+      )
     }))}
   />
-)
+);
 
-export default PerfectParticle
+export default PerfectParticle;

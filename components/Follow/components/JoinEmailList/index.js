@@ -1,42 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
   spacing,
   borderRadii,
   borderSizes,
   fontSizes,
   uiGroups,
-  colorValues,
-} from 'utils/theme'
-import Button from 'components/Button'
-import Anchor from 'components/Anchor'
+  colorValues
+} from "utils/theme";
+import Button from "components/Button";
+import Anchor from "components/Anchor";
 
 const inputResetStyles = {
   fontSize: fontSizes.medium,
   border: 0,
-  WebkitAppearance: 'none',
-  MozAppearance: 'none',
-}
+  WebkitAppearance: "none",
+  MozAppearance: "none"
+};
 
 const submitUrl =
-  'https://trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec'
+  "https://trevordmiller.us3.list-manage.com/subscribe/post?u=70b7070413b98c77c71e28694&amp;id=97d3f6b0ec";
 
 const archiveUrl =
-  'https://us3.campaign-archive.com/home/?u=70b7070413b98c77c71e28694&id=97d3f6b0ec'
+  "https://us3.campaign-archive.com/home/?u=70b7070413b98c77c71e28694&id=97d3f6b0ec";
 
 class JoinEmailList extends Component {
   state = {
-    isOpen: false,
-  }
+    isOpen: false
+  };
 
   handleToggle = event => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
-      isOpen: !this.state.isOpen,
-    })
-  }
+      isOpen: !this.state.isOpen
+    });
+  };
 
   render() {
-    const { isOpen } = this.state
+    const { isOpen } = this.state;
 
     return (
       <div>
@@ -47,7 +47,7 @@ class JoinEmailList extends Component {
                 uiGroups.userCurrentState
               }`,
               padding: spacing.large,
-              borderRadius: borderRadii.medium,
+              borderRadius: borderRadii.medium
             }}
           >
             <div>
@@ -65,7 +65,7 @@ class JoinEmailList extends Component {
             >
               <div
                 style={{
-                  marginTop: spacing.medium,
+                  marginTop: spacing.medium
                 }}
               >
                 <input
@@ -77,19 +77,19 @@ class JoinEmailList extends Component {
                   required
                   style={{
                     ...inputResetStyles,
-                    width: '100%',
+                    width: "100%",
                     maxWidth: 300,
                     padding: spacing.small,
                     background: uiGroups.gray2,
                     color: uiGroups.gray6,
-                    borderRadius: borderRadii.medium,
+                    borderRadius: borderRadii.medium
                   }}
                 />
               </div>
 
               <div
                 style={{
-                  marginTop: spacing.medium,
+                  marginTop: spacing.medium
                 }}
               >
                 <input
@@ -100,25 +100,25 @@ class JoinEmailList extends Component {
                   style={{
                     ...inputResetStyles,
                     minWidth: 175,
-                    cursor: 'pointer',
-                    display: 'inline-block',
-                    textAlign: 'center',
-                    outline: 'none',
+                    cursor: "pointer",
+                    display: "inline-block",
+                    textAlign: "center",
+                    outline: "none",
                     borderRadius: borderRadii.medium,
-                    background: 'transparent',
+                    background: "transparent",
                     fontSize: fontSizes.medium,
                     color: colorValues.colors.blue,
                     border: `${borderSizes.small}px solid ${
                       colorValues.colors.blue
                     }`,
-                    padding: spacing.medium,
+                    padding: spacing.medium
                   }}
                 />
               </div>
 
               <div
                 style={{
-                  marginTop: spacing.large,
+                  marginTop: spacing.large
                 }}
               >
                 <Anchor href={archiveUrl}>View past emails</Anchor>
@@ -128,15 +128,15 @@ class JoinEmailList extends Component {
         ) : (
           <div
             style={{
-              textAlign: 'center',
+              textAlign: "center"
             }}
           >
             <Button onClick={this.handleToggle}>Join my email list</Button>
           </div>
         )}
       </div>
-    )
+    );
   }
 }
 
-export default JoinEmailList
+export default JoinEmailList;

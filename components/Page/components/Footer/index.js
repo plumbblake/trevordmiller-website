@@ -1,6 +1,6 @@
-import React from 'react'
-import { spacing, screenSizes } from 'utils/theme'
-import Follow from 'components/Follow'
+import React from "react";
+import { spacing, screenSizes } from "utils/theme";
+import Follow from "components/Follow";
 
 const Footer = () => (
   <footer
@@ -9,12 +9,12 @@ const Footer = () => (
       paddingRight: spacing.large,
       paddingBottom: 300,
       maxWidth: screenSizes.large,
-      margin: 'auto',
-      marginTop: spacing.xlarge,
+      margin: "auto",
+      marginTop: spacing.xlarge
     }}
   >
     <Follow />
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

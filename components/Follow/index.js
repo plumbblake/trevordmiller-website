@@ -1,19 +1,19 @@
-import React from 'react'
-import { spacing } from 'utils/theme'
-import Info from 'components/Info'
-import JoinEmailList from './components/JoinEmailList'
-import Accounts from './components/Accounts'
+import React from "react";
+import { spacing } from "utils/theme";
+import Info from "components/Info";
+import JoinEmailList from "./components/JoinEmailList";
+import Accounts from "./components/Accounts";
 
 const Follow = () => (
   <section
     style={{
-      textAlign: 'center',
+      textAlign: "center"
     }}
   >
     <Info>
       <div
         style={{
-          marginTop: spacing.small,
+          marginTop: spacing.small
         }}
       >
         <JoinEmailList />
@@ -21,13 +21,13 @@ const Follow = () => (
 
       <div
         style={{
-          marginTop: spacing.large,
+          marginTop: spacing.large
         }}
       >
         <Accounts />
       </div>
     </Info>
   </section>
-)
+);
 
-export default Follow
+export default Follow;

@@ -1,22 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing } from 'utils/theme'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing } from "utils/theme";
 
 const ListItem = ({ children }) => {
   return (
     <li
       style={{
         marginTop: spacing.xsmall,
-        marginBottom: spacing.xsmall,
+        marginBottom: spacing.xsmall
       }}
     >
       {children}
     </li>
-  )
-}
+  );
+};
 
 ListItem.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default ListItem
+export default ListItem;

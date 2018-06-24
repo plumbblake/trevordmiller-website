@@ -1,10 +1,10 @@
-import React from 'react'
-import PageWithProject from 'components/PageWithProject'
-import Video from 'components/Video'
-import Paragraph from 'components/Paragraph'
-import Anchor from 'components/Anchor'
-import Button from 'components/Button'
-import Label from 'components/Label'
+import React from "react";
+import PageWithProject from "components/PageWithProject";
+import Video from "components/Video";
+import Paragraph from "components/Paragraph";
+import Anchor from "components/Anchor";
+import Button from "components/Button";
+import Label from "components/Label";
 
 const Hideaway = () => (
   <PageWithProject
@@ -14,21 +14,21 @@ const Hideaway = () => (
         component: (
           <div
             style={{
-              textAlign: 'center',
+              textAlign: "center"
             }}
           >
             <Anchor
-              href={'https://github.com/trevordmiller/hideaway/releases/latest'}
+              href={"https://github.com/trevordmiller/hideaway/releases/latest"}
             >
               <Button>Download</Button>
             </Anchor>
             <Label>macOS Sierra or later required</Label>
           </div>
-        ),
+        )
       },
 
       {
-        title: 'Choose how long. Hit start. Work in peace.',
+        title: "Choose how long. Hit start. Work in peace.",
         component: (
           <div>
             <Video
@@ -49,10 +49,10 @@ const Hideaway = () => (
               allows notifications again.
             </Paragraph>
           </div>
-        ),
-      },
+        )
+      }
     ]}
   />
-)
+);
 
-export default Hideaway
+export default Hideaway;

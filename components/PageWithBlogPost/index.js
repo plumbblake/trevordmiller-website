@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Page from 'components/Page'
-import { blogPosts, blogPostKeys } from 'pages/blog'
+import React from "react";
+import PropTypes from "prop-types";
+import Page from "components/Page";
+import { blogPosts, blogPostKeys } from "pages/blog";
 
 const PageWithBlogPost = ({ id, sections, children }) => (
   <Page
@@ -15,17 +15,17 @@ const PageWithBlogPost = ({ id, sections, children }) => (
   >
     {children}
   </Page>
-)
+);
 
 PageWithBlogPost.propTypes = {
   id: PropTypes.oneOf(blogPostKeys).isRequired,
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      component: PropTypes.node.isRequired,
-    }),
+      component: PropTypes.node.isRequired
+    })
   ),
-  children: PropTypes.element,
-}
+  children: PropTypes.element
+};
 
-export default PageWithBlogPost
+export default PageWithBlogPost;

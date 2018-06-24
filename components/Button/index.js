@@ -1,60 +1,60 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 import {
   uiGroups,
   colorValues,
   spacing,
   borderRadii,
   borderSizes,
-  fontSizes,
-} from 'utils/theme'
+  fontSizes
+} from "utils/theme";
 
 const stylesByType = {
   primary: {
     color: colorValues.colors.blue,
-    border: `${borderSizes.small}px solid ${colorValues.colors.blue}`,
+    border: `${borderSizes.small}px solid ${colorValues.colors.blue}`
   },
   secondary: {
     color: uiGroups.gray4,
-    border: `${borderSizes.small}px solid ${uiGroups.gray2}`,
-  },
-}
+    border: `${borderSizes.small}px solid ${uiGroups.gray2}`
+  }
+};
 
 const stylesBySize = {
   medium: {
-    padding: spacing.medium,
+    padding: spacing.medium
   },
   small: {
-    padding: spacing.xsmall,
-  },
-}
+    padding: spacing.xsmall
+  }
+};
 
-const Button = ({ children, onClick, type = 'primary', size = 'medium' }) => (
+const Button = ({ children, onClick, type = "primary", size = "medium" }) => (
   <button
     onClick={onClick}
     style={{
       minWidth: 175,
-      cursor: 'pointer',
-      display: 'inline-block',
-      textAlign: 'center',
-      border: 'none',
-      outline: 'none',
+      cursor: "pointer",
+      display: "inline-block",
+      textAlign: "center",
+      border: "none",
+      outline: "none",
       borderRadius: borderRadii.medium,
-      background: 'transparent',
+      background: "transparent",
       fontSize: fontSizes.medium,
       ...stylesByType[type],
-      ...stylesBySize[size],
+      ...stylesBySize[size]
     }}
   >
     {children}
   </button>
-)
+);
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(stylesByType)),
-  size: PropTypes.oneOf(Object.keys(stylesBySize)),
-}
+  size: PropTypes.oneOf(Object.keys(stylesBySize))
+};
 
-export default Button
+export default Button;

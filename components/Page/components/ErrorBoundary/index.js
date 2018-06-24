@@ -1,46 +1,46 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Raven from 'raven-js'
-import { screenSizes, spacing } from 'utils/theme'
-import Heading from 'components/Heading'
-import Button from 'components/Button'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Raven from "raven-js";
+import { screenSizes, spacing } from "utils/theme";
+import Heading from "components/Heading";
+import Button from "components/Button";
 
 const SENTRY_PUBLIC_DSN =
-  'https://c1ab0bd30979402eaba992a0aabf3a1b@sentry.io/265579'
+  "https://c1ab0bd30979402eaba992a0aabf3a1b@sentry.io/265579";
 
 class ErrorBoundary extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      error: null,
-    }
+      error: null
+    };
     Raven.config(SENTRY_PUBLIC_DSN, {
-      ignoreUrls: ['localhost', '127.0.0.1'],
-    }).install()
+      ignoreUrls: ["localhost", "127.0.0.1"]
+    }).install();
   }
 
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error,
-    })
+      error
+    });
     Raven.captureException(error, {
-      extra: errorInfo,
-    })
+      extra: errorInfo
+    });
   }
 
   render() {
-    const { children } = this.props
-    const { error } = this.state
+    const { children } = this.props;
+    const { error } = this.state;
 
     return error ? (
       <div
         style={{
           maxWidth: screenSizes.large,
-          margin: 'auto',
-          minHeight: '100vh',
+          margin: "auto",
+          minHeight: "100vh",
           paddingTop: spacing.xlarge,
           paddingLeft: spacing.large,
-          paddingRight: spacing.large,
+          paddingRight: spacing.large
         }}
       >
         <Heading level={1}>There was an error</Heading>
@@ -56,12 +56,12 @@ class ErrorBoundary extends Component {
       </div>
     ) : (
       children
-    )
+    );
   }
 }
 
 ErrorBoundary.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default ErrorBoundary
+export default ErrorBoundary;

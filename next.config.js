@@ -1,21 +1,21 @@
-const remarkHighlight = require('remark-highlight.js')
+const remarkHighlight = require("remark-highlight.js");
 
 module.exports = {
-  pageExtensions: ['js', 'md'],
+  pageExtensions: ["js", "md"],
   webpack: (config, { defaultLoaders }) => {
     config.module.rules.push({
       test: /\.md$/,
       use: [
         defaultLoaders.babel,
         {
-          loader: '@mdx-js/loader',
+          loader: "@mdx-js/loader",
           options: {
-            mdPlugins: [remarkHighlight],
-          },
-        },
-      ],
-    })
+            mdPlugins: [remarkHighlight]
+          }
+        }
+      ]
+    });
 
-    return config
-  },
-}
+    return config;
+  }
+};

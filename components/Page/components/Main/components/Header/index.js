@@ -1,24 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing, screenSizes } from 'utils/theme'
-import Heading from 'components/Heading'
-import Image from 'components/Image'
-import Info from 'components/Info'
-import Tags from 'components/Tags'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing, screenSizes } from "utils/theme";
+import Heading from "components/Heading";
+import Image from "components/Image";
+import Info from "components/Info";
+import Tags from "components/Tags";
 
 const Header = ({ title, mainVisual, description, tags, info, cta }) => (
   <header
     style={{
       maxWidth: screenSizes.large,
-      margin: 'auto',
-      marginTop: spacing.xlarge,
+      margin: "auto",
+      marginTop: spacing.xlarge
     }}
   >
     <Heading level={1}>{title}</Heading>
 
     <div
       style={{
-        marginTop: spacing.small,
+        marginTop: spacing.small
       }}
     >
       <Heading level={2}>{description}</Heading>
@@ -27,8 +27,8 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
     {tags ? (
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
+          display: "flex",
+          justifyContent: "center"
         }}
       >
         <Tags tags={tags} />
@@ -39,8 +39,8 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
       <div
         style={{
           maxWidth: 350,
-          margin: 'auto',
-          marginTop: spacing.small,
+          margin: "auto",
+          marginTop: spacing.small
         }}
       >
         <Image src={mainVisual} description="Decorative overview image" />
@@ -51,7 +51,7 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
       <div
         style={{
           marginTop: spacing.small,
-          textAlign: 'center',
+          textAlign: "center"
         }}
       >
         {cta}
@@ -62,14 +62,14 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
       <div
         style={{
           marginTop: spacing.small,
-          marginBottom: spacing.large,
+          marginBottom: spacing.large
         }}
       >
         <Info>{info}</Info>
       </div>
     )}
   </header>
-)
+);
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
@@ -79,11 +79,11 @@ Header.propTypes = {
     PropTypes.shape({
       label: PropTypes.string,
       color: PropTypes.string,
-      icon: PropTypes.string,
-    }),
+      icon: PropTypes.string
+    })
   ),
   info: PropTypes.node,
-  cta: PropTypes.node,
-}
+  cta: PropTypes.node
+};
 
-export default Header
+export default Header;

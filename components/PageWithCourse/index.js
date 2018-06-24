@@ -1,49 +1,49 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { spacing, fontSizes, uiGroups, syntaxGroups } from 'utils/theme'
-import Page from 'components/Page'
-import Heading from 'components/Heading'
-import Anchor from 'components/Anchor'
-import Button from 'components/Button'
-import Avatar from 'components/Avatar'
-import Icon from 'components/Icon'
-import List from 'components/List'
-import ListItem from 'components/ListItem'
-import Video from 'components/Video'
-import { courses, courseKeys } from 'pages/courses'
+import React from "react";
+import PropTypes from "prop-types";
+import { spacing, fontSizes, uiGroups, syntaxGroups } from "utils/theme";
+import Page from "components/Page";
+import Heading from "components/Heading";
+import Anchor from "components/Anchor";
+import Button from "components/Button";
+import Avatar from "components/Avatar";
+import Icon from "components/Icon";
+import List from "components/List";
+import ListItem from "components/ListItem";
+import Video from "components/Video";
+import { courses, courseKeys } from "pages/courses";
 
 const PageWithCourse = ({ id }) => {
-  const course = courses[id]
+  const course = courses[id];
 
   const enrollButton = (
     <Anchor href={course.enrollHref}>
       <Button>{`Enroll in course for ${
-        course.cost === 0 ? 'free' : `$${course.cost}`
+        course.cost === 0 ? "free" : `$${course.cost}`
       }`}</Button>
     </Anchor>
-  )
+  );
 
   const videoCount = course.curriculum.reduce(
     (memo, section) => memo + section.items.length,
-    0,
-  )
+    0
+  );
 
   const faq = [
     {
       question: `When does the course start and finish?`,
-      answer: `The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish.`,
+      answer: `The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish.`
     },
     {
       question: `How long do I have access to the course?`,
-      answer: `How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. No need to continue paying one of those pesky subscription payments to keep access to courses you've bought.`,
+      answer: `How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. No need to continue paying one of those pesky subscription payments to keep access to courses you've bought.`
     },
     course.cost === 0
       ? {}
       : {
           question: `What if I am unhappy with the course?`,
-          answer: `If you are unsatisfied with your purchase, you can get a full refund for 30 days.`,
-        },
-  ]
+          answer: `If you are unsatisfied with your purchase, you can get a full refund for 30 days.`
+        }
+  ];
 
   return (
     <Page
@@ -58,23 +58,23 @@ const PageWithCourse = ({ id }) => {
       cta={enrollButton}
       sections={[
         {
-          title: 'Course preview video',
+          title: "Course preview video",
           component: (
             <Video
               src={course.previewVideo}
               thumbnail={course.previewVideoThumbnail}
             />
-          ),
+          )
         },
 
         {
-          title: 'About this course',
-          component: <div>{course.about}</div>,
+          title: "About this course",
+          component: <div>{course.about}</div>
         },
 
         {
           title: `What you get for ${
-            course.cost === 0 ? 'free' : `$${course.cost}`
+            course.cost === 0 ? "free" : `$${course.cost}`
           }`,
           component: (
             <List>
@@ -89,11 +89,11 @@ const PageWithCourse = ({ id }) => {
               <ListItem
               >{`All videos can be downloaded so you aren't locked into where you can view them`}</ListItem>
             </List>
-          ),
+          )
         },
 
         {
-          title: 'Course curriculum',
+          title: "Course curriculum",
           component: (
             <div>
               {course.curriculum.map((section, index) => (
@@ -101,7 +101,7 @@ const PageWithCourse = ({ id }) => {
                   key={index}
                   style={{
                     marginBottom:
-                      index + 1 < course.curriculum.length ? spacing.large : 0,
+                      index + 1 < course.curriculum.length ? spacing.large : 0
                   }}
                 >
                   <Heading level={4}>{section.title}</Heading>
@@ -110,8 +110,8 @@ const PageWithCourse = ({ id }) => {
                       <div
                         key={index}
                         style={{
-                          display: 'flex',
-                          alignItems: 'center',
+                          display: "flex",
+                          alignItems: "center"
                         }}
                       >
                         <Icon
@@ -123,7 +123,7 @@ const PageWithCourse = ({ id }) => {
                           style={{
                             fontSize: fontSizes.small,
                             color: uiGroups.gray4,
-                            marginLeft: spacing.small,
+                            marginLeft: spacing.small
                           }}
                         >
                           {item.title}
@@ -132,8 +132,8 @@ const PageWithCourse = ({ id }) => {
                     ))}
                     <div
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: "flex",
+                        alignItems: "center"
                       }}
                     >
                       <Icon
@@ -145,7 +145,7 @@ const PageWithCourse = ({ id }) => {
                         style={{
                           fontSize: fontSizes.small,
                           color: uiGroups.gray4,
-                          marginLeft: spacing.small,
+                          marginLeft: spacing.small
                         }}
                       >
                         Quiz
@@ -155,11 +155,11 @@ const PageWithCourse = ({ id }) => {
                 </div>
               ))}
             </div>
-          ),
+          )
         },
 
         {
-          title: 'Languages and tools used',
+          title: "Languages and tools used",
           component: (
             <div>
               trevordmiller.com courses show timeless principles applied. The
@@ -169,24 +169,24 @@ const PageWithCourse = ({ id }) => {
               lessons work with whatever coding language, editor, terminal
               emulator etc. that you use.
             </div>
-          ),
+          )
         },
 
         {
-          title: 'Your instructor',
+          title: "Your instructor",
           component: (
             <div>
               <div
                 style={{
                   marginBottom: spacing.small,
-                  display: 'flex',
-                  alignItems: 'center',
+                  display: "flex",
+                  alignItems: "center"
                 }}
               >
                 <div
                   style={{
                     width: 100,
-                    minWidth: 100,
+                    minWidth: 100
                   }}
                 >
                   <Avatar />
@@ -194,8 +194,8 @@ const PageWithCourse = ({ id }) => {
                 <div
                   style={{
                     marginLeft: spacing.medium,
-                    display: 'flex',
-                    alignItems: 'center',
+                    display: "flex",
+                    alignItems: "center"
                   }}
                 >
                   <Heading level={2}>
@@ -213,18 +213,18 @@ const PageWithCourse = ({ id }) => {
                 developers.
               </div>
             </div>
-          ),
+          )
         },
 
         {
-          title: 'Frequently Asked Questions',
+          title: "Frequently Asked Questions",
           component: (
             <div>
               {faq.map((item, index) => (
                 <div
                   key={index}
                   style={{
-                    marginBottom: index + 1 < faq.length ? spacing.large : 0,
+                    marginBottom: index + 1 < faq.length ? spacing.large : 0
                   }}
                 >
                   <Heading level={4}>{item.question}</Heading>
@@ -232,20 +232,20 @@ const PageWithCourse = ({ id }) => {
                 </div>
               ))}
             </div>
-          ),
+          )
         },
 
         {
-          title: 'Get started now!',
-          component: enrollButton,
-        },
+          title: "Get started now!",
+          component: enrollButton
+        }
       ]}
     />
-  )
-}
+  );
+};
 
 PageWithCourse.propTypes = {
-  id: PropTypes.oneOf(courseKeys).isRequired,
-}
+  id: PropTypes.oneOf(courseKeys).isRequired
+};
 
-export default PageWithCourse
+export default PageWithCourse;

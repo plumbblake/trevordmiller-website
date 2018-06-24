@@ -1,24 +1,24 @@
-import React from 'react'
-import tags from 'utils/tags'
-import { spacing, fontSizes, uiGroups } from 'utils/theme'
-import PageWithBaseRoute from 'components/PageWithBaseRoute'
-import Teaser from 'components/Teaser'
-import List from 'components/List'
-import ListItem from 'components/ListItem'
-import Avatar from 'components/Avatar'
-import Icon from 'components/Icon'
+import React from "react";
+import tags from "utils/tags";
+import { spacing, fontSizes, uiGroups } from "utils/theme";
+import PageWithBaseRoute from "components/PageWithBaseRoute";
+import Teaser from "components/Teaser";
+import List from "components/List";
+import ListItem from "components/ListItem";
+import Avatar from "components/Avatar";
+import Icon from "components/Icon";
 
 export const companies = {
   icsAgain: {
     tags: [tags.inProgress, tags.node, tags.react, tags.redux, tags.graphQl],
     title:
-      'Senior Software Developer at The Church of Jesus Christ of Latter-day Saints',
+      "Senior Software Developer at The Church of Jesus Christ of Latter-day Saints",
     dateRange: `May 2018 - Present`,
     responsibilities: [
       `Writing core code shared across teams and projects`,
       `Mentoring developers throughout the organization`,
-      `Training teams on the latest updates in the industry`,
-    ],
+      `Training teams on the latest updates in the industry`
+    ]
   },
 
   meetedgar: {
@@ -29,9 +29,9 @@ export const companies = {
       tags.flow,
       tags.graphQl,
       tags.ruby,
-      tags.postgresql,
+      tags.postgresql
     ],
-    title: 'Senior Software Developer at MeetEdgar',
+    title: "Senior Software Developer at MeetEdgar",
     dateRange: `May 2017 - May 2018`,
     responsibilities: [
       `Contributed to full-stack development of the Edgar web app`,
@@ -40,20 +40,20 @@ export const companies = {
       `Refactored thousands of old tests`,
       `Led front-end development of the Ropig web app`,
       `Automated API layer between back-end and front-end`,
-      `Introduced end-to-end tests for critical features`,
-    ],
+      `Introduced end-to-end tests for critical features`
+    ]
   },
 
   egghead: {
     tags: [tags.node, tags.react, tags.redux, tags.ruby, tags.postgresql],
-    title: 'Director of Instruction at egghead.io',
+    title: "Director of Instruction at egghead.io",
     dateRange: `July 2015 - May 2017`,
     responsibilities: [
       `Led onboarding of all new instructors`,
       `Developed the instructor web app for uploading videos, viewing royalties/stats etc.`,
       `Built the component library shared across egghead apps`,
-      `Recorded and published my own courses as an instructor`,
-    ],
+      `Recorded and published my own courses as an instructor`
+    ]
   },
 
   domo: {
@@ -62,8 +62,8 @@ export const companies = {
     dateRange: `September 2015 - October 2016`,
     responsibilities: [
       `Built the mobile web app`,
-      `Applied complex logic for data visualizations, client-side caching, and realtime chat`,
-    ],
+      `Applied complex logic for data visualizations, client-side caching, and realtime chat`
+    ]
   },
 
   ics: {
@@ -75,8 +75,8 @@ export const companies = {
       `Authored and maintained an internal framework built for performance and accessibility`,
       `Published npm modules for use across projects and teams`,
       `Helped start the component library shared across projects`,
-      `Introduced unit testing to old and new code`,
-    ],
+      `Introduced unit testing to old and new code`
+    ]
   },
 
   qualtrics: {
@@ -88,8 +88,8 @@ export const companies = {
       `Updated team templates to be responsive`,
       `Created a custom Facebook app`,
       `Interviewed potential new hires`,
-      `Trained new hires`,
-    ],
+      `Trained new hires`
+    ]
   },
 
   byu: {
@@ -98,8 +98,8 @@ export const companies = {
     dateRange: `August 2012 - May 2013`,
     responsibilities: [
       `Maintained websites for 12 BYU programs`,
-      `Updated team templates to be responsive`,
-    ],
+      `Updated team templates to be responsive`
+    ]
   },
 
   trevordmiller: {
@@ -111,7 +111,7 @@ export const companies = {
       tags.reactNative,
       tags.graphQl,
       tags.electron,
-      tags.typescript,
+      tags.typescript
     ],
     title: `Owner at trevordmiller`,
     dateRange: `January 2009 - Present`,
@@ -119,12 +119,12 @@ export const companies = {
       `Teaching thousands of developers through video courses, blog posts, conferences, and local boot camps`,
       `Maintaining open source libraries and apps`,
       `Building freelance apps and services`,
-      `Managing online developer communities`,
-    ],
-  },
-}
+      `Managing online developer communities`
+    ]
+  }
+};
 
-const companyKeys = Object.keys(companies)
+const companyKeys = Object.keys(companies);
 
 const Resume = () => (
   <PageWithBaseRoute
@@ -135,16 +135,16 @@ const Resume = () => (
           <div
             style={{
               marginBottom: spacing.small,
-              display: 'flex',
-              alignItems: 'center',
+              display: "flex",
+              alignItems: "center"
             }}
           >
             <div
               style={{
                 width: 85,
                 minWidth: 85,
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center"
               }}
             >
               <Avatar />
@@ -153,13 +153,13 @@ const Resume = () => (
             <div
               style={{
                 marginLeft: spacing.medium,
-                fontSize: fontSizes.small,
+                fontSize: fontSizes.small
               }}
             >
               <div>Trevor D. Miller</div>
               <div
                 style={{
-                  color: uiGroups.gray4,
+                  color: uiGroups.gray4
                 }}
               >
                 <div>Software Developer</div>
@@ -167,38 +167,38 @@ const Resume = () => (
 
                 <div
                   style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap"
                   }}
                 >
                   {[
                     {
-                      icon: 'github',
-                      text: 'trevordmiller',
+                      icon: "github",
+                      text: "trevordmiller"
                     },
                     {
-                      icon: 'twitter',
-                      text: 'trevordmiller',
+                      icon: "twitter",
+                      text: "trevordmiller"
                     },
                     {
-                      icon: 'linkedin',
-                      text: 'trevordmiller',
-                    },
+                      icon: "linkedin",
+                      text: "trevordmiller"
+                    }
                   ].map(handle => (
                     <div
                       key={handle.icon}
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        marginRight: spacing.medium,
+                        display: "flex",
+                        alignItems: "center",
+                        marginRight: spacing.medium
                       }}
                     >
                       <div
                         style={{
                           marginRight: spacing.xxsmall,
-                          display: 'flex',
-                          alignItems: 'center',
+                          display: "flex",
+                          alignItems: "center"
                         }}
                       >
                         <Icon
@@ -214,11 +214,11 @@ const Resume = () => (
               </div>
             </div>
           </div>
-        ),
+        )
       },
 
       ...companyKeys.map(companyKey => {
-        const company = companies[companyKey]
+        const company = companies[companyKey];
         return {
           note: company.dateRange,
           title: company.title,
@@ -233,11 +233,11 @@ const Resume = () => (
                 </List>
               }
             />
-          ),
-        }
-      }),
+          )
+        };
+      })
     ]}
   />
-)
+);
 
-export default Resume
+export default Resume;
