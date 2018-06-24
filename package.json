@@ -12,28 +12,6 @@
     "deploy": "now",
     "alias": "now alias"
   },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "env": {
-      "node": true,
-      "browser": true,
-      "jest": true
-    },
-    "plugins": ["import", "react", "jsx-a11y", "jest"],
-    "extends": [
-      "eslint:recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:react/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:jest/recommended"
-    ],
-    "settings": {
-      "import/resolver": {
-        "babel-module": {}
-      }
-    }
-  },
   "prettier": {
     "semi": false,
     "singleQuote": true,
