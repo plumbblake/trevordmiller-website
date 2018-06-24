@@ -1,6 +1,7 @@
 {
   "name": "trevordmiller-website",
   "scripts": {
+    "upgrade": "npm-check -u && npm audit fix",
     "dev": "next",
     "precommit": "lint-staged",
     "verify": "npm run lint && npm run test",
@@ -27,6 +28,7 @@
     "jest": "^23.0.0",
     "lint-staged": "^7.1.2",
     "now": "^11.1.14",
+    "npm-check": "^5.7.1",
     "prettier": "^1.12.1",
     "remark-highlight.js": "^5.0.0"
   },
