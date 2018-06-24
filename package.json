@@ -12,15 +12,6 @@
     "deploy": "now",
     "alias": "now alias"
   },
-  "lint-staged": {
-    "*.{json,md}": ["prettier --write", "git add"],
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add",
-      "jest --bail --findRelatedTests"
-    ]
-  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "env": {
