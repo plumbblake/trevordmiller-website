@@ -15,18 +15,6 @@
   "browser": {
     "rss": false
   },
-  "now": {
-    "alias": "trevordmiller.com",
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "scale": {
-      "sfo1": {
-        "min": 1,
-        "max": "auto"
-      }
-    }
-  },
   "devDependencies": {
     "@mdx-js/loader": "^0.9.0",
     "@mdx-js/mdx": "^0.9.0",
