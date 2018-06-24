@@ -12,9 +12,6 @@
     "deploy": "now",
     "alias": "now alias"
   },
-  "browser": {
-    "rss": false
-  },
   "devDependencies": {
     "@mdx-js/loader": "^0.9.0",
     "@mdx-js/mdx": "^0.9.0",
@@ -41,5 +38,8 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "rss": "^1.2.2"
+  },
+  "browser": {
+    "rss": false
   }
 }
