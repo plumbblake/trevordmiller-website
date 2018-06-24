@@ -11,7 +11,7 @@
 * _In Continuous Integration `npm run verify` runs automatically to ensure things are working as expected with the entire codebase_
 * An admin releases your changes
   * Merges your pull request into `master`
-  * Stages changes with `npm run deploy`
+  * Stages changes with `npm run deploy` to make sure everything looks good for production
   * Links https://trevordmiller.com to the latest deployment with `npm run alias`
 
 ## Integrations
