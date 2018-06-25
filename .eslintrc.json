@@ -5,7 +5,7 @@
     "jest": true
   },
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   },
   "parser": "babel-eslint",
   "plugins": ["import", "react", "jsx-a11y", "jest"],
