@@ -20,7 +20,8 @@
 
 - Work tracking: [GitHub Issues](https://github.com/trevordmiller/trevordmiller-website/issues)
 - Continuous Integration: [Travis CI](https://travis-ci.org/trevordmiller/trevordmiller-website)
+- Continuous Deployment: [Zeit Now app for GitHub](https://github.com/settings/installations/220458)
+- Hosting: [Zeit Now](https://zeit.co)
 - Error tracking: [Sentry](https://sentry.io/trevordmiller/trevordmiller-website-1b/)
 - Analytics: [Google Analytics](https://analytics.google.com)
-- Hosting: [Zeit now](https://zeit.co)
 - Domain: [Hover](https://www.hover.com/control_panel/domain/trevordmiller.com)
