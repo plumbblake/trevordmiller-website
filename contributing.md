@@ -8,13 +8,14 @@
 - Run `npm run upgrade` to upgrade dependencies
 - Run `npm run storybook` and open `localhost:9001` to develop isolated components
 - Run `npm run dev` and open `localhost:3000` to develop the full application
-- _When you commit, `npm run precommit` runs automatically to ensure things are working as expected with your changes_
+- When you commit, `npm run precommit` runs automatically to ensure things are working as expected with your changes
 - Submit a pull request to `master`
-- _In Continuous Integration `npm run verify` runs automatically to ensure things are working as expected with the entire codebase_
+  - Continuous Integration runs `npm run verify` automatically to ensure things are working as expected with the entire codebase
+  - Continuous Deployment runs automatically to deploy a unique URL for your pull request for review
 - An admin releases your changes
   - Merges your pull request into `master`
   - Stages changes with `npm run deploy` to make sure everything looks good for production
-  - Links https://trevordmiller.com to the latest deployment with `npm run alias`
+  - Links https://trevordmiller.com to this ^ latest deployment with `npm run alias`
 
 ## Integrations
 
