@@ -101,7 +101,7 @@ const officialPlugins = [
       {
         title: "Contributing instructions",
         url:
-          "https://github.com/trevordmiller/nova-vim/blob/master/CONTRIBUTING.md"
+          "https://github.com/trevordmiller/nova-vim/blob/master/contributing.md"
       },
       {
         title: "Source code",
