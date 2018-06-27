@@ -17,6 +17,36 @@
   - Stages changes with `npm run deploy` to make sure everything looks good for production
   - Links https://trevordmiller.com to this ^ latest deployment with `npm run alias`
 
+---
+
+## Guidelines
+
+### Feature folders
+
+All items in `utils`, `components`, and `pages` should be feature folders. A feature folder looks like this:
+
+```
+someThing/
+  index.js
+  test.js
+  story.js
+  utils/
+  components/
+```
+
+- The only required file is `index.js`, all others can optionally be added when they provide value
+- `index.js` is the source code
+- `test.js` can be added to write tests for `index.js`
+- `story.js` can be added to write UI component stories for `index.js`
+- `utils/` can be added to break up utility module logic into smaller pieces (each as a feature folder as well)
+- `components/` can be added to break up UI components into smaller pieces (each as a feature folder as well)
+
+### Testing
+
+Unit tests and end-to-end tests should be added where they provide value.
+
+---
+
 ## Integrations
 
 - Work tracking: [GitHub Issues](https://github.com/trevordmiller/trevordmiller-website/issues)
