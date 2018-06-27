@@ -12,11 +12,11 @@ Some tools generate dotfiles automatically, others you can add and manage yourse
 
 ![My managed dotfiles](/static/dotfiles.png)
 
-* `.snippets` is where I keep my code snippets.
-* `.bash_profile` is run when my shell (Bash) starts. This is where I set up my `$PATH`, shell prompt, Unix command aliases, etc.
-* `.gitconfig` is used by Git for global configuration. This includes my default Git options, logging colors, etc.
-* `.tmux.conf` is used by tmux (a window manager for the terminal) to set up keyboard shortcuts, styles etc..
-* `.vimrc` is used by Vim (a terminal editor) to configure editor settings, plugins, styles etc.
+- `.snippets` is where I keep my code snippets.
+- `.bash_profile` is run when my shell (Bash) starts. This is where I set up my `$PATH`, shell prompt, Unix command aliases, etc.
+- `.gitconfig` is used by Git for global configuration. This includes my default Git options, logging colors, etc.
+- `.tmux.conf` is used by tmux (a window manager for the terminal) to set up keyboard shortcuts, styles etc..
+- `.vimrc` is used by Vim (a terminal editor) to configure editor settings, plugins, styles etc.
 
 ### Backing up dotfiles with Git
 

@@ -32,9 +32,9 @@ I have a task to run my `sync` scripts a few times a day.
 
 This opens up three tools I use to stay up to date:
 
-* Email: for task input. I have all of my other websites and apps send me emails so that I don’t have to check them individually. I also unsubscribe from anything that isn’t valuable, so that each email I get is valuable for me.
-* Calendar: to track time-specific events.
-* Texts: to communicate with family and friends.
+- Email: for task input. I have all of my other websites and apps send me emails so that I don’t have to check them individually. I also unsubscribe from anything that isn’t valuable, so that each email I get is valuable for me.
+- Calendar: to track time-specific events.
+- Texts: to communicate with family and friends.
 
 ### Knowledge
 

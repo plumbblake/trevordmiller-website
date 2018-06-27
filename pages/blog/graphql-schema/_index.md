@@ -67,11 +67,11 @@ This means that with a schema **you have a single contract between the back-end
 
 With just this simple schema, we know exactly what we can do with our app's API. For example, we can:
 
-* run `registerUser` on new user signup
-* run `logout` to log the user out
-* run `login` to log the user in
-* run `updateBilling` to let the user subscribe using a credit card
-* query `billing` to see what plan the user is on
+- run `registerUser` on new user signup
+- run `logout` to log the user out
+- run `login` to log the user in
+- run `updateBilling` to let the user subscribe using a credit card
+- query `billing` to see what plan the user is on
 
 This type of contract on top of a solid type system opens up some sweet possibilities...
 

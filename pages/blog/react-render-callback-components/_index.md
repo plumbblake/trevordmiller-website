@@ -12,7 +12,7 @@ A Render Callback is a component where the children prop is a function; then sha
 
 To define a Render Callback you return this.props.children (a function) with the arguments you want to share.
 
-```javascript
+```jsx
 import { Component } from 'react'
 
 class SharedThing extends Component {
@@ -31,7 +31,7 @@ export default SharedThing
 
 To use a Render Callback you write an inline function with the arguments you've shared.
 
-```javascript
+```jsx
 import React from 'react'
 
 const AnotherComponent = () => (
@@ -51,7 +51,7 @@ We have three components: an Accordion, Modal, and Thumbnail. Here is an example
 
 #### App.js
 
-```javascript
+```jsx
 import React from "react";
 import Accordion from "./Accordion";
 import Modal from "./Modal";
@@ -83,7 +83,7 @@ What is common between them? They all can be toggled open/closed. We could write
 
 #### Toggle.js
 
-```javascript
+```jsx
 import { Component } from "react";
 
 class Toggle extends Component {
@@ -109,7 +109,7 @@ Now components that use `Toggle` will have access to their own `isOpen` and `han
 
 #### Accordion.js
 
-```javascript
+```jsx
 import React from "react";
 import Toggle from "./Toggle";
 
@@ -131,7 +131,7 @@ export default Accordion;
 
 #### Modal.js
 
-```javascript
+```jsx
 import React from 'react'
 import Toggle from './Toggle'
 
@@ -173,7 +173,7 @@ export default Modal
 
 #### Thumbnail.js
 
-```javascript
+```jsx
 import React from "react";
 import Toggle from "./Toggle";
 
