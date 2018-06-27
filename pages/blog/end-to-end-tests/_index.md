@@ -4,9 +4,9 @@ import Video from 'components/Video'
 
 Tests written to check software functionality can be grouped into a few categories. Some of the most popular categories include:
 
-* **unit tests** check input => output of self-contained functions.
-* **integration tests** check that individual pieces of your app play nicely together.
-* **end-to-end tests **check that entire features work from the user's perspective.
+- **unit tests** check input => output of self-contained functions.
+- **integration tests** check that individual pieces of your app play nicely together.
+- **end-to-end tests **check that entire features work from the user's perspective.
 
 This last group of tests is what we are talking about in this post. They are sometimes known as acceptance tests or functional tests. I'll be referring to them as **e2e tests**.
 
@@ -195,11 +195,11 @@ Here is a video of what these tests look like when you run them in debug mode. D
 
 #### Some of the things I really like about Puppeteer
 
-* It's **official** from the Chrome team. This means it has a solid future. This also means it supports all modern JavaScript syntax available in Chrome (like async/await).
-* Puppeteer is** headless** so it can run without a visual browser; this makes running tests faster. Additionally, tests can run in Continuous Integration without extra setup or costs.
-* It has a **simple API** to do common things like typing in inputs, clicking etc.
-* Puppeteer **can be used for any browser automation, **not just testing.
-* It **doesn't need to know anything about your stack.** We are using Elixir and React, but we could just as well be using any other tools.
+- It's **official** from the Chrome team. This means it has a solid future. This also means it supports all modern JavaScript syntax available in Chrome (like async/await).
+- Puppeteer is** headless** so it can run without a visual browser; this makes running tests faster. Additionally, tests can run in Continuous Integration without extra setup or costs.
+- It has a **simple API** to do common things like typing in inputs, clicking etc.
+- Puppeteer **can be used for any browser automation, **not just testing.
+- It **doesn't need to know anything about your stack.** We are using Elixir and React, but we could just as well be using any other tools.
 
 Note that Puppeteer only runs tests in Chrome. For many apps, this is enough because we only support modern browsers which have minimal inconsistencies. If your app has a lot of device or browser specific code, you may still want Selenium. For everyone else, Puppeteer makes a lot of sense.
 

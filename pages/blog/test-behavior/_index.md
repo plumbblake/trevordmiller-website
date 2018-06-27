@@ -93,7 +93,7 @@ Now this test label focuses on the behavior we are checking not specific to file
 
 Before:
 
-```javascript
+```jsx
 import React from "react";
 import { shallow } from "enzyme";
 import { mockStripeKey, unmockStripeKey } from "fixtures/stripeKey";
@@ -140,7 +140,7 @@ The difficulty with this approach is that when looking at a test like `renders a
 
 After:
 
-```javascript
+```jsx
 import React from "react";
 import { mount } from "enzyme";
 import { mockStripeKey, unmockStripeKey } from "fixtures/stripeKey";
@@ -212,7 +212,7 @@ const DateInput = (props: Props) => ...
 
 Before:
 
-```javascript
+```jsx
 import React from "react";
 import { shallow } from "enzyme";
 
@@ -234,7 +234,7 @@ test("renders a <BaseAccountSelect />", () => {
 
 The assertions in these kinds of tests are testing that the following wire-up/syntax in React works:
 
-```javascript
+```jsx
 <BaseAccountSelect accounts={accounts} ... />
 ```
 
@@ -254,7 +254,7 @@ I'd suggest removing these types of tests because they have a high cost (can't m
 
 I think it would be more valuable to instead test specific behaviors. For example:
 
-```javascript
+```jsx
 import React from "react";
 import { mount } from "enzyme";
 
@@ -378,7 +378,7 @@ export default hasMultipleTwitterAccounts;
 
 Then replace the logic in the UI with the utility module:
 
-```javascript
+```jsx
 import hasMultipleTwitterAccounts from './hasMultipleTwitterAccounts'
 
 ...
@@ -394,7 +394,7 @@ Now the tests and logic aren't tied to any UI / libraries.
 
 Before:
 
-```javascript
+```jsx
 import React from "react";
 import { shallow } from "enzyme";
 import Badge from "typography/Badge";
@@ -416,7 +416,7 @@ For example, with React and Enzyme, using `shallow` rendering means you need to 
 
 After:
 
-```javascript
+```jsx
 import React from "react";
 import { mount } from "enzyme";
 import Header from ".";
@@ -437,7 +437,7 @@ To get around DOM structure testing with React and Enzyme you can use `mount` an
 
 Before:
 
-```javascript
+```jsx
 import React from "react";
 import { shallow } from "enzyme";
 import moment from "moment";
@@ -480,7 +480,7 @@ describe("when the input value changes", () => {
 
 After:
 
-```javascript
+```jsx
 import React from 'react'
 import { mount } from 'enzyme'
 import { createWaitForElement } from 'enzyme-wait'
@@ -531,8 +531,8 @@ These types of tests can remove the need for many heavily mocked and brittle uni
 
 Here are some good indicators that you are testing behavior instead of implementation:
 
-* You can write tests for your code without looking at how the code is written
-* You can change how your code is written (unrelated to behavior) without breaking your tests
+- You can write tests for your code without looking at how the code is written
+- You can change how your code is written (unrelated to behavior) without breaking your tests
 
 ### Bottom line
 

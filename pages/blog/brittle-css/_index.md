@@ -129,10 +129,10 @@ Now we use "additive" media queries like this so the styles work on any screen s
 
 ### Red flags and alternatives
 
-* `width` values can usually be replaced with `max-width` so that they don't overflow on smaller screens.
-* Hard-coded numbers, absolute positioning, negative margins, and floats can almost always be replaced with modern flexible alternatives (flexbox, CSS grid, and CSS transitions like `translate` etc.).
-* `max-width` _undo_ media queries can usually be replaced with `min-width` _additive_ media queries (or container queries, element queries etc.).
-* `important!` and other "undo" rules are usually a symptom of bad cascading/inheritance that should be broken up into explicit styles.
+- `width` values can usually be replaced with `max-width` so that they don't overflow on smaller screens.
+- Hard-coded numbers, absolute positioning, negative margins, and floats can almost always be replaced with modern flexible alternatives (flexbox, CSS grid, and CSS transitions like `translate` etc.).
+- `max-width` _undo_ media queries can usually be replaced with `min-width` _additive_ media queries (or container queries, element queries etc.).
+- `important!` and other "undo" rules are usually a symptom of bad cascading/inheritance that should be broken up into explicit styles.
 
 Although there are legitimate uses for these, they are usually a code smell.
 

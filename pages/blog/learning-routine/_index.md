@@ -30,28 +30,28 @@ The way it works is you add "feeds" of information that is important to you. The
 
 Choosing what to subscribe to will depend on your field. There are a lot of options:
 
-* Newsletters
-* Blogs
-* YouTube channels
-* Twitter accounts
-* Facebook pages
-* Subreddits
-* Hacker News
-* Google alerts
-* etc.
+- Newsletters
+- Blogs
+- YouTube channels
+- Twitter accounts
+- Facebook pages
+- Subreddits
+- Hacker News
+- Google alerts
+- etc.
 
 For example, here are some of the feeds I have in my feed reader for my interests and field of software development:
 
-* [GitHub Trends](http://github-trends.ryotarai.info/rss/github_trends_all_weekly.rss)
-* [Hacker Newsletter](https://us1.campaign-archive.com/feed?u=faa8eb4ef3a111cef92c4f3d4&id=e505c88a2e)
-* [Programming Digest](https://programmingdigest.net)
-* [Node Weekly](https://nodeweekly.com)
-* [JavaScript Weekly](https://javascriptweekly.com)
-* [React.js blog](https://reactjs.org)
-* [Storybook release notes](https://github.com/storybooks/storybook/releases)
-* [My own blog (from this website)](https://trevordmiller.com/blog/feed)
-* [Mormon Newsroom](https://www.mormonnewsroom.org)
-* etc.
+- [GitHub Trends](http://github-trends.ryotarai.info/rss/github_trends_all_weekly.rss)
+- [Hacker Newsletter](https://us1.campaign-archive.com/feed?u=faa8eb4ef3a111cef92c4f3d4&id=e505c88a2e)
+- [Programming Digest](https://programmingdigest.net)
+- [Node Weekly](https://nodeweekly.com)
+- [JavaScript Weekly](https://javascriptweekly.com)
+- [React.js blog](https://reactjs.org)
+- [Storybook release notes](https://github.com/storybooks/storybook/releases)
+- [My own blog (from this website)](https://trevordmiller.com/blog/feed)
+- [Mormon Newsroom](https://www.mormonnewsroom.org)
+- etc.
 
 #### A warning about adding too many feeds
 
@@ -63,9 +63,9 @@ So for example, I currently get about 5-10 new feed items a day. If it starts ge
 
 To be clear, I still use some Twitter accounts and subreddits etc. under the hood of my feed reader (you can subscribe to these things via RSS). But instead of going to all those sites/apps manually I aggregate them in a feed reader. I like doing this for a few reasons:
 
-* All my learning input is in one place (videos, articles, social feeds, email newsletters etc.)
-* There are fewer distractions (no logging into different accounts, no notifications bugging you on your phone, no social features begging for your attention, fewer advertisements, etc.)
-* There is less data tracking - I'm in complete control of what I see and share without having to log in to sites and give them my information.
+- All my learning input is in one place (videos, articles, social feeds, email newsletters etc.)
+- There are fewer distractions (no logging into different accounts, no notifications bugging you on your phone, no social features begging for your attention, fewer advertisements, etc.)
+- There is less data tracking - I'm in complete control of what I see and share without having to log in to sites and give them my information.
 
 #### What if what I want to learn doesn't have an RSS feed?
 

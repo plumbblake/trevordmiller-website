@@ -2,10 +2,10 @@
 
 In this post, we'll go over how to run Windows on Mac using Boot Camp. You might want to do this so you can run Windows-only software, to test apps or websites in Windows etc. Although there are many options for running Windows on Mac, I recommend Boot Camp because:
 
-* it's the officially supported option
-* it's free
-* it's legal
-* it's native rather than an emulator, so it has fast performance as if you were running a standalone Windows machine
+- it's the officially supported option
+- it's free
+- it's legal
+- it's native rather than an emulator, so it has fast performance as if you were running a standalone Windows machine
 
 ### Prep
 

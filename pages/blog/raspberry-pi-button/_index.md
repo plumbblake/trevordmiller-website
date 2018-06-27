@@ -12,13 +12,13 @@ It works! You press the button and it sends me a text message from my dog saying
 
 ### Parts
 
-* Raspberry Pi 3
-* 8+ GB micro SD card pre-loaded with NOOBS
-* Raspberry Pi 3 case
-* 2.5A 5V micro USB power supply
-* Momentary button with built-in resistor and GPIO wires
-* An HDMI cable, USB keyboard, and USB mouse if you don't already have them
-* The [CanaKit Complete Starter Kit](https://www.amazon.com/gp/product/B01C6Q2GSY) and [Raspberry Squid Button Twin Pack](https://www.amazon.com/gp/product/B0170B75EU) are what I purchased to get these items.
+- Raspberry Pi 3
+- 8+ GB micro SD card pre-loaded with NOOBS
+- Raspberry Pi 3 case
+- 2.5A 5V micro USB power supply
+- Momentary button with built-in resistor and GPIO wires
+- An HDMI cable, USB keyboard, and USB mouse if you don't already have them
+- The [CanaKit Complete Starter Kit](https://www.amazon.com/gp/product/B01C6Q2GSY) and [Raspberry Squid Button Twin Pack](https://www.amazon.com/gp/product/B0170B75EU) are what I purchased to get these items.
 
 You could probably use cheaper items instead, but I chose these items to simplify the setup (skip installing Linux, soldering, and wiring up circuits and so I could use Node and npm in a Linux environment which I am comfortable with).
 
@@ -60,10 +60,10 @@ To connect Wi-Fi, tap the network icon in the top menu bar and then the network 
 
 Open the terminal app. Figure out what version of Node you want to use and then run the commands below with the version in place of X.Y.Z:
 
-* Download the latest with `wget https://nodejs.org/dist/vX.Y.Z/node-vX.Y.Z-linux-armv7l.tar.gz`
-* Unpack the download with `tar -xvf node-vX.Y.Z-linux-armv7l.tar.gz`
-* Go into the unpacked download with `cd node-vX.Y.Z-linux-armv7l`
-* Copy the binaries with `sudo cp -R \* /usr/local/`
+- Download the latest with `wget https://nodejs.org/dist/vX.Y.Z/node-vX.Y.Z-linux-armv7l.tar.gz`
+- Unpack the download with `tar -xvf node-vX.Y.Z-linux-armv7l.tar.gz`
+- Go into the unpacked download with `cd node-vX.Y.Z-linux-armv7l`
+- Copy the binaries with `sudo cp -R \* /usr/local/`
 
 ### Button
 
