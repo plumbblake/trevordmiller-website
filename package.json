@@ -16,14 +16,19 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
     "@mdx-js/loader": "^0.11.0",
     "@mdx-js/mdx": "^0.10.1",
     "@storybook/react": "^3.4.8",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.2.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "broken-link-checker": "^0.7.8",
     "bundlesize": "^0.17.0",
     "depcheck": "^0.6.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.0.0",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
     "eslint-plugin-import": "^2.13.0",
@@ -37,6 +42,9 @@
     "now": "^11.2.4",
     "npm-check": "^5.7.1",
     "prettier": "^1.13.5",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.4.1",
+    "regenerator-runtime": "^0.12.0",
     "remark-highlight.js": "^5.0.0"
   },
   "dependencies": {
