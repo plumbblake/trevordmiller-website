@@ -1,16 +1,31 @@
 import Router from "next/router";
-import { addDecorator, configure } from "@storybook/react";
+import { setOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
+import { addDecorator, configure } from "@storybook/react";
+
+// Mock Next.js router
 
 Router.router = { push: () => {}, prefetch: () => {} };
 
-const infoOptions = {
-  inline: true,
-  source: true,
-  header: false
-};
+// Customize storybook options
 
-addDecorator((story, context) => withInfo(infoOptions)(story)(context));
+setOptions({
+  name: "Style Guide",
+  url: "https://trevordmiller.com",
+  showAddonPanel: false
+});
+
+// Globally decorate storybooks
+
+addDecorator((story, context) =>
+  withInfo({
+    inline: true,
+    source: true,
+    header: false
+  })(story)(context)
+);
+
+// Use all story.js files in feature folders
 
 const req = require.context("../components", true, /.story\.js$/);
 
