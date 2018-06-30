@@ -18,7 +18,7 @@ const Normalize = ({ children }) => (
         background-color: ${uiGroups.background};
         color: ${uiGroups.gray5};
         font-family: ${fontFamilies.sansSerif};
-        font-size: ${fontSizes.medium};
+        font-size: ${fontSizes.medium}px;
         font-weight: ${fontWeights.normal};
         line-height: ${lineHeights.medium};
       }
