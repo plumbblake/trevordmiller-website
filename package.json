@@ -11,7 +11,7 @@
     "test": "jest",
     "build": "next build",
     "size": "bundlesize -f './.next/static/commons/main-*.js' -s 150kB",
-    "stage": "url=$(now) && open $url && blc $url -ro",
+    "stage": "url=$(now) && open $url && blc $url -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com",
     "alias": "now alias",
     "start": "next start"
   },
