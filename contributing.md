@@ -14,8 +14,8 @@
   - Continuous Deployment runs automatically to deploy a unique URL for your pull request for review
 - An admin releases your changes
   - Merges your pull request into `master`
-  - Stages changes with `npm run deploy` to make sure everything looks good for production
-  - Links https://trevordmiller.com to this ^ latest deployment with `npm run alias`
+  - Stages changes with `npm run stage` to make sure everything looks good for production
+  - Points the production `https://trevordmiller.com` domain to the latest staged deployment with `npm run alias`
 
 ## Organization
 

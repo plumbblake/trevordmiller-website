@@ -11,8 +11,8 @@
     "test": "jest",
     "build": "next build",
     "size": "bundlesize -f './.next/static/commons/main-*.js' -s 150kB",
-    "deploy": "now",
-    "alias": "now alias && blc https://trevordmiller.com -ro",
+    "stage": "url=$(now) && open $url && blc $url -ro",
+    "alias": "now alias",
     "start": "next start"
   },
   "devDependencies": {
