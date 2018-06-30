@@ -3,11 +3,11 @@ import { setOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
 import { addDecorator, configure } from "@storybook/react";
 
-// Mock Next.js router
+// Mocks
 
 Router.router = { push: () => {}, prefetch: () => {} };
 
-// Customize storybook options
+// Global options
 
 setOptions({
   name: "Style Guide",
@@ -15,7 +15,7 @@ setOptions({
   showAddonPanel: false
 });
 
-// Globally decorate storybooks
+// Global decorators
 
 addDecorator((story, context) =>
   withInfo({
@@ -25,7 +25,7 @@ addDecorator((story, context) =>
   })(story)(context)
 );
 
-// Use all story.js files in feature folders
+// Support for feature folder "story.js" files
 
 const req = require.context("../components", true, /.story\.js$/);
 
