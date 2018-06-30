@@ -22,7 +22,7 @@
 The project is organized into feature folders. A feature folder has items in it:
 
 - `index.js`: entry point source code
-- `test.js`:unit tests
+- `test.js`: unit tests
 - `story.js`: isolated UI rendering
 - `readme.md`: usage documentation
 - `contributing.md`: contributing documentation
