@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import React from "react";
 import PropTypes from "prop-types";
+import LazyLoad from "react-lazyload";
 import { uiGroups } from "utils/theme";
 
 const Video = ({
@@ -11,24 +12,26 @@ const Video = ({
   controls = "true",
   thumbnail
 }) => (
-  <div
-    style={{
-      background: uiGroups.gray2
-    }}
-  >
-    <video
-      src={src}
-      autoPlay={autoplay}
-      loop={loop}
-      muted={muted}
-      controls={controls}
-      poster={thumbnail}
+  <LazyLoad offset={200} placeholder={<span />} once>
+    <div
       style={{
-        width: "100%",
-        display: "block"
+        background: uiGroups.gray2
       }}
-    />
-  </div>
+    >
+      <video
+        src={src}
+        autoPlay={autoplay}
+        loop={loop}
+        muted={muted}
+        controls={controls}
+        poster={thumbnail}
+        style={{
+          width: "100%",
+          display: "block"
+        }}
+      />
+    </div>
+  </LazyLoad>
 );
 
 Video.propTypes = {

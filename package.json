@@ -55,6 +55,7 @@
     "raven-js": "^3.26.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-lazyload": "^2.3.0",
     "rss": "^1.2.2"
   },
   "browser": {
