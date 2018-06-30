@@ -2,6 +2,8 @@ import Router from "next/router";
 import { setOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
 import { addDecorator, configure } from "@storybook/react";
+import { spacing } from "utils/theme";
+import Normalize from "components/Normalize";
 
 // Mocks
 
@@ -24,6 +26,12 @@ addDecorator((story, context) =>
     header: false
   })(story)(context)
 );
+
+addDecorator(story => (
+  <Normalize>
+    <section style={{ padding: spacing.large }}>{story()}</section>
+  </Normalize>
+));
 
 // Support for feature folder "story.js" files
 

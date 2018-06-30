@@ -1,18 +1,12 @@
 import React, { Component, StrictMode } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import {
-  uiGroups,
-  fontFamilies,
-  lineHeights,
-  fontSizes,
-  fontWeights
-} from "utils/theme";
+import { uiGroups } from "utils/theme";
 import { baseRouteKeys } from "pages";
-import styleReset from "./utils/styleReset";
-import novaCodeHighlighting from "./utils/novaCodeHighlighting";
+import Normalize from "components/Normalize";
 import analytics from "./utils/analytics";
 import ErrorBoundary from "./components/ErrorBoundary";
+import CircuitBoard from "./components/CircuitBoard";
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -79,10 +73,6 @@ class Page extends Component {
               name="viewport"
               content="initial-scale=1.0, width=device-width"
             />
-            <style>
-              {styleReset}
-              {novaCodeHighlighting}
-            </style>
 
             <link rel="manifest" href="/static/manifest.json" />
             <link
@@ -117,39 +107,27 @@ class Page extends Component {
             <script dangerouslySetInnerHTML={{ __html: analytics }} />
           </Head>
 
-          <div
-            style={{
-              color: uiGroups.gray5,
-              fontFamily: fontFamilies.sansSerif,
-              fontSize: fontSizes.medium,
-              fontWeight: fontWeights.normal,
-              lineHeight: lineHeights.medium,
-              background: uiGroups.background,
-              backgroundImage:
-                'url("/static/circuit-board-flipped.png"), url("/static/circuit-board.png")',
-              backgroundSize: "1000px, 1000px",
-              backgroundPosition: "center top, center bottom",
-              backgroundRepeat: "no-repeat, no-repeat"
-            }}
-          >
-            <Navigation baseRouteKey={baseRouteKey} />
+          <Normalize>
+            <CircuitBoard>
+              <Navigation baseRouteKey={baseRouteKey} />
 
-            <ErrorBoundary>
-              <Main
-                title={title}
-                mainVisual={showMainVisual ? mainVisual : null}
-                tags={tags}
-                description={description}
-                info={info}
-                cta={cta}
-                sections={sections}
-              >
-                {children}
-              </Main>
-            </ErrorBoundary>
+              <ErrorBoundary>
+                <Main
+                  title={title}
+                  mainVisual={showMainVisual ? mainVisual : null}
+                  tags={tags}
+                  description={description}
+                  info={info}
+                  cta={cta}
+                  sections={sections}
+                >
+                  {children}
+                </Main>
+              </ErrorBoundary>
 
-            <Footer />
-          </div>
+              <Footer />
+            </CircuitBoard>
+          </Normalize>
         </ErrorBoundary>
       </StrictMode>
     );
