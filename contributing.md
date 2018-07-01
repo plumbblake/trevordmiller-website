@@ -37,7 +37,7 @@ The root is also a feature folder, but has some differences:
 
 - ~~`index.js`~~: omitted since `pages/index.js` is the root entry point
 - `test.js`: end-to-end tests instead of unit tests
-- `pages/`: route-level components
+- `pages/`: route-level components with optional `index.md` markdown content
 - `static/`: static assets like images, videos, audio etc.
 - Other: Tooling
 
