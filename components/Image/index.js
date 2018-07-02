@@ -3,18 +3,13 @@ import PropTypes from "prop-types";
 import LazyLoad from "react-lazyload";
 import { borderRadii } from "utils/theme";
 
-const maxWidthsBySize = {
-  medium: 400
-};
-
-const Image = ({ src, description, style, size }) => (
+const Image = ({ src, description }) => (
   <LazyLoad offset={200} placeholder={<span />} once>
     <img
       style={{
         borderRadius: borderRadii.medium,
         width: "100%",
-        maxWidth: maxWidthsBySize[size] ? maxWidthsBySize[size] : "100%",
-        ...style
+        maxWidth: "100%"
       }}
       src={src}
       alt={description}
@@ -24,9 +19,7 @@ const Image = ({ src, description, style, size }) => (
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  style: PropTypes.object,
-  size: PropTypes.oneOf(Object.keys(maxWidthsBySize))
+  description: PropTypes.string.isRequired
 };
 
 export default Image;
