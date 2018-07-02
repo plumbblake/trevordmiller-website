@@ -6,13 +6,13 @@ import { borderRadii } from "utils/theme";
 const Image = ({ src, description }) => (
   <LazyLoad offset={200} placeholder={<span />} once>
     <img
-      style={{
-        borderRadius: borderRadii.medium,
-        width: "100%",
-        maxWidth: "100%"
-      }}
       src={src}
       alt={description}
+      style={{
+        width: "100%",
+        maxWidth: "100%",
+        borderRadius: borderRadii.medium
+      }}
     />
   </LazyLoad>
 );

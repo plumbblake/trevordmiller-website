@@ -78,7 +78,10 @@ const About = () => (
                 marginBottom: spacing.small
               }}
             >
-              <Avatar />
+              <Avatar
+                src="/static/avatar.jpg"
+                description="Trevor D. Miller avatar"
+              />
             </div>
             <Heading level={2}>Well hello there! My name is Trevor.</Heading>
           </div>

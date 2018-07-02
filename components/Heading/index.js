@@ -8,7 +8,7 @@ import {
   lineHeights
 } from "utils/theme";
 
-export const levelSpecificStyles = {
+const levelSpecificStyles = {
   1: {
     color: uiGroups.userCurrentState,
     fontSize: fontSizes.xxxlarge,
@@ -36,6 +36,8 @@ export const levelSpecificStyles = {
   }
 };
 
+export const levels = Object.keys(levelSpecificStyles);
+
 const Heading = ({ children, level }) => (
   <div
     style={{
@@ -49,11 +51,7 @@ const Heading = ({ children, level }) => (
 
 Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  level: PropTypes.oneOf(
-    Object.keys(levelSpecificStyles).map(levelString =>
-      parseInt(levelString, 10)
-    )
-  ).isRequired
+  level: PropTypes.oneOf([1, 2, 3, 4]).isRequired
 };
 
 export default Heading;

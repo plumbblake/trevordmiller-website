@@ -189,7 +189,10 @@ const PageWithCourse = ({ id }) => {
                     minWidth: 100
                   }}
                 >
-                  <Avatar />
+                  <Avatar
+                    src="/static/avatar.jpg"
+                    description="Trevor D. Miller avatar"
+                  />
                 </div>
                 <div
                   style={{

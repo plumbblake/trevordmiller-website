@@ -147,7 +147,10 @@ const Resume = () => (
                 alignItems: "center"
               }}
             >
-              <Avatar />
+              <Avatar
+                src="/static/avatar.jpg"
+                description="Trevor D. Miller avatar"
+              />
             </div>
 
             <div
