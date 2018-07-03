@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { spacing, borderRadii } from "utils/theme";
 
-const Info = ({ children }) => (
+const Well = ({ children }) => (
   <div
     style={{
       padding: spacing.large,
@@ -14,8 +14,8 @@ const Info = ({ children }) => (
   </div>
 );
 
-Info.propTypes = {
+Well.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Info;
+export default Well;

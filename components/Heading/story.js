@@ -3,11 +3,11 @@ import { storiesOf } from "@storybook/react";
 import Heading, { levels } from ".";
 
 storiesOf("Heading", module)
-  .add("Default", () => <Heading level={1}>Some text</Heading>)
+  .add("Default", () => <Heading level={1}>Some string</Heading>)
   .add("Levels", () =>
     levels.map(level => (
       <Heading key={level} level={parseInt(level, 10)}>
-        Some text
+        Some string
       </Heading>
     ))
   );

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { spacing, screenSizes } from "utils/theme";
 import Heading from "components/Heading";
 import Image from "components/Image";
-import Info from "components/Info";
+import Well from "components/Well";
 import Tags from "components/Tags";
 
 const Header = ({ title, mainVisual, description, tags, info, cta }) => (
@@ -65,7 +65,7 @@ const Header = ({ title, mainVisual, description, tags, info, cta }) => (
           marginBottom: spacing.large
         }}
       >
-        <Info>{info}</Info>
+        <Well>{info}</Well>
       </div>
     )}
   </header>

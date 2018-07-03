@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { fontFamilies, spacing, fontSizes } from "utils/theme";
-import Info from "components/Info";
+import Well from "components/Well";
 
 const PreformattedText = ({ children }) => (
   <div
@@ -10,7 +10,7 @@ const PreformattedText = ({ children }) => (
       marginBottom: spacing.medium
     }}
   >
-    <Info>
+    <Well>
       <pre
         style={{
           fontFamily: fontFamilies.monoSpace,
@@ -20,7 +20,7 @@ const PreformattedText = ({ children }) => (
       >
         {children}
       </pre>
-    </Info>
+    </Well>
   </div>
 );
 

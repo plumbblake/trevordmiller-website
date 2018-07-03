@@ -24,7 +24,7 @@ const Anchor = ({ href, children }) => {
 
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Anchor;

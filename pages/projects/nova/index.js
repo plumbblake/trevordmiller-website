@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { spacing, fontSizes, borderRadii, syntaxGroups } from "utils/theme";
 import PageWithProject from "components/PageWithProject";
-import Info from "components/Info";
+import Well from "components/Well";
 import Icon from "components/Icon";
 import Anchor from "components/Anchor";
 import Heading from "components/Heading";
@@ -394,7 +394,7 @@ const PluginsList = ({ plugins }) =>
           marginBottom: spacing.medium
         }}
       >
-        <Info>
+        <Well>
           {plugin.screenshot ? (
             <div
               style={{
@@ -468,7 +468,7 @@ const PluginsList = ({ plugins }) =>
               ))}
             </div>
           ) : null}
-        </Info>
+        </Well>
       </div>
     </details>
   ));

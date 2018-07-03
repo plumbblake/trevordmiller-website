@@ -4,7 +4,7 @@ import Link from "next/link";
 import Anchor from ".";
 
 test("uses Next.js Link with prefetch when a relative link", () => {
-  const wrapper = mount(<Anchor href="/blog/example">Some children</Anchor>);
+  const wrapper = mount(<Anchor href="/blog/example">Some node</Anchor>);
 
   const children = wrapper.children();
 
@@ -13,9 +13,7 @@ test("uses Next.js Link with prefetch when a relative link", () => {
 });
 
 test("uses a normal anchor tag when not a relative link", () => {
-  const wrapper = mount(
-    <Anchor href="https://google.com">Some children</Anchor>
-  );
+  const wrapper = mount(<Anchor href="https://google.com">Some node</Anchor>);
 
   const children = wrapper.children();
 

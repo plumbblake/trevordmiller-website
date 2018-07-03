@@ -1,6 +1,6 @@
 import React from "react";
 import { spacing } from "utils/theme";
-import Info from "components/Info";
+import Well from "components/Well";
 import JoinEmailList from "./components/JoinEmailList";
 import Accounts from "./components/Accounts";
 
@@ -10,7 +10,7 @@ const Follow = () => (
       textAlign: "center"
     }}
   >
-    <Info>
+    <Well>
       <div
         style={{
           marginTop: spacing.small
@@ -26,7 +26,7 @@ const Follow = () => (
       >
         <Accounts />
       </div>
-    </Info>
+    </Well>
   </section>
 );
 
