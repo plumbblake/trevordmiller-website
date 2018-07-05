@@ -41,11 +41,11 @@ The root is also a feature folder, but has some differences:
 - `static/`: static assets like images, videos, audio etc.
 - Other: Tooling
 
-## Stack
+## Technology
 
 - Language: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - Packages: [npm](https://www.npmjs.com)
-- Framework: [Next.js](https://nextjs.org)
+- Wrapper: [Next.js](https://nextjs.org)
 - UI: [React](https://reactjs.org)
 - UI dev environment: [Storybook](https://storybook.js.org)
 - Linting: [ESLint](https://eslint.org)
