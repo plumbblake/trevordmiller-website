@@ -51,7 +51,6 @@ The root is also a feature folder, but has some differences:
 - Styling: [styled-components](https://www.styled-components.com)
 - Linting: [ESLint](https://eslint.org)
 - Testing: [Jest](http://jestjs.io) + [Enzyme](http://airbnb.io/enzyme) + [Puppeteer](https://pptr.dev)
-- Types: [PropTypes](https://www.npmjs.com/package/prop-types)
 - Formatting: [Prettier](https://prettier.io)
 - Colors: [Nova](https://trevordmiller.com/projects/nova)
 
