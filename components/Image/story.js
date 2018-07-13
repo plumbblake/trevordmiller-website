@@ -3,8 +3,10 @@ import { storiesOf } from "@storybook/react";
 import Image from ".";
 
 storiesOf("Image", module).add("Default", () => (
-  <Image
-    src="https://trevordmiller.com/static/todoist.jpg"
-    description="Screenshot of a task manager"
-  />
+  <div style={{ maxWidth: 500 }}>
+    <Image
+      src="https://trevordmiller.com/static/todoist.jpg"
+      description="Screenshot of a task manager"
+    />
+  </div>
 ));
