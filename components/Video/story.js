@@ -2,8 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Video from ".";
 
-const src = "https://trevordmiller.com/static/hideaway-example.mp4";
-const thumbnail = "https://static/real-world-git-course-preview-thumbnail.png";
+const src = "/static/hideaway-example.mp4";
+const thumbnail = "/static/real-world-git-course-preview-thumbnail.png";
 
 storiesOf("Video", module)
   .addDecorator(story => <div style={{ maxWidth: 500 }}>{story()}</div>)

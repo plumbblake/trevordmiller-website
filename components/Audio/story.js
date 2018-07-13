@@ -3,5 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Audio from ".";
 
 storiesOf("Audio", module).add("Default", () => (
-  <Audio src="https://trevordmiller.com/static/spectrum-sample.mp3" />
+  <div style={{ maxWidth: 500 }}>
+    <Audio src="/static/spectrum-sample.mp3" />
+  </div>
 ));

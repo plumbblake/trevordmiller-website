@@ -2,7 +2,7 @@
   "name": "trevordmiller-website",
   "scripts": {
     "upgrade": "npm-check -u && npm audit fix",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./",
     "dev": "next",
     "precommit": "lint-staged",
     "verify": "npm run lint && npm run test && npm run build && npm run size",
