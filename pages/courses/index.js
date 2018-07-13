@@ -9,7 +9,7 @@ export const courses = {
     mainVisual: "/static/real-world-git.png",
     previewVideo: "/static/real-world-git-course-preview.mp4",
     previewVideoThumbnail:
-      "/static/real-world-git-coruse-preview-thumbnail.png",
+      "/static/real-world-git-course-preview-thumbnail.png",
     title: `Real-world Git`,
     description: `Learn the most important Git commands.`,
     cost: 0,

@@ -9,6 +9,8 @@ import Normalize from "components/Normalize";
 
 Router.router = { push: () => {}, prefetch: () => {} };
 
+window.ga = () => {};
+
 // Global options
 
 setOptions({
