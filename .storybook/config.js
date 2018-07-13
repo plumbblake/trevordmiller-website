@@ -12,7 +12,7 @@ Router.router = { push: () => {}, prefetch: () => {} };
 // Global options
 
 setOptions({
-  name: "Style Guide",
+  name: "trevordmiller.com",
   url: "https://trevordmiller.com",
   showAddonPanel: false
 });
