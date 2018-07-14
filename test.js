@@ -1,3 +1,3 @@
-test("temporary", () => {
+test("has true", () => {
   expect(true).toBe(true);
 });
