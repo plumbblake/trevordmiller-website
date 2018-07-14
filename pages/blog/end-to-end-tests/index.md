@@ -14,9 +14,9 @@ This last group of tests is what we are talking about in this post. They are som
 
 The most important thing for any app is that it works for your users. Good e2e tests let you know when at least one piece of a feature (database, API, UI) isn't working as expected. This can be extremely valuable. It removes the need to manually check existing features in a browser whenever you make changes.
 
-### But e2e tests are horrible, disgusting, dreadful pieces of garbage
+### But aren't e2e tests a pain?
 
-e2e tests have historically been awful. They tend to be sluggish and brittle. They tend to break easily and eat away at valuable developer time. Most teams either don't write them or write them with distaste, like forcefully taking a pill you think will be good for you. But there is a better way!
+e2e tests have historically been difficult to work with. They tend to be sluggish and brittle. They tend to break easily and eat away at valuable developer time. Most teams either don't write them or write them with distaste, like forcefully taking a pill you think will be good for you. But there is a better way!
 
 _cue infomercial music_
 
