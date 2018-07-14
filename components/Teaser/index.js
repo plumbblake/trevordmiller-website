@@ -75,6 +75,7 @@ const Teaser = ({ visual, body, links, tags }) => (
 );
 
 Teaser.propTypes = {
+  body: PropTypes.node.isRequired,
   tags: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
@@ -83,7 +84,6 @@ Teaser.propTypes = {
     })
   ),
   visual: PropTypes.string,
-  body: PropTypes.node.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,

@@ -84,6 +84,7 @@ class JoinEmailList extends Component {
                     color: uiGroups.gray6,
                     borderRadius: borderRadii.medium
                   }}
+                  data-testid="joinEmailListInput"
                 />
               </div>
 
@@ -131,7 +132,12 @@ class JoinEmailList extends Component {
               textAlign: "center"
             }}
           >
-            <Button onClick={this.handleToggle}>Join my email list</Button>
+            <Button
+              onClick={this.handleToggle}
+              data-testid="joinEmailListButton"
+            >
+              Join my email list
+            </Button>
           </div>
         )}
       </div>

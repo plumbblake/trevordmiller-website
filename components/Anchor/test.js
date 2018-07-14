@@ -5,16 +5,16 @@ import Anchor from ".";
 
 test("has Next.js Link with prefetch when a relative link", () => {
   const wrapper = mount(<Anchor href="/blog/example">Some node</Anchor>);
-  const children = wrapper.children();
+  const link = wrapper.find(Link);
 
-  expect(children.type()).toBe(Link);
-  expect(children.prop("prefetch")).toBe(true);
+  expect(link.exists()).toBe(true);
+  expect(link.prop("prefetch")).toBe(true);
 });
 
 test("has normal anchor tag when not a relative link", () => {
   const wrapper = mount(<Anchor href="https://google.com">Some node</Anchor>);
-  const children = wrapper.children();
+  const html = wrapper.html();
 
-  expect(children.type()).toBe("a");
-  expect(children.prop("prefetch")).toBe(undefined);
+  expect(html).toContain("<a");
+  expect(html).not.toContain("prefetch");
 });
