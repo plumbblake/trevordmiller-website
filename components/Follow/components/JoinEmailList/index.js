@@ -132,10 +132,7 @@ class JoinEmailList extends Component {
               textAlign: "center"
             }}
           >
-            <Button
-              onClick={this.handleToggle}
-              data-testid="joinEmailListButton"
-            >
+            <Button onClick={this.handleToggle} testId="joinEmailListButton">
               Join my email list
             </Button>
           </div>

@@ -29,7 +29,13 @@ const stylesBySize = {
   }
 };
 
-const Button = ({ children, onClick, type = "primary", size = "medium" }) => (
+const Button = ({
+  children,
+  onClick,
+  type = "primary",
+  size = "medium",
+  testId
+}) => (
   <button
     onClick={onClick}
     style={{
@@ -45,6 +51,7 @@ const Button = ({ children, onClick, type = "primary", size = "medium" }) => (
       ...stylesByType[type],
       ...stylesBySize[size]
     }}
+    data-testid={testId}
   >
     {children}
   </button>
@@ -54,7 +61,8 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(stylesByType)),
-  size: PropTypes.oneOf(Object.keys(stylesBySize))
+  size: PropTypes.oneOf(Object.keys(stylesBySize)),
+  testId: PropTypes.string
 };
 
 export default Button;

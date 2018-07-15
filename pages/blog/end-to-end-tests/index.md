@@ -77,7 +77,8 @@ beforeAll(async () => {
     process.env.DEBUG
       ? {
           headless: false,
-          slowMo: 100
+          slowMo: 100,
+          devtools: true
         }
       : {}
   );

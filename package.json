@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write '**/*.{js,json,md}'",
     "test": "jest",
+    "test:debug": "DEBUG=true jest",
     "build": "next build",
     "size": "bundlesize -f './.next/static/commons/main-*.js' -s 150kB",
     "stage": "url=$(now) && open $url && blc $url -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com",
@@ -44,6 +45,7 @@
     "now": "^11.2.4",
     "npm-check": "^5.7.1",
     "prettier": "^1.13.7",
+    "puppeteer": "^1.6.0",
     "react-test-renderer": "^16.4.1",
     "regenerator-runtime": "^0.12.0",
     "remark-highlight.js": "^5.0.0"
