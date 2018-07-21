@@ -58,7 +58,7 @@ The root is also a feature folder, but has some differences:
 
 - Work tracking: [GitHub Issues](https://github.com/trevordmiller/trevordmiller-website/issues)
 - Continuous Integration: [Travis CI](https://travis-ci.com) + [GitHub app](https://github.com/settings/installations)
-- Continuous Deployment + Hosting: [Zeit Now](https://zeit.co/dashboard) + [GitHub app](https://github.com/settings/installations)
+- Continuous Deployment + Hosting + CDN: [Zeit Now](https://zeit.co/dashboard) + [GitHub app](https://github.com/settings/installations)
 - Error tracking: [Sentry](https://sentry.io)
 - Domain: [Hover](https://www.hover.com)
 - Analytics: [Google Analytics](https://analytics.google.com)
