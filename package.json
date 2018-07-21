@@ -60,6 +60,10 @@
     "react-lazyload": "^2.3.0",
     "rss": "^1.2.2"
   },
+  "engines" : { 
+    "node" : ">=8",
+    "npm" : ">=6" 
+  },
   "browser": {
     "rss": false
   }
