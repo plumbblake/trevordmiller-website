@@ -36,7 +36,7 @@ test("can join email list", async () => {
 });
 
 afterAll(() => {
-  if (!process.env.DEBUG) {
+  if (browser && !process.env.DEBUG) {
     browser.close();
   }
 });
