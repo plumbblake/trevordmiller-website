@@ -3,7 +3,7 @@ node_js:
   - "node"
 cache:
   directories:
-    - "node_modules" # This will tell Travis CI to cache the dependencies
+    - "node_modules"
 sudo: required
 addons:
   chrome: stable
