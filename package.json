@@ -8,7 +8,7 @@
     "verify": "npm run lint && npm run test && npm run broken-links && npm run build && npm run size",
     "lint": "eslint .",
     "format": "prettier --write '**/*.{js,json,md}'",
-    "test": "jest",
+    "test": "URL=${URL:=http://localhost:3000} jest",
     "test:debug": "DEBUG=true npm run test",
     "broken-links": "blc ${URL:=http://localhost:3000} -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com",
     "build": "next build",
