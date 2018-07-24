@@ -1,10 +1,13 @@
 {
-  "*.js": [
-    "eslint --fix",
-    "prettier --write",
-    "git add",
-    "jest --bail --findRelatedTests"
-  ],
-  "*.{json,md}": ["prettier --write", "git add"],
-  "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+  "linters": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add",
+      "jest --bail --findRelatedTests"
+    ],
+    "*.{json,md}": ["prettier --write", "git add"],
+    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+  },
+  "ignore": ["**/node_modules/**", "**/.next/**", "**/storybook-static/**"]
 }
