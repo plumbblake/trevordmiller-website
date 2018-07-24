@@ -37,10 +37,11 @@ This feature folder pattern is recursive. Meaning each `utils/` and `components/
 The root is also a feature folder, but has some differences:
 
 - ~~`index.js`~~: omitted since `pages/index.js` is the root entry point
-- `test.js`: end-to-end tests instead of unit tests
 - `pages/`: route-level components with optional `index.md` markdown content
 - `static/`: static assets like images, videos, audio etc.
-- Other: Tooling
+- `e2e/`: end-to-end tests instead of unit tests
+- `scripts/`: shell scripts
+- Other: tooling
 
 ## Technology
 

@@ -14,14 +14,14 @@ notifications:
 script: npm run verify
 deploy:
   - provider: script
-    script: export APP_URL=(npx now --token $NOW_TOKEN)
+    script: ./scripts/deploy-pull-request
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: APP_URL=https://trevordmiller.com npx now --token $NOW_TOKEN && npx now alias --token $NOW_TOKEN
+    script: ./scripts/deploy-master
     skip_cleanup: true
     on:
       master: true
-after_deploy: npm run verify-url
+after_deploy: ./scripts/after-deploy

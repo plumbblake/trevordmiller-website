@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
+# APP_URL=$(npx now --token $NOW_TOKEN)
+APP_URL="http://localhost:3000"
+echo $APP_URL >"APP_URL.tmp"
