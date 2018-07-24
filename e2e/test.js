@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 jest.setTimeout(100000);
 
-const appUrl = process.env.APP_URL;
+const appUrl = process.env.APP_URL || "http://localhost:3000";
 
 const routes = {
   home: `${appUrl}`
