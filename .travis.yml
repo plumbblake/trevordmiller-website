@@ -11,17 +11,17 @@ notifications:
   email:
     on_success: never
     on_failure: always
-script: npm run lint
+script: npm run verify
 deploy:
   - provider: script
-    script: export URL=(npx now --token $NOW_TOKEN)
+    script: export APP_URL=(npx now --token $NOW_TOKEN)
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: URL=https://trevordmiller.com npx now --token $NOW_TOKEN && npx now alias --token $NOW_TOKEN
+    script: APP_URL=https://trevordmiller.com npx now --token $NOW_TOKEN && npx now alias --token $NOW_TOKEN
     skip_cleanup: true
     on:
       master: true
-after_deploy: npm run verify
+after_deploy: npm run verify-url

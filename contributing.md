@@ -7,7 +7,7 @@
 - Run `npm install` to install dependencies
 - Run `npm run upgrade` to upgrade dependencies
 - Run `npm run storybook` and open `localhost:9001` to develop components in an isolated environment
-- Run `npm run dev` and open `localhost:3000` to develop the full application
+- Run `npm run dev` and open `localhost:3000` to develop the app
 - Commit your changes
   - `npm run precommit` runs automatically to ensure things are working as expected related to your changed files
 - Submit a pull request to `master`
