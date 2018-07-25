@@ -4,7 +4,7 @@ import Page from "components/Page";
 import Anchor from "components/Anchor";
 import Button from "components/Button";
 
-class Error extends Component {
+class CustomError extends Component {
   static getInitialProps({ res, err }) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
     return { statusCode };
@@ -36,8 +36,8 @@ class Error extends Component {
   }
 }
 
-Error.propTypes = {
+CustomError.propTypes = {
   statusCode: PropTypes.number.isRequired
 };
 
-export default Error;
+export default CustomError;
