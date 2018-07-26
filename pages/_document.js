@@ -1,6 +1,11 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import { injectGlobal, ServerStyleSheet } from "styled-components";
+import globalStyles from "utils/globalStyles";
+
+injectGlobal`
+  ${globalStyles}
+`;
 
 class CustomDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -13,9 +18,11 @@ class CustomDocument extends Document {
   }
 
   render() {
+    const { styleTags } = this.props;
+
     return (
       <html lang="en">
-        <Head>{this.props.styleTags}</Head>
+        <Head>{styleTags}</Head>
         <body>
           <Main />
           <NextScript />

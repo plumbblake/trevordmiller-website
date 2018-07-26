@@ -1,15 +1,22 @@
 import Router from "next/router";
+import { injectGlobal, ServerStyleSheet } from "styled-components";
 import { setOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
 import { addDecorator, configure } from "@storybook/react";
+import globalStyles from "utils/globalStyles";
 import { spacing } from "utils/theme";
-import Normalize from "components/Normalize";
 
 // Mocks
 
 Router.router = { push: () => {}, prefetch: () => {} };
 
 window.ga = () => {};
+
+// Global styles
+
+injectGlobal`
+  ${globalStyles}
+`;
 
 // Global options
 
@@ -30,9 +37,7 @@ addDecorator((story, context) =>
 );
 
 addDecorator(story => (
-  <Normalize>
-    <section style={{ padding: spacing.large }}>{story()}</section>
-  </Normalize>
+  <section style={{ padding: spacing.large }}>{story()}</section>
 ));
 
 // Support for feature folder "story.js" files
