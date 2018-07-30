@@ -29,6 +29,7 @@
     "babel-jest": "^23.4.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.5.1",
     "broken-link-checker": "^0.7.8",
     "bundlesize": "^0.17.0",
     "enzyme": "^3.3.0",
@@ -59,7 +60,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-lazyload": "^2.3.0",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "styled-components": "^3.3.3"
   },
   "engines": {
     "node": "8.x.x",
