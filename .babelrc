@@ -81,5 +81,26 @@
         ]
       ]
     }
-  }
+  },
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "utils": "./utils",
+          "components": "./components",
+          "pages": "./pages"
+        }
+      }
+    ]
+  ]
 }
