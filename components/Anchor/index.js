@@ -1,24 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Link from "next/link";
 import { colorValues } from "utils/theme";
 
-const InnerAnchor = styled.a`
-  color: ${colorValues.colors.blue};
-  line-height: 0;
-`;
+const Anchor = ({ href, children }) => {
+  const linkStyle = {
+    color: colorValues.colors.blue,
+    lineHeight: 0
+  };
 
-const Anchor = ({ href, children }) =>
-  href.startsWith("/") ? (
+  return href.startsWith("/") ? (
     <Link href={href} prefetch>
-      <InnerAnchor href={href}>{children}</InnerAnchor>
+      <a href={href} style={linkStyle}>
+        {children}
+      </a>
     </Link>
   ) : (
-    <InnerAnchor href={href} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle}>
       {children}
-    </InnerAnchor>
+    </a>
   );
+};
 
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,

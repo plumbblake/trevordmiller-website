@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import { uiGroups } from "utils/theme";
 import { baseRouteKeys } from "pages";
+import Normalize from "components/Normalize";
 import analytics from "./utils/analytics";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CircuitBoard from "./components/CircuitBoard";
@@ -102,25 +103,27 @@ class Page extends Component {
           <script dangerouslySetInnerHTML={{ __html: analytics }} />
         </Head>
 
-        <CircuitBoard>
-          <Navigation baseRouteKey={baseRouteKey} />
+        <Normalize>
+          <CircuitBoard>
+            <Navigation baseRouteKey={baseRouteKey} />
 
-          <ErrorBoundary>
-            <Main
-              title={title}
-              mainVisual={showMainVisual ? mainVisual : null}
-              tags={tags}
-              description={description}
-              info={info}
-              cta={cta}
-              sections={sections}
-            >
-              {children}
-            </Main>
-          </ErrorBoundary>
+            <ErrorBoundary>
+              <Main
+                title={title}
+                mainVisual={showMainVisual ? mainVisual : null}
+                tags={tags}
+                description={description}
+                info={info}
+                cta={cta}
+                sections={sections}
+              >
+                {children}
+              </Main>
+            </ErrorBoundary>
 
-          <Footer />
-        </CircuitBoard>
+            <Footer />
+          </CircuitBoard>
+        </Normalize>
       </ErrorBoundary>
     );
   }

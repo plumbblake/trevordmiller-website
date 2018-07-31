@@ -4,14 +4,6 @@
       "presets": ["next/babel"],
       "plugins": [
         [
-          "styled-components",
-          {
-            "ssr": true,
-            "displayName": true,
-            "preprocess": false
-          }
-        ],
-        [
           "module-resolver",
           {
             "root": ["./"],
@@ -27,14 +19,6 @@
     "production": {
       "presets": ["next/babel"],
       "plugins": [
-        [
-          "styled-components",
-          {
-            "ssr": true,
-            "displayName": false,
-            "preprocess": false
-          }
-        ],
         [
           "module-resolver",
           {
@@ -61,14 +45,6 @@
       ],
       "plugins": [
         [
-          "styled-components",
-          {
-            "ssr": true,
-            "displayName": true,
-            "preprocess": false
-          }
-        ],
-        [
           "module-resolver",
           {
             "root": ["./"],
@@ -83,14 +59,6 @@
     }
   },
   "plugins": [
-    [
-      "styled-components",
-      {
-        "ssr": true,
-        "displayName": true,
-        "preprocess": false
-      }
-    ],
     [
       "module-resolver",
       {

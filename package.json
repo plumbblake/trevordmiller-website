@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "test": "jest utils/ components/",
     "build": "next build",
-    "size": "bundlesize -f './.next/static/commons/main-*.js' -s 150kB",
+    "size": "bundlesize -f './.next/main.js' -s 150kB",
     "verify-url": "npm run test-e2e && npm run broken-links",
     "test-e2e": "jest e2e/",
     "test-e2e:debug": "DEBUG=true npm run test-e2e",
@@ -57,8 +57,7 @@
     "react-dom": "^16.4.1",
     "react-lazyload": "^2.3.0",
     "remark-highlight.js": "^5.0.0",
-    "rss": "^1.2.2",
-    "styled-components": "^3.3.3"
+    "rss": "^1.2.2"
   },
   "engines": {
     "node": "8.x.x",
