@@ -1,63 +1,4 @@
 {
-  "env": {
-    "development": {
-      "presets": ["next/babel"],
-      "plugins": [
-        [
-          "module-resolver",
-          {
-            "root": ["./"],
-            "alias": {
-              "utils": "./utils",
-              "components": "./components",
-              "pages": "./pages"
-            }
-          }
-        ]
-      ]
-    },
-    "production": {
-      "presets": ["next/babel"],
-      "plugins": [
-        [
-          "module-resolver",
-          {
-            "root": ["./"],
-            "alias": {
-              "utils": "./utils",
-              "components": "./components",
-              "pages": "./pages"
-            }
-          }
-        ]
-      ]
-    },
-    "test": {
-      "presets": [
-        [
-          "next/babel",
-          {
-            "preset-env": {
-              "modules": "commonjs"
-            }
-          }
-        ]
-      ],
-      "plugins": [
-        [
-          "module-resolver",
-          {
-            "root": ["./"],
-            "alias": {
-              "utils": "./utils",
-              "components": "./components",
-              "pages": "./pages"
-            }
-          }
-        ]
-      ]
-    }
-  },
   "plugins": [
     [
       "module-resolver",
@@ -70,5 +11,25 @@
         }
       }
     ]
-  ]
+  ],
+  "env": {
+    "development": {
+      "presets": ["next/babel"]
+    },
+    "production": {
+      "presets": ["next/babel"]
+    },
+    "test": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "preset-env": {
+              "modules": "commonjs"
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
