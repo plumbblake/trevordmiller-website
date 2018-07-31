@@ -1,7 +1,7 @@
 import React from "react";
 import PageWithBlogPost from "components/PageWithBlogPost";
 import markdownMap from "utils/markdownMap";
-import Content from "./index.md";
+import Content from "./_index.md";
 
 const SpacedRepetitionSoftware = () => (
   <PageWithBlogPost id="spaced-repetition-software">

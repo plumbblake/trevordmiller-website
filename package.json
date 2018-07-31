@@ -18,8 +18,6 @@
     "start": "next start"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^0.9.0",
-    "@mdx-js/mdx": "^0.9.0",
     "@storybook/addon-info": "^3.4.8",
     "@storybook/addon-options": "^3.4.8",
     "@storybook/react": "^3.4.8",
@@ -46,10 +44,11 @@
     "prettier": "^1.14.0",
     "puppeteer": "^1.6.1",
     "react-test-renderer": "^16.4.1",
-    "regenerator-runtime": "^0.12.0",
-    "remark-highlight.js": "^5.0.0"
+    "regenerator-runtime": "^0.12.0"
   },
   "dependencies": {
+    "@mdx-js/loader": "^0.15.0-1",
+    "@mdx-js/mdx": "^0.15.0-1",
     "next": "^5.1.0",
     "nova-colors": "^2.1.5",
     "prop-types": "^15.6.2",
@@ -57,6 +56,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-lazyload": "^2.3.0",
+    "remark-highlight.js": "^5.0.0",
     "rss": "^1.2.2",
     "styled-components": "^3.3.3"
   },
