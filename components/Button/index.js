@@ -25,21 +25,17 @@ const stylesBySize = {
     padding: spacing.medium
   },
   small: {
-    padding: spacing.xsmall
+    paddingTop: spacing.xsmall,
+    paddingBottom: spacing.xsmall,
+    paddingLeft: spacing.medium,
+    paddingRight: spacing.medium
   }
 };
 
-const Button = ({
-  children,
-  onClick,
-  type = "primary",
-  size = "medium",
-  testId
-}) => (
+const Button = ({ children, onClick, type = "primary", size = "medium" }) => (
   <button
     onClick={onClick}
     style={{
-      minWidth: 175,
       cursor: "pointer",
       display: "inline-block",
       textAlign: "center",
@@ -51,7 +47,6 @@ const Button = ({
       ...stylesByType[type],
       ...stylesBySize[size]
     }}
-    data-testid={testId}
   >
     {children}
   </button>
@@ -61,8 +56,7 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(stylesByType)),
-  size: PropTypes.oneOf(Object.keys(stylesBySize)),
-  testId: PropTypes.string
+  size: PropTypes.oneOf(Object.keys(stylesBySize))
 };
 
 export default Button;

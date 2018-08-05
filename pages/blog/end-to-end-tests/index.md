@@ -105,7 +105,7 @@ describe("registration", () => {
     await page.type(user.email);
     await page.click('[data-testid="userRegisterInputWithPassword"]');
     await page.type(user.password);
-    await page.click('[data-testId="userAccountSubmitButton"]');
+    await page.click('[data-testid="userAccountSubmitButton"]');
     await page.waitForSelector('[data-testid="userSettingsForm"]');
   });
 

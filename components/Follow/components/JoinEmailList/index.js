@@ -61,7 +61,6 @@ class JoinEmailList extends Component {
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
-              target="_blank"
             >
               <div
                 style={{
@@ -114,6 +113,7 @@ class JoinEmailList extends Component {
                     }`,
                     padding: spacing.medium
                   }}
+                  data-testid="joinEmailListSubmit"
                 />
               </div>
 
@@ -131,10 +131,9 @@ class JoinEmailList extends Component {
             style={{
               textAlign: "center"
             }}
+            data-testid="joinEmailListButton"
           >
-            <Button onClick={this.handleToggle} testId="joinEmailListButton">
-              Join my email list
-            </Button>
+            <Button onClick={this.handleToggle}>Join my email list</Button>
           </div>
         )}
       </div>

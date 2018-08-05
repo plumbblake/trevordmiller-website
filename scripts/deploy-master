@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-# APP_URL_ALIAS=$(npx now --token $NOW_TOKEN)
-# npx now alias $APP_URL_ALIAS trevordmiller.com --token $NOW_TOKEN
-
+APP_URL_ALIAS=$(npx now --token $NOW_TOKEN)
+npx now alias $APP_URL_ALIAS trevordmiller.com --token $NOW_TOKEN
 APP_URL="https://trevordmiller.com"
-echo $APP_URL >"APP_URL.tmp"
+export APP_URL
+npm run verify-url

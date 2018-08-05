@@ -12,10 +12,10 @@
   - `npm run precommit` runs automatically to ensure things are working as expected related to your changed files
 - Submit a pull request to `master`
   - Deployment runs automatically to create a unique URL of the code in your pull request for review
-  - `npm run verify` runs automatically to ensure things are working as expected with the entire codebase and deployed pull request URL
+  - `npm run verify` runs automatically to ensure things are working as expected with the entire codebase and your pull request deployment URL
   - An admin reviews your pull request
 - Once all checks on your pull request have passed, an admin merges your pull request into `master`
-  - The latest deployment URL is automatically aliased to the production `https://trevordmiller.com` domain
+  - Your pull request deployment URL is automatically aliased to the production `https://trevordmiller.com` domain
   - `npm run verify` runs automatically to ensure things are still working as expected with the full codebase and production URL
 
 ## Organization

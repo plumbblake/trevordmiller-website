@@ -1,10 +1,8 @@
 import puppeteer from "puppeteer";
 
-const appUrl = process.env.APP_URL || "http://localhost:3000";
-
-const routes = {
-  home: `${appUrl}`
-};
+if (process.env.DEBUG) {
+  jest.setTimeout(15000);
+}
 
 let browser;
 let page;
@@ -13,7 +11,7 @@ beforeAll(async () => {
     process.env.DEBUG
       ? {
           headless: false,
-          slowMo: 100,
+          slowMo: 50,
           devtools: true
         }
       : {}
@@ -21,17 +19,37 @@ beforeAll(async () => {
   page = await browser.newPage();
 });
 
+const appUrl = process.env.APP_URL || "http://localhost:3000";
+
+const routes = {
+  home: `${appUrl}`
+};
+
+const timestamp = new Date().getUTCMilliseconds();
+
+const user = {
+  email: `trevordmillertest+${timestamp}@gmail.com`
+};
+
 test("can join email list", async () => {
   await page.goto(routes.home);
-  await page.waitForSelector('[data-testid="joinEmailListButton"]');
-  await page.click('[data-testid="joinEmailListButton"]');
-  await page.waitForSelector('[data-testid="joinEmailListInput"]');
-  await page.type(
-    '[data-testid="joinEmailListInput"]',
-    "trevordmiller@icloud.com"
-  );
-  // await page.click('[data-testid="joinEmailListSubmit"]');
-  // await page.waitForSelector('[data-testid="joinEmailList"]');
+
+  const button = '[data-testid="joinEmailListButton"]';
+  await page.waitForSelector(button);
+  await page.click(button);
+
+  const input = '[data-testid="joinEmailListInput"]';
+  await page.waitForSelector(input);
+  await page.type(input, user.email);
+
+  const submit = '[data-testid="joinEmailListSubmit"]';
+  await page.waitForSelector(submit);
+  await page.click(submit);
+
+  const mailchimp = ".bodyContent";
+  await page.waitForSelector(mailchimp);
+  const mailchimpContent = await page.$eval(mailchimp, el => el.innerText);
+  expect(mailchimpContent).toContain("Subscription Confirmed");
 });
 
 afterAll(() => {
