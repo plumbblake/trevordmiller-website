@@ -30,8 +30,8 @@ test("can join email list", async () => {
     '[data-testid="joinEmailListInput"]',
     "trevordmiller@icloud.com"
   );
-  // await page.click('[data-testid="joinEmailListSubmit"]');
-  // await page.waitForSelector('[data-testid="joinEmailList"]');
+  await page.click('[data-testid="joinEmailListSubmit"]');
+  await page.waitForSelector('[data-testid="joinEmailList"]');
 });
 
 afterAll(() => {
