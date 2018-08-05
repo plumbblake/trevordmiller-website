@@ -2,4 +2,5 @@
 set -euo pipefail
 
 APP_URL=$(npx now --token $NOW_TOKEN)
-echo $APP_URL >"APP_URL.tmp"
+export APP_URL
+npm run verify-url

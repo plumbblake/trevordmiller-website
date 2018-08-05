@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-APP_URL=$(cat APP_URL.tmp)
-export APP_URL
-npm run verify-url

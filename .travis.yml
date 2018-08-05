@@ -14,17 +14,13 @@ notifications:
 script: npm run verify
 deploy:
   - provider: script
-    script:
-      - ./scripts/deploy-pull-request
-      - ./scripts/after-deploy
+    script: ./scripts/deploy-pull-request
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script:
-      - ./scripts/deploy-master
-      - ./scripts/after-deploy
+    script: ./scripts/deploy-master
     skip_cleanup: true
     on:
       master: true
