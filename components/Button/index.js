@@ -25,7 +25,10 @@ const stylesBySize = {
     padding: spacing.medium
   },
   small: {
-    padding: spacing.xsmall
+    paddingTop: spacing.xsmall,
+    paddingBottom: spacing.xsmall,
+    paddingLeft: spacing.medium,
+    paddingRight: spacing.medium
   }
 };
 
@@ -39,7 +42,6 @@ const Button = ({
   <button
     onClick={onClick}
     style={{
-      minWidth: 175,
       cursor: "pointer",
       display: "inline-block",
       textAlign: "center",
