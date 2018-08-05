@@ -12,7 +12,7 @@ const levelSpecificStyles = {
   1: {
     color: uiGroups.userCurrentState,
     fontSize: fontSizes.xxxlarge,
-    lineHeight: ineHeights.xxlarge,
+    lineHeight: lineHeights.xxlarge,
     textAlign: "center"
   },
   2: {
