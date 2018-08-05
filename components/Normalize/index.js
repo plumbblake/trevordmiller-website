@@ -49,6 +49,16 @@ const Normalize = ({ children }) => (
         color: ${uiGroups.backgroundShade};
       }
 
+      p,
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: ${lineHeights.medium};
+      }
+
       button {
         padding: 0;
         margin: 0;

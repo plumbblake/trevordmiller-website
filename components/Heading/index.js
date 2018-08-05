@@ -38,16 +38,20 @@ const levelSpecificStyles = {
 
 export const levels = Object.keys(levelSpecificStyles);
 
-const Heading = ({ children, level }) => (
-  <div
-    style={{
-      fontWeight: fontWeights.light,
-      ...levelSpecificStyles[level]
-    }}
-  >
-    {children}
-  </div>
-);
+const Heading = ({ children, level }) => {
+  const HeadingLevel = `h${level}`;
+
+  return (
+    <HeadingLevel
+      style={{
+        fontWeight: fontWeights.light,
+        ...levelSpecificStyles[level]
+      }}
+    >
+      {children}
+    </HeadingLevel>
+  );
+};
 
 Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
