@@ -36,7 +36,7 @@ beforeAll(async () => {
 });
 
 const appUrl = process.env.APP_URL || "http://localhost:3000";
-
+const isLocal = appUrl === "http://localhost:3000";
 const isProduction = appUrl === "http://trevordmiller.com";
 
 const routes = {
@@ -117,6 +117,36 @@ describe("hosting", () => {
       await page.goto("https://www.trevordmiller.com");
       expect(page.url()).toContain("https://trevordmiller.com");
     });
+  }
+});
+
+describe("performance", () => {
+  if (!isLocal) {
+    test("loads in less than 1 second on current network", async () => {
+      await page.goto(routes.home);
+      const metrics = await page.metrics();
+      const browserTasksSeconds = metrics.TaskDuration;
+      expect(browserTasksSeconds).toBeLessThan(1.0);
+    });
+
+    test(
+      "loads in less than 3 seconds on throttled slower network",
+      async () => {
+        const client = await page.target().createCDPSession();
+        await client.send("Network.emulateNetworkConditions", {
+          offline: false,
+          downloadThroughput: (1.5 * 1024 * 1024) / 8,
+          uploadThroughput: (750 * 1024) / 8,
+          latency: 40
+        });
+
+        await page.goto(routes.home);
+        const metrics = await page.metrics();
+        const browserTasksSeconds = metrics.TaskDuration;
+        expect(browserTasksSeconds).toBeLessThan(3.0);
+      },
+      15000
+    );
   }
 });
 
