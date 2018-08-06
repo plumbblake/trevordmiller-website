@@ -37,6 +37,8 @@ beforeAll(async () => {
 
 const appUrl = process.env.APP_URL || "http://localhost:3000";
 
+const isProduction = appUrl === "http://trevordmiller.com";
+
 const routes = {
   home: `${appUrl}`,
   courses: `${appUrl}/courses`,
@@ -55,47 +57,58 @@ const user = {
   email: `trevordmillertest+${timestamp}@gmail.com`
 };
 
-const testRoutes = () => {
-  for (const route of Object.keys(routes)) {
-    test(`can load ${route} route`, async () => {
-      await page.goto(routes[route]);
-      const content = '[data-testid="main"]';
-      await page.waitForSelector(content);
+describe("core", () => {
+  test("can join courses", async () => {
+    await page.goto(routes.course);
+
+    const button = '[data-testid="joinCourseButton"]';
+    await page.waitForSelector(button);
+    await page.click(button);
+
+    expect(page.url()).toContain("https://sso.teachable.com");
+  });
+
+  if (isProduction) {
+    test("can join the email list", async () => {
+      await page.goto(routes.home);
+
+      const button = '[data-testid="joinEmailListButton"]';
+      await page.waitForSelector(button);
+      await page.click(button);
+
+      const input = '[data-testid="joinEmailListInput"]';
+      await page.waitForSelector(input);
+      await page.type(input, user.email);
+
+      const submit = '[data-testid="joinEmailListSubmit"]';
+      await page.waitForSelector(submit);
+      await page.click(submit);
+
+      const mailchimp = ".bodyContent";
+      await page.waitForSelector(mailchimp);
+      const mailchimpContent = await page.$eval(mailchimp, el => el.innerText);
+      expect(mailchimpContent).toContain("Subscription Confirmed");
+    });
+
+    test("redirects http to https", async () => {
+      await page.goto("http://trevordmiller.com");
+      expect(page.url()).toContain("https://");
     });
   }
-};
-
-testRoutes();
-
-test.skip("can join the email list", async () => {
-  await page.goto(routes.home);
-
-  const button = '[data-testid="joinEmailListButton"]';
-  await page.waitForSelector(button);
-  await page.click(button);
-
-  const input = '[data-testid="joinEmailListInput"]';
-  await page.waitForSelector(input);
-  await page.type(input, user.email);
-
-  const submit = '[data-testid="joinEmailListSubmit"]';
-  await page.waitForSelector(submit);
-  await page.click(submit);
-
-  const mailchimp = ".bodyContent";
-  await page.waitForSelector(mailchimp);
-  const mailchimpContent = await page.$eval(mailchimp, el => el.innerText);
-  expect(mailchimpContent).toContain("Subscription Confirmed");
 });
 
-test("can join courses", async () => {
-  await page.goto(routes.course);
+describe("routes", () => {
+  const testRoutes = () => {
+    for (const route of Object.keys(routes)) {
+      test(`can load ${route} route`, async () => {
+        await page.goto(routes[route]);
+        const content = '[data-testid="main"]';
+        await page.waitForSelector(content);
+      });
+    }
+  };
 
-  const button = '[data-testid="joinCourseButton"]';
-  await page.waitForSelector(button);
-  await page.click(button);
-
-  expect(page.url()).toContain("https://sso.teachable.com");
+  testRoutes();
 });
 
 afterAll(() => {
