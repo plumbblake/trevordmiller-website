@@ -92,7 +92,12 @@ describe("core", () => {
 
     test("redirects http to https", async () => {
       await page.goto("http://trevordmiller.com");
-      expect(page.url()).toContain("https://");
+      expect(page.url()).toContain("https://trevordmiller.com");
+    });
+
+    test("redirects www to non-www", async () => {
+      await page.goto("https://www.trevordmiller.com");
+      expect(page.url()).toContain("https://trevordmiller.com");
     });
   }
 });
