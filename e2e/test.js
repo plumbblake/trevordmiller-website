@@ -57,17 +57,21 @@ const user = {
   email: `trevordmillertest+${timestamp}@gmail.com`
 };
 
-describe("core", () => {
-  test("can join courses", async () => {
-    await page.goto(routes.course);
+describe("routes", () => {
+  const testRoutes = () => {
+    for (const route of Object.keys(routes)) {
+      test(`can load ${route} route`, async () => {
+        await page.goto(routes[route]);
+        const content = '[data-testid="main"]';
+        await page.waitForSelector(content);
+      });
+    }
+  };
 
-    const button = '[data-testid="joinCourseButton"]';
-    await page.waitForSelector(button);
-    await page.click(button);
+  testRoutes();
+});
 
-    expect(page.url()).toContain("https://sso.teachable.com");
-  });
-
+describe("subscribing", () => {
   if (isProduction) {
     test("can join the email list", async () => {
       await page.goto(routes.home);
@@ -89,7 +93,21 @@ describe("core", () => {
       const mailchimpContent = await page.$eval(mailchimp, el => el.innerText);
       expect(mailchimpContent).toContain("Subscription Confirmed");
     });
+  }
 
+  test("can join courses", async () => {
+    await page.goto(routes.course);
+
+    const button = '[data-testid="joinCourseButton"]';
+    await page.waitForSelector(button);
+    await page.click(button);
+
+    expect(page.url()).toContain("https://sso.teachable.com");
+  });
+});
+
+describe("hosting", () => {
+  if (isProduction) {
     test("redirects http to https", async () => {
       await page.goto("http://trevordmiller.com");
       expect(page.url()).toContain("https://trevordmiller.com");
@@ -100,20 +118,6 @@ describe("core", () => {
       expect(page.url()).toContain("https://trevordmiller.com");
     });
   }
-});
-
-describe("routes", () => {
-  const testRoutes = () => {
-    for (const route of Object.keys(routes)) {
-      test(`can load ${route} route`, async () => {
-        await page.goto(routes[route]);
-        const content = '[data-testid="main"]';
-        await page.waitForSelector(content);
-      });
-    }
-  };
-
-  testRoutes();
 });
 
 afterAll(() => {
