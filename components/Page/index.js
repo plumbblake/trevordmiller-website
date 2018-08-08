@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { uiGroups } from "utils/theme";
-import { baseRouteKeys } from "pages";
 import Normalize from "components/Normalize";
 import analytics from "./utils/analytics";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -108,17 +107,19 @@ class Page extends Component {
             <Navigation baseRouteKey={baseRouteKey} />
 
             <ErrorBoundary>
-              <Main
-                title={title}
-                mainVisual={showMainVisual ? mainVisual : null}
-                tags={tags}
-                description={description}
-                info={info}
-                cta={cta}
-                sections={sections}
-              >
-                {children}
-              </Main>
+              <div data-testid="main">
+                <Main
+                  title={title}
+                  mainVisual={showMainVisual ? mainVisual : null}
+                  tags={tags}
+                  description={description}
+                  info={info}
+                  cta={cta}
+                  sections={sections}
+                >
+                  {children}
+                </Main>
+              </div>
             </ErrorBoundary>
 
             <Footer />
@@ -130,7 +131,7 @@ class Page extends Component {
 }
 
 Page.propTypes = {
-  baseRouteKey: PropTypes.oneOf(baseRouteKeys),
+  baseRouteKey: PropTypes.string,
   mainVisual: PropTypes.string.isRequired,
   showMainVisual: PropTypes.bool,
   pathname: PropTypes.string.isRequired,

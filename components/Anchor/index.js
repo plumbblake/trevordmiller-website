@@ -16,7 +16,7 @@ const Anchor = ({ href, children }) => {
       </a>
     </Link>
   ) : (
-    <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+    <a href={href} style={linkStyle}>
       {children}
     </a>
   );

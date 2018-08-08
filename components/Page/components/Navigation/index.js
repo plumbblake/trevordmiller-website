@@ -79,7 +79,7 @@ const Navigation = ({ baseRouteKey }) => (
 );
 
 Navigation.propTypes = {
-  baseRouteKey: PropTypes.oneOf(baseRouteKeys)
+  baseRouteKey: PropTypes.string
 };
 
 export default Navigation;

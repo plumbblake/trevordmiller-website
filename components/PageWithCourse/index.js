@@ -16,11 +16,13 @@ const PageWithCourse = ({ id }) => {
   const course = courses[id];
 
   const enrollButton = (
-    <Anchor href={course.enrollHref}>
-      <Button>{`Enroll in course for ${
-        course.cost === 0 ? "free" : `$${course.cost}`
-      }`}</Button>
-    </Anchor>
+    <div data-testid="joinCourseButton">
+      <Anchor href={course.enrollHref}>
+        <Button>{`Enroll in course for ${
+          course.cost === 0 ? "free" : `$${course.cost}`
+        }`}</Button>
+      </Anchor>
+    </div>
   );
 
   const videoCount = course.curriculum.reduce(
