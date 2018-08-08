@@ -56,6 +56,7 @@ const routes = {
   blog: `${appUrl}/blog`,
   blogPost: `${appUrl}/blog/rebuilding-my-website`,
   projects: `${appUrl}/projects`,
+  project: `${appUrl}/projects/nova`,
   resume: `${appUrl}/resume`,
   about: `${appUrl}/about`,
   follow: `${appUrl}/follow`
