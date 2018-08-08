@@ -37,7 +37,7 @@ beforeAll(async () => {
 
 const appUrl = process.env.APP_URL || "http://localhost:3000";
 const isLocal = appUrl === "http://localhost:3000";
-const isProduction = appUrl === "http://trevordmiller.com";
+const isProduction = appUrl === "https://trevordmiller.com";
 
 const routes = {
   home: `${appUrl}`,
