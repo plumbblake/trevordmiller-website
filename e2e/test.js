@@ -29,7 +29,17 @@ beforeAll(async () => {
   });
 
   page.on("console", message => {
-    if (["error", "warning"].includes(message._type)) {
+    const pageUrl = page.url();
+
+    const isLocalPage = pageUrl.includes("http://localhost");
+    const isStagingPage = pageUrl.includes("now.sh");
+    const isProductionPage = pageUrl.includes("trevordmiller.com");
+
+    const isOwnUrl = isLocalPage || isStagingPage || isProductionPage;
+
+    const isImportantConsoleType = ["error", "warning"].includes(message._type);
+
+    if (isOwnUrl && isImportantConsoleType) {
       throw new Error(message._text);
     }
   });
