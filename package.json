@@ -14,7 +14,7 @@
     "verify-url": "npm run test-e2e && npm run broken-links",
     "test-e2e": "jest e2e/",
     "test-e2e:debug": "DEBUG=true npm run test-e2e",
-    "broken-links": "blc ${APP_URL:=http://localhost:3000} -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com",
+    "broken-links": "blc ${APP_URL:=http://localhost:3000} -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com --exclude=apple.com",
     "start": "next start"
   },
   "devDependencies": {
@@ -42,7 +42,8 @@
     "prettier": "^1.14.0",
     "puppeteer": "^1.6.1",
     "react-test-renderer": "^16.4.1",
-    "regenerator-runtime": "^0.12.0"
+    "regenerator-runtime": "^0.12.0",
+    "rss-parser": "^3.4.2"
   },
   "dependencies": {
     "@mdx-js/loader": "^0.15.0-1",
