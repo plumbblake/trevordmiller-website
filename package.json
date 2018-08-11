@@ -14,7 +14,7 @@
     "verify-url": "npm run test-e2e && npm run broken-links",
     "test-e2e": "jest e2e/",
     "test-e2e:debug": "DEBUG=true npm run test-e2e",
-    "broken-links": "blc ${APP_URL:=http://localhost:3000} -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com",
+    "broken-links": "blc ${APP_URL:=http://localhost:3000} -ro --exclude=linkedin.com --exclude=visualstudio.com --exclude=netflix.com --exclude=apple.com",
     "start": "next start"
   },
   "devDependencies": {
