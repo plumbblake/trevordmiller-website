@@ -15,6 +15,7 @@ const wrapper = mount(
 
 test("is closed by default", () => {
   const text = wrapper.text();
+
   expect(text).toContain("closed");
 });
 
@@ -22,5 +23,6 @@ test("is open after a toggle", () => {
   const button = wrapper.find("button");
   button.simulate("click");
   const text = wrapper.text();
+
   expect(text).toContain("open");
 });
