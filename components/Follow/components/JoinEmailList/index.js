@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   spacing,
   borderRadii,
@@ -9,6 +9,7 @@ import {
 } from "utils/theme";
 import Button from "components/Button";
 import Anchor from "components/Anchor";
+import Toggle from "components/Toggle";
 
 const inputResetStyles = {
   fontSize: fontSizes.medium,
@@ -23,22 +24,9 @@ const submitUrl =
 const archiveUrl =
   "https://us3.campaign-archive.com/home/?u=70b7070413b98c77c71e28694&id=97d3f6b0ec";
 
-class JoinEmailList extends Component {
-  state = {
-    isOpen: false
-  };
-
-  handleToggle = event => {
-    event.preventDefault();
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
-
-  render() {
-    const { isOpen } = this.state;
-
-    return (
+const JoinEmailList = () => (
+  <Toggle>
+    {({ isOpen, handleToggle }) => (
       <div>
         {isOpen ? (
           <div
@@ -133,12 +121,19 @@ class JoinEmailList extends Component {
             }}
             data-testid="joinEmailListButton"
           >
-            <Button onClick={this.handleToggle}>Join my email list</Button>
+            <Button
+              onClick={event => {
+                event.preventDefault();
+                handleToggle();
+              }}
+            >
+              Join my email list
+            </Button>
           </div>
         )}
       </div>
-    );
-  }
-}
+    )}
+  </Toggle>
+);
 
 export default JoinEmailList;
