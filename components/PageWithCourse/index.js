@@ -18,9 +18,7 @@ const PageWithCourse = ({ id }) => {
   const enrollButton = (
     <div data-testid="joinCourseButton">
       <Anchor href={course.enrollHref}>
-        <Button>{`Enroll in course for ${
-          course.cost === 0 ? "free" : `$${course.cost}`
-        }`}</Button>
+        <Button>Enroll in course</Button>
       </Anchor>
     </div>
   );
@@ -29,23 +27,6 @@ const PageWithCourse = ({ id }) => {
     (memo, section) => memo + section.items.length,
     0
   );
-
-  const faq = [
-    {
-      question: `When does the course start and finish?`,
-      answer: `The course starts now and never ends! It is a completely self-paced online course - you decide when you start and when you finish.`
-    },
-    {
-      question: `How long do I have access to the course?`,
-      answer: `How does lifetime access sound? After enrolling, you have unlimited access to this course for as long as you like - across any and all devices you own. No need to continue paying one of those pesky subscription payments to keep access to courses you've bought.`
-    },
-    course.cost === 0
-      ? {}
-      : {
-          question: `What if I am unhappy with the course?`,
-          answer: `If you are unsatisfied with your purchase, you can get a full refund for 30 days.`
-        }
-  ];
 
   return (
     <Page
@@ -75,19 +56,16 @@ const PageWithCourse = ({ id }) => {
         },
 
         {
-          title: `What you get for ${
-            course.cost === 0 ? "free" : `$${course.cost}`
-          }`,
+          title: `Details`,
           component: (
             <List>
+              <ListItem>Free</ListItem>
               <ListItem>{`${videoCount} videos`}</ListItem>
               <ListItem>{`${course.time} to watch`}</ListItem>
               <ListItem
               >{`Example code to download and practice with`}</ListItem>
               <ListItem
               >{`Quizzes after each section to make sure you understand`}</ListItem>
-              <ListItem
-              >{`Comments on each video to get help from your instructor and discuss with fellow students`}</ListItem>
               <ListItem
               >{`All videos can be downloaded so you aren't locked into where you can view them`}</ListItem>
             </List>
@@ -222,26 +200,7 @@ const PageWithCourse = ({ id }) => {
         },
 
         {
-          title: "Frequently Asked Questions",
-          component: (
-            <div>
-              {faq.map((item, index) => (
-                <div
-                  key={index}
-                  style={{
-                    marginBottom: index + 1 < faq.length ? spacing.large : 0
-                  }}
-                >
-                  <Heading level={4}>{item.question}</Heading>
-                  <div>{item.answer}</div>
-                </div>
-              ))}
-            </div>
-          )
-        },
-
-        {
-          title: "Get started now!",
+          title: "Get started",
           component: enrollButton
         }
       ]}

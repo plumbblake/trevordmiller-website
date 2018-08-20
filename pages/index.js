@@ -6,7 +6,7 @@ export const baseRoutes = {
   courses: {
     path: "/courses",
     title: "Courses",
-    description: `Some free tutorial videos I've recorded for software developers.`,
+    description: `Some tutorial videos I've recorded for software developers.`,
     visual: "film"
   },
 

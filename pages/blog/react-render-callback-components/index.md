@@ -91,21 +91,21 @@ class Toggle extends Component {
     isOpen: false
   };
 
-  handleToggleClick = () => {
+  handleToggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
   };
 
   render() {
-    return this.props.children(this.state.isOpen, this.handleToggleClick);
+    return this.props.children(this.state.isOpen, this.handleToggle);
   }
 }
 
 export default Toggle;
 ```
 
-Now components that use `Toggle` will have access to their own `isOpen` and `handleToggleClick` arguments without having to wire up the state code. The instances of `Toggle` (Accordion, Modal, and Thumbnail) can just be stateless function components.
+Now components that use `Toggle` will have access to their own `isOpen` and `handleToggle` arguments without having to wire up the state code. The instances of `Toggle` (Accordion, Modal, and Thumbnail) can just be stateless function components.
 
 #### Accordion.js
 
@@ -115,9 +115,9 @@ import Toggle from "./Toggle";
 
 const Accordion = ({ teaser, details }) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
+    {(isOpen, handleToggle) => (
       <section>
-        <button onClick={handleToggleClick}>
+        <button onClick={handleToggle}>
           {`${isOpen ? "-" : "+"} ${teaser}`}
         </button>
         {isOpen && details}
@@ -137,8 +137,8 @@ import Toggle from './Toggle'
 
 const Modal = ({teaser, details}) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
-      <button onClick={handleToggleClick}>
+    {(isOpen, handleToggle) => (
+      <button onClick={handleToggle}>
         {teaser}
         {isOpen && (
           <div>
@@ -179,10 +179,10 @@ import Toggle from "./Toggle";
 
 const Thumbnail = ({ src, teaser }) => (
   <Toggle>
-    {(isOpen, handleToggleClick) => (
+    {(isOpen, handleToggle) => (
       <div>
         <div>{teaser}</div>
-        <button onClick={handleToggleClick}>
+        <button onClick={handleToggle}>
           <img
             src={src}
             alt={teaser}
