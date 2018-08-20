@@ -12,7 +12,6 @@ export const courses = {
       "/static/real-world-git-course-preview-thumbnail.png",
     title: `Real-world Git`,
     description: `Learn the most important Git commands.`,
-    cost: 0,
     time: "1 hour",
     enrollHref:
       "https://sso.teachable.com/secure/158085/users/sign_up?after_success_url=%2Fsecure%2F158085%2Fcheckout%2F504126%2Freal-world-git",
