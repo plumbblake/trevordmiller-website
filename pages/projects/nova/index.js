@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { spacing, fontSizes, borderRadii, syntaxGroups } from "utils/theme";
+import {
+  spacing,
+  fontSizes,
+  borderRadii,
+  syntaxGroups,
+  colorValues
+} from "utils/theme";
 import PageWithProject from "components/PageWithProject";
-import Well from "components/Well";
+import Accordian from "components/Accordian";
 import Icon from "components/Icon";
 import Anchor from "components/Anchor";
 import Heading from "components/Heading";
@@ -363,38 +369,32 @@ const faq = [
 
 const PluginsList = ({ plugins }) =>
   plugins.map(plugin => (
-    <details key={plugin.title}>
-      <summary
-        style={{
-          display: "flex",
-          alignItems: "center",
-          color: syntaxGroups.type,
-          marginTop: spacing.medium,
-          marginBottom: spacing.medium
-        }}
-      >
-        <Icon
-          type={plugin.icon}
-          size={fontSizes.xlarge}
-          fill={syntaxGroups.type}
-        />
+    <div key={plugin.title} style={{ marginBottom: spacing.medium }}>
+      <Accordian
+        summary={
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center"
+            }}
+          >
+            <Icon
+              type={plugin.icon}
+              size={fontSizes.xlarge}
+              fill={colorValues.colors.blue}
+            />
 
-        <div
-          style={{
-            marginLeft: spacing.small
-          }}
-        >
-          {plugin.title}
-        </div>
-      </summary>
-
-      <div
-        style={{
-          marginTop: spacing.medium,
-          marginBottom: spacing.medium
-        }}
+            <div
+              style={{
+                marginLeft: spacing.small
+              }}
+            >
+              {plugin.title}
+            </div>
+          </div>
+        }
       >
-        <Well>
+        <div>
           {plugin.screenshot ? (
             <div
               style={{
@@ -468,9 +468,9 @@ const PluginsList = ({ plugins }) =>
               ))}
             </div>
           ) : null}
-        </Well>
-      </div>
-    </details>
+        </div>
+      </Accordian>
+    </div>
   ));
 
 PluginsList.propTypes = {
