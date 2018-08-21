@@ -4,6 +4,14 @@ import PageWithBaseRoute from "components/PageWithBaseRoute";
 import Teaser from "components/Teaser";
 
 export const blogPosts = {
+  "healthy-technology": {
+    tags: [tags.general],
+    mainVisual: "/static/devices.jpg",
+    title: `Finding a healthy balance with technology`,
+    description: `What I do to stay sane with all the device noise.`,
+    date: "August 20, 2018"
+  },
+
   "learning-routine": {
     tags: [tags.general],
     mainVisual: "/static/books.jpg",
