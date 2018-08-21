@@ -26,7 +26,11 @@ I have scheduled "Do Not Disturb" mode on each of my devices for a couple hours 
 
 I have very little installed on my phone; only what I consider the essentials for me. I turn off all non-essential notifications. No email. No social media. No other stuff that I can live without being in my pocket. This helps me to not have notifications all day long.
 
+<div style={{ maxWidth: 300 }}>
+
 ![A screenshot of my phone home screen](/static/phone-home-screen.png)
+
+</div>
 
 ### Grouping all the "checking" and updates to once a day
 

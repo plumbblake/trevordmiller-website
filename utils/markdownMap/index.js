@@ -8,6 +8,7 @@ import List from "components/List";
 import ListItem from "components/ListItem";
 import PreformattedText from "components/PreformattedText";
 import InlineCode from "components/InlineCode";
+import Quote from "components/Quote";
 
 const Heading1MarkdownMap = ({ children }) => (
   <Heading level={1}>{children}</Heading>
@@ -91,6 +92,11 @@ InlineCodeMarkdownMap.propTypes = {
   children: PropTypes.string.isRequired
 };
 
+const BlockQuoteMarkdownMap = ({ children }) => <Quote>{children}</Quote>;
+BlockQuoteMarkdownMap.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
 const markdownMap = {
   h1: Heading1MarkdownMap,
   h2: Heading2MarkdownMap,
@@ -103,7 +109,8 @@ const markdownMap = {
   ol: OrderedListMarkdownMap,
   li: ListItemMarkdownMap,
   pre: PreformattedTextMarkdownMap,
-  inlineCode: InlineCodeMarkdownMap
+  inlineCode: InlineCodeMarkdownMap,
+  blockquote: BlockQuoteMarkdownMap
 };
 
 export default markdownMap;
