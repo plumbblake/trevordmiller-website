@@ -6,7 +6,7 @@ configure({ adapter: new Adapter() });
 
 Router.router = { push: () => {}, prefetch: () => {} };
 
-global.console.warning = message => {
+global.console.warn = message => {
   throw new Error(message);
 };
 
