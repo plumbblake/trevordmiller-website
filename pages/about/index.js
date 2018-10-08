@@ -48,11 +48,11 @@ const lifeAspects = [
 
   {
     visual: "suit",
-    label: "Mormon",
-    description: `I've got plenty of weaknesses, but I strive to be a good Christian.`,
+    label: "member of The Church of Jesus Christ of Latter-day Saints",
+    description: `I've got plenty of weaknesses, but I strive to follow Jesus Christ.`,
     links: [
       {
-        description: "Learn about Mormons",
+        description: "Learn more",
         href: "https://www.mormon.org"
       }
     ]
