@@ -4,11 +4,13 @@ module.exports = {
   modulePathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/.next/",
-    "<rootDir>/storybook-static/"
+    "<rootDir>/storybook-static/",
+    "<rootDir>/dist/"
   ],
   testPathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/.next/",
-    "<rootDir>/storybook-static/"
+    "<rootDir>/storybook-static/",
+    "<rootDir>/dist/"
   ]
 };
