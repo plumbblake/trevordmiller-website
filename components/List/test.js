@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import ListItem from "components/ListItem";
+import ListItem from "../ListItem";
 import List from ".";
 
 test("has bullets when kind is bullet", () => {

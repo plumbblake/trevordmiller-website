@@ -16,10 +16,5 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended"
-  ],
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
+  ]
 }

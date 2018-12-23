@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 import Parser from "rss-parser";
-import { blogPosts, blogPostKeys } from "pages/blog";
+import { blogPosts, blogPostKeys } from "../pages/blog";
 
 if (process.env.DEBUG) {
   jest.setTimeout(15000);

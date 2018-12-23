@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Raven from "raven-js";
-import { screenSizes, spacing } from "utils/theme";
-import Heading from "components/Heading";
-import Button from "components/Button";
+import { screenSizes, spacing } from "../../../../utils/theme";
+import Heading from "../../../Heading";
+import Button from "../../../Button";
 
 const SENTRY_PUBLIC_DSN =
   "https://c1ab0bd30979402eaba992a0aabf3a1b@sentry.io/265579";

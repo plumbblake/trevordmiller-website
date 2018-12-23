@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { colorValues } from "utils/theme";
+import { colorValues } from "../../utils/theme";
 import iconsSource from "./utils/icons";
 
 export const icons = iconsSource;

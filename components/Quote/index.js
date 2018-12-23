@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { uiGroups, spacing } from "utils/theme";
+import { uiGroups, spacing } from "../../utils/theme";
 
 const Quote = ({ children }) => (
   <blockquote

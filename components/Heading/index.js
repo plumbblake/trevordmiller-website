@@ -6,7 +6,7 @@ import {
   fontSizes,
   spacing,
   lineHeights
-} from "utils/theme";
+} from "../../utils/theme";
 
 const levelSpecificStyles = {
   1: {

@@ -1,6 +1,6 @@
 import React from "react";
-import { spacing, screenSizes } from "utils/theme";
-import Follow from "components/Follow";
+import { spacing, screenSizes } from "../../../../utils/theme";
+import Follow from "../../../Follow";
 
 const Footer = () => (
   <footer

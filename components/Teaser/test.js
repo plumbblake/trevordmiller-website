@@ -1,10 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
-import tags from "utils/tags";
-import Tags from "components/Tags";
-import Icon from "components/Icon";
-import Image from "components/Image";
-import Button from "components/Button";
+import tags from "../../utils/tags";
+import Tags from "../Tags";
+import Icon from "../Icon";
+import Image from "../Image";
+import Button from "../Button";
 import Teaser from ".";
 
 const imageFile = "/static/real-world-git.png";

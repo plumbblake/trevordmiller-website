@@ -6,10 +6,10 @@ import {
   fontSizes,
   uiGroups,
   colorValues
-} from "utils/theme";
-import Button from "components/Button";
-import Anchor from "components/Anchor";
-import Toggle from "components/Toggle";
+} from "../../../../utils/theme";
+import Button from "../../../Button";
+import Anchor from "../../../Anchor";
+import Toggle from "../../../Toggle";
 
 const inputResetStyles = {
   fontSize: fontSizes.medium,

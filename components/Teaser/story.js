@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import tags from "utils/tags";
+import tags from "../../utils/tags";
 import Teaser from ".";
 
 storiesOf("Teaser", module)

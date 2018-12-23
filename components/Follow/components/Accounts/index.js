@@ -1,7 +1,7 @@
 import React from "react";
-import { colorValues, fontSizes, spacing } from "utils/theme";
-import Anchor from "components/Anchor";
-import Icon from "components/Icon";
+import { colorValues, fontSizes, spacing } from "../../../../utils/theme";
+import Anchor from "../../../Anchor";
+import Icon from "../../../Icon";
 
 const accounts = [
   {
@@ -9,7 +9,7 @@ const accounts = [
     label: "GitHub",
     href: "https://github.com/trevordmiller"
   },
-  
+
   {
     iconType: "rss",
     label: "RSS",

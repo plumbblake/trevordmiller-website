@@ -1,7 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { spacing, fontSizes, borderRadii, borderSizes } from "utils/theme";
-import Icon from "components/Icon";
+import {
+  spacing,
+  fontSizes,
+  borderRadii,
+  borderSizes
+} from "../../utils/theme";
+import Icon from "../Icon";
 
 const Tags = ({ tags }) => (
   <div

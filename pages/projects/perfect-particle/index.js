@@ -1,10 +1,10 @@
 import React from "react";
-import { spacing } from "utils/theme";
-import PageWithProject from "components/PageWithProject";
-import Image from "components/Image";
-import Anchor from "components/Anchor";
-import Button from "components/Button";
-import Audio from "components/Audio";
+import { spacing } from "../../../utils/theme";
+import PageWithProject from "../../../components/PageWithProject";
+import Image from "../../../components/Image";
+import Anchor from "../../../components/Anchor";
+import Button from "../../../components/Button";
+import Audio from "../../../components/Audio";
 
 const releases = [
   {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { uiGroups } from "utils/theme";
-import Normalize from "components/Normalize";
+import { uiGroups } from "../../utils/theme";
+import Normalize from "../Normalize";
 import analytics from "./utils/analytics";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CircuitBoard from "./components/CircuitBoard";

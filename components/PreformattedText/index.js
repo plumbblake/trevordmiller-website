@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { fontFamilies, spacing, fontSizes } from "utils/theme";
-import Well from "components/Well";
+import { fontFamilies, spacing, fontSizes } from "../../utils/theme";
+import Well from "../Well";
 
 const PreformattedText = ({ children }) => (
   <div

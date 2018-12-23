@@ -2,8 +2,8 @@ import Router from "next/router";
 import { setOptions } from "@storybook/addon-options";
 import { withInfo } from "@storybook/addon-info";
 import { addDecorator, configure } from "@storybook/react";
-import { spacing } from "utils/theme";
-import Normalize from "components/Normalize";
+import { spacing } from "../utils/theme";
+import Normalize from "../components/Normalize";
 
 // Mocks
 

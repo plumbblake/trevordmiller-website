@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { syntaxGroups, fontFamilies } from "utils/theme";
+import { syntaxGroups, fontFamilies } from "../../utils/theme";
 
 const InlineCode = ({ children }) => (
   <code

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { colorValues, fontSizes, spacing } from "utils/theme";
+import { colorValues, fontSizes, spacing } from "../../utils/theme";
 import Icon, { icons } from ".";
 
 storiesOf("Icon", module)
