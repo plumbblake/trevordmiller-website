@@ -16,5 +16,10 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended"
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "16.7"
+    }
+  }
 }

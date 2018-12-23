@@ -1,6 +1,4 @@
 import puppeteer from "puppeteer";
-import Parser from "rss-parser";
-import { blogPosts, blogPostKeys } from "../pages/blog";
 
 if (process.env.DEBUG) {
   jest.setTimeout(15000);
@@ -52,21 +50,16 @@ const isLocal = appUrl === "http://localhost:3000";
 const isProduction = appUrl === "https://trevordmiller.com";
 
 const routes = {
-  ui: {
-    home: `${appUrl}`,
-    courses: `${appUrl}/courses`,
-    course: `${appUrl}/courses/real-world-git`,
-    blog: `${appUrl}/blog`,
-    blogPost: `${appUrl}/blog/rebuilding-my-website`,
-    projects: `${appUrl}/projects`,
-    project: `${appUrl}/projects/nova`,
-    resume: `${appUrl}/resume`,
-    about: `${appUrl}/about`,
-    follow: `${appUrl}/follow`
-  },
-  data: {
-    rssFeed: `${appUrl}/blog/feed`
-  }
+  home: `${appUrl}`,
+  courses: `${appUrl}/courses`,
+  course: `${appUrl}/courses/real-world-git`,
+  blog: `${appUrl}/blog`,
+  blogPost: `${appUrl}/blog/rebuilding-my-website`,
+  projects: `${appUrl}/projects`,
+  project: `${appUrl}/projects/nova`,
+  resume: `${appUrl}/resume`,
+  about: `${appUrl}/about`,
+  follow: `${appUrl}/follow`
 };
 
 const timestamp = new Date().valueOf();
@@ -77,41 +70,23 @@ const user = {
 
 describe(`e2e tests on ${appUrl}`, () => {
   describe("routes", () => {
-    const testUiRoutes = () => {
-      for (const route of Object.keys(routes.ui)) {
+    const testRoutes = () => {
+      for (const route of Object.keys(routes)) {
         test(`can load ${route} route`, async () => {
-          await page.goto(routes.ui[route]);
+          await page.goto(routes[route]);
           const content = '[data-testid="main"]';
           await page.waitForSelector(content);
         });
       }
     };
 
-    testUiRoutes();
-
-    test("can use rss feed route", async () => {
-      const parser = new Parser();
-      const feed = await parser.parseURL(routes.data.rssFeed);
-      const mostRecentRssItem = feed.items[0];
-      const mostRecentBlogPost = blogPosts[blogPostKeys[0]];
-
-      expect(feed.title).toBe("Trevor D. Miller blog");
-      expect(mostRecentRssItem.creator).toBe("Trevor D. Miller");
-      expect(mostRecentRssItem.title).toBe(mostRecentBlogPost.title);
-      expect(mostRecentRssItem.link).toBe(
-        `https://trevordmiller.com/blog/${blogPostKeys[0]}`
-      );
-      expect(mostRecentRssItem.content).toBe(mostRecentBlogPost.description);
-      expect(mostRecentRssItem.categories).toEqual(
-        mostRecentBlogPost.tags.map(tag => tag.label)
-      );
-    });
+    testRoutes();
   });
 
   describe("subscribing", () => {
     if (isProduction) {
       test("can join the email list", async () => {
-        await page.goto(routes.ui.home);
+        await page.goto(routes.home);
 
         const button = '[data-testid="joinEmailListButton"]';
         await page.waitForSelector(button);
@@ -136,7 +111,7 @@ describe(`e2e tests on ${appUrl}`, () => {
     }
 
     test("can join courses", async () => {
-      await page.goto(routes.ui.course);
+      await page.goto(routes.course);
 
       const button = '[data-testid="joinCourseButton"]';
       await page.waitForSelector(button);
@@ -163,7 +138,7 @@ describe(`e2e tests on ${appUrl}`, () => {
   describe("performance", () => {
     if (!isLocal) {
       test("loads in less than 1 second on current network", async () => {
-        await page.goto(routes.ui.home);
+        await page.goto(routes.home);
         const metrics = await page.metrics();
         const browserTasksSeconds = metrics.TaskDuration;
         expect(browserTasksSeconds).toBeLessThan(1.0);
@@ -180,7 +155,7 @@ describe(`e2e tests on ${appUrl}`, () => {
             latency: 40
           });
 
-          await page.goto(routes.ui.home);
+          await page.goto(routes.home);
           const metrics = await page.metrics();
           const browserTasksSeconds = metrics.TaskDuration;
           expect(browserTasksSeconds).toBeLessThan(3.0);

@@ -11,12 +11,6 @@ const accounts = [
   },
 
   {
-    iconType: "rss",
-    label: "RSS",
-    href: "https://trevordmiller.com/blog/feed"
-  },
-
-  {
     iconType: "linkedin",
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/trevordmiller"

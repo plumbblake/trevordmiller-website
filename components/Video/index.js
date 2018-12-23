@@ -4,14 +4,7 @@ import PropTypes from "prop-types";
 import LazyLoad from "react-lazyload";
 import { uiGroups } from "../../utils/theme";
 
-const Video = ({
-  src,
-  autoplay,
-  loop,
-  muted,
-  controls = "true",
-  thumbnail
-}) => (
+const Video = ({ src, autoplay, loop, muted, controls = true, thumbnail }) => (
   <LazyLoad offset={200} placeholder={<span />} once>
     <div
       style={{

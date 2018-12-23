@@ -4,7 +4,7 @@ There are [plenty of goodies GraphQL has to offer](http://graphql.org), but in t
 
 A GraphQL schema **describes your data**. Using [GraphQL's fantastic type system](http://graphql.org/learn/schema/), you can clearly define the public API of your entire back-end. It looks like this:
 
-```graphql
+```
 schema {
   query: RootQueryType
   mutation: RootMutationType
@@ -83,7 +83,7 @@ With a schema, we know what our public contract is for our API. It doesn't matte
 
 A schema also lets you work quickly across the stack. For example, let's say we now want to add a feature where we can show an entire team (every user in a company). The front-end or back-end could propose some schema changes like:
 
-```graphql
+```
 extend type RootQueryType {
   team: [User]
 }
@@ -130,7 +130,7 @@ to generate Flow types automatically from schema types. It can use a `.graphqlco
 
 With a schema, you can automatically generate example data that can be used for building out the front-end before the real back-end is ready or for testing. The usage depends on what tools and languages you are using. For example, if you are using Apollo with React on the front-end, you can use [apollo-link-schema](https://www.npmjs.com/package/apollo-link-schema) for this. You pass it mock functions for certain schema types that look like this (in JavaScript, with [faker](https://www.npmjs.com/package/faker) for example):
 
-```graphql
+```
 import faker from 'faker'
 import { MockList } from 'graphql-tools'
 

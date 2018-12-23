@@ -58,12 +58,6 @@ class Page extends Component {
           />
           <meta name="twitter:image:alt" content="A decorative image" />
 
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            href="https://trevordmiller.com/blog/feed"
-          />
-
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
