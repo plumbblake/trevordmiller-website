@@ -1,12 +1,10 @@
 {
+  "version": 2,
   "alias": "trevordmiller.com",
   "env": {
     "NODE_ENV": "production"
   },
-  "scale": {
-    "sfo1": {
-      "min": 1,
-      "max": "auto"
-    }
-  }
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
 }

@@ -6,16 +6,16 @@ import {
   borderRadii,
   syntaxGroups,
   colorValues
-} from "utils/theme";
-import PageWithProject from "components/PageWithProject";
-import Accordian from "components/Accordian";
-import Icon from "components/Icon";
-import Anchor from "components/Anchor";
-import Heading from "components/Heading";
-import List from "components/List";
-import ListItem from "components/ListItem";
-import Button from "components/Button";
-import Image from "components/Image";
+} from "../../../utils/theme";
+import PageWithProject from "../../../components/PageWithProject";
+import Accordian from "../../../components/Accordian";
+import Icon from "../../../components/Icon";
+import Anchor from "../../../components/Anchor";
+import Heading from "../../../components/Heading";
+import List from "../../../components/List";
+import ListItem from "../../../components/ListItem";
+import Button from "../../../components/Button";
+import Image from "../../../components/Image";
 
 const colorMeanings = [
   [

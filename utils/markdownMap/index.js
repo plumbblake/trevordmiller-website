@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Heading from "components/Heading";
-import Paragraph from "components/Paragraph";
-import Image from "components/Image";
-import Anchor from "components/Anchor";
-import List from "components/List";
-import ListItem from "components/ListItem";
-import PreformattedText from "components/PreformattedText";
-import InlineCode from "components/InlineCode";
-import Quote from "components/Quote";
+import Heading from "../../components/Heading";
+import Paragraph from "../../components/Paragraph";
+import Image from "../../components/Image";
+import Anchor from "../../components/Anchor";
+import List from "../../components/List";
+import ListItem from "../../components/ListItem";
+import PreformattedText from "../../components/PreformattedText";
+import InlineCode from "../../components/InlineCode";
+import Quote from "../../components/Quote";
 
 const Heading1MarkdownMap = ({ children }) => (
   <Heading level={1}>{children}</Heading>

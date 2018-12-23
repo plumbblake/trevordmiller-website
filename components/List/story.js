@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ListItem from "components/ListItem";
+import ListItem from "../ListItem";
 import List from ".";
 
 storiesOf("List", module)

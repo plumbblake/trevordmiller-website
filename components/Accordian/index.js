@@ -7,9 +7,9 @@ import {
   spacing,
   borderSizes,
   uiGroups
-} from "utils/theme";
-import Toggle from "components/Toggle";
-import Well from "components/Well";
+} from "../../utils/theme";
+import Toggle from "../Toggle";
+import Well from "../Well";
 
 const Accordian = ({ summary, children }) => (
   <Toggle>

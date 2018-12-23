@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { uiGroups } from "utils/theme";
-import Normalize from "components/Normalize";
+import { uiGroups } from "../../utils/theme";
+import Normalize from "../Normalize";
 import analytics from "./utils/analytics";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CircuitBoard from "./components/CircuitBoard";
@@ -57,12 +57,6 @@ class Page extends Component {
             content={`https://trevordmiller.com${mainVisual}`}
           />
           <meta name="twitter:image:alt" content="A decorative image" />
-
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            href="https://trevordmiller.com/blog/feed"
-          />
 
           <meta
             name="viewport"

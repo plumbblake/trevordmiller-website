@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { spacing, fontSizes, uiGroups, syntaxGroups } from "utils/theme";
-import Page from "components/Page";
-import Heading from "components/Heading";
-import Anchor from "components/Anchor";
-import Button from "components/Button";
-import Avatar from "components/Avatar";
-import Icon from "components/Icon";
-import List from "components/List";
-import ListItem from "components/ListItem";
-import Video from "components/Video";
-import { courses, courseKeys } from "pages/courses";
+import { spacing, fontSizes, uiGroups, syntaxGroups } from "../../utils/theme";
+import Page from "../Page";
+import Heading from "../Heading";
+import Anchor from "../Anchor";
+import Button from "../Button";
+import Avatar from "../Avatar";
+import Icon from "../Icon";
+import List from "../List";
+import ListItem from "../ListItem";
+import Video from "../Video";
+import { courses, courseKeys } from "../../pages/courses";
 
 const PageWithCourse = ({ id }) => {
   const course = courses[id];

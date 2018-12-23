@@ -1,9 +1,9 @@
 import React from "react";
-import { spacing } from "utils/theme";
-import PageWithBaseRoute from "components/PageWithBaseRoute";
-import Avatar from "components/Avatar";
-import Heading from "components/Heading";
-import Teaser from "components/Teaser";
+import { spacing } from "../../utils/theme";
+import PageWithBaseRoute from "../../components/PageWithBaseRoute";
+import Avatar from "../../components/Avatar";
+import Heading from "../../components/Heading";
+import Teaser from "../../components/Teaser";
 
 const lifeAspects = [
   {

@@ -8,7 +8,7 @@ import {
   lineHeights,
   syntaxGroups,
   versionControlGroups
-} from "utils/theme";
+} from "../../utils/theme";
 
 const Normalize = ({ children }) => (
   <div>

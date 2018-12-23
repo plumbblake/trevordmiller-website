@@ -1,6 +1,6 @@
 import React from "react";
-import Page from "components/Page";
-import Teaser from "components/Teaser";
+import Page from "../components/Page";
+import Teaser from "../components/Teaser";
 
 export const baseRoutes = {
   courses: {

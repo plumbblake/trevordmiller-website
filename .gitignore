@@ -1,4 +1,5 @@
 node_modules/
 .next/
 storybook-static/
+dist/
 .DS_Store

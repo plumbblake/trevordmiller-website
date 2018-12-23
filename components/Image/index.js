@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import LazyLoad from "react-lazyload";
-import { borderRadii } from "utils/theme";
+import { borderRadii } from "../../utils/theme";
 
 const Image = ({ src, description }) => (
   <LazyLoad offset={200} placeholder={<span />} once>

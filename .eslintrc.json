@@ -18,8 +18,8 @@
     "plugin:jest/recommended"
   ],
   "settings": {
-    "import/resolver": {
-      "babel-module": {}
+    "react": {
+      "version": "16.7"
     }
   }
 }

@@ -9,5 +9,5 @@
     "*.{json,md,yml}": ["prettier --write", "git add"],
     "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
   },
-  "ignore": ["**/node_modules/**", "**/.next/**", "**/storybook-static/**"]
+  "ignore": ["**/node_modules/**", "**/.next/**", "**/storybook-static/**", "**/dist/**"]
 }
